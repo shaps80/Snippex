@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		546B7A34175CFBB700B216A3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
+		546B7A36175CFCA000B216A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A35175CFC9F00B216A3 /* UIKit.framework */; };
+		546B7A38175CFCAC00B216A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */; };
+		546B7A39175CFCBA00B216A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */; };
+		546B7A3B175CFCBE00B216A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3A175CFCBE00B216A3 /* Cocoa.framework */; };
+		546B7A3E175CFCD800B216A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3D175CFCD700B216A3 /* CoreData.framework */; };
+		546B7A3F175CFCE300B216A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3D175CFCD700B216A3 /* CoreData.framework */; };
+		546B7A40175CFCFD00B216A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A35175CFC9F00B216A3 /* UIKit.framework */; };
+		546B7A41175CFCFD00B216A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3D175CFCD700B216A3 /* CoreData.framework */; };
+		546B7A42175CFCFD00B216A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */; };
+		546B7A43175CFD0600B216A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3A175CFCBE00B216A3 /* Cocoa.framework */; };
+		546B7A44175CFD0600B216A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3D175CFCD700B216A3 /* CoreData.framework */; };
+		546B7A45175CFD0600B216A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */; };
 		54870B02175CB113004194F7 /* ShapsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; };
 		54870B12175CB113004194F7 /* libShapsLibraryiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */; };
 		54870B18175CB113004194F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54870B16175CB113004194F7 /* InfoPlist.strings */; };
@@ -27,7 +40,6 @@
 		54915485175CE3C500A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915487175CE3DF00A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
-		549154BF175CE80500A210BC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
 		549154C7175CE93700A210BC /* SLDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLDefines.h */; };
 		549154C8175CE93700A210BC /* SLDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLDefines.h */; };
 		549154CB175CE95400A210BC /* SLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SLView.h */; };
@@ -139,6 +151,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		546B7A35175CFC9F00B216A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		546B7A3A175CFCBE00B216A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		546B7A3D175CFCD700B216A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShapsLibraryiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54870B00175CB113004194F7 /* ShapsLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapsLibrary-Prefix.pch"; sourceTree = "<group>"; };
 		54870B01175CB113004194F7 /* ShapsLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShapsLibrary.h; path = ShapsLibrary/ShapsLibrary.h; sourceTree = "<group>"; };
@@ -204,6 +220,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546B7A3E175CFCD800B216A3 /* CoreData.framework in Frameworks */,
+				546B7A38175CFCAC00B216A3 /* CoreGraphics.framework in Frameworks */,
+				546B7A36175CFCA000B216A3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +230,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				549154BF175CE80500A210BC /* SenTestingKit.framework in Frameworks */,
+				546B7A34175CFBB700B216A3 /* SenTestingKit.framework in Frameworks */,
 				54870B12175CB113004194F7 /* libShapsLibraryiOS.a in Frameworks */,
+				546B7A40175CFCFD00B216A3 /* UIKit.framework in Frameworks */,
+				546B7A41175CFCFD00B216A3 /* CoreData.framework in Frameworks */,
+				546B7A42175CFCFD00B216A3 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +242,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546B7A3B175CFCBE00B216A3 /* Cocoa.framework in Frameworks */,
+				546B7A39175CFCBA00B216A3 /* CoreGraphics.framework in Frameworks */,
+				546B7A3F175CFCE300B216A3 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,14 +252,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */,
 				54CA9081175CDB6200470B9F /* libShapsLibraryOSX.a in Frameworks */,
+				549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */,
+				546B7A43175CFD0600B216A3 /* Cocoa.framework in Frameworks */,
+				546B7A44175CFD0600B216A3 /* CoreData.framework in Frameworks */,
+				546B7A45175CFD0600B216A3 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		546B7A3C175CFCC400B216A3 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				546B7A3A175CFCBE00B216A3 /* Cocoa.framework */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
 		54870AF0175CB113004194F7 = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +297,7 @@
 		54870AFB175CB113004194F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				546B7A3C175CFCC400B216A3 /* OSX */,
 				549154C2175CE81700A210BC /* iOS */,
 				549154B8175CE7AF00A210BC /* Common */,
 			);
@@ -327,6 +364,8 @@
 		549154B8175CE7AF00A210BC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				546B7A3D175CFCD700B216A3 /* CoreData.framework */,
+				546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */,
 				549154BD175CE7DD00A210BC /* SenTestingKit.framework */,
 			);
 			name = Common;
@@ -335,6 +374,7 @@
 		549154C2175CE81700A210BC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				546B7A35175CFC9F00B216A3 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -493,8 +533,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54870B21175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOSTests" */;
 			buildPhases = (
-				54870B06175CB113004194F7 /* Frameworks */,
 				54870B05175CB113004194F7 /* Sources */,
+				54870B06175CB113004194F7 /* Frameworks */,
 				54870B07175CB113004194F7 /* Resources */,
 				54870B08175CB113004194F7 /* ShellScript */,
 			);
@@ -529,8 +569,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54CA908E175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSXTests" */;
 			buildPhases = (
-				54CA9078175CDB6200470B9F /* Frameworks */,
 				54CA9077175CDB6200470B9F /* Sources */,
+				54CA9078175CDB6200470B9F /* Frameworks */,
 				54CA9079175CDB6200470B9F /* Resources */,
 				54CA907A175CDB6200470B9F /* ShellScript */,
 			);
@@ -786,7 +826,10 @@
 				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -806,7 +849,10 @@
 				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -816,7 +862,10 @@
 		54870B22175CB114004194F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
 				INFOPLIST_FILE = "ShapsLibraryTests/ShapsLibraryTests-Info.plist";
@@ -830,7 +879,10 @@
 		54870B23175CB114004194F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
 				INFOPLIST_FILE = "ShapsLibraryTests/ShapsLibraryTests-Info.plist";
@@ -854,7 +906,10 @@
 				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.7;
 			};
@@ -874,7 +929,10 @@
 				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.7;
 			};
