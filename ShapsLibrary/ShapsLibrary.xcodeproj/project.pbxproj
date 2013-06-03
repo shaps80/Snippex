@@ -21,10 +21,13 @@
 		546B7A47175D003800B216A3 /* GlobalDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A46175D003700B216A3 /* GlobalDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		546B7A48175D003800B216A3 /* GlobalDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A46175D003700B216A3 /* GlobalDefines.h */; };
 		546B7A4B175D114600B216A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54870B16175CB113004194F7 /* InfoPlist.strings */; };
+		546B7A58175D17B000B216A3 /* SLViewiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A57175D17B000B216A3 /* SLViewiOSTests.m */; };
+		546B7A5B175D17BC00B216A3 /* SLViewOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A5A175D17BC00B216A3 /* SLViewOSXTests.m */; };
+		546B7A5E175D1A5A00B216A3 /* SLControliOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A5D175D1A5A00B216A3 /* SLControliOSTests.m */; };
+		546B7A61175D1A6900B216A3 /* SLControlOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A60175D1A6900B216A3 /* SLControlOSXTests.m */; };
 		54870B02175CB113004194F7 /* ShapsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; };
 		54870B12175CB113004194F7 /* libShapsLibraryiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */; };
 		54870B18175CB113004194F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54870B16175CB113004194F7 /* InfoPlist.strings */; };
-		54870B1B175CB114004194F7 /* ShapsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54870B1A175CB114004194F7 /* ShapsLibraryTests.m */; };
 		5491546B175CE16A00A210BC /* SLASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 5491545C175CE16A00A210BC /* SLASLLogger.h */; };
 		5491546C175CE16A00A210BC /* SLASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545D175CE16A00A210BC /* SLASLLogger.m */; };
 		5491546E175CE16A00A210BC /* SLASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545D175CE16A00A210BC /* SLASLLogger.m */; };
@@ -37,7 +40,6 @@
 		5491547F175CE16A00A210BC /* SLTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915464175CE16A00A210BC /* SLTTYLogger.h */; };
 		54915480175CE16A00A210BC /* SLTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915465175CE16A00A210BC /* SLTTYLogger.m */; };
 		54915482175CE16A00A210BC /* SLTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915465175CE16A00A210BC /* SLTTYLogger.m */; };
-		54915484175CE39C00A210BC /* ShapsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54870B1A175CB114004194F7 /* ShapsLibraryTests.m */; };
 		54915485175CE3C500A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915487175CE3DF00A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
@@ -157,14 +159,20 @@
 		546B7A3A175CFCBE00B216A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		546B7A3D175CFCD700B216A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		546B7A46175D003700B216A3 /* GlobalDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefines.h; sourceTree = "<group>"; };
+		546B7A56175D17B000B216A3 /* SLViewiOSTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLViewiOSTests.h; sourceTree = "<group>"; };
+		546B7A57175D17B000B216A3 /* SLViewiOSTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLViewiOSTests.m; sourceTree = "<group>"; };
+		546B7A59175D17BC00B216A3 /* SLViewOSXTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLViewOSXTests.h; sourceTree = "<group>"; };
+		546B7A5A175D17BC00B216A3 /* SLViewOSXTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLViewOSXTests.m; sourceTree = "<group>"; };
+		546B7A5C175D1A5A00B216A3 /* SLControliOSTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLControliOSTests.h; sourceTree = "<group>"; };
+		546B7A5D175D1A5A00B216A3 /* SLControliOSTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLControliOSTests.m; sourceTree = "<group>"; };
+		546B7A5F175D1A6900B216A3 /* SLControlOSXTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLControlOSXTests.h; sourceTree = "<group>"; };
+		546B7A60175D1A6900B216A3 /* SLControlOSXTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLControlOSXTests.m; sourceTree = "<group>"; };
 		54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShapsLibraryiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54870B00175CB113004194F7 /* ShapsLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapsLibrary-Prefix.pch"; sourceTree = "<group>"; };
 		54870B01175CB113004194F7 /* ShapsLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShapsLibrary.h; path = ShapsLibrary/ShapsLibrary.h; sourceTree = "<group>"; };
 		54870B0A175CB113004194F7 /* ShapsLibraryiOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapsLibraryiOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54870B15175CB113004194F7 /* ShapsLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShapsLibraryTests-Info.plist"; sourceTree = "<group>"; };
 		54870B17175CB113004194F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		54870B19175CB113004194F7 /* ShapsLibraryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapsLibraryTests.h; sourceTree = "<group>"; };
-		54870B1A175CB114004194F7 /* ShapsLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapsLibraryTests.m; sourceTree = "<group>"; };
 		5491545C175CE16A00A210BC /* SLASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLASLLogger.h; sourceTree = "<group>"; };
 		5491545D175CE16A00A210BC /* SLASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLASLLogger.m; sourceTree = "<group>"; };
 		5491545E175CE16A00A210BC /* SLDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
@@ -319,9 +327,15 @@
 		54870B13175CB113004194F7 /* ShapsLibraryTests */ = {
 			isa = PBXGroup;
 			children = (
-				54870B19175CB113004194F7 /* ShapsLibraryTests.h */,
-				54870B1A175CB114004194F7 /* ShapsLibraryTests.m */,
 				54870B14175CB113004194F7 /* Supporting Files */,
+				546B7A56175D17B000B216A3 /* SLViewiOSTests.h */,
+				546B7A57175D17B000B216A3 /* SLViewiOSTests.m */,
+				546B7A59175D17BC00B216A3 /* SLViewOSXTests.h */,
+				546B7A5A175D17BC00B216A3 /* SLViewOSXTests.m */,
+				546B7A5C175D1A5A00B216A3 /* SLControliOSTests.h */,
+				546B7A5D175D1A5A00B216A3 /* SLControliOSTests.m */,
+				546B7A5F175D1A6900B216A3 /* SLControlOSXTests.h */,
+				546B7A60175D1A6900B216A3 /* SLControlOSXTests.m */,
 			);
 			path = ShapsLibraryTests;
 			sourceTree = "<group>";
@@ -712,7 +726,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54870B1B175CB114004194F7 /* ShapsLibraryTests.m in Sources */,
+				546B7A58175D17B000B216A3 /* SLViewiOSTests.m in Sources */,
+				546B7A5E175D1A5A00B216A3 /* SLControliOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,7 +765,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54915484175CE39C00A210BC /* ShapsLibraryTests.m in Sources */,
+				546B7A5B175D17BC00B216A3 /* SLViewOSXTests.m in Sources */,
+				546B7A61175D1A6900B216A3 /* SLControlOSXTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

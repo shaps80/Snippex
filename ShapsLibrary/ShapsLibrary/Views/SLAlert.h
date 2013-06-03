@@ -49,7 +49,7 @@ typedef void (^SLAlertCompletionBlock)(NSInteger buttonIndex);
  @param			message The message for the alert.
  @param			cancelTitle The title to display for this alerts cancel option.
  @param			otherTitles The titles to display for this alerts other buttons.
- @return		An NSAlert/UIAlert instance depending on platform.
+ @return			An NSAlert/UIAlert instance depending on platform.
  */
 - (id)initWithTitle:(NSString *)title
 			message:(NSString *)message
@@ -71,7 +71,7 @@ typedef void (^SLAlertCompletionBlock)(NSInteger buttonIndex);
  @param			message The message for the alert.
  @param			cancelButtonTitle The title to display for this alerts cancel option.
  @param			otherButtonTitles The titles to display for this alerts other buttons.
- @return		An NSAlert/UIAlert instance depending on platform.
+ @return			An NSAlert/UIAlert instance depending on platform.
  */
 - (id)initWithTitle:(NSString *)title
 			message:(NSString *)message

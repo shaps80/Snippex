@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Shaps. All rights reserved.
+   Copyright (c) 2013 Shaps. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,31 +23,25 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/**
- This class provides an abstract way of subclassing either a UIView (on iOS) or NSView (on OSX). It also provides custom methods for updating layout or drawing.
- Any components that should work on both iOS and OSX should subclass this class instead of implementing UIView/NSView directly.
- */
+#import "SLViewOSXTests.h"
+#import "SLView.h"
 
-#if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
-@interface SLView : UIView
+@implementation SLViewOSXTests
 
--(void)layoutSubviews NS_REQUIRES_SUPER;
+-(void)testClassTypes
+{
+	STAssertEqualObjects([NSView class], [SLView superclass], @"View type returned is invalid");
 
-#else
-@interface SLView : NSView
+	NSView *view1 = [[NSView alloc] init];
+	SLView *view2 = [[SLView alloc] init];
 
--(void)layout NS_REQUIRES_SUPER;
+	STAssertEqualObjects([view1 class], [view2 superclass], @"View type returned is invalid");
+}
 
-#endif
-
-/// @abstract		All subclasses should use this method to perform layout as this ensures iOS and OSX get updated correctly.
--(void)layoutViews;
-
-/// @abstract		This ensures setNeedsLayout is called correctly on iOS and OSX
--(void)setLayoutRequired;
-
-/// @abstract		This ensures setNeedsDisplay is called correctly on iOS and OSX.
--(void)setDrawingRequired;
+-(void)testSelectors
+{
+	STAssertTrue([SLView instancesRespondToSelector:@selector(drawRect:)], @"Method is not implemented");
+	STAssertTrue([SLView instancesRespondToSelector:@selector(layout)], @"Method is not implemented");
+}
 
 @end

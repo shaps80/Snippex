@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Shaps. All rights reserved.
+   Copyright (c) 2013 Shaps. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,31 +23,8 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/**
- This class provides an abstract way of subclassing either a UIView (on iOS) or NSView (on OSX). It also provides custom methods for updating layout or drawing.
- Any components that should work on both iOS and OSX should subclass this class instead of implementing UIView/NSView directly.
- */
+#import <SenTestingKit/SenTestingKit.h>
 
-#if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
-@interface SLView : UIView
-
--(void)layoutSubviews NS_REQUIRES_SUPER;
-
-#else
-@interface SLView : NSView
-
--(void)layout NS_REQUIRES_SUPER;
-
-#endif
-
-/// @abstract		All subclasses should use this method to perform layout as this ensures iOS and OSX get updated correctly.
--(void)layoutViews;
-
-/// @abstract		This ensures setNeedsLayout is called correctly on iOS and OSX
--(void)setLayoutRequired;
-
-/// @abstract		This ensures setNeedsDisplay is called correctly on iOS and OSX.
--(void)setDrawingRequired;
+@interface SLViewiOSTests : SenTestCase
 
 @end

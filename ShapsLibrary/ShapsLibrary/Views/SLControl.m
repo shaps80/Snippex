@@ -57,14 +57,20 @@
 	// All layout code should be placed in this method.
 }
 
+#if TARGET_OS_IPHONE
+
 -(void)layoutSubviews
 {
 	[self layoutViews];
 }
 
+#else
+
 -(void)layout
 {
 	[self layoutViews];
 }
+
+#endif
 
 @end

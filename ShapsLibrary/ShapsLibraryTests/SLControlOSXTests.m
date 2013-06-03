@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Shaps. All rights reserved.
+   Copyright (c) 2013 Shaps. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,8 +23,26 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "SLControlOSXTests.h"
+#import "SLControl.h"
 
-@interface ShapsLibraryTests : SenTestCase
+@implementation SLControlOSXTests
+
+-(void)testClassTypes
+{
+	STAssertEqualObjects([NSControl class], [SLControl superclass], @"View type returned is invalid");
+
+	NSControl *view1 = [[NSControl alloc] init];
+	SLControl *view2 = [[SLControl alloc] init];
+
+	STAssertEqualObjects([view1 class], [view2 superclass], @"View type returned is invalid");
+}
+
+-(void)testSelectors
+{
+	STAssertTrue([SLControl instancesRespondToSelector:@selector(drawRect:)], @"Method is not implemented");
+	STAssertTrue([SLControl instancesRespondToSelector:@selector(layout)], @"Method is not implemented");
+	STAssertTrue([SLControl instancesRespondToSelector:@selector(setSelected:)], @"Method is not implemented");
+}
 
 @end

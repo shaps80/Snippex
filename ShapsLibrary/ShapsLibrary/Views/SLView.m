@@ -57,20 +57,18 @@
 	// All subclasses should use this method to perform layout as this ensures iOS and OSX get updated correctly.
 }
 
+#if TARGET_OS_IPHONE
 -(void)layoutSubviews
 {
 	[self layoutViews];
-#if TARGET_OS_IPHONE
 	[super layoutSubviews];
-#endif
 }
-
+#else
 -(void)layout
 {
 	[self layoutViews];
-#if !TARGET_OS_IPHONE
 	[super layout];
-#endif
 }
+#endif
 
 @end
