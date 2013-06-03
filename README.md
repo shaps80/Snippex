@@ -7,7 +7,7 @@ The project is a static library and I'll provide a pre-compiled cross platform (
 You can however download the entire code, project, etc... and are free to use for both free and commercial use.
 I would appreciate attribution if you're able to but if not that's ok too :)
 
-The project is organized into 4 sections:
+The project is currently organized into 4 sections:
 
     Categories
     Graphics
