@@ -25,8 +25,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define replaceStrings(TARGET, SEARCH, REPLACE) TARGET = [TARGET stringByReplacingOccurrencesOfString:SEARCH withString:REPLACE]
-
 /**
  An NSString category that adds useful functionality for formatting strings.
  */
