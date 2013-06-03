@@ -310,7 +310,8 @@
 				5491545E175CE16A00A210BC /* SLDispatchQueueLogFormatter.h */,
 				5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */,
 			);
-			path = Logging;
+			name = Logging;
+			path = ../../Logging;
 			sourceTree = "<group>";
 		};
 		54915459175CE13300A210BC /* Supporting Files */ = {
