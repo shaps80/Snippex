@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SLGradient.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SLGradient</TokenIdentifier>
+			<Abstract type="html">This class encapsulates the drawing of a core graphics gradient.
+All colors should be passed as either UIColor or NSColor instances since this class is supported on both iOS and OSX.
+You can also use the macro SLColor to support both platforms. CGColorRef&apos;s however are NOT acceptable.
+All angles are assumed to be in degrees.</Abstract>
+			<DeclaredIn>SLGradient.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLGradient/initWithStartingColor:endingColor:</TokenIdentifier>
+			<Abstract type="html">Returns an instance with the specified colors.</Abstract>
+			<DeclaredIn>SLGradient.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithStartingColor:(SLColor *)startingColor endingColor:(SLColor *)endingColor</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>startingColor</Name>
+					<Abstract type="html">The start color for this gradient.</Abstract>
+				</Parameter><Parameter>
+					<Name>endingColor</Name>
+					<Abstract type="html">The end color for this gradient.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithStartingColor:endingColor:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLGradient/initWithColors:</TokenIdentifier>
+			<Abstract type="html">Returns an instance with the specified colors.</Abstract>
+			<DeclaredIn>SLGradient.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithColors:(NSArray *)colors</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>colors</Name>
+					<Abstract type="html">An array of colors to be used for this gradient, these colors will be spaced equally.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithColors:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLGradient/initWithColors:atLocations:</TokenIdentifier>
+			<Abstract type="html">Returns an instance with the specified colors and locations.</Abstract>
+			<DeclaredIn>SLGradient.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithColors:(NSArray *)colors atLocations:(CGFloat *)locations</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>colors</Name>
+					<Abstract type="html">An array of colors to be used for this gradient.</Abstract>
+				</Parameter><Parameter>
+					<Name>locations</Name>
+					<Abstract type="html">The locations for each color in this gradient.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithColors:atLocations:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLGradient/drawInRect:angle:</TokenIdentifier>
+			<Abstract type="html">Draws a linear gradient in the specified rect at the given angle.</Abstract>
+			<DeclaredIn>SLGradient.h</DeclaredIn>			
+			
+			<Declaration>- (void)drawInRect:(CGRect)rect angle:(CGFloat)angle</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>rect</Name>
+					<Abstract type="html">The rect to draw this gradient inside.</Abstract>
+				</Parameter><Parameter>
+					<Name>angle</Name>
+					<Abstract type="html">The angle at which to draw this gradient.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/drawInRect:angle:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLGradient/drawInBezierPath:angle:</TokenIdentifier>
+			<Abstract type="html">Draws a linear gradient within the specified path at the given angle.</Abstract>
+			<DeclaredIn>SLGradient.h</DeclaredIn>			
+			
+			<Declaration>- (void)drawInBezierPath:(SLBezierPath *)path angle:(CGFloat)angle</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>path</Name>
+					<Abstract type="html">The path to draw this gradient inside.</Abstract>
+				</Parameter><Parameter>
+					<Name>angle</Name>
+					<Abstract type="html">The angle at which to draw this gradient.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/drawInBezierPath:angle:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLGradient/drawInRect:relativeCenterPosition:</TokenIdentifier>
+			<Abstract type="html">Draws a radial gradient inside the specified rect given the relative center.</Abstract>
+			<DeclaredIn>SLGradient.h</DeclaredIn>			
+			
+			<Declaration>- (void)drawInRect:(CGRect)rect relativeCenterPosition:(CGPoint)relativeCenterPosition</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>rect</Name>
+					<Abstract type="html">The rect to draw this gradient inside.</Abstract>
+				</Parameter><Parameter>
+					<Name>relativeCenterPosition</Name>
+					<Abstract type="html">The relative center start position for this gradient.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/drawInRect:relativeCenterPosition:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLGradient/drawInBezierPath:relativeCenterPosition:</TokenIdentifier>
+			<Abstract type="html">Draws a radial gradient inside the specified rect given the relative center.</Abstract>
+			<DeclaredIn>SLGradient.h</DeclaredIn>			
+			
+			<Declaration>- (void)drawInBezierPath:(SLBezierPath *)path relativeCenterPosition:(CGPoint)relativeCenterPosition</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>path</Name>
+					<Abstract type="html">The path to draw this gradient inside.</Abstract>
+				</Parameter><Parameter>
+					<Name>relativeCenterPosition</Name>
+					<Abstract type="html">The relative center start position for this gradient.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/drawInBezierPath:relativeCenterPosition:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+	</File>
+</Tokens>

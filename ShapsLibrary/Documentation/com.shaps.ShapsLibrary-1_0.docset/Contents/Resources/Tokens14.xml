@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSManagedObjectContext+SLAdditions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSManagedObjectContext(SLAdditions)</TokenIdentifier>
+			<Abstract type="html">An NSManagedObjectContext category that encapsulates some common fetch requests.</Abstract>
+			<DeclaredIn>NSManagedObjectContext+SLAdditions.h</DeclaredIn>
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSManagedObjectContext(SLAdditions)/fetchObjectsForEntityName:sortDescriptors:</TokenIdentifier>
+			<Abstract type="html">Returns all objects from the entity, sorted using the specified sort descriptors.</Abstract>
+			<DeclaredIn>NSManagedObjectContext+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>entityName</Name>
+					<Abstract type="html">The name of the entity to fetch.</Abstract>
+				</Parameter><Parameter>
+					<Name>sortDescriptors</Name>
+					<Abstract type="html">The sort descriptors to apply to this fetch request.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of NSManagedObject instances, nil if the results are empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/fetchObjectsForEntityName:sortDescriptors:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSManagedObjectContext(SLAdditions)/fetchObjectsForEntityName:predicate:</TokenIdentifier>
+			<Abstract type="html">Returns all objects from the entity, filtered by the specified predicate.</Abstract>
+			<DeclaredIn>NSManagedObjectContext+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName predicate:(NSPredicate *)predicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>entityName</Name>
+					<Abstract type="html">The name of the entity to fetch.</Abstract>
+				</Parameter><Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">The predicate to apply to this fetch request.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of NSManagedObject instances, nil if the results are empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/fetchObjectsForEntityName:predicate:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSManagedObjectContext(SLAdditions)/fetchObjectsForEntityName:sortDescriptors:predicate:</TokenIdentifier>
+			<Abstract type="html">Returns all objects from the entity, sorted using the specified sort descriptors and filtered by the given predicate.</Abstract>
+			<DeclaredIn>NSManagedObjectContext+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors predicate:(NSPredicate *)predicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>entityName</Name>
+					<Abstract type="html">The name of the entity to fetch.</Abstract>
+				</Parameter><Parameter>
+					<Name>sortDescriptors</Name>
+					<Abstract type="html">The sort descriptors to apply to this fetch request.</Abstract>
+				</Parameter><Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">The predicate to apply to this fetch request.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of NSManagedObject instances, nil if the results are empty.</Abstract></ReturnValue>
+			<Anchor>//api/name/fetchObjectsForEntityName:sortDescriptors:predicate:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSManagedObjectContext(SLAdditions)/fetchObjectWithIdentifier:entityName:autoCreate:</TokenIdentifier>
+			<Abstract type="html">Returns an NSManagedObject instance from the specified entity with the given identifier.</Abstract>
+			<DeclaredIn>NSManagedObjectContext+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)fetchObjectWithIdentifier:(id)identifier entityName:(NSString *)entityName autoCreate:(BOOL)autoCreate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>identifier</Name>
+					<Abstract type="html">The identifier of the object.</Abstract>
+				</Parameter><Parameter>
+					<Name>entityName</Name>
+					<Abstract type="html">The name of the entity to fetch.</Abstract>
+				</Parameter><Parameter>
+					<Name>autoCreate</Name>
+					<Abstract type="html">If yes, when the object is not found, it is automatically created.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An NSManagedObject instance if found, nil otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/fetchObjectWithIdentifier:entityName:autoCreate:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSManagedObjectContext(SLAdditions)/fetchObjectWithIdentifier:predicate:entityName:autoCreate:</TokenIdentifier>
+			<Abstract type="html">Returns an NSManagedObject instance from the specified entity with the given identifier, filtered by predicate.</Abstract>
+			<DeclaredIn>NSManagedObjectContext+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)fetchObjectWithIdentifier:(id)identifier predicate:(NSPredicate *)predicate entityName:(NSString *)entityName autoCreate:(BOOL)autoCreate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>identifier</Name>
+					<Abstract type="html">The identifier of the object.</Abstract>
+				</Parameter><Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">The predicate to apply to this fetch request.</Abstract>
+				</Parameter><Parameter>
+					<Name>entityName</Name>
+					<Abstract type="html">The name of the entity to fetch.</Abstract>
+				</Parameter><Parameter>
+					<Name>autoCreate</Name>
+					<Abstract type="html">If yes, when the object is not found, it is automatically created.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An NSManagedObject instance if found, nil otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/fetchObjectWithIdentifier:predicate:entityName:autoCreate:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSManagedObjectContext(SLAdditions)/fetchObjectWithIdentifier:sortDescriptors:predicate:entityName:autoCreate:</TokenIdentifier>
+			<Abstract type="html">Returns an NSManagedObject instance from the specified entity with the given identifier, sorted by sortDescriptors and filtered by predicate.</Abstract>
+			<DeclaredIn>NSManagedObjectContext+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)fetchObjectWithIdentifier:(id)identifier sortDescriptors:(NSArray *)sortDescriptors predicate:(NSPredicate *)predicate entityName:(NSString *)entityName autoCreate:(BOOL)autoCreate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>identifier</Name>
+					<Abstract type="html">The identifier of the object.</Abstract>
+				</Parameter><Parameter>
+					<Name>sortDescriptors</Name>
+					<Abstract type="html">The sort descriptors to apply to this fetch request.</Abstract>
+				</Parameter><Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">The predicate to apply to this fetch request.</Abstract>
+				</Parameter><Parameter>
+					<Name>entityName</Name>
+					<Abstract type="html">The name of the entity to fetch.</Abstract>
+				</Parameter><Parameter>
+					<Name>autoCreate</Name>
+					<Abstract type="html">If yes, when the object is not found, it is automatically created.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An NSManagedObject instance if found, nil otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/fetchObjectWithIdentifier:sortDescriptors:predicate:entityName:autoCreate:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+	</File>
+</Tokens>
