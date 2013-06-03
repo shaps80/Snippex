@@ -1,7 +1,7 @@
 ShapsLibrary
 ============
 
-My own personal library of reusable code that compiles and standardises some classes across iOS and OSX.
+My own personal library of reusable code that compiles and standardises some classes across iOS and OSX. This code is still in development and although I will always deprecate nicely to ensure you are able to update as seamlessly as possible, remember it is a work in progress.
 
 The project is a static library and I'll provide a pre-compiled cross platform (simulator included) binary soon.
 You can however download the entire code, project, etc... and are free to use for both free and commercial use.
