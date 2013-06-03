@@ -21,11 +21,11 @@ For example:
     1. You should use SLView in place of UIView/NSView
     2. You should use SLColor in place of UIColor/NSColor
     3. You should use SLBezierPath in place of NSBezierPath/UIBezierPath
-    3. You can use RCContext in place of UIGraphicsGetCurrentContext() or [[NSGraphicsContext currentGraphics] graphicsPort]
-    4. RCOffset is supported on both platforms and provides convenience functions for converting to/from UIOffset
+    3. You can use SLContext in place of UIGraphicsGetCurrentContext() or [[NSGraphicsContext currentGraphics] graphicsPort]
+    4. SLOffset is supported on both platforms and provides convenience functions for converting to/from UIOffset
     5. NSColor (on 10.7) doesn't have CGColor as an accessor so I've added it :)
     
-There's lots more you included like RCShadow and RCGradient, both of which make use of SLGeometry and SLDrawing (lower level classes you can use to do custom drawing that is supported across both platforms)
+There's a lot more included like SLShadow and SLGradient, both of which make use of SLGeometry and SLDrawing (lower level classes you can use to do custom drawing that is supported across both platforms)
 
 Want to hear the best part?
 
