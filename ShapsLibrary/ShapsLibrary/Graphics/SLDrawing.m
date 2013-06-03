@@ -25,7 +25,7 @@
 
 #import "SLDrawing.h"
 #import "SLGeometry.h"
-#import "SLDefines.h"
+#import "SLGraphicsDefines.h"
 
 #pragma mark - Shadows
 

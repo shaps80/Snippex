@@ -20,6 +20,8 @@
 		546B7A43175CFD0600B216A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3A175CFCBE00B216A3 /* Cocoa.framework */; };
 		546B7A44175CFD0600B216A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3D175CFCD700B216A3 /* CoreData.framework */; };
 		546B7A45175CFD0600B216A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */; };
+		546B7A47175D003800B216A3 /* GlobalDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A46175D003700B216A3 /* GlobalDefines.h */; };
+		546B7A48175D003800B216A3 /* GlobalDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A46175D003700B216A3 /* GlobalDefines.h */; };
 		54870B02175CB113004194F7 /* ShapsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; };
 		54870B12175CB113004194F7 /* libShapsLibraryiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */; };
 		54870B18175CB113004194F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54870B16175CB113004194F7 /* InfoPlist.strings */; };
@@ -40,8 +42,8 @@
 		54915485175CE3C500A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915487175CE3DF00A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
-		549154C7175CE93700A210BC /* SLDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLDefines.h */; };
-		549154C8175CE93700A210BC /* SLDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLDefines.h */; };
+		549154C7175CE93700A210BC /* SLGraphicsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLGraphicsDefines.h */; };
+		549154C8175CE93700A210BC /* SLGraphicsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLGraphicsDefines.h */; };
 		549154CB175CE95400A210BC /* SLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SLView.h */; };
 		549154CC175CE95400A210BC /* SLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SLView.h */; };
 		549154CD175CE95400A210BC /* SLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154CA175CE95400A210BC /* SLView.m */; };
@@ -155,6 +157,7 @@
 		546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		546B7A3A175CFCBE00B216A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		546B7A3D175CFCD700B216A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		546B7A46175D003700B216A3 /* GlobalDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefines.h; sourceTree = "<group>"; };
 		54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShapsLibraryiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54870B00175CB113004194F7 /* ShapsLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapsLibrary-Prefix.pch"; sourceTree = "<group>"; };
 		54870B01175CB113004194F7 /* ShapsLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShapsLibrary.h; path = ShapsLibrary/ShapsLibrary.h; sourceTree = "<group>"; };
@@ -172,7 +175,7 @@
 		54915464175CE16A00A210BC /* SLTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTTYLogger.h; sourceTree = "<group>"; };
 		54915465175CE16A00A210BC /* SLTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTTYLogger.m; sourceTree = "<group>"; };
 		549154BD175CE7DD00A210BC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		549154C6175CE93700A210BC /* SLDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDefines.h; sourceTree = "<group>"; };
+		549154C6175CE93700A210BC /* SLGraphicsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGraphicsDefines.h; sourceTree = "<group>"; };
 		549154C9175CE95400A210BC /* SLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLView.h; sourceTree = "<group>"; };
 		549154CA175CE95400A210BC /* SLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLView.m; sourceTree = "<group>"; };
 		549154CF175CEE9E00A210BC /* SLControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLControl.h; sourceTree = "<group>"; };
@@ -307,7 +310,7 @@
 		54870AFE175CB113004194F7 /* ShapsLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				549154C6175CE93700A210BC /* SLDefines.h */,
+				546B7A46175D003700B216A3 /* GlobalDefines.h */,
 				549154DC175CEFA600A210BC /* Views */,
 				54915532175CF1DD00A210BC /* Managers */,
 				549154DB175CEF9E00A210BC /* Graphics */,
@@ -382,10 +385,11 @@
 		549154DB175CEF9E00A210BC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				549154DD175CEFF100A210BC /* SLDrawing.h */,
-				549154DE175CEFF100A210BC /* SLDrawing.m */,
+				549154C6175CE93700A210BC /* SLGraphicsDefines.h */,
 				549154DF175CEFF100A210BC /* SLGeometry.h */,
 				549154E0175CEFF100A210BC /* SLGeometry.m */,
+				549154DD175CEFF100A210BC /* SLDrawing.h */,
+				549154DE175CEFF100A210BC /* SLDrawing.m */,
 				549154E1175CEFF100A210BC /* SLGradient.h */,
 				549154E2175CEFF100A210BC /* SLGradient.m */,
 				549154E3175CEFF100A210BC /* SLShadow.h */,
@@ -453,7 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54915487175CE3DF00A210BC /* ShapsLibrary.h in Headers */,
-				549154C7175CE93700A210BC /* SLDefines.h in Headers */,
+				549154C7175CE93700A210BC /* SLGraphicsDefines.h in Headers */,
 				549154CB175CE95400A210BC /* SLView.h in Headers */,
 				549154D1175CEE9E00A210BC /* SLControl.h in Headers */,
 				549154D7175CEF4000A210BC /* SLAlert.h in Headers */,
@@ -473,6 +477,7 @@
 				5491552E175CF06200A210BC /* NSString+SLAdditions.h in Headers */,
 				54915537175CF24E00A210BC /* SLCoreDataManager.h in Headers */,
 				5491553B175CF24E00A210BC /* SLErrorManager.h in Headers */,
+				546B7A47175D003800B216A3 /* GlobalDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +490,7 @@
 				54915470175CE16A00A210BC /* SLDispatchQueueLogFormatter.h in Headers */,
 				5491547A175CE16A00A210BC /* SLLog.h in Headers */,
 				5491547F175CE16A00A210BC /* SLTTYLogger.h in Headers */,
-				549154C8175CE93700A210BC /* SLDefines.h in Headers */,
+				549154C8175CE93700A210BC /* SLGraphicsDefines.h in Headers */,
 				549154CC175CE95400A210BC /* SLView.h in Headers */,
 				549154D2175CEE9E00A210BC /* SLControl.h in Headers */,
 				549154D8175CEF4000A210BC /* SLAlert.h in Headers */,
@@ -505,6 +510,7 @@
 				5491552F175CF06200A210BC /* NSString+SLAdditions.h in Headers */,
 				54915538175CF24E00A210BC /* SLCoreDataManager.h in Headers */,
 				5491553C175CF24E00A210BC /* SLErrorManager.h in Headers */,
+				546B7A48175D003800B216A3 /* GlobalDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@
  */
 
 #import <QuartzCore/QuartzCore.h>
-#import "SLDefines.h"
+#import "SLGraphicsDefines.h"
 
 #if !TARGET_OS_IPHONE
 #import "NSColor+SLAdditions.h"

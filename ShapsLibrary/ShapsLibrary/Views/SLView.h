@@ -31,9 +31,14 @@
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 @interface SLView : UIView
+
+-(void)layoutSubviews NS_REQUIRES_SUPER;
+
 #else
 @interface SLView : NSView
 #endif
+
+-(void)layout NS_REQUIRES_SUPER;
 
 /// @abstract		All subclasses should use this method to perform layout as this ensures iOS and OSX get updated correctly.
 -(void)layoutViews;

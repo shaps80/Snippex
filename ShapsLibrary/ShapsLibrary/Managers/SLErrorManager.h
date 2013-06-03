@@ -24,7 +24,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "SLDefines.h"
 #import "SLAlert.h"
 
 /// The dictionary key for the alert title
@@ -82,7 +81,7 @@ extern const NSString *kCLErrorOtherButtons;
  @abstract		Returns a singleton instance that will automatically load Errors.plist from the main bundle. If the plist doesn't exist and NSException will occur.
 
  @exception		SLFileNotFoundException Occurs when the plist file cannot be found in the main bundle.
- @discussion	This method doesn't currently validate the plist file so please use the documentation to determine is correct structure.
+ @discussion		This method doesn't currently validate the plist file so please use the documentation to determine is correct structure.
 */
 +(SLErrorManager *)sharedInstance;
 

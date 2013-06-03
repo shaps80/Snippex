@@ -25,7 +25,7 @@
 
 #import "BezierPath+SLAdditions.h"
 #import "SLDrawing.h"
-#import "SLDefines.h"
+#import "SLGraphicsDefines.h"
 
 /**
  This class encapsulates the drawing of a core graphics gradient. 

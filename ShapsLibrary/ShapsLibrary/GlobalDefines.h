@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Shaps. All rights reserved.
+   Copyright (c) 2013 Shaps. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,38 +23,41 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+
 /**
- This class provides an abstract way of subclassing either a UIControl (on iOS) or NSControl (on OSX). It also provides custom methods for updating layout or drawing.
- Any components that should work on both iOS and OSX should subclass this class instead of implementing UIControl/NSControl directly.
+ Place NS_REQUIRES_SUPER at the end of a method definition to force a compiler warning when the user has forgotten to call super for that method.
+ 
+ E.g.
+ 
+	-(void)myMethod NS_REQUIRES_SUPER;
  */
 
-typedef enum
-{
-    SLControlStateNormal			= 0,
-    SLControlStateHighlighted		= 1 << 0,
-    SLControlStateDisabled			= 1 << 1,
-    SLControlStateSelected			= 1 << 2,
-} SLControlState;
-
-#if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
-@interface SLControl : UIControl
-
--(void)layoutSubviews NS_REQUIRES_SUPER;
-
-#else 
-@interface SLControl : NSControl
+#ifndef NS_REQUIRES_SUPER
+#if __has_attribute(objc_requires_super)
+#define NS_REQUIRES_SUPER __attribute((objc_requires_super))
+#else
+#define NS_REQUIRES_SUPER
+#endif
 #endif
 
--(void)layout NS_REQUIRES_SUPER;
 
-/// @abstract		All subclasses should use this method to perform layout as this ensures iOS and OSX get updated correctly.
--(void)layoutViews;
 
-/// @abstract		This ensures setNeedsLayout is called correctly on iOS and OSX
--(void)setLayoutRequired;
+/**
+ Shorthand for calling:
+ 
+	if ([object respondsToSelector:])
+		[object performSelector:selector];
+ 
+ or
+ 
+	if ([object respondsToSelector:withObject:])
+		[object performSelector:selector withObject:object];
+ 
+ etc...
 
-/// @abstract		This ensures setNeedsDisplay is called correctly on iOS and OSX.
--(void)setDrawingRequired;
+ */
 
-@end
+#define TRY_PERFORM(THE_OBJECT, THE_SELECTOR) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR] : nil)
+#define TRY_PERFORM_WITH_ARG(THE_OBJECT, THE_SELECTOR, THE_ARG) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:THE_ARG] : nil)
+#define TRY_PERFORM_WITH_ARG2(THE_OBJECT, THE_SELECTOR, ARG1, ARG2) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:ARG1 withObject:ARG2] : nil)
+

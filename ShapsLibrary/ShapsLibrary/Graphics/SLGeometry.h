@@ -42,6 +42,20 @@ static inline SLOffset SLOffsetMake(CGFloat horizontal, CGFloat vertical)
     return offset;
 }
 
+#if TARGET_OS_IPHONE
+
+static inline SLOffset SLOffsetFromUIOffset(UIOffset offset)
+{
+	return SLOffsetMake(offset.horizontal, offset.vertical);
+}
+
+static inline UIOffset UIOffsetFromSLOffset(SLOffset offset)
+{
+	return UIOffsetMake(offset.horizontal, offset.vertical);
+}
+
+#endif
+
 // rects - the defines are just so because its faster to lookup CL than all the CG references.
 #define CLRectAspectRectFromScale(rect, newScale, isFromCenter) CGRectAspectRectFromScale(rect, newScale, isFromCenter)
 #define CLRectAspectRectFromSize(rect, newSize, isFromCenter) CGRectAspectRectFromSize(rect, newSize, isFromCenter)
