@@ -1,0 +1,970 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54870B02175CB113004194F7 /* ShapsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; };
+		54870B12175CB113004194F7 /* libShapsLibraryiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */; };
+		54870B18175CB113004194F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54870B16175CB113004194F7 /* InfoPlist.strings */; };
+		54870B1B175CB114004194F7 /* ShapsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54870B1A175CB114004194F7 /* ShapsLibraryTests.m */; };
+		5491546B175CE16A00A210BC /* SLASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 5491545C175CE16A00A210BC /* SLASLLogger.h */; };
+		5491546C175CE16A00A210BC /* SLASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545D175CE16A00A210BC /* SLASLLogger.m */; };
+		5491546E175CE16A00A210BC /* SLASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545D175CE16A00A210BC /* SLASLLogger.m */; };
+		54915470175CE16A00A210BC /* SLDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5491545E175CE16A00A210BC /* SLDispatchQueueLogFormatter.h */; };
+		54915471175CE16A00A210BC /* SLDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */; };
+		54915473175CE16A00A210BC /* SLDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */; };
+		5491547A175CE16A00A210BC /* SLLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915462175CE16A00A210BC /* SLLog.h */; };
+		5491547B175CE16A00A210BC /* SLLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915463175CE16A00A210BC /* SLLog.m */; };
+		5491547D175CE16A00A210BC /* SLLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915463175CE16A00A210BC /* SLLog.m */; };
+		5491547F175CE16A00A210BC /* SLTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915464175CE16A00A210BC /* SLTTYLogger.h */; };
+		54915480175CE16A00A210BC /* SLTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915465175CE16A00A210BC /* SLTTYLogger.m */; };
+		54915482175CE16A00A210BC /* SLTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915465175CE16A00A210BC /* SLTTYLogger.m */; };
+		54915484175CE39C00A210BC /* ShapsLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54870B1A175CB114004194F7 /* ShapsLibraryTests.m */; };
+		54915485175CE3C500A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915487175CE3DF00A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
+		549154BF175CE80500A210BC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
+		549154C7175CE93700A210BC /* SLDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLDefines.h */; };
+		549154C8175CE93700A210BC /* SLDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLDefines.h */; };
+		549154CB175CE95400A210BC /* SLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SLView.h */; };
+		549154CC175CE95400A210BC /* SLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SLView.h */; };
+		549154CD175CE95400A210BC /* SLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154CA175CE95400A210BC /* SLView.m */; };
+		549154CE175CE95400A210BC /* SLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154CA175CE95400A210BC /* SLView.m */; };
+		549154D1175CEE9E00A210BC /* SLControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154CF175CEE9E00A210BC /* SLControl.h */; };
+		549154D2175CEE9E00A210BC /* SLControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154CF175CEE9E00A210BC /* SLControl.h */; };
+		549154D3175CEE9E00A210BC /* SLControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D0175CEE9E00A210BC /* SLControl.m */; };
+		549154D4175CEE9E00A210BC /* SLControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D0175CEE9E00A210BC /* SLControl.m */; };
+		549154D7175CEF4000A210BC /* SLAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154D5175CEF4000A210BC /* SLAlert.h */; };
+		549154D8175CEF4000A210BC /* SLAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154D5175CEF4000A210BC /* SLAlert.h */; };
+		549154D9175CEF4000A210BC /* SLAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D6175CEF4000A210BC /* SLAlert.m */; };
+		549154DA175CEF4000A210BC /* SLAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D6175CEF4000A210BC /* SLAlert.m */; };
+		549154E5175CEFF100A210BC /* SLDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DD175CEFF100A210BC /* SLDrawing.h */; };
+		549154E6175CEFF100A210BC /* SLDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DD175CEFF100A210BC /* SLDrawing.h */; };
+		549154E7175CEFF100A210BC /* SLDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154DE175CEFF100A210BC /* SLDrawing.m */; };
+		549154E8175CEFF100A210BC /* SLDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154DE175CEFF100A210BC /* SLDrawing.m */; };
+		549154E9175CEFF100A210BC /* SLGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DF175CEFF100A210BC /* SLGeometry.h */; };
+		549154EA175CEFF100A210BC /* SLGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DF175CEFF100A210BC /* SLGeometry.h */; };
+		549154EB175CEFF100A210BC /* SLGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E0175CEFF100A210BC /* SLGeometry.m */; };
+		549154EC175CEFF100A210BC /* SLGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E0175CEFF100A210BC /* SLGeometry.m */; };
+		549154ED175CEFF100A210BC /* SLGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E1175CEFF100A210BC /* SLGradient.h */; };
+		549154EE175CEFF100A210BC /* SLGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E1175CEFF100A210BC /* SLGradient.h */; };
+		549154EF175CEFF100A210BC /* SLGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E2175CEFF100A210BC /* SLGradient.m */; };
+		549154F0175CEFF100A210BC /* SLGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E2175CEFF100A210BC /* SLGradient.m */; };
+		549154F1175CEFF100A210BC /* SLShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E3175CEFF100A210BC /* SLShadow.h */; };
+		549154F2175CEFF100A210BC /* SLShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E3175CEFF100A210BC /* SLShadow.h */; };
+		549154F3175CEFF100A210BC /* SLShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E4175CEFF100A210BC /* SLShadow.m */; };
+		549154F4175CEFF100A210BC /* SLShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E4175CEFF100A210BC /* SLShadow.m */; };
+		5491550A175CF06200A210BC /* BezierPath+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F6175CF06200A210BC /* BezierPath+SLAdditions.h */; };
+		5491550B175CF06200A210BC /* BezierPath+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F6175CF06200A210BC /* BezierPath+SLAdditions.h */; };
+		5491550C175CF06200A210BC /* BezierPath+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F7175CF06200A210BC /* BezierPath+SLAdditions.m */; };
+		5491550D175CF06200A210BC /* BezierPath+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F7175CF06200A210BC /* BezierPath+SLAdditions.m */; };
+		5491550E175CF06200A210BC /* NSBlock+TypedDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+TypedDescription.h */; };
+		5491550F175CF06200A210BC /* NSBlock+TypedDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+TypedDescription.h */; };
+		54915510175CF06200A210BC /* NSBlock+TypedDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+TypedDescription.m */; };
+		54915511175CF06200A210BC /* NSBlock+TypedDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+TypedDescription.m */; };
+		54915512175CF06200A210BC /* NSColor+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FA175CF06200A210BC /* NSColor+SLAdditions.h */; };
+		54915513175CF06200A210BC /* NSColor+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FA175CF06200A210BC /* NSColor+SLAdditions.h */; };
+		54915515175CF06200A210BC /* NSColor+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FB175CF06200A210BC /* NSColor+SLAdditions.m */; };
+		54915516175CF06200A210BC /* NSData+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SLAdditions.h */; };
+		54915517175CF06200A210BC /* NSData+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SLAdditions.h */; };
+		54915518175CF06200A210BC /* NSData+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SLAdditions.m */; };
+		54915519175CF06200A210BC /* NSData+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SLAdditions.m */; };
+		5491551A175CF06200A210BC /* NSDate+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FE175CF06200A210BC /* NSDate+SLAdditions.h */; };
+		5491551B175CF06200A210BC /* NSDate+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FE175CF06200A210BC /* NSDate+SLAdditions.h */; };
+		5491551C175CF06200A210BC /* NSDate+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FF175CF06200A210BC /* NSDate+SLAdditions.m */; };
+		5491551D175CF06200A210BC /* NSDate+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FF175CF06200A210BC /* NSDate+SLAdditions.m */; };
+		5491551E175CF06200A210BC /* NSDateFormatter+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915500175CF06200A210BC /* NSDateFormatter+SLAdditions.h */; };
+		5491551F175CF06200A210BC /* NSDateFormatter+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915500175CF06200A210BC /* NSDateFormatter+SLAdditions.h */; };
+		54915520175CF06200A210BC /* NSDateFormatter+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SLAdditions.m */; };
+		54915521175CF06200A210BC /* NSDateFormatter+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SLAdditions.m */; };
+		54915522175CF06200A210BC /* NSDictionary+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915502175CF06200A210BC /* NSDictionary+SLAdditions.h */; };
+		54915523175CF06200A210BC /* NSDictionary+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915502175CF06200A210BC /* NSDictionary+SLAdditions.h */; };
+		54915524175CF06200A210BC /* NSDictionary+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915503175CF06200A210BC /* NSDictionary+SLAdditions.m */; };
+		54915525175CF06200A210BC /* NSDictionary+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915503175CF06200A210BC /* NSDictionary+SLAdditions.m */; };
+		54915526175CF06200A210BC /* NSManagedObject+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915504175CF06200A210BC /* NSManagedObject+SLAdditions.h */; };
+		54915527175CF06200A210BC /* NSManagedObject+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915504175CF06200A210BC /* NSManagedObject+SLAdditions.h */; };
+		54915528175CF06200A210BC /* NSManagedObject+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915505175CF06200A210BC /* NSManagedObject+SLAdditions.m */; };
+		54915529175CF06200A210BC /* NSManagedObject+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915505175CF06200A210BC /* NSManagedObject+SLAdditions.m */; };
+		5491552A175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915506175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h */; };
+		5491552B175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915506175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h */; };
+		5491552C175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915507175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m */; };
+		5491552D175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915507175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m */; };
+		5491552E175CF06200A210BC /* NSString+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915508175CF06200A210BC /* NSString+SLAdditions.h */; };
+		5491552F175CF06200A210BC /* NSString+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915508175CF06200A210BC /* NSString+SLAdditions.h */; };
+		54915530175CF06200A210BC /* NSString+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915509175CF06200A210BC /* NSString+SLAdditions.m */; };
+		54915531175CF06200A210BC /* NSString+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915509175CF06200A210BC /* NSString+SLAdditions.m */; };
+		54915537175CF24E00A210BC /* SLCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915533175CF24E00A210BC /* SLCoreDataManager.h */; };
+		54915538175CF24E00A210BC /* SLCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915533175CF24E00A210BC /* SLCoreDataManager.h */; };
+		54915539175CF24E00A210BC /* SLCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915534175CF24E00A210BC /* SLCoreDataManager.m */; };
+		5491553A175CF24E00A210BC /* SLCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915534175CF24E00A210BC /* SLCoreDataManager.m */; };
+		5491553B175CF24E00A210BC /* SLErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SLErrorManager.h */; };
+		5491553C175CF24E00A210BC /* SLErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SLErrorManager.h */; };
+		5491553D175CF24E00A210BC /* SLErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SLErrorManager.m */; };
+		5491553E175CF24E00A210BC /* SLErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SLErrorManager.m */; };
+		54CA9081175CDB6200470B9F /* libShapsLibraryOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54CA906A175CDB6200470B9F /* libShapsLibraryOSX.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54870B10175CB113004194F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54870AF1175CB113004194F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54870AF8175CB113004194F7;
+			remoteInfo = ShapsLibrary;
+		};
+		54CA907F175CDB6200470B9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54870AF1175CB113004194F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54CA9069175CDB6200470B9F;
+			remoteInfo = ShapsLibraryOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		54870AF7175CB113004194F7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				54870B02175CB113004194F7 /* ShapsLibrary.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShapsLibraryiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		54870B00175CB113004194F7 /* ShapsLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapsLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		54870B01175CB113004194F7 /* ShapsLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShapsLibrary.h; path = ShapsLibrary/ShapsLibrary.h; sourceTree = "<group>"; };
+		54870B0A175CB113004194F7 /* ShapsLibraryiOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapsLibraryiOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54870B15175CB113004194F7 /* ShapsLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShapsLibraryTests-Info.plist"; sourceTree = "<group>"; };
+		54870B17175CB113004194F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		54870B19175CB113004194F7 /* ShapsLibraryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapsLibraryTests.h; sourceTree = "<group>"; };
+		54870B1A175CB114004194F7 /* ShapsLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapsLibraryTests.m; sourceTree = "<group>"; };
+		5491545C175CE16A00A210BC /* SLASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLASLLogger.h; sourceTree = "<group>"; };
+		5491545D175CE16A00A210BC /* SLASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLASLLogger.m; sourceTree = "<group>"; };
+		5491545E175CE16A00A210BC /* SLDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		54915462175CE16A00A210BC /* SLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLog.h; sourceTree = "<group>"; };
+		54915463175CE16A00A210BC /* SLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLog.m; sourceTree = "<group>"; };
+		54915464175CE16A00A210BC /* SLTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTTYLogger.h; sourceTree = "<group>"; };
+		54915465175CE16A00A210BC /* SLTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTTYLogger.m; sourceTree = "<group>"; };
+		549154BD175CE7DD00A210BC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		549154C6175CE93700A210BC /* SLDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDefines.h; sourceTree = "<group>"; };
+		549154C9175CE95400A210BC /* SLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLView.h; sourceTree = "<group>"; };
+		549154CA175CE95400A210BC /* SLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLView.m; sourceTree = "<group>"; };
+		549154CF175CEE9E00A210BC /* SLControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLControl.h; sourceTree = "<group>"; };
+		549154D0175CEE9E00A210BC /* SLControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLControl.m; sourceTree = "<group>"; };
+		549154D5175CEF4000A210BC /* SLAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAlert.h; sourceTree = "<group>"; };
+		549154D6175CEF4000A210BC /* SLAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAlert.m; sourceTree = "<group>"; };
+		549154DD175CEFF100A210BC /* SLDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDrawing.h; sourceTree = "<group>"; };
+		549154DE175CEFF100A210BC /* SLDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDrawing.m; sourceTree = "<group>"; };
+		549154DF175CEFF100A210BC /* SLGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGeometry.h; sourceTree = "<group>"; };
+		549154E0175CEFF100A210BC /* SLGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGeometry.m; sourceTree = "<group>"; };
+		549154E1175CEFF100A210BC /* SLGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGradient.h; sourceTree = "<group>"; };
+		549154E2175CEFF100A210BC /* SLGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGradient.m; sourceTree = "<group>"; };
+		549154E3175CEFF100A210BC /* SLShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShadow.h; sourceTree = "<group>"; };
+		549154E4175CEFF100A210BC /* SLShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLShadow.m; sourceTree = "<group>"; };
+		549154F6175CF06200A210BC /* BezierPath+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BezierPath+SLAdditions.h"; sourceTree = "<group>"; };
+		549154F7175CF06200A210BC /* BezierPath+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BezierPath+SLAdditions.m"; sourceTree = "<group>"; };
+		549154F8175CF06200A210BC /* NSBlock+TypedDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBlock+TypedDescription.h"; sourceTree = "<group>"; };
+		549154F9175CF06200A210BC /* NSBlock+TypedDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBlock+TypedDescription.m"; sourceTree = "<group>"; };
+		549154FA175CF06200A210BC /* NSColor+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+SLAdditions.h"; sourceTree = "<group>"; };
+		549154FB175CF06200A210BC /* NSColor+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+SLAdditions.m"; sourceTree = "<group>"; };
+		549154FC175CF06200A210BC /* NSData+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SLAdditions.h"; sourceTree = "<group>"; };
+		549154FD175CF06200A210BC /* NSData+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SLAdditions.m"; sourceTree = "<group>"; };
+		549154FE175CF06200A210BC /* NSDate+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SLAdditions.h"; sourceTree = "<group>"; };
+		549154FF175CF06200A210BC /* NSDate+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SLAdditions.m"; sourceTree = "<group>"; };
+		54915500175CF06200A210BC /* NSDateFormatter+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SLAdditions.h"; sourceTree = "<group>"; };
+		54915501175CF06200A210BC /* NSDateFormatter+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SLAdditions.m"; sourceTree = "<group>"; };
+		54915502175CF06200A210BC /* NSDictionary+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SLAdditions.h"; sourceTree = "<group>"; };
+		54915503175CF06200A210BC /* NSDictionary+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SLAdditions.m"; sourceTree = "<group>"; };
+		54915504175CF06200A210BC /* NSManagedObject+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+SLAdditions.h"; sourceTree = "<group>"; };
+		54915505175CF06200A210BC /* NSManagedObject+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+SLAdditions.m"; sourceTree = "<group>"; };
+		54915506175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SLAdditions.h"; sourceTree = "<group>"; };
+		54915507175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SLAdditions.m"; sourceTree = "<group>"; };
+		54915508175CF06200A210BC /* NSString+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SLAdditions.h"; sourceTree = "<group>"; };
+		54915509175CF06200A210BC /* NSString+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SLAdditions.m"; sourceTree = "<group>"; };
+		54915533175CF24E00A210BC /* SLCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCoreDataManager.h; sourceTree = "<group>"; };
+		54915534175CF24E00A210BC /* SLCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCoreDataManager.m; sourceTree = "<group>"; };
+		54915535175CF24E00A210BC /* SLErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLErrorManager.h; sourceTree = "<group>"; };
+		54915536175CF24E00A210BC /* SLErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLErrorManager.m; sourceTree = "<group>"; };
+		54CA906A175CDB6200470B9F /* libShapsLibraryOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShapsLibraryOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		54CA907C175CDB6200470B9F /* ShapsLibraryOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapsLibraryOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54870AF6175CB113004194F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54870B06175CB113004194F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549154BF175CE80500A210BC /* SenTestingKit.framework in Frameworks */,
+				54870B12175CB113004194F7 /* libShapsLibraryiOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CA9067175CDB6200470B9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CA9078175CDB6200470B9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */,
+				54CA9081175CDB6200470B9F /* libShapsLibraryOSX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54870AF0175CB113004194F7 = {
+			isa = PBXGroup;
+			children = (
+				54870B01175CB113004194F7 /* ShapsLibrary.h */,
+				54870AFE175CB113004194F7 /* ShapsLibrary */,
+				54870B13175CB113004194F7 /* ShapsLibraryTests */,
+				54915459175CE13300A210BC /* Supporting Files */,
+				54870AFB175CB113004194F7 /* Frameworks */,
+				54870AFA175CB113004194F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54870AFA175CB113004194F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */,
+				54870B0A175CB113004194F7 /* ShapsLibraryiOSTests.octest */,
+				54CA906A175CDB6200470B9F /* libShapsLibraryOSX.a */,
+				54CA907C175CDB6200470B9F /* ShapsLibraryOSXTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54870AFB175CB113004194F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				549154C2175CE81700A210BC /* iOS */,
+				549154B8175CE7AF00A210BC /* Common */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54870AFE175CB113004194F7 /* ShapsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				549154C6175CE93700A210BC /* SLDefines.h */,
+				549154DC175CEFA600A210BC /* Views */,
+				54915532175CF1DD00A210BC /* Managers */,
+				549154DB175CEF9E00A210BC /* Graphics */,
+				549154F5175CF04500A210BC /* Categories */,
+			);
+			path = ShapsLibrary;
+			sourceTree = "<group>";
+		};
+		54870B13175CB113004194F7 /* ShapsLibraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				54870B19175CB113004194F7 /* ShapsLibraryTests.h */,
+				54870B1A175CB114004194F7 /* ShapsLibraryTests.m */,
+				54870B14175CB113004194F7 /* Supporting Files */,
+			);
+			path = ShapsLibraryTests;
+			sourceTree = "<group>";
+		};
+		54870B14175CB113004194F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54870B15175CB113004194F7 /* ShapsLibraryTests-Info.plist */,
+				54870B16175CB113004194F7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		54915457175CE10300A210BC /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				54915462175CE16A00A210BC /* SLLog.h */,
+				54915463175CE16A00A210BC /* SLLog.m */,
+				5491545C175CE16A00A210BC /* SLASLLogger.h */,
+				5491545D175CE16A00A210BC /* SLASLLogger.m */,
+				54915464175CE16A00A210BC /* SLTTYLogger.h */,
+				54915465175CE16A00A210BC /* SLTTYLogger.m */,
+				5491545E175CE16A00A210BC /* SLDispatchQueueLogFormatter.h */,
+				5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		54915459175CE13300A210BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54915457175CE10300A210BC /* Logging */,
+				54870B00175CB113004194F7 /* ShapsLibrary-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = ShapsLibrary;
+			sourceTree = "<group>";
+		};
+		549154B8175CE7AF00A210BC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				549154BD175CE7DD00A210BC /* SenTestingKit.framework */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		549154C2175CE81700A210BC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		549154DB175CEF9E00A210BC /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				549154DD175CEFF100A210BC /* SLDrawing.h */,
+				549154DE175CEFF100A210BC /* SLDrawing.m */,
+				549154DF175CEFF100A210BC /* SLGeometry.h */,
+				549154E0175CEFF100A210BC /* SLGeometry.m */,
+				549154E1175CEFF100A210BC /* SLGradient.h */,
+				549154E2175CEFF100A210BC /* SLGradient.m */,
+				549154E3175CEFF100A210BC /* SLShadow.h */,
+				549154E4175CEFF100A210BC /* SLShadow.m */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		549154DC175CEFA600A210BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				549154C9175CE95400A210BC /* SLView.h */,
+				549154CA175CE95400A210BC /* SLView.m */,
+				549154CF175CEE9E00A210BC /* SLControl.h */,
+				549154D0175CEE9E00A210BC /* SLControl.m */,
+				549154D5175CEF4000A210BC /* SLAlert.h */,
+				549154D6175CEF4000A210BC /* SLAlert.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		549154F5175CF04500A210BC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				549154F6175CF06200A210BC /* BezierPath+SLAdditions.h */,
+				549154F7175CF06200A210BC /* BezierPath+SLAdditions.m */,
+				549154F8175CF06200A210BC /* NSBlock+TypedDescription.h */,
+				549154F9175CF06200A210BC /* NSBlock+TypedDescription.m */,
+				549154FA175CF06200A210BC /* NSColor+SLAdditions.h */,
+				549154FB175CF06200A210BC /* NSColor+SLAdditions.m */,
+				549154FC175CF06200A210BC /* NSData+SLAdditions.h */,
+				549154FD175CF06200A210BC /* NSData+SLAdditions.m */,
+				549154FE175CF06200A210BC /* NSDate+SLAdditions.h */,
+				549154FF175CF06200A210BC /* NSDate+SLAdditions.m */,
+				54915500175CF06200A210BC /* NSDateFormatter+SLAdditions.h */,
+				54915501175CF06200A210BC /* NSDateFormatter+SLAdditions.m */,
+				54915502175CF06200A210BC /* NSDictionary+SLAdditions.h */,
+				54915503175CF06200A210BC /* NSDictionary+SLAdditions.m */,
+				54915504175CF06200A210BC /* NSManagedObject+SLAdditions.h */,
+				54915505175CF06200A210BC /* NSManagedObject+SLAdditions.m */,
+				54915506175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h */,
+				54915507175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m */,
+				54915508175CF06200A210BC /* NSString+SLAdditions.h */,
+				54915509175CF06200A210BC /* NSString+SLAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		54915532175CF1DD00A210BC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				54915533175CF24E00A210BC /* SLCoreDataManager.h */,
+				54915534175CF24E00A210BC /* SLCoreDataManager.m */,
+				54915535175CF24E00A210BC /* SLErrorManager.h */,
+				54915536175CF24E00A210BC /* SLErrorManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		54915486175CE3D800A210BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54915487175CE3DF00A210BC /* ShapsLibrary.h in Headers */,
+				549154C7175CE93700A210BC /* SLDefines.h in Headers */,
+				549154CB175CE95400A210BC /* SLView.h in Headers */,
+				549154D1175CEE9E00A210BC /* SLControl.h in Headers */,
+				549154D7175CEF4000A210BC /* SLAlert.h in Headers */,
+				549154E5175CEFF100A210BC /* SLDrawing.h in Headers */,
+				549154E9175CEFF100A210BC /* SLGeometry.h in Headers */,
+				549154ED175CEFF100A210BC /* SLGradient.h in Headers */,
+				549154F1175CEFF100A210BC /* SLShadow.h in Headers */,
+				5491550A175CF06200A210BC /* BezierPath+SLAdditions.h in Headers */,
+				5491550E175CF06200A210BC /* NSBlock+TypedDescription.h in Headers */,
+				54915512175CF06200A210BC /* NSColor+SLAdditions.h in Headers */,
+				54915516175CF06200A210BC /* NSData+SLAdditions.h in Headers */,
+				5491551A175CF06200A210BC /* NSDate+SLAdditions.h in Headers */,
+				5491551E175CF06200A210BC /* NSDateFormatter+SLAdditions.h in Headers */,
+				54915522175CF06200A210BC /* NSDictionary+SLAdditions.h in Headers */,
+				54915526175CF06200A210BC /* NSManagedObject+SLAdditions.h in Headers */,
+				5491552A175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h in Headers */,
+				5491552E175CF06200A210BC /* NSString+SLAdditions.h in Headers */,
+				54915537175CF24E00A210BC /* SLCoreDataManager.h in Headers */,
+				5491553B175CF24E00A210BC /* SLErrorManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CA9068175CDB6200470B9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54915485175CE3C500A210BC /* ShapsLibrary.h in Headers */,
+				5491546B175CE16A00A210BC /* SLASLLogger.h in Headers */,
+				54915470175CE16A00A210BC /* SLDispatchQueueLogFormatter.h in Headers */,
+				5491547A175CE16A00A210BC /* SLLog.h in Headers */,
+				5491547F175CE16A00A210BC /* SLTTYLogger.h in Headers */,
+				549154C8175CE93700A210BC /* SLDefines.h in Headers */,
+				549154CC175CE95400A210BC /* SLView.h in Headers */,
+				549154D2175CEE9E00A210BC /* SLControl.h in Headers */,
+				549154D8175CEF4000A210BC /* SLAlert.h in Headers */,
+				549154E6175CEFF100A210BC /* SLDrawing.h in Headers */,
+				549154EA175CEFF100A210BC /* SLGeometry.h in Headers */,
+				549154EE175CEFF100A210BC /* SLGradient.h in Headers */,
+				549154F2175CEFF100A210BC /* SLShadow.h in Headers */,
+				5491550B175CF06200A210BC /* BezierPath+SLAdditions.h in Headers */,
+				5491550F175CF06200A210BC /* NSBlock+TypedDescription.h in Headers */,
+				54915513175CF06200A210BC /* NSColor+SLAdditions.h in Headers */,
+				54915517175CF06200A210BC /* NSData+SLAdditions.h in Headers */,
+				5491551B175CF06200A210BC /* NSDate+SLAdditions.h in Headers */,
+				5491551F175CF06200A210BC /* NSDateFormatter+SLAdditions.h in Headers */,
+				54915523175CF06200A210BC /* NSDictionary+SLAdditions.h in Headers */,
+				54915527175CF06200A210BC /* NSManagedObject+SLAdditions.h in Headers */,
+				5491552B175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h in Headers */,
+				5491552F175CF06200A210BC /* NSString+SLAdditions.h in Headers */,
+				54915538175CF24E00A210BC /* SLCoreDataManager.h in Headers */,
+				5491553C175CF24E00A210BC /* SLErrorManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		54870AF8175CB113004194F7 /* ShapsLibraryiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54870B1E175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOS" */;
+			buildPhases = (
+				54870AF5175CB113004194F7 /* Sources */,
+				54870AF6175CB113004194F7 /* Frameworks */,
+				54870AF7175CB113004194F7 /* CopyFiles */,
+				54915486175CE3D800A210BC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShapsLibraryiOS;
+			productName = ShapsLibrary;
+			productReference = 54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		54870B09175CB113004194F7 /* ShapsLibraryiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54870B21175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOSTests" */;
+			buildPhases = (
+				54870B06175CB113004194F7 /* Frameworks */,
+				54870B05175CB113004194F7 /* Sources */,
+				54870B07175CB113004194F7 /* Resources */,
+				54870B08175CB113004194F7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54870B11175CB113004194F7 /* PBXTargetDependency */,
+			);
+			name = ShapsLibraryiOSTests;
+			productName = ShapsLibraryTests;
+			productReference = 54870B0A175CB113004194F7 /* ShapsLibraryiOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		54CA9069175CDB6200470B9F /* ShapsLibraryOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54CA908B175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSX" */;
+			buildPhases = (
+				54CA9066175CDB6200470B9F /* Sources */,
+				54CA9067175CDB6200470B9F /* Frameworks */,
+				54CA9068175CDB6200470B9F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShapsLibraryOSX;
+			productName = ShapsLibraryOSX;
+			productReference = 54CA906A175CDB6200470B9F /* libShapsLibraryOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		54CA907B175CDB6200470B9F /* ShapsLibraryOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54CA908E175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSXTests" */;
+			buildPhases = (
+				54CA9078175CDB6200470B9F /* Frameworks */,
+				54CA9077175CDB6200470B9F /* Sources */,
+				54CA9079175CDB6200470B9F /* Resources */,
+				54CA907A175CDB6200470B9F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54CA9080175CDB6200470B9F /* PBXTargetDependency */,
+			);
+			name = ShapsLibraryOSXTests;
+			productName = ShapsLibraryOSXTests;
+			productReference = 54CA907C175CDB6200470B9F /* ShapsLibraryOSXTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54870AF1175CB113004194F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Shaps;
+			};
+			buildConfigurationList = 54870AF4175CB113004194F7 /* Build configuration list for PBXProject "ShapsLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 54870AF0175CB113004194F7;
+			productRefGroup = 54870AFA175CB113004194F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54870AF8175CB113004194F7 /* ShapsLibraryiOS */,
+				54870B09175CB113004194F7 /* ShapsLibraryiOSTests */,
+				54CA9069175CDB6200470B9F /* ShapsLibraryOSX */,
+				54CA907B175CDB6200470B9F /* ShapsLibraryOSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54870B07175CB113004194F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54870B18175CB113004194F7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CA9079175CDB6200470B9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54870B08175CB113004194F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		54CA907A175CDB6200470B9F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54870AF5175CB113004194F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5491546C175CE16A00A210BC /* SLASLLogger.m in Sources */,
+				54915471175CE16A00A210BC /* SLDispatchQueueLogFormatter.m in Sources */,
+				5491547B175CE16A00A210BC /* SLLog.m in Sources */,
+				54915480175CE16A00A210BC /* SLTTYLogger.m in Sources */,
+				549154CD175CE95400A210BC /* SLView.m in Sources */,
+				549154D3175CEE9E00A210BC /* SLControl.m in Sources */,
+				549154D9175CEF4000A210BC /* SLAlert.m in Sources */,
+				549154E7175CEFF100A210BC /* SLDrawing.m in Sources */,
+				549154EB175CEFF100A210BC /* SLGeometry.m in Sources */,
+				549154EF175CEFF100A210BC /* SLGradient.m in Sources */,
+				549154F3175CEFF100A210BC /* SLShadow.m in Sources */,
+				5491550C175CF06200A210BC /* BezierPath+SLAdditions.m in Sources */,
+				54915510175CF06200A210BC /* NSBlock+TypedDescription.m in Sources */,
+				54915518175CF06200A210BC /* NSData+SLAdditions.m in Sources */,
+				5491551C175CF06200A210BC /* NSDate+SLAdditions.m in Sources */,
+				54915520175CF06200A210BC /* NSDateFormatter+SLAdditions.m in Sources */,
+				54915524175CF06200A210BC /* NSDictionary+SLAdditions.m in Sources */,
+				54915528175CF06200A210BC /* NSManagedObject+SLAdditions.m in Sources */,
+				5491552C175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m in Sources */,
+				54915530175CF06200A210BC /* NSString+SLAdditions.m in Sources */,
+				54915539175CF24E00A210BC /* SLCoreDataManager.m in Sources */,
+				5491553D175CF24E00A210BC /* SLErrorManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54870B05175CB113004194F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54870B1B175CB114004194F7 /* ShapsLibraryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CA9066175CDB6200470B9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5491546E175CE16A00A210BC /* SLASLLogger.m in Sources */,
+				54915473175CE16A00A210BC /* SLDispatchQueueLogFormatter.m in Sources */,
+				5491547D175CE16A00A210BC /* SLLog.m in Sources */,
+				54915482175CE16A00A210BC /* SLTTYLogger.m in Sources */,
+				549154CE175CE95400A210BC /* SLView.m in Sources */,
+				549154D4175CEE9E00A210BC /* SLControl.m in Sources */,
+				549154DA175CEF4000A210BC /* SLAlert.m in Sources */,
+				549154E8175CEFF100A210BC /* SLDrawing.m in Sources */,
+				549154EC175CEFF100A210BC /* SLGeometry.m in Sources */,
+				549154F0175CEFF100A210BC /* SLGradient.m in Sources */,
+				549154F4175CEFF100A210BC /* SLShadow.m in Sources */,
+				5491550D175CF06200A210BC /* BezierPath+SLAdditions.m in Sources */,
+				54915511175CF06200A210BC /* NSBlock+TypedDescription.m in Sources */,
+				54915515175CF06200A210BC /* NSColor+SLAdditions.m in Sources */,
+				54915519175CF06200A210BC /* NSData+SLAdditions.m in Sources */,
+				5491551D175CF06200A210BC /* NSDate+SLAdditions.m in Sources */,
+				54915521175CF06200A210BC /* NSDateFormatter+SLAdditions.m in Sources */,
+				54915525175CF06200A210BC /* NSDictionary+SLAdditions.m in Sources */,
+				54915529175CF06200A210BC /* NSManagedObject+SLAdditions.m in Sources */,
+				5491552D175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m in Sources */,
+				54915531175CF06200A210BC /* NSString+SLAdditions.m in Sources */,
+				5491553A175CF24E00A210BC /* SLCoreDataManager.m in Sources */,
+				5491553E175CF24E00A210BC /* SLErrorManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CA9077175CDB6200470B9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54915484175CE39C00A210BC /* ShapsLibraryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54870B11175CB113004194F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54870AF8175CB113004194F7 /* ShapsLibraryiOS */;
+			targetProxy = 54870B10175CB113004194F7 /* PBXContainerItemProxy */;
+		};
+		54CA9080175CDB6200470B9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54CA9069175CDB6200470B9F /* ShapsLibraryOSX */;
+			targetProxy = 54CA907F175CDB6200470B9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		54870B16175CB113004194F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54870B17175CB113004194F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54870B1C175CB114004194F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		54870B1D175CB114004194F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54870B1F175CB114004194F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DSTROOT = /tmp/ShapsLibrary.dst;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		54870B20175CB114004194F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DSTROOT = /tmp/ShapsLibrary.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		54870B22175CB114004194F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
+				INFOPLIST_FILE = "ShapsLibraryTests/ShapsLibraryTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		54870B23175CB114004194F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
+				INFOPLIST_FILE = "ShapsLibraryTests/ShapsLibraryTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		54CA908C175CDB6200470B9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		54CA908D175CDB6200470B9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+		54CA908F175CDB6200470B9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "ShapsLibraryTests/ShapsLibraryTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		54CA9090175CDB6200470B9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShapsLibrary/ShapsLibrary-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "ShapsLibraryTests/ShapsLibraryTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54870AF4175CB113004194F7 /* Build configuration list for PBXProject "ShapsLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54870B1C175CB114004194F7 /* Debug */,
+				54870B1D175CB114004194F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54870B1E175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54870B1F175CB114004194F7 /* Debug */,
+				54870B20175CB114004194F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54870B21175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54870B22175CB114004194F7 /* Debug */,
+				54870B23175CB114004194F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54CA908B175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54CA908C175CDB6200470B9F /* Debug */,
+				54CA908D175CDB6200470B9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54CA908E175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54CA908F175CDB6200470B9F /* Debug */,
+				54CA9090175CDB6200470B9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54870AF1175CB113004194F7 /* Project object */;
+}
