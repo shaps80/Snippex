@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SLRegisteredDynamicLogging.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SLRegisteredDynamicLogging</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLLog.h</DeclaredIn>
+			
+			<NodeRef refid="28"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLRegisteredDynamicLogging/slLogLevel</TokenIdentifier>
+			<Abstract type="html">Implement these methods to allow a file&apos;s log level to be managed from a central location.</Abstract>
+			<DeclaredIn>SLLog.h</DeclaredIn>			
+			
+			<Declaration>+ (int)slLogLevel</Declaration>
+			
+			
+			<Anchor>//api/name/slLogLevel</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+	</File>
+</Tokens>

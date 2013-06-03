@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SLLogger.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SLLogger</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLLog.h</DeclaredIn>
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLLogger/logFormatter</TokenIdentifier>
+			<Abstract type="html">Formatters may optionally be added to any logger.</Abstract>
+			<DeclaredIn>SLLog.h</DeclaredIn>			
+			
+			<Declaration>- (id&lt;SLLogFormatter&gt;)logFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/logFormatter</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLLogger/didAddLogger</TokenIdentifier>
+			<Abstract type="html">Since logging is asynchronous, adding and removing loggers is also asynchronous.
+In other words, the loggers are added and removed at appropriate times with regards to log messages.</Abstract>
+			<DeclaredIn>SLLog.h</DeclaredIn>			
+			
+			<Declaration>- (void)didAddLogger</Declaration>
+			
+			
+			<Anchor>//api/name/didAddLogger</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLLogger/flush</TokenIdentifier>
+			<Abstract type="html">Some loggers may buffer IO for optimization purposes.
+For example, a database logger may only save occasionaly as the disk IO is slow.
+In such loggers, this method should be implemented to flush any pending IO.</Abstract>
+			<DeclaredIn>SLLog.h</DeclaredIn>			
+			
+			<Declaration>- (void)flush</Declaration>
+			
+			
+			<Anchor>//api/name/flush</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLLogger/loggerQueue</TokenIdentifier>
+			<Abstract type="html">Each logger is executed concurrently with respect to the other loggers.
+Thus, a dedicated dispatch queue is used for each logger.
+Logger implementations may optionally choose to provide their own dispatch queue.</Abstract>
+			<DeclaredIn>SLLog.h</DeclaredIn>			
+			
+			<Declaration>- (dispatch_queue_t)loggerQueue</Declaration>
+			
+			
+			<Anchor>//api/name/loggerQueue</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLLogger/loggerName</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLLog.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)loggerName</Declaration>
+			
+			
+			<Anchor>//api/name/loggerName</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+	</File>
+</Tokens>

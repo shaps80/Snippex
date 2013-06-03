@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>ShapsLibrary 1.0</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
+						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="16"/>
+						<NodeRef refid="17"/>
+						<NodeRef refid="18"/>
+						<NodeRef refid="19"/>
+						<NodeRef refid="20"/>
+						<NodeRef refid="21"/>
+						<NodeRef refid="22"/>
+						<NodeRef refid="23"/>
+						<NodeRef refid="24"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="25"/>
+						<NodeRef refid="26"/>
+						<NodeRef refid="27"/>
+						<NodeRef refid="28"/>
+						
+					</Subnodes>
+				</Node>
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>SLASLLogger</Name>
+			<Path>Classes/SLASLLogger.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>SLAbstractLogger</Name>
+			<Path>Classes/SLAbstractLogger.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>SLAlert</Name>
+			<Path>Classes/SLAlert.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>SLControl</Name>
+			<Path>Classes/SLControl.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>SLCoreDataManager</Name>
+			<Path>Classes/SLCoreDataManager.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>SLDispatchQueueLogFormatter</Name>
+			<Path>Classes/SLDispatchQueueLogFormatter.html</Path>
+		</Node>
+		<Node id="7">
+			<Name>SLErrorManager</Name>
+			<Path>Classes/SLErrorManager.html</Path>
+		</Node>
+		<Node id="8">
+			<Name>SLGradient</Name>
+			<Path>Classes/SLGradient.html</Path>
+		</Node>
+		<Node id="9">
+			<Name>SLLog</Name>
+			<Path>Classes/SLLog.html</Path>
+		</Node>
+		<Node id="10">
+			<Name>SLLogMessage</Name>
+			<Path>Classes/SLLogMessage.html</Path>
+		</Node>
+		<Node id="11">
+			<Name>SLLoggerNode</Name>
+			<Path>Classes/SLLoggerNode.html</Path>
+		</Node>
+		<Node id="12">
+			<Name>SLShadow</Name>
+			<Path>Classes/SLShadow.html</Path>
+		</Node>
+		<Node id="13">
+			<Name>SLTTYLogger</Name>
+			<Path>Classes/SLTTYLogger.html</Path>
+		</Node>
+		<Node id="14">
+			<Name>SLTTYLoggerColorProfile</Name>
+			<Path>Classes/SLTTYLoggerColorProfile.html</Path>
+		</Node>
+		<Node id="15">
+			<Name>SLView</Name>
+			<Path>Classes/SLView.html</Path>
+		</Node>
+		
+		<Node id="16">
+			<Name>NSColor(SLAdditions)</Name>
+			<Path>Categories/NSColor+SLAdditions.html</Path>
+		</Node>
+		<Node id="17">
+			<Name>NSData(SLAdditions)</Name>
+			<Path>Categories/NSData+SLAdditions.html</Path>
+		</Node>
+		<Node id="18">
+			<Name>NSDate(SLAdditions)</Name>
+			<Path>Categories/NSDate+SLAdditions.html</Path>
+		</Node>
+		<Node id="19">
+			<Name>NSDateFormatter(SLAdditions)</Name>
+			<Path>Categories/NSDateFormatter+SLAdditions.html</Path>
+		</Node>
+		<Node id="20">
+			<Name>NSDictionary(SLAdditions)</Name>
+			<Path>Categories/NSDictionary+SLAdditions.html</Path>
+		</Node>
+		<Node id="21">
+			<Name>NSManagedObject(SLAdditions)</Name>
+			<Path>Categories/NSManagedObject+SLAdditions.html</Path>
+		</Node>
+		<Node id="22">
+			<Name>NSManagedObjectContext(SLAdditions)</Name>
+			<Path>Categories/NSManagedObjectContext+SLAdditions.html</Path>
+		</Node>
+		<Node id="23">
+			<Name>NSString(SLAdditions)</Name>
+			<Path>Categories/NSString+SLAdditions.html</Path>
+		</Node>
+		<Node id="24">
+			<Name>UIBezierPath(SLAdditions)</Name>
+			<Path>Categories/UIBezierPath+SLAdditions.html</Path>
+		</Node>
+		
+		<Node id="25">
+			<Name>SLAlertProtocol</Name>
+			<Path>Protocols/SLAlertProtocol.html</Path>
+		</Node>
+		<Node id="26">
+			<Name>SLLogFormatter</Name>
+			<Path>Protocols/SLLogFormatter.html</Path>
+		</Node>
+		<Node id="27">
+			<Name>SLLogger</Name>
+			<Path>Protocols/SLLogger.html</Path>
+		</Node>
+		<Node id="28">
+			<Name>SLRegisteredDynamicLogging</Name>
+			<Path>Protocols/SLRegisteredDynamicLogging.html</Path>
+		</Node>
+		
+	</Library>
+</DocSetNodes>

@@ -1,0 +1,1232 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SLShadow Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ShapsLibrary 1.0 </a></h1>
+				<a id="developerHome" href="../index.html">Shaps</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SLShadow Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/shadowBlurRadius">&nbsp;&nbsp;&nbsp;&nbsp;shadowBlurRadius</option>
+	
+	<option value="//api/name/shadowColor">&nbsp;&nbsp;&nbsp;&nbsp;shadowColor</option>
+	
+	<option value="//api/name/shadowOffset">&nbsp;&nbsp;&nbsp;&nbsp;shadowOffset</option>
+	
+	<option value="//api/name/shadowOpacity">&nbsp;&nbsp;&nbsp;&nbsp;shadowOpacity</option>
+	
+	<option value="//api/name/shadowPath">&nbsp;&nbsp;&nbsp;&nbsp;shadowPath</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/darkTextShadow">&nbsp;&nbsp;&nbsp;&nbsp;+ darkTextShadow</option>
+	
+	<option value="//api/name/darkTextShadowWithAlpha:">&nbsp;&nbsp;&nbsp;&nbsp;+ darkTextShadowWithAlpha:</option>
+	
+	<option value="//api/name/defaultShadow">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultShadow</option>
+	
+	<option value="//api/name/lightTextShadow">&nbsp;&nbsp;&nbsp;&nbsp;+ lightTextShadow</option>
+	
+	<option value="//api/name/lightTextShadowWithAlpha:">&nbsp;&nbsp;&nbsp;&nbsp;+ lightTextShadowWithAlpha:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/drawDropShadowForPath:fillColor:">&nbsp;&nbsp;&nbsp;&nbsp;- drawDropShadowForPath:fillColor:</option>
+	
+	<option value="//api/name/drawDropShadowForRect:fillColor:">&nbsp;&nbsp;&nbsp;&nbsp;- drawDropShadowForRect:fillColor:</option>
+	
+	<option value="//api/name/drawInnerShadowForPath:">&nbsp;&nbsp;&nbsp;&nbsp;- drawInnerShadowForPath:</option>
+	
+	<option value="//api/name/drawInnerShadowForRect:">&nbsp;&nbsp;&nbsp;&nbsp;- drawInnerShadowForRect:</option>
+	
+	<option value="//api/name/initWithColor:offset:radius:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithColor:offset:radius:</option>
+	
+	<option value="//api/name/set">&nbsp;&nbsp;&nbsp;&nbsp;- set</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Convenience Initializers">Convenience Initializers</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initializers">Initializers</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Drop Shadows">Drop Shadows</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Inner Shadows">Inner Shadows</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Other Methods">Other Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowBlurRadius">shadowBlurRadius</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowColor">shadowColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowOffset">shadowOffset</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowOpacity">shadowOpacity</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowPath">shadowPath</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/darkTextShadow">darkTextShadow</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/darkTextShadowWithAlpha:">darkTextShadowWithAlpha:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultShadow">defaultShadow</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lightTextShadow">lightTextShadow</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lightTextShadowWithAlpha:">lightTextShadowWithAlpha:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawDropShadowForPath:fillColor:">drawDropShadowForPath:fillColor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawDropShadowForRect:fillColor:">drawDropShadowForRect:fillColor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawInnerShadowForPath:">drawInnerShadowForPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawInnerShadowForRect:">drawInnerShadowForRect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithColor:offset:radius:">initWithColor:offset:radius:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/set">set</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SLShadow Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SLShadow Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSCoding</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SLShadow.h<br />SLShadow.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class encapsulates the drawing of a core graphics shadow.<br/>
+All colors should be passed as either UIColor or NSColor instances since this class is supported on both iOS and OSX.<br/>
+You can also use the macro SLColor to support <em>both</em> platforms. CGColorRef&rsquo;s however are <em>NOT</em> acceptable.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Convenience Initializers" name="task_Convenience Initializers"></a>
+						<h3 class="subsubtitle task-title">Convenience Initializers</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultShadow">+&nbsp;defaultShadow</a></code>
+		<span class="tooltip"><p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code>color    -&gt;  [UIColor colorWithWhite:0 alpha:0.5]  
+offset   -&gt;  CGSizeMake(0, 0)  
+radius   -&gt;  2
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/darkTextShadow">+&nbsp;darkTextShadow</a></code>
+		<span class="tooltip"><p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code> color   -&gt;  [UIColor colorWithWhite:0 alpha:0.7]  
+ offset  -&gt;  CGSizeMake(0, -1)  
+ radius  -&gt;  0
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lightTextShadow">+&nbsp;lightTextShadow</a></code>
+		<span class="tooltip"><p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code> color   -&gt;  [UIColor colorWithWhite:1 alpha:0.5]  
+ offset  -&gt;  CGSizeMake(0, 1)  
+ radius  -&gt;  0
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/darkTextShadowWithAlpha:">+&nbsp;darkTextShadowWithAlpha:</a></code>
+		<span class="tooltip"><p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code> color   -&gt;  [UIColor colorWithWhite:0 alpha:alpha]  
+ offset  -&gt;  CGSizeMake(0, -1)  
+ radius  -&gt;  0
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lightTextShadowWithAlpha:">+&nbsp;lightTextShadowWithAlpha:</a></code>
+		<span class="tooltip"><p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code> color   -&gt;  [UIColor colorWithWhite:1 alpha:alpha]  
+ offset  -&gt;  CGSizeMake(0, 1)  
+ radius  -&gt;  0
+</code></pre></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Initializers" name="task_Initializers"></a>
+						<h3 class="subsubtitle task-title">Initializers</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithColor:offset:radius:">&ndash;&nbsp;initWithColor:offset:radius:</a></code>
+		<span class="tooltip"><p>Returns an instance with the specified color, off<a href="#//api/name/set">set</a> and radius.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shadowOffset">&nbsp;&nbsp;shadowOffset</a></code>
+		<span class="tooltip"><p>The off<a href="#//api/name/set">set</a> for this shadow</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shadowBlurRadius">&nbsp;&nbsp;shadowBlurRadius</a></code>
+		<span class="tooltip"><p>The radius for this shadow</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shadowOpacity">&nbsp;&nbsp;shadowOpacity</a></code>
+		<span class="tooltip"><p>The color opacity for this shadow</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shadowColor">&nbsp;&nbsp;shadowColor</a></code>
+		<span class="tooltip"><p>The color for this shadow</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shadowPath">&nbsp;&nbsp;shadowPath</a></code>
+		<span class="tooltip"><p>The path for this shadow</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Drop Shadows" name="task_Drop Shadows"></a>
+						<h3 class="subsubtitle task-title">Drop Shadows</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawDropShadowForPath:fillColor:">&ndash;&nbsp;drawDropShadowForPath:fillColor:</a></code>
+		<span class="tooltip"><p>Draws a drop shadow in the specified path with the given background fillColor</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawDropShadowForRect:fillColor:">&ndash;&nbsp;drawDropShadowForRect:fillColor:</a></code>
+		<span class="tooltip"><p>Draws a drop shadow in the specified rect with the given background fillColor</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Inner Shadows" name="task_Inner Shadows"></a>
+						<h3 class="subsubtitle task-title">Inner Shadows</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawInnerShadowForPath:">&ndash;&nbsp;drawInnerShadowForPath:</a></code>
+		<span class="tooltip"><p>Draws an inner shadow in the specified path.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawInnerShadowForRect:">&ndash;&nbsp;drawInnerShadowForRect:</a></code>
+		<span class="tooltip"><p>Draws a inner shadow in the specified rect.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Other Methods" name="task_Other Methods"></a>
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/set">&ndash;&nbsp;set</a></code>
+		<span class="tooltip"><p>Sets the shadow for the current core graphics context.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/shadowBlurRadius" title="shadowBlurRadius"></a>
+	<h3 class="subsubtitle method-title">shadowBlurRadius</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The radius for this shadow</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGFloat shadowBlurRadius</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shadowColor" title="shadowColor"></a>
+	<h3 class="subsubtitle method-title">shadowColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The color for this shadow</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) SLColor *shadowColor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shadowOffset" title="shadowOffset"></a>
+	<h3 class="subsubtitle method-title">shadowOffset</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The off<a href="#//api/name/set">set</a> for this shadow</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGSize shadowOffset</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shadowOpacity" title="shadowOpacity"></a>
+	<h3 class="subsubtitle method-title">shadowOpacity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The color opacity for this shadow</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGFloat shadowOpacity</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shadowPath" title="shadowPath"></a>
+	<h3 class="subsubtitle method-title">shadowPath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The path for this shadow</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) SLBezierPath *shadowPath</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/darkTextShadow" title="darkTextShadow"></a>
+	<h3 class="subsubtitle method-title">darkTextShadow</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code> color   -&gt;  [UIColor colorWithWhite:0 alpha:0.7]  
+ offset  -&gt;  CGSizeMake(0, -1)  
+ radius  -&gt;  0
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (SLShadow *)darkTextShadow</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/darkTextShadowWithAlpha:" title="darkTextShadowWithAlpha:"></a>
+	<h3 class="subsubtitle method-title">darkTextShadowWithAlpha:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code> color   -&gt;  [UIColor colorWithWhite:0 alpha:alpha]  
+ offset  -&gt;  CGSizeMake(0, -1)  
+ radius  -&gt;  0
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (SLShadow *)darkTextShadowWithAlpha:(CGFloat)<em>alpha</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>alpha</em></dt>
+			<dd><p>The alpha value to apply to the color for this shadow</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultShadow" title="defaultShadow"></a>
+	<h3 class="subsubtitle method-title">defaultShadow</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code>color    -&gt;  [UIColor colorWithWhite:0 alpha:0.5]  
+offset   -&gt;  CGSizeMake(0, 0)  
+radius   -&gt;  2
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (SLShadow *)defaultShadow</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lightTextShadow" title="lightTextShadow"></a>
+	<h3 class="subsubtitle method-title">lightTextShadow</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code> color   -&gt;  [UIColor colorWithWhite:1 alpha:0.5]  
+ offset  -&gt;  CGSizeMake(0, 1)  
+ radius  -&gt;  0
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (SLShadow *)lightTextShadow</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lightTextShadowWithAlpha:" title="lightTextShadowWithAlpha:"></a>
+	<h3 class="subsubtitle method-title">lightTextShadowWithAlpha:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convenience method for returning a shadow with the following settings:</p>
+
+<pre><code> color   -&gt;  [UIColor colorWithWhite:1 alpha:alpha]  
+ offset  -&gt;  CGSizeMake(0, 1)  
+ radius  -&gt;  0
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (SLShadow *)lightTextShadowWithAlpha:(CGFloat)<em>alpha</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>alpha</em></dt>
+			<dd><p>The alpha value to apply to the color for this shadow</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/drawDropShadowForPath:fillColor:" title="drawDropShadowForPath:fillColor:"></a>
+	<h3 class="subsubtitle method-title">drawDropShadowForPath:fillColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Draws a drop shadow in the specified path with the given background fillColor</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)drawDropShadowForPath:(SLBezierPath *)<em>path</em> fillColor:(SLColor *)<em>fillColor</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>The path for this shadow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fillColor</em></dt>
+			<dd><p>The fillColor to use for the background of this path.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/drawDropShadowForRect:fillColor:" title="drawDropShadowForRect:fillColor:"></a>
+	<h3 class="subsubtitle method-title">drawDropShadowForRect:fillColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Draws a drop shadow in the specified rect with the given background fillColor</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)drawDropShadowForRect:(CGRect)<em>rect</em> fillColor:(SLColor *)<em>fillColor</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rect</em></dt>
+			<dd><p>The rect for this shadow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fillColor</em></dt>
+			<dd><p>The fillColor to use for the background of this rect.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/drawInnerShadowForPath:" title="drawInnerShadowForPath:"></a>
+	<h3 class="subsubtitle method-title">drawInnerShadowForPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Draws an inner shadow in the specified path.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)drawInnerShadowForPath:(SLBezierPath *)<em>path</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>The path for this shadow.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/drawInnerShadowForRect:" title="drawInnerShadowForRect:"></a>
+	<h3 class="subsubtitle method-title">drawInnerShadowForRect:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Draws a inner shadow in the specified rect.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)drawInnerShadowForRect:(CGRect)<em>rect</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rect</em></dt>
+			<dd><p>The rect for this shadow.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithColor:offset:radius:" title="initWithColor:offset:radius:"></a>
+	<h3 class="subsubtitle method-title">initWithColor:offset:radius:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an instance with the specified color, off<a href="#//api/name/set">set</a> and radius.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithColor:(SLColor *)<em>color</em> offset:(CGSize)<em>offset</em> radius:(CGFloat)<em>radius</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>The color for this shadow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd><p>The off<a href="#//api/name/set">set</a> for this shadow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd><p>The radius for this shadow.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/set" title="set"></a>
+	<h3 class="subsubtitle method-title">set</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the shadow for the current core graphics context.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)set</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SLShadow.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Shaps. All rights reserved. (Last updated: 2013-06-03)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

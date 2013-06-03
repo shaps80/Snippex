@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSData+SLAdditions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSData(SLAdditions)</TokenIdentifier>
+			<Abstract type="html">An NSData category that adds useful functionality manipulating NSData instances.</Abstract>
+			<DeclaredIn>NSData+SLAdditions.h</DeclaredIn>
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSData(SLAdditions)/dataFromBase64String:</TokenIdentifier>
+			<Abstract type="html">Returns an NSData instance with the specified base64 encoded string.</Abstract>
+			<DeclaredIn>NSData+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>+ (NSData *)dataFromBase64String:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">The base64 encoded string.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/dataFromBase64String:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSData(SLAdditions)/base64EncodedString</TokenIdentifier>
+			<Abstract type="html">Returns a base64 encoded string using this NSData instance.</Abstract>
+			<DeclaredIn>NSData+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)base64EncodedString</Declaration>
+			
+			
+			<Anchor>//api/name/base64EncodedString</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,5 @@
+DOCS_URL="Documentation"
+BUNDLE_ID="com.shaps"
+COMPANY_NAME="Shaps"
+PROJECT_NAME="ShapsLibrary"
+VERSION=1.0

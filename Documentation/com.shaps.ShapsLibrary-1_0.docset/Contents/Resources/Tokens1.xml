@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SLASLLogger.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SLASLLogger</TokenIdentifier>
+			<Abstract type="html">Welcome to Cocoa Lumberjack!</Abstract>
+			<DeclaredIn>SLASLLogger.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SLASLLogger/initialize</TokenIdentifier>
+			<Abstract type="html">The runtime sends initialize to each class in a program exactly one time just before the class,
+or any class that inherits from it, is sent its first message from within the program. (Thus the
+method may never be invoked if the class is not used.) The runtime sends the initialize message to
+classes in a thread-safe manner. Superclasses receive this message before their subclasses.</Abstract>
+			<DeclaredIn>SLASLLogger.m</DeclaredIn>			
+			
+			<Declaration>+ (void)initialize</Declaration>
+			
+			
+			<Anchor>//api/name/initialize</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLASLLogger/loggerName</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLASLLogger.m</DeclaredIn>			
+			
+			<Declaration>- (NSString *)loggerName</Declaration>
+			
+			
+			<Anchor>//api/name/loggerName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+	</File>
+</Tokens>
