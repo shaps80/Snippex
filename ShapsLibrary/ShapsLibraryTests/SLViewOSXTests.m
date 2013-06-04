@@ -38,10 +38,4 @@
 	STAssertEqualObjects([view1 class], [view2 superclass], @"View type returned is invalid");
 }
 
--(void)testSelectors
-{
-	STAssertTrue([SLView instancesRespondToSelector:@selector(drawRect:)], @"Method is not implemented");
-	STAssertTrue([SLView instancesRespondToSelector:@selector(layout)], @"Method is not implemented");
-}
-
 @end

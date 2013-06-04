@@ -46,8 +46,6 @@ typedef enum
 @interface SLControl : NSControl
 
 -(void)layout NS_REQUIRES_SUPER;
--(BOOL)isSelected;
--(void)setSelected:(BOOL)selected;
 
 #endif
 

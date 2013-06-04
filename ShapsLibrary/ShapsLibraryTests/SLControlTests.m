@@ -23,19 +23,22 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SLViewiOSTests.h"
-#import "SLView.h"
+#import "SLControlTests.h"
+#import "SLControl.h"
 
-@implementation SLViewiOSTests
+@implementation SLControlTests
 
--(void)testClassTypes
+-(void)testSelectors
 {
-	STAssertEqualObjects([UIView class], [SLView superclass], @"View type returned is invalid");
-
-	UIView *view1 = [[UIView alloc] init];
-	SLView *view2 = [[SLView alloc] init];
-
-	STAssertEqualObjects([view1 class], [view2 superclass], @"View type returned is invalid");
+#if TARGET_OS_IPHONE
+	STAssertTrue([SLControl instancesRespondToSelector:@selector(layoutSubviews)], @"Method is not implemented");
+	STAssertTrue([SLControl instancesRespondToSelector:@selector(isSelected)], @"Method is not implemented");
+	STAssertTrue([SLControl instancesRespondToSelector:@selector(setSelected:)], @"Method is not implemented");
+#else
+	STAssertTrue([SLControl instancesRespondToSelector:@selector(layout)], @"Method is not implemented");
+#endif
+	
+	STAssertTrue([SLControl instancesRespondToSelector:@selector(drawRect:)], @"Method is not implemented");
 }
 
 @end

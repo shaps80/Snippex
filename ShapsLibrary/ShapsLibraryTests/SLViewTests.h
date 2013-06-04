@@ -23,19 +23,8 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SLViewiOSTests.h"
-#import "SLView.h"
+#import <SenTestingKit/SenTestingKit.h>
 
-@implementation SLViewiOSTests
-
--(void)testClassTypes
-{
-	STAssertEqualObjects([UIView class], [SLView superclass], @"View type returned is invalid");
-
-	UIView *view1 = [[UIView alloc] init];
-	SLView *view2 = [[SLView alloc] init];
-
-	STAssertEqualObjects([view1 class], [view2 superclass], @"View type returned is invalid");
-}
+@interface SLViewTests : SenTestCase
 
 @end
