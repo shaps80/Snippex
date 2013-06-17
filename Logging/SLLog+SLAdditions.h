@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Shaps. All rights reserved.
+   Copyright (c) 2013 Shaps. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,28 +23,11 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import "SLLog.h"
 
-#ifdef __OBJC__
-	#import "SLGlobalDefines.h"
-	#import <Foundation/Foundation.h>
+@interface SLLog (SLAdditions)
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
++(void)registerClass:(Class)class;
++(void)registerClasses:(NSArray *)classes;
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
-
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
-
-#endif
+@end

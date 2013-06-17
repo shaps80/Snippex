@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2013 Shaps. All rights reserved.
+ Copyright (c) 2013 Shaps. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,41 +23,26 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#import "SLBreadCrumbItem.h"
 
-/**
- Place NS_REQUIRES_SUPER at the end of a method definition to force a compiler warning when the user has forgotten to call super for that method.
- 
- E.g.
- 
-	-(void)myMethod NS_REQUIRES_SUPER;
- */
+@implementation SLBreadCrumbItem
 
-#ifndef NS_REQUIRES_SUPER
-#if __has_attribute(objc_requires_super)
-#define NS_REQUIRES_SUPER __attribute((objc_requires_super))
-#else
-#define NS_REQUIRES_SUPER
+-(id)initWithText:(NSString *)text
+{
+	self = [super init];
+	if (self)
+	{
+#if !TARGET_OS_IPHONE
+		[self setWantsLayer:YES];
 #endif
-#endif
+		_text = [text copy];
+	}
+	return self;
+}
 
+-(NSString *)description
+{
+	return [NSString stringWithFormat:@"%@ - %@", [super description], _text];
+}
 
-
-/**
- Shorthand for calling:
- 
-	if ([object respondsToSelector:])
-		[object performSelector:selector];
- 
- or
- 
-	if ([object respondsToSelector:withObject:])
-		[object performSelector:selector withObject:object];
- 
- etc...
-
- */
-
-#define TRY_PERFORM(THE_OBJECT, THE_SELECTOR) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR] : nil)
-#define TRY_PERFORM_WITH_ARG(THE_OBJECT, THE_SELECTOR, THE_ARG) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:THE_ARG] : nil)
-#define TRY_PERFORM_WITH_ARG2(THE_OBJECT, THE_SELECTOR, ARG1, ARG2) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:ARG1 withObject:ARG2] : nil)
-
+@end

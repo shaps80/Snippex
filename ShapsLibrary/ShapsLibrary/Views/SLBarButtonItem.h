@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Shaps. All rights reserved.
+   Copyright (c) 2013 Shaps. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,28 +23,19 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import <UIKit/UIKit.h>
 
-#ifdef __OBJC__
-	#import "SLGlobalDefines.h"
-	#import <Foundation/Foundation.h>
+@class SLBarButtonItem;
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+typedef void (^SLBarButtonItemCompletionBlock)(SLBarButtonItem *sender);
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+@interface SLBarButtonItem : UIBarButtonItem
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
++(SLBarButtonItem *)barButtonSystemItem:(UIBarButtonSystemItem)systemItem;
++(SLBarButtonItem *)barButtonWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style;
++(SLBarButtonItem *)barButtonWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style;
++(SLBarButtonItem *)barButtonWithImage:(UIImage *)image landscapeImagePhone:(UIImage *)landscapeImagePhone style:(UIBarButtonItemStyle)style;
 
-#endif
+@property (nonatomic, copy) SLBarButtonItemCompletionBlock completionBlock;
+
+@end

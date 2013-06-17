@@ -24,6 +24,9 @@
  */
 
 #import "SLErrorManager.h"
+#import "SLLog.h"
+
+static int slLogLevel = LOG_LEVEL_OFF;
 
 const NSString *kCLErrorUserTitle					= @"UserTitle";
 const NSString *kCLErrorUserDescription				= @"UserDescription";
@@ -40,6 +43,17 @@ static NSDictionary *errorsDictionary;
 int ddLogLevel;
 
 @implementation SLErrorManager
+
+#pragma mark - Logging
+
++(void)slSetLogLevel:(int)logLevel
+{
+	slLogLevel = logLevel;
+}
+
++(int)slLogLevel {
+	return slLogLevel;
+}
 
 #pragma mark - Lifecycle
 
@@ -77,6 +91,7 @@ int ddLogLevel;
 
 +(void)initializeWithPlist:(NSURL *)urlToPlist
 {
+	SLLogInfo(@"Initialized");
 	errorsDictionary = [SLErrorManager dictionaryFromURL:urlToPlist];
 }
 
