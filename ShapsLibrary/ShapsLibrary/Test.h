@@ -23,8 +23,12 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <Foundation/Foundation.h>
 
-@interface SLViewTests : SenTestCase
+@interface Test : NSObject <NSCoding>
+
+@property (nonatomic) NSInteger integer;
+@property (nonatomic) NSString *string;
+@property (nonatomic) float myFloat;
 
 @end

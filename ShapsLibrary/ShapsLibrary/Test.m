@@ -23,8 +23,28 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "Test.h"
+#import "SLGlobalDefines.h"
 
-@interface SLViewTests : SenTestCase
+@implementation Test
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+
+    if (self) {
+		decodeInteger(_integer);
+		decodeFloat(_myFloat);
+		decodeObject(_string);
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+	encodeFloat(_myFloat);
+	encodeInteger(_integer);
+	encodeObject(_string);
+}
 
 @end

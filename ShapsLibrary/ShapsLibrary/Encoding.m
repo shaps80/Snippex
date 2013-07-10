@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2013 Snippex. All rights reserved.
+ Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,33 +23,7 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
-/**
- Here are various definitions to simplify implementation across platforms.
- You can use these methods throughout your code, as does all the Core code
- to ensure the correct classes are used on each platform. e.g. (NSColor vs UIColor)
- */
-
-
-
-// Usage: -(void)myMethod NS_REQUIRES_SUPER;
-
-#ifndef NS_REQUIRES_SUPER
-#if __has_attribute(objc_requires_super)
-#define NS_REQUIRES_SUPER __attribute((objc_requires_super))
-#else
-#define NS_REQUIRES_SUPER
-#endif
-#endif
-
-
-// Usage: TRY_PERFORM(self, @selector(stringWithArray:));
-
-#define TRY_PERFORM(THE_OBJECT, THE_SELECTOR) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR] : nil)
-#define TRY_PERFORM_WITH_ARG(THE_OBJECT, THE_SELECTOR, THE_ARG) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:THE_ARG] : nil)
-#define TRY_PERFORM_WITH_ARG2(THE_OBJECT, THE_SELECTOR, ARG1, ARG2) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:ARG1 withObject:ARG2] : nil)
-
-// Usage: encodeObject(_variableName); and decodeObject(_variableName);
+#import <Foundation/Foundation.h>
 
 #define STRINGIFY(x) #x
 #define OBJC_STRINGIFY(x) @#x
@@ -85,3 +59,44 @@
 
 #endif
 
+@interface SampleEncoding : NSObject <NSCoding>
+{
+    CGFloat _float;
+    NSInteger _integer;
+    BOOL _bool;
+    NSString *_string;
+    CGRect _rect;
+    CGPoint _point;
+}
+@end
+
+@implementation SampleEncoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+
+    if (self)
+    {
+        decodeFloat(_float);
+		decodeInteger(_integer);
+        decodeBool(_bool);
+		decodeObject(_string);
+        decodeRect(_rect);
+        decodePoint(_point);
+    }
+
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+	encodeInteger(_integer);
+    encodeFloat(_float);
+    encodeBool(_bool);
+	encodeObject(_string);
+    encodeRect(_rect);
+    encodePoint(_point);
+}
+
+@end

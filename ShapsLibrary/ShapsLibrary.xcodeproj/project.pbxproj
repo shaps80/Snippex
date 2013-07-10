@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		543C1C86177741EC009C116C /* Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C1C84177741EC009C116C /* Test.h */; };
+		543C1C87177741EC009C116C /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C1C85177741EC009C116C /* Test.m */; };
+		543E4FC31779B5BB00A22EC5 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 543E4FC11779B5BB00A22EC5 /* SPXStore.h */; };
+		543E4FC41779B5BB00A22EC5 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 543E4FC11779B5BB00A22EC5 /* SPXStore.h */; };
+		543E4FC51779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
+		543E4FC61779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
+		543E4FC71779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
+		543E4FC81779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
+		54467861178D6380006C3C87 /* Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5446785E178D6380006C3C87 /* Encoding.m */; };
+		54467862178D6380006C3C87 /* Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5446785E178D6380006C3C87 /* Encoding.m */; };
 		546B7A34175CFBB700B216A3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
 		546B7A36175CFCA000B216A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A35175CFC9F00B216A3 /* UIKit.framework */; };
 		546B7A38175CFCAC00B216A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */; };
@@ -181,6 +191,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		543C1C84177741EC009C116C /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		543C1C85177741EC009C116C /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		543E4FC11779B5BB00A22EC5 /* SPXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStore.h; sourceTree = "<group>"; };
+		543E4FC21779B5BB00A22EC5 /* SPXStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStore.m; sourceTree = "<group>"; };
+		5446785E178D6380006C3C87 /* Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Encoding.m; path = ../../../../../../../../shaps/Documents/Development/personal/Universal/ShapsLibrary/ShapsLibrary/ShapsLibrary/Encoding.m; sourceTree = "<group>"; };
 		546B7A35175CFC9F00B216A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		546B7A3A175CFCBE00B216A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -316,6 +331,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		543E4FB91779B4A500A22EC5 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				543E4FC11779B5BB00A22EC5 /* SPXStore.h */,
+				543E4FC21779B5BB00A22EC5 /* SPXStore.m */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
 		546B7A3C175CFCC400B216A3 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,8 +400,12 @@
 			isa = PBXGroup;
 			children = (
 				546B7A46175D003700B216A3 /* SLGlobalDefines.h */,
+				543C1C84177741EC009C116C /* Test.h */,
+				543C1C85177741EC009C116C /* Test.m */,
+				5446785E178D6380006C3C87 /* Encoding.m */,
 				546B7A6C175E92CB00B216A3 /* SyncTest.h */,
 				546B7A6D175E92CB00B216A3 /* SyncTest.m */,
+				543E4FB91779B4A500A22EC5 /* Wrappers */,
 				549154DC175CEFA600A210BC /* Views */,
 				54915532175CF1DD00A210BC /* Managers */,
 				549154DB175CEF9E00A210BC /* Graphics */,
@@ -567,6 +595,8 @@
 				5491553B175CF24E00A210BC /* SLErrorManager.h in Headers */,
 				546B7AEA175EBED300B216A3 /* SLLog+SLAdditions.h in Headers */,
 				54AC49BF176F61AA000389DF /* SLBarButtonItem.h in Headers */,
+				543C1C86177741EC009C116C /* Test.h in Headers */,
+				543E4FC31779B5BB00A22EC5 /* SPXStore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +633,7 @@
 				546B7AAA175E9BA000B216A3 /* SLBreadCrumbView+iOS.h in Headers */,
 				546B7AAE175E9BA000B216A3 /* SLBreadCrumbView+OSX.h in Headers */,
 				546B7AEB175EBED300B216A3 /* SLLog+SLAdditions.h in Headers */,
+				543E4FC41779B5BB00A22EC5 /* SPXStore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +838,9 @@
 				546B7AAB175E9BA000B216A3 /* SLBreadCrumbView+iOS.m in Sources */,
 				546B7AAF175E9BA000B216A3 /* SLBreadCrumbView+OSX.m in Sources */,
 				546B7AEC175EBED300B216A3 /* SLLog+SLAdditions.m in Sources */,
+				543C1C87177741EC009C116C /* Test.m in Sources */,
+				543E4FC51779B5BB00A22EC5 /* SPXStore.m in Sources */,
+				54467861178D6380006C3C87 /* Encoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +852,7 @@
 				546B7A5E175D1A5A00B216A3 /* SLControliOSTests.m in Sources */,
 				546B7A66175E370F00B216A3 /* SLViewTests.m in Sources */,
 				546B7A6A175E375200B216A3 /* SLControlTests.m in Sources */,
+				543E4FC61779B5BB00A22EC5 /* SPXStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +889,8 @@
 				546B7AAC175E9BA000B216A3 /* SLBreadCrumbView+iOS.m in Sources */,
 				546B7AB0175E9BA000B216A3 /* SLBreadCrumbView+OSX.m in Sources */,
 				546B7AED175EBED300B216A3 /* SLLog+SLAdditions.m in Sources */,
+				543E4FC71779B5BB00A22EC5 /* SPXStore.m in Sources */,
+				54467862178D6380006C3C87 /* Encoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +902,7 @@
 				546B7A61175D1A6900B216A3 /* SLControlOSXTests.m in Sources */,
 				546B7A67175E370F00B216A3 /* SLViewTests.m in Sources */,
 				546B7A6B175E375200B216A3 /* SLControlTests.m in Sources */,
+				543E4FC81779B5BB00A22EC5 /* SPXStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
