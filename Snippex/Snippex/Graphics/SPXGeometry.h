@@ -49,7 +49,7 @@ static inline SPXOffset SPXOffsetFromUIOffset(UIOffset offset)
 	return SPXOffsetMake(offset.horizontal, offset.vertical);
 }
 
-static inline UIOffset UIOffsetFromSLOffset(SPXOffset offset)
+static inline UIOffset UIOffsetFromSPXOffset(SPXOffset offset)
 {
 	return UIOffsetMake(offset.horizontal, offset.vertical);
 }
