@@ -33,5 +33,3 @@ Everything is well documented, with full HTML documentation provided (thanks to 
 
 I hope you find this useful and if you do, drop me a line on twitter @shaps or email shaps80[@]me.com
 I love to hear from fellow developers :)
-
-P.s. if you don't like something, make sure your critism's are constructive please :)
