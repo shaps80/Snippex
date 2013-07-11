@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>ShapsLibrary 1.0</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
+						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
+						<NodeRef refid="16"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="17"/>
+						
+					</Subnodes>
+				</Node>
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>SLAlert</Name>
+			<Path>Classes/SLAlert.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>SLControl</Name>
+			<Path>Classes/SLControl.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>SLCoreDataManager</Name>
+			<Path>Classes/SLCoreDataManager.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>SLErrorManager</Name>
+			<Path>Classes/SLErrorManager.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>SLGradient</Name>
+			<Path>Classes/SLGradient.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>SLShadow</Name>
+			<Path>Classes/SLShadow.html</Path>
+		</Node>
+		<Node id="7">
+			<Name>SLView</Name>
+			<Path>Classes/SLView.html</Path>
+		</Node>
+		
+		<Node id="8">
+			<Name>NSColor(SLAdditions)</Name>
+			<Path>Categories/NSColor+SLAdditions.html</Path>
+		</Node>
+		<Node id="9">
+			<Name>NSData(SLAdditions)</Name>
+			<Path>Categories/NSData+SLAdditions.html</Path>
+		</Node>
+		<Node id="10">
+			<Name>NSDate(SLAdditions)</Name>
+			<Path>Categories/NSDate+SLAdditions.html</Path>
+		</Node>
+		<Node id="11">
+			<Name>NSDateFormatter(SLAdditions)</Name>
+			<Path>Categories/NSDateFormatter+SLAdditions.html</Path>
+		</Node>
+		<Node id="12">
+			<Name>NSDictionary(SLAdditions)</Name>
+			<Path>Categories/NSDictionary+SLAdditions.html</Path>
+		</Node>
+		<Node id="13">
+			<Name>NSManagedObject(SLAdditions)</Name>
+			<Path>Categories/NSManagedObject+SLAdditions.html</Path>
+		</Node>
+		<Node id="14">
+			<Name>NSManagedObjectContext(SLAdditions)</Name>
+			<Path>Categories/NSManagedObjectContext+SLAdditions.html</Path>
+		</Node>
+		<Node id="15">
+			<Name>NSString(SLAdditions)</Name>
+			<Path>Categories/NSString+SLAdditions.html</Path>
+		</Node>
+		<Node id="16">
+			<Name>UIBezierPath(SLAdditions)</Name>
+			<Path>Categories/UIBezierPath+SLAdditions.html</Path>
+		</Node>
+		
+		<Node id="17">
+			<Name>SLAlertProtocol</Name>
+			<Path>Protocols/SLAlertProtocol.html</Path>
+		</Node>
+		
+	</Library>
+</DocSetNodes>

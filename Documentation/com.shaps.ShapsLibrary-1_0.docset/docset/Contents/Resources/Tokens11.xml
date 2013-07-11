@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSDateFormatter+SLAdditions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSDateFormatter(SLAdditions)</TokenIdentifier>
+			<Abstract type="html">An NSDateFormatter category</Abstract>
+			<DeclaredIn>NSDateFormatter+SLAdditions.h</DeclaredIn>
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSDateFormatter(SLAdditions)/sharedFormatter</TokenIdentifier>
+			<Abstract type="html">Returns a shared NSDateFormatter singleton</Abstract>
+			<DeclaredIn>NSDateFormatter+SLAdditions.h</DeclaredIn>			
+			
+			<Declaration>+ (NSDateFormatter *)sharedFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/sharedFormatter</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+	</File>
+</Tokens>
