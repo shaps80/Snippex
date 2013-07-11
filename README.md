@@ -1,4 +1,4 @@
-ShapsLibrary
+Snippex Library
 ============
 
 My own personal library of reusable code that compiles and standardises some classes across iOS and OSX. This code is still in development and although I will always deprecate nicely to ensure you are able to update as seamlessly as possible, remember it is a work in progress.
