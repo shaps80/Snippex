@@ -39,5 +39,5 @@ I hope you find this useful and if you do, drop me a line on twitter @shaps or e
 I love to hear from fellow developers :)
 
 Developed by 	[@shaps](http://twitter.com/shaps "Twitter")
-				[shaps.me](http://shaps.me "Profile")
-				[Snippex](http://snippex.co.uk "Snippex")
+Profile			[shaps.me](http://shaps.me "Profile")
+Snippex			[Snippex](http://snippex.co.uk "Snippex")
