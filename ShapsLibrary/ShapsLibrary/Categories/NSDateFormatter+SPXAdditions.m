@@ -23,28 +23,19 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import "NSDateFormatter+SPXAdditions.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+@implementation NSDateFormatter (SPXAdditions)
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
++(NSDateFormatter *)sharedFormatter
+{
+	static NSDateFormatter *_sharedFormatter = nil;
+	static dispatch_once_t oncePredicate;
+	dispatch_once(&oncePredicate, ^{
+		_sharedFormatter = [[self alloc] init];
+	});
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+	return _sharedFormatter;
+}
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
-
-#endif
+@end

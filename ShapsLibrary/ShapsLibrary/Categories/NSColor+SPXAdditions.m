@@ -24,27 +24,34 @@
  */
 
 #import <Availability.h>
+#import "NSColor+SPXAdditions.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+@implementation NSColor (SPXAdditions)
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+// This is to supress warnings when compiling on 10.8+ because these methods are already provided by the SDK.
+// These should be removed soon since we no longer need to support 10.7
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+-(CGColorRef)CGColor
+{
+    const NSInteger numberOfComponents = [self numberOfComponents];
+    CGFloat components[numberOfComponents];
+    CGColorSpaceRef colorSpace = [[self colorSpace] CGColorSpace];
 
-#endif
+    [self getComponents:(CGFloat *)&components];
+	CGColorRef color = CGColorCreate(colorSpace, components);
+
+    return (__bridge CGColorRef)(__bridge_transfer id)color;
+}
+
++(NSColor *)colorWithCGColor:(CGColorRef)CGColor
+{
+    if (CGColor == NULL) return nil;
+    return [NSColor colorWithCIColor:[CIColor colorWithCGColor:CGColor]];
+}
+
+#pragma clang diagnostic pop
+
+@end

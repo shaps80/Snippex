@@ -23,28 +23,12 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import "SPXBreadCrumbView+OSX.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+@implementation SPXBreadCrumbView (OSX)
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#pragma mark - Mouse Events
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#pragma mark - Key Events
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
-
-#endif
+@end

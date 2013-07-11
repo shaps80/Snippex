@@ -23,28 +23,54 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import "SPXControl.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+@implementation SPXControl
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+-(BOOL)isFlipped
+{
+	return YES;
+}
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+-(void)setLayoutRequired
+{
+#if TARGET_OS_IPHONE
+	[self setNeedsLayout];
+#else
+	[self setNeedsLayout:YES];
+#endif
+}
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+-(void)setDrawingRequired
+{
+#if !TARGET_OS_IPHONE
+	// we have to call layout when on OSX since it won't get called automatically when drawRect is overriden.
+	[self setNeedsDisplay:YES];
+	[self layoutViews];
+#else
+	[self setNeedsDisplay];
+#endif
+}
+
+-(void)layoutViews
+{
+	// All layout code should be placed in this method.
+}
+
+#if TARGET_OS_IPHONE
+
+-(void)layoutSubviews
+{
+	[self layoutViews];
+}
+
+#else
+
+-(void)layout
+{
+	[self layoutViews];
+}
 
 #endif
+
+@end

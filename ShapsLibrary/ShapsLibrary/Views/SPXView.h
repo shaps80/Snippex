@@ -23,28 +23,31 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+/**
+ This class provides an abstract way of subclassing either a UIView (on iOS) or NSView (on OSX). It also provides custom methods for updating layout or drawing.
+ Any components that should work on both iOS and OSX should subclass this class instead of implementing UIView/NSView directly.
+ */
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+@interface SPXView : UIView
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+-(void)layoutSubviews NS_REQUIRES_SUPER;
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#else
+@interface SPXView : NSView
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+-(void)layout NS_REQUIRES_SUPER;
 
 #endif
+
+/// @abstract		All subclasses should use this method to perform layout as this ensures iOS and OSX get updated correctly.
+-(void)layoutViews;
+
+/// @abstract		This ensures setNeedsLayout is called correctly on iOS and OSX
+-(void)setLayoutRequired;
+
+/// @abstract		This ensures setNeedsDisplay is called correctly on iOS and OSX.
+-(void)setDrawingRequired;
+
+@end

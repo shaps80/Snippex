@@ -23,28 +23,30 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+/**
+ Here are various definitions to simplify implementation across platforms.
+ You can use these methods throughout your code, as does all the Core code
+ to ensure the correct classes are used on each platform. e.g. (NSColor vs UIColor)
+ */
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+#if TARGET_OS_IPHONE
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#define SPXContext UIGraphicsGetCurrentContext()
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#define SPXColor UIColor
+#define SPXColorRGBMake(r,g,b,a) [UIColor colorWithRed:r green:g blue:b alpha:a]
+#define SPXColorWhiteMake(w,a) [UIColor colorWithWhite:w alpha:a]
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+#define SPXBezierPath UIBezierPath
+
+#else
+
+#define SPXContext [[NSGraphicsContext currentContext] graphicsPort]
+
+#define SPXColor NSColor
+#define SPXColorRGBMake(r,g,b,a) [NSColor colorWithCalibratedRed:r green:g blue:b alpha:a]
+#define SPXColorWhiteMake(w,a) [NSColor colorWithCalibratedWhite:w alpha:a]
+
+#define SPXBezierPath NSBezierPath
 
 #endif

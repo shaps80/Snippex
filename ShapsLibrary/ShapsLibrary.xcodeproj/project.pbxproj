@@ -24,136 +24,110 @@
 		546B7A42175CFCFD00B216A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */; };
 		546B7A43175CFD0600B216A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3A175CFCBE00B216A3 /* Cocoa.framework */; };
 		546B7A44175CFD0600B216A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A3D175CFCD700B216A3 /* CoreData.framework */; };
-		546B7A47175D003800B216A3 /* SLGlobalDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A46175D003700B216A3 /* SLGlobalDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7A48175D003800B216A3 /* SLGlobalDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A46175D003700B216A3 /* SLGlobalDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7A47175D003800B216A3 /* SPXDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A46175D003700B216A3 /* SPXDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7A48175D003800B216A3 /* SPXDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A46175D003700B216A3 /* SPXDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		546B7A4B175D114600B216A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54870B16175CB113004194F7 /* InfoPlist.strings */; };
-		546B7A58175D17B000B216A3 /* SLViewiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A57175D17B000B216A3 /* SLViewiOSTests.m */; };
-		546B7A5B175D17BC00B216A3 /* SLViewOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A5A175D17BC00B216A3 /* SLViewOSXTests.m */; };
-		546B7A5E175D1A5A00B216A3 /* SLControliOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A5D175D1A5A00B216A3 /* SLControliOSTests.m */; };
-		546B7A61175D1A6900B216A3 /* SLControlOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A60175D1A6900B216A3 /* SLControlOSXTests.m */; };
-		546B7A66175E370F00B216A3 /* SLViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A65175E370F00B216A3 /* SLViewTests.m */; };
-		546B7A67175E370F00B216A3 /* SLViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A65175E370F00B216A3 /* SLViewTests.m */; };
-		546B7A6A175E375200B216A3 /* SLControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A69175E375200B216A3 /* SLControlTests.m */; };
-		546B7A6B175E375200B216A3 /* SLControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A69175E375200B216A3 /* SLControlTests.m */; };
-		546B7A6E175E92CC00B216A3 /* SyncTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A6C175E92CB00B216A3 /* SyncTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7A6F175E92CC00B216A3 /* SyncTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A6D175E92CB00B216A3 /* SyncTest.m */; };
-		546B7A97175E998900B216A3 /* SLLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915462175CE16A00A210BC /* SLLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AA1175E9BA000B216A3 /* SLBreadCrumbItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A99175E9BA000B216A3 /* SLBreadCrumbItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AA2175E9BA000B216A3 /* SLBreadCrumbItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A99175E9BA000B216A3 /* SLBreadCrumbItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AA3175E9BA000B216A3 /* SLBreadCrumbItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9A175E9BA000B216A3 /* SLBreadCrumbItem.m */; };
-		546B7AA4175E9BA000B216A3 /* SLBreadCrumbItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9A175E9BA000B216A3 /* SLBreadCrumbItem.m */; };
-		546B7AA5175E9BA000B216A3 /* SLBreadCrumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9B175E9BA000B216A3 /* SLBreadCrumbView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AA6175E9BA000B216A3 /* SLBreadCrumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9B175E9BA000B216A3 /* SLBreadCrumbView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AA7175E9BA000B216A3 /* SLBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9C175E9BA000B216A3 /* SLBreadCrumbView.m */; };
-		546B7AA8175E9BA000B216A3 /* SLBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9C175E9BA000B216A3 /* SLBreadCrumbView.m */; };
-		546B7AA9175E9BA000B216A3 /* SLBreadCrumbView+iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9D175E9BA000B216A3 /* SLBreadCrumbView+iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AAA175E9BA000B216A3 /* SLBreadCrumbView+iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9D175E9BA000B216A3 /* SLBreadCrumbView+iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AAB175E9BA000B216A3 /* SLBreadCrumbView+iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9E175E9BA000B216A3 /* SLBreadCrumbView+iOS.m */; };
-		546B7AAC175E9BA000B216A3 /* SLBreadCrumbView+iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9E175E9BA000B216A3 /* SLBreadCrumbView+iOS.m */; };
-		546B7AAD175E9BA000B216A3 /* SLBreadCrumbView+OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9F175E9BA000B216A3 /* SLBreadCrumbView+OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AAE175E9BA000B216A3 /* SLBreadCrumbView+OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9F175E9BA000B216A3 /* SLBreadCrumbView+OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AAF175E9BA000B216A3 /* SLBreadCrumbView+OSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7AA0175E9BA000B216A3 /* SLBreadCrumbView+OSX.m */; };
-		546B7AB0175E9BA000B216A3 /* SLBreadCrumbView+OSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7AA0175E9BA000B216A3 /* SLBreadCrumbView+OSX.m */; };
-		546B7AC6175EA41E00B216A3 /* SyncTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A6C175E92CB00B216A3 /* SyncTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546B7AC7175EA6D900B216A3 /* SyncTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A6D175E92CB00B216A3 /* SyncTest.m */; };
-		546B7AEA175EBED300B216A3 /* SLLog+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7AE8175EBED200B216A3 /* SLLog+SLAdditions.h */; };
-		546B7AEB175EBED300B216A3 /* SLLog+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7AE8175EBED200B216A3 /* SLLog+SLAdditions.h */; };
-		546B7AEC175EBED300B216A3 /* SLLog+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7AE9175EBED300B216A3 /* SLLog+SLAdditions.m */; };
-		546B7AED175EBED300B216A3 /* SLLog+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7AE9175EBED300B216A3 /* SLLog+SLAdditions.m */; };
-		54870B02175CB113004194F7 /* ShapsLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; };
-		54870B12175CB113004194F7 /* libShapsLibraryiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */; };
+		546B7AA1175E9BA000B216A3 /* SPXBreadCrumbItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A99175E9BA000B216A3 /* SPXBreadCrumbItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7AA2175E9BA000B216A3 /* SPXBreadCrumbItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A99175E9BA000B216A3 /* SPXBreadCrumbItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7AA3175E9BA000B216A3 /* SPXBreadCrumbItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9A175E9BA000B216A3 /* SPXBreadCrumbItem.m */; };
+		546B7AA4175E9BA000B216A3 /* SPXBreadCrumbItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9A175E9BA000B216A3 /* SPXBreadCrumbItem.m */; };
+		546B7AA5175E9BA000B216A3 /* SPXBreadCrumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9B175E9BA000B216A3 /* SPXBreadCrumbView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7AA6175E9BA000B216A3 /* SPXBreadCrumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9B175E9BA000B216A3 /* SPXBreadCrumbView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7AA7175E9BA000B216A3 /* SPXBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9C175E9BA000B216A3 /* SPXBreadCrumbView.m */; };
+		546B7AA8175E9BA000B216A3 /* SPXBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9C175E9BA000B216A3 /* SPXBreadCrumbView.m */; };
+		546B7AA9175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9D175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7AAA175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9D175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7AAB175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9E175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m */; };
+		546B7AAC175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7A9E175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m */; };
+		546B7AAD175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9F175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7AAE175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 546B7A9F175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546B7AAF175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7AA0175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m */; };
+		546B7AB0175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B7AA0175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m */; };
+		54870B02175CB113004194F7 /* Snippex.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* Snippex.h */; };
+		54870B12175CB113004194F7 /* libSnippexiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54870AF9175CB113004194F7 /* libSnippexiOS.a */; };
 		54870B18175CB113004194F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54870B16175CB113004194F7 /* InfoPlist.strings */; };
-		5491546C175CE16A00A210BC /* SLASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545D175CE16A00A210BC /* SLASLLogger.m */; };
-		5491546E175CE16A00A210BC /* SLASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545D175CE16A00A210BC /* SLASLLogger.m */; };
-		54915471175CE16A00A210BC /* SLDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */; };
-		54915473175CE16A00A210BC /* SLDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */; };
-		5491547A175CE16A00A210BC /* SLLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915462175CE16A00A210BC /* SLLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491547B175CE16A00A210BC /* SLLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915463175CE16A00A210BC /* SLLog.m */; };
-		5491547D175CE16A00A210BC /* SLLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915463175CE16A00A210BC /* SLLog.m */; };
-		54915480175CE16A00A210BC /* SLTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915465175CE16A00A210BC /* SLTTYLogger.m */; };
-		54915482175CE16A00A210BC /* SLTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915465175CE16A00A210BC /* SLTTYLogger.m */; };
-		54915485175CE3C500A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915487175CE3DF00A210BC /* ShapsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* ShapsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915485175CE3C500A210BC /* Snippex.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* Snippex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915487175CE3DF00A210BC /* Snippex.h in Headers */ = {isa = PBXBuildFile; fileRef = 54870B01175CB113004194F7 /* Snippex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
-		549154C7175CE93700A210BC /* SLGraphicsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLGraphicsDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154C8175CE93700A210BC /* SLGraphicsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SLGraphicsDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154CB175CE95400A210BC /* SLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154CC175CE95400A210BC /* SLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154CD175CE95400A210BC /* SLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154CA175CE95400A210BC /* SLView.m */; };
-		549154CE175CE95400A210BC /* SLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154CA175CE95400A210BC /* SLView.m */; };
-		549154D1175CEE9E00A210BC /* SLControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154CF175CEE9E00A210BC /* SLControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154D2175CEE9E00A210BC /* SLControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154CF175CEE9E00A210BC /* SLControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154D3175CEE9E00A210BC /* SLControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D0175CEE9E00A210BC /* SLControl.m */; };
-		549154D4175CEE9E00A210BC /* SLControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D0175CEE9E00A210BC /* SLControl.m */; };
-		549154D7175CEF4000A210BC /* SLAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154D5175CEF4000A210BC /* SLAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154D8175CEF4000A210BC /* SLAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154D5175CEF4000A210BC /* SLAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154D9175CEF4000A210BC /* SLAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D6175CEF4000A210BC /* SLAlert.m */; };
-		549154DA175CEF4000A210BC /* SLAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D6175CEF4000A210BC /* SLAlert.m */; };
-		549154E5175CEFF100A210BC /* SLDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DD175CEFF100A210BC /* SLDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154E6175CEFF100A210BC /* SLDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DD175CEFF100A210BC /* SLDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154E7175CEFF100A210BC /* SLDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154DE175CEFF100A210BC /* SLDrawing.m */; };
-		549154E8175CEFF100A210BC /* SLDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154DE175CEFF100A210BC /* SLDrawing.m */; };
-		549154E9175CEFF100A210BC /* SLGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DF175CEFF100A210BC /* SLGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154EA175CEFF100A210BC /* SLGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DF175CEFF100A210BC /* SLGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154EB175CEFF100A210BC /* SLGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E0175CEFF100A210BC /* SLGeometry.m */; };
-		549154EC175CEFF100A210BC /* SLGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E0175CEFF100A210BC /* SLGeometry.m */; };
-		549154ED175CEFF100A210BC /* SLGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E1175CEFF100A210BC /* SLGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154EE175CEFF100A210BC /* SLGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E1175CEFF100A210BC /* SLGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154EF175CEFF100A210BC /* SLGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E2175CEFF100A210BC /* SLGradient.m */; };
-		549154F0175CEFF100A210BC /* SLGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E2175CEFF100A210BC /* SLGradient.m */; };
-		549154F1175CEFF100A210BC /* SLShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E3175CEFF100A210BC /* SLShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154F2175CEFF100A210BC /* SLShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E3175CEFF100A210BC /* SLShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549154F3175CEFF100A210BC /* SLShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E4175CEFF100A210BC /* SLShadow.m */; };
-		549154F4175CEFF100A210BC /* SLShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E4175CEFF100A210BC /* SLShadow.m */; };
-		5491550A175CF06200A210BC /* BezierPath+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F6175CF06200A210BC /* BezierPath+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491550B175CF06200A210BC /* BezierPath+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F6175CF06200A210BC /* BezierPath+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491550C175CF06200A210BC /* BezierPath+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F7175CF06200A210BC /* BezierPath+SLAdditions.m */; };
-		5491550D175CF06200A210BC /* BezierPath+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F7175CF06200A210BC /* BezierPath+SLAdditions.m */; };
-		5491550E175CF06200A210BC /* NSBlock+TypedDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+TypedDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491550F175CF06200A210BC /* NSBlock+TypedDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+TypedDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915510175CF06200A210BC /* NSBlock+TypedDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+TypedDescription.m */; };
-		54915511175CF06200A210BC /* NSBlock+TypedDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+TypedDescription.m */; };
-		54915513175CF06200A210BC /* NSColor+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FA175CF06200A210BC /* NSColor+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915515175CF06200A210BC /* NSColor+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FB175CF06200A210BC /* NSColor+SLAdditions.m */; };
-		54915516175CF06200A210BC /* NSData+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915517175CF06200A210BC /* NSData+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915518175CF06200A210BC /* NSData+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SLAdditions.m */; };
-		54915519175CF06200A210BC /* NSData+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SLAdditions.m */; };
-		5491551A175CF06200A210BC /* NSDate+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FE175CF06200A210BC /* NSDate+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491551B175CF06200A210BC /* NSDate+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FE175CF06200A210BC /* NSDate+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491551C175CF06200A210BC /* NSDate+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FF175CF06200A210BC /* NSDate+SLAdditions.m */; };
-		5491551D175CF06200A210BC /* NSDate+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FF175CF06200A210BC /* NSDate+SLAdditions.m */; };
-		5491551E175CF06200A210BC /* NSDateFormatter+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915500175CF06200A210BC /* NSDateFormatter+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491551F175CF06200A210BC /* NSDateFormatter+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915500175CF06200A210BC /* NSDateFormatter+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915520175CF06200A210BC /* NSDateFormatter+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SLAdditions.m */; };
-		54915521175CF06200A210BC /* NSDateFormatter+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SLAdditions.m */; };
-		54915522175CF06200A210BC /* NSDictionary+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915502175CF06200A210BC /* NSDictionary+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915523175CF06200A210BC /* NSDictionary+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915502175CF06200A210BC /* NSDictionary+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915524175CF06200A210BC /* NSDictionary+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915503175CF06200A210BC /* NSDictionary+SLAdditions.m */; };
-		54915525175CF06200A210BC /* NSDictionary+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915503175CF06200A210BC /* NSDictionary+SLAdditions.m */; };
-		54915526175CF06200A210BC /* NSManagedObject+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915504175CF06200A210BC /* NSManagedObject+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915527175CF06200A210BC /* NSManagedObject+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915504175CF06200A210BC /* NSManagedObject+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915528175CF06200A210BC /* NSManagedObject+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915505175CF06200A210BC /* NSManagedObject+SLAdditions.m */; };
-		54915529175CF06200A210BC /* NSManagedObject+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915505175CF06200A210BC /* NSManagedObject+SLAdditions.m */; };
-		5491552A175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915506175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491552B175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915506175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491552C175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915507175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m */; };
-		5491552D175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915507175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m */; };
-		5491552E175CF06200A210BC /* NSString+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915508175CF06200A210BC /* NSString+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491552F175CF06200A210BC /* NSString+SLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915508175CF06200A210BC /* NSString+SLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915530175CF06200A210BC /* NSString+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915509175CF06200A210BC /* NSString+SLAdditions.m */; };
-		54915531175CF06200A210BC /* NSString+SLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915509175CF06200A210BC /* NSString+SLAdditions.m */; };
-		54915537175CF24E00A210BC /* SLCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915533175CF24E00A210BC /* SLCoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915538175CF24E00A210BC /* SLCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915533175CF24E00A210BC /* SLCoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915539175CF24E00A210BC /* SLCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915534175CF24E00A210BC /* SLCoreDataManager.m */; };
-		5491553A175CF24E00A210BC /* SLCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915534175CF24E00A210BC /* SLCoreDataManager.m */; };
-		5491553B175CF24E00A210BC /* SLErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SLErrorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491553C175CF24E00A210BC /* SLErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SLErrorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491553D175CF24E00A210BC /* SLErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SLErrorManager.m */; };
-		5491553E175CF24E00A210BC /* SLErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SLErrorManager.m */; };
-		54AC49BF176F61AA000389DF /* SLBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 54AC49BD176F61AA000389DF /* SLBarButtonItem.h */; };
-		54AC49C0176F61AA000389DF /* SLBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AC49BE176F61AA000389DF /* SLBarButtonItem.m */; };
-		54CA9081175CDB6200470B9F /* libShapsLibraryOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54CA906A175CDB6200470B9F /* libShapsLibraryOSX.a */; };
+		549154C7175CE93700A210BC /* SPXGraphicsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SPXGraphicsDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154C8175CE93700A210BC /* SPXGraphicsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C6175CE93700A210BC /* SPXGraphicsDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154CB175CE95400A210BC /* SPXView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SPXView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154CC175CE95400A210BC /* SPXView.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154C9175CE95400A210BC /* SPXView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154CD175CE95400A210BC /* SPXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154CA175CE95400A210BC /* SPXView.m */; };
+		549154CE175CE95400A210BC /* SPXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154CA175CE95400A210BC /* SPXView.m */; };
+		549154D1175CEE9E00A210BC /* SPXControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154CF175CEE9E00A210BC /* SPXControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154D2175CEE9E00A210BC /* SPXControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154CF175CEE9E00A210BC /* SPXControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154D3175CEE9E00A210BC /* SPXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D0175CEE9E00A210BC /* SPXControl.m */; };
+		549154D4175CEE9E00A210BC /* SPXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D0175CEE9E00A210BC /* SPXControl.m */; };
+		549154D7175CEF4000A210BC /* SPXAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154D5175CEF4000A210BC /* SPXAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154D8175CEF4000A210BC /* SPXAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154D5175CEF4000A210BC /* SPXAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154D9175CEF4000A210BC /* SPXAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D6175CEF4000A210BC /* SPXAlert.m */; };
+		549154DA175CEF4000A210BC /* SPXAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154D6175CEF4000A210BC /* SPXAlert.m */; };
+		549154E5175CEFF100A210BC /* SPXDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DD175CEFF100A210BC /* SPXDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154E6175CEFF100A210BC /* SPXDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DD175CEFF100A210BC /* SPXDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154E7175CEFF100A210BC /* SPXDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154DE175CEFF100A210BC /* SPXDrawing.m */; };
+		549154E8175CEFF100A210BC /* SPXDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154DE175CEFF100A210BC /* SPXDrawing.m */; };
+		549154E9175CEFF100A210BC /* SPXGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DF175CEFF100A210BC /* SPXGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154EA175CEFF100A210BC /* SPXGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154DF175CEFF100A210BC /* SPXGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154EB175CEFF100A210BC /* SPXGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E0175CEFF100A210BC /* SPXGeometry.m */; };
+		549154EC175CEFF100A210BC /* SPXGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E0175CEFF100A210BC /* SPXGeometry.m */; };
+		549154ED175CEFF100A210BC /* SPXGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E1175CEFF100A210BC /* SPXGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154EE175CEFF100A210BC /* SPXGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E1175CEFF100A210BC /* SPXGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154EF175CEFF100A210BC /* SPXGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E2175CEFF100A210BC /* SPXGradient.m */; };
+		549154F0175CEFF100A210BC /* SPXGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E2175CEFF100A210BC /* SPXGradient.m */; };
+		549154F1175CEFF100A210BC /* SPXShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E3175CEFF100A210BC /* SPXShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154F2175CEFF100A210BC /* SPXShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154E3175CEFF100A210BC /* SPXShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549154F3175CEFF100A210BC /* SPXShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E4175CEFF100A210BC /* SPXShadow.m */; };
+		549154F4175CEFF100A210BC /* SPXShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154E4175CEFF100A210BC /* SPXShadow.m */; };
+		5491550A175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F6175CF06200A210BC /* BezierPath+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491550B175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F6175CF06200A210BC /* BezierPath+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491550C175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */; };
+		5491550D175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */; };
+		5491550E175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491550F175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915510175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */; };
+		54915511175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */; };
+		54915513175CF06200A210BC /* NSColor+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FA175CF06200A210BC /* NSColor+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915515175CF06200A210BC /* NSColor+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FB175CF06200A210BC /* NSColor+SPXAdditions.m */; };
+		54915516175CF06200A210BC /* NSData+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915517175CF06200A210BC /* NSData+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915518175CF06200A210BC /* NSData+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SPXAdditions.m */; };
+		54915519175CF06200A210BC /* NSData+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SPXAdditions.m */; };
+		5491551A175CF06200A210BC /* NSDate+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FE175CF06200A210BC /* NSDate+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491551B175CF06200A210BC /* NSDate+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FE175CF06200A210BC /* NSDate+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491551C175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FF175CF06200A210BC /* NSDate+SPXAdditions.m */; };
+		5491551D175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FF175CF06200A210BC /* NSDate+SPXAdditions.m */; };
+		5491551E175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915500175CF06200A210BC /* NSDateFormatter+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491551F175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915500175CF06200A210BC /* NSDateFormatter+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915520175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */; };
+		54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */; };
+		54915522175CF06200A210BC /* NSDictionary+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915502175CF06200A210BC /* NSDictionary+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915523175CF06200A210BC /* NSDictionary+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915502175CF06200A210BC /* NSDictionary+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915524175CF06200A210BC /* NSDictionary+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915503175CF06200A210BC /* NSDictionary+SPXAdditions.m */; };
+		54915525175CF06200A210BC /* NSDictionary+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915503175CF06200A210BC /* NSDictionary+SPXAdditions.m */; };
+		54915526175CF06200A210BC /* NSManagedObject+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915504175CF06200A210BC /* NSManagedObject+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915527175CF06200A210BC /* NSManagedObject+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915504175CF06200A210BC /* NSManagedObject+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915528175CF06200A210BC /* NSManagedObject+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915505175CF06200A210BC /* NSManagedObject+SPXAdditions.m */; };
+		54915529175CF06200A210BC /* NSManagedObject+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915505175CF06200A210BC /* NSManagedObject+SPXAdditions.m */; };
+		5491552A175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915506175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491552B175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915506175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491552C175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */; };
+		5491552D175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */; };
+		5491552E175CF06200A210BC /* NSString+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915508175CF06200A210BC /* NSString+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491552F175CF06200A210BC /* NSString+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915508175CF06200A210BC /* NSString+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915530175CF06200A210BC /* NSString+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915509175CF06200A210BC /* NSString+SPXAdditions.m */; };
+		54915531175CF06200A210BC /* NSString+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915509175CF06200A210BC /* NSString+SPXAdditions.m */; };
+		54915537175CF24E00A210BC /* SPXCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915533175CF24E00A210BC /* SPXCoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915538175CF24E00A210BC /* SPXCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915533175CF24E00A210BC /* SPXCoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54915539175CF24E00A210BC /* SPXCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915534175CF24E00A210BC /* SPXCoreDataManager.m */; };
+		5491553A175CF24E00A210BC /* SPXCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915534175CF24E00A210BC /* SPXCoreDataManager.m */; };
+		5491553B175CF24E00A210BC /* SPXErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SPXErrorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491553C175CF24E00A210BC /* SPXErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SPXErrorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5491553D175CF24E00A210BC /* SPXErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SPXErrorManager.m */; };
+		5491553E175CF24E00A210BC /* SPXErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SPXErrorManager.m */; };
+		54AC49BF176F61AA000389DF /* SPXBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 54AC49BD176F61AA000389DF /* SPXBarButtonItem.h */; };
+		54AC49C0176F61AA000389DF /* SPXBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */; };
+		54CA9081175CDB6200470B9F /* libSnippexOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54CA906A175CDB6200470B9F /* libSnippexOSX.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,7 +154,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				54870B02175CB113004194F7 /* ShapsLibrary.h in CopyFiles */,
+				54870B02175CB113004194F7 /* Snippex.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,88 +167,64 @@
 		546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		546B7A3A175CFCBE00B216A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		546B7A3D175CFCD700B216A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		546B7A46175D003700B216A3 /* SLGlobalDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGlobalDefines.h; sourceTree = "<group>"; };
-		546B7A56175D17B000B216A3 /* SLViewiOSTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLViewiOSTests.h; sourceTree = "<group>"; };
-		546B7A57175D17B000B216A3 /* SLViewiOSTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLViewiOSTests.m; sourceTree = "<group>"; };
-		546B7A59175D17BC00B216A3 /* SLViewOSXTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLViewOSXTests.h; sourceTree = "<group>"; };
-		546B7A5A175D17BC00B216A3 /* SLViewOSXTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLViewOSXTests.m; sourceTree = "<group>"; };
-		546B7A5C175D1A5A00B216A3 /* SLControliOSTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLControliOSTests.h; sourceTree = "<group>"; };
-		546B7A5D175D1A5A00B216A3 /* SLControliOSTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLControliOSTests.m; sourceTree = "<group>"; };
-		546B7A5F175D1A6900B216A3 /* SLControlOSXTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLControlOSXTests.h; sourceTree = "<group>"; };
-		546B7A60175D1A6900B216A3 /* SLControlOSXTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLControlOSXTests.m; sourceTree = "<group>"; };
-		546B7A64175E370E00B216A3 /* SLViewTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLViewTests.h; sourceTree = "<group>"; };
-		546B7A65175E370F00B216A3 /* SLViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLViewTests.m; sourceTree = "<group>"; };
-		546B7A68175E375200B216A3 /* SLControlTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLControlTests.h; sourceTree = "<group>"; };
-		546B7A69175E375200B216A3 /* SLControlTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLControlTests.m; sourceTree = "<group>"; };
-		546B7A6C175E92CB00B216A3 /* SyncTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncTest.h; sourceTree = "<group>"; };
-		546B7A6D175E92CB00B216A3 /* SyncTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncTest.m; sourceTree = "<group>"; };
-		546B7A99175E9BA000B216A3 /* SLBreadCrumbItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBreadCrumbItem.h; sourceTree = "<group>"; };
-		546B7A9A175E9BA000B216A3 /* SLBreadCrumbItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBreadCrumbItem.m; sourceTree = "<group>"; };
-		546B7A9B175E9BA000B216A3 /* SLBreadCrumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBreadCrumbView.h; sourceTree = "<group>"; };
-		546B7A9C175E9BA000B216A3 /* SLBreadCrumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBreadCrumbView.m; sourceTree = "<group>"; };
-		546B7A9D175E9BA000B216A3 /* SLBreadCrumbView+iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLBreadCrumbView+iOS.h"; sourceTree = "<group>"; };
-		546B7A9E175E9BA000B216A3 /* SLBreadCrumbView+iOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLBreadCrumbView+iOS.m"; sourceTree = "<group>"; };
-		546B7A9F175E9BA000B216A3 /* SLBreadCrumbView+OSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLBreadCrumbView+OSX.h"; sourceTree = "<group>"; };
-		546B7AA0175E9BA000B216A3 /* SLBreadCrumbView+OSX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLBreadCrumbView+OSX.m"; sourceTree = "<group>"; };
-		546B7AE8175EBED200B216A3 /* SLLog+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLLog+SLAdditions.h"; sourceTree = "<group>"; };
-		546B7AE9175EBED300B216A3 /* SLLog+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLLog+SLAdditions.m"; sourceTree = "<group>"; };
-		54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShapsLibraryiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		546B7A46175D003700B216A3 /* SPXDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXDefines.h; sourceTree = "<group>"; };
+		546B7A99175E9BA000B216A3 /* SPXBreadCrumbItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXBreadCrumbItem.h; sourceTree = "<group>"; };
+		546B7A9A175E9BA000B216A3 /* SPXBreadCrumbItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXBreadCrumbItem.m; sourceTree = "<group>"; };
+		546B7A9B175E9BA000B216A3 /* SPXBreadCrumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXBreadCrumbView.h; sourceTree = "<group>"; };
+		546B7A9C175E9BA000B216A3 /* SPXBreadCrumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXBreadCrumbView.m; sourceTree = "<group>"; };
+		546B7A9D175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPXBreadCrumbView+iOS.h"; sourceTree = "<group>"; };
+		546B7A9E175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPXBreadCrumbView+iOS.m"; sourceTree = "<group>"; };
+		546B7A9F175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPXBreadCrumbView+OSX.h"; sourceTree = "<group>"; };
+		546B7AA0175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPXBreadCrumbView+OSX.m"; sourceTree = "<group>"; };
+		54870AF9175CB113004194F7 /* libSnippexiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnippexiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54870B00175CB113004194F7 /* ShapsLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapsLibrary-Prefix.pch"; sourceTree = "<group>"; };
-		54870B01175CB113004194F7 /* ShapsLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShapsLibrary.h; path = ShapsLibrary/ShapsLibrary.h; sourceTree = "<group>"; };
+		54870B01175CB113004194F7 /* Snippex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Snippex.h; path = ShapsLibrary/Snippex.h; sourceTree = "<group>"; };
 		54870B0A175CB113004194F7 /* ShapsLibraryiOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapsLibraryiOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54870B15175CB113004194F7 /* ShapsLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShapsLibraryTests-Info.plist"; sourceTree = "<group>"; };
 		54870B17175CB113004194F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5491545C175CE16A00A210BC /* SLASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLASLLogger.h; sourceTree = "<group>"; };
-		5491545D175CE16A00A210BC /* SLASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLASLLogger.m; sourceTree = "<group>"; };
-		5491545E175CE16A00A210BC /* SLDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		54915462175CE16A00A210BC /* SLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLog.h; sourceTree = "<group>"; };
-		54915463175CE16A00A210BC /* SLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLog.m; sourceTree = "<group>"; };
-		54915464175CE16A00A210BC /* SLTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTTYLogger.h; sourceTree = "<group>"; };
-		54915465175CE16A00A210BC /* SLTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTTYLogger.m; sourceTree = "<group>"; };
 		549154BD175CE7DD00A210BC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		549154C6175CE93700A210BC /* SLGraphicsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGraphicsDefines.h; sourceTree = "<group>"; };
-		549154C9175CE95400A210BC /* SLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLView.h; sourceTree = "<group>"; };
-		549154CA175CE95400A210BC /* SLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLView.m; sourceTree = "<group>"; };
-		549154CF175CEE9E00A210BC /* SLControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLControl.h; sourceTree = "<group>"; };
-		549154D0175CEE9E00A210BC /* SLControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLControl.m; sourceTree = "<group>"; };
-		549154D5175CEF4000A210BC /* SLAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAlert.h; sourceTree = "<group>"; };
-		549154D6175CEF4000A210BC /* SLAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAlert.m; sourceTree = "<group>"; };
-		549154DD175CEFF100A210BC /* SLDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDrawing.h; sourceTree = "<group>"; };
-		549154DE175CEFF100A210BC /* SLDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDrawing.m; sourceTree = "<group>"; };
-		549154DF175CEFF100A210BC /* SLGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGeometry.h; sourceTree = "<group>"; };
-		549154E0175CEFF100A210BC /* SLGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGeometry.m; sourceTree = "<group>"; };
-		549154E1175CEFF100A210BC /* SLGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGradient.h; sourceTree = "<group>"; };
-		549154E2175CEFF100A210BC /* SLGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGradient.m; sourceTree = "<group>"; };
-		549154E3175CEFF100A210BC /* SLShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShadow.h; sourceTree = "<group>"; };
-		549154E4175CEFF100A210BC /* SLShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLShadow.m; sourceTree = "<group>"; };
-		549154F6175CF06200A210BC /* BezierPath+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BezierPath+SLAdditions.h"; sourceTree = "<group>"; };
-		549154F7175CF06200A210BC /* BezierPath+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BezierPath+SLAdditions.m"; sourceTree = "<group>"; };
-		549154F8175CF06200A210BC /* NSBlock+TypedDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBlock+TypedDescription.h"; sourceTree = "<group>"; };
-		549154F9175CF06200A210BC /* NSBlock+TypedDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBlock+TypedDescription.m"; sourceTree = "<group>"; };
-		549154FA175CF06200A210BC /* NSColor+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+SLAdditions.h"; sourceTree = "<group>"; };
-		549154FB175CF06200A210BC /* NSColor+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+SLAdditions.m"; sourceTree = "<group>"; };
-		549154FC175CF06200A210BC /* NSData+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SLAdditions.h"; sourceTree = "<group>"; };
-		549154FD175CF06200A210BC /* NSData+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SLAdditions.m"; sourceTree = "<group>"; };
-		549154FE175CF06200A210BC /* NSDate+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SLAdditions.h"; sourceTree = "<group>"; };
-		549154FF175CF06200A210BC /* NSDate+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SLAdditions.m"; sourceTree = "<group>"; };
-		54915500175CF06200A210BC /* NSDateFormatter+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SLAdditions.h"; sourceTree = "<group>"; };
-		54915501175CF06200A210BC /* NSDateFormatter+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SLAdditions.m"; sourceTree = "<group>"; };
-		54915502175CF06200A210BC /* NSDictionary+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SLAdditions.h"; sourceTree = "<group>"; };
-		54915503175CF06200A210BC /* NSDictionary+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SLAdditions.m"; sourceTree = "<group>"; };
-		54915504175CF06200A210BC /* NSManagedObject+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+SLAdditions.h"; sourceTree = "<group>"; };
-		54915505175CF06200A210BC /* NSManagedObject+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+SLAdditions.m"; sourceTree = "<group>"; };
-		54915506175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SLAdditions.h"; sourceTree = "<group>"; };
-		54915507175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SLAdditions.m"; sourceTree = "<group>"; };
-		54915508175CF06200A210BC /* NSString+SLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SLAdditions.h"; sourceTree = "<group>"; };
-		54915509175CF06200A210BC /* NSString+SLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SLAdditions.m"; sourceTree = "<group>"; };
-		54915533175CF24E00A210BC /* SLCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCoreDataManager.h; sourceTree = "<group>"; };
-		54915534175CF24E00A210BC /* SLCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCoreDataManager.m; sourceTree = "<group>"; };
-		54915535175CF24E00A210BC /* SLErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLErrorManager.h; sourceTree = "<group>"; };
-		54915536175CF24E00A210BC /* SLErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLErrorManager.m; sourceTree = "<group>"; };
-		54AC49BD176F61AA000389DF /* SLBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBarButtonItem.h; sourceTree = "<group>"; };
-		54AC49BE176F61AA000389DF /* SLBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBarButtonItem.m; sourceTree = "<group>"; };
-		54CA906A175CDB6200470B9F /* libShapsLibraryOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShapsLibraryOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		549154C6175CE93700A210BC /* SPXGraphicsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXGraphicsDefines.h; sourceTree = "<group>"; };
+		549154C9175CE95400A210BC /* SPXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXView.h; sourceTree = "<group>"; };
+		549154CA175CE95400A210BC /* SPXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXView.m; sourceTree = "<group>"; };
+		549154CF175CEE9E00A210BC /* SPXControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXControl.h; sourceTree = "<group>"; };
+		549154D0175CEE9E00A210BC /* SPXControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXControl.m; sourceTree = "<group>"; };
+		549154D5175CEF4000A210BC /* SPXAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXAlert.h; sourceTree = "<group>"; };
+		549154D6175CEF4000A210BC /* SPXAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXAlert.m; sourceTree = "<group>"; };
+		549154DD175CEFF100A210BC /* SPXDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXDrawing.h; sourceTree = "<group>"; };
+		549154DE175CEFF100A210BC /* SPXDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXDrawing.m; sourceTree = "<group>"; };
+		549154DF175CEFF100A210BC /* SPXGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXGeometry.h; sourceTree = "<group>"; };
+		549154E0175CEFF100A210BC /* SPXGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXGeometry.m; sourceTree = "<group>"; };
+		549154E1175CEFF100A210BC /* SPXGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXGradient.h; sourceTree = "<group>"; };
+		549154E2175CEFF100A210BC /* SPXGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXGradient.m; sourceTree = "<group>"; };
+		549154E3175CEFF100A210BC /* SPXShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXShadow.h; sourceTree = "<group>"; };
+		549154E4175CEFF100A210BC /* SPXShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXShadow.m; sourceTree = "<group>"; };
+		549154F6175CF06200A210BC /* BezierPath+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BezierPath+SPXAdditions.h"; sourceTree = "<group>"; };
+		549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BezierPath+SPXAdditions.m"; sourceTree = "<group>"; };
+		549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBlock+SPXAdditions.h"; sourceTree = "<group>"; };
+		549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBlock+SPXAdditions.m"; sourceTree = "<group>"; };
+		549154FA175CF06200A210BC /* NSColor+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+SPXAdditions.h"; sourceTree = "<group>"; };
+		549154FB175CF06200A210BC /* NSColor+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+SPXAdditions.m"; sourceTree = "<group>"; };
+		549154FC175CF06200A210BC /* NSData+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SPXAdditions.h"; sourceTree = "<group>"; };
+		549154FD175CF06200A210BC /* NSData+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SPXAdditions.m"; sourceTree = "<group>"; };
+		549154FE175CF06200A210BC /* NSDate+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SPXAdditions.h"; sourceTree = "<group>"; };
+		549154FF175CF06200A210BC /* NSDate+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SPXAdditions.m"; sourceTree = "<group>"; };
+		54915500175CF06200A210BC /* NSDateFormatter+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SPXAdditions.h"; sourceTree = "<group>"; };
+		54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SPXAdditions.m"; sourceTree = "<group>"; };
+		54915502175CF06200A210BC /* NSDictionary+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SPXAdditions.h"; sourceTree = "<group>"; };
+		54915503175CF06200A210BC /* NSDictionary+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SPXAdditions.m"; sourceTree = "<group>"; };
+		54915504175CF06200A210BC /* NSManagedObject+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+SPXAdditions.h"; sourceTree = "<group>"; };
+		54915505175CF06200A210BC /* NSManagedObject+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+SPXAdditions.m"; sourceTree = "<group>"; };
+		54915506175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SPXAdditions.h"; sourceTree = "<group>"; };
+		54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SPXAdditions.m"; sourceTree = "<group>"; };
+		54915508175CF06200A210BC /* NSString+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SPXAdditions.h"; sourceTree = "<group>"; };
+		54915509175CF06200A210BC /* NSString+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SPXAdditions.m"; sourceTree = "<group>"; };
+		54915533175CF24E00A210BC /* SPXCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataManager.h; sourceTree = "<group>"; };
+		54915534175CF24E00A210BC /* SPXCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataManager.m; sourceTree = "<group>"; };
+		54915535175CF24E00A210BC /* SPXErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXErrorManager.h; sourceTree = "<group>"; };
+		54915536175CF24E00A210BC /* SPXErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXErrorManager.m; sourceTree = "<group>"; };
+		54AC49BD176F61AA000389DF /* SPXBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXBarButtonItem.h; sourceTree = "<group>"; };
+		54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXBarButtonItem.m; sourceTree = "<group>"; };
+		54CA906A175CDB6200470B9F /* libSnippexOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnippexOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CA907C175CDB6200470B9F /* ShapsLibraryOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapsLibraryOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -294,7 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				546B7A34175CFBB700B216A3 /* SenTestingKit.framework in Frameworks */,
-				54870B12175CB113004194F7 /* libShapsLibraryiOS.a in Frameworks */,
+				54870B12175CB113004194F7 /* libSnippexiOS.a in Frameworks */,
 				546B7A40175CFCFD00B216A3 /* UIKit.framework in Frameworks */,
 				546B7A41175CFCFD00B216A3 /* CoreData.framework in Frameworks */,
 				546B7A42175CFCFD00B216A3 /* CoreGraphics.framework in Frameworks */,
@@ -314,7 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54CA9081175CDB6200470B9F /* libShapsLibraryOSX.a in Frameworks */,
+				54CA9081175CDB6200470B9F /* libSnippexOSX.a in Frameworks */,
 				549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */,
 				546B7A43175CFD0600B216A3 /* Cocoa.framework in Frameworks */,
 				546B7A44175CFD0600B216A3 /* CoreData.framework in Frameworks */,
@@ -341,25 +291,25 @@
 			name = OSX;
 			sourceTree = "<group>";
 		};
-		546B7A98175E9B8C00B216A3 /* SLBreadCrumbView */ = {
+		546B7A98175E9B8C00B216A3 /* SPXBreadCrumbView */ = {
 			isa = PBXGroup;
 			children = (
-				546B7A99175E9BA000B216A3 /* SLBreadCrumbItem.h */,
-				546B7A9A175E9BA000B216A3 /* SLBreadCrumbItem.m */,
-				546B7A9B175E9BA000B216A3 /* SLBreadCrumbView.h */,
-				546B7A9C175E9BA000B216A3 /* SLBreadCrumbView.m */,
-				546B7A9D175E9BA000B216A3 /* SLBreadCrumbView+iOS.h */,
-				546B7A9E175E9BA000B216A3 /* SLBreadCrumbView+iOS.m */,
-				546B7A9F175E9BA000B216A3 /* SLBreadCrumbView+OSX.h */,
-				546B7AA0175E9BA000B216A3 /* SLBreadCrumbView+OSX.m */,
+				546B7A99175E9BA000B216A3 /* SPXBreadCrumbItem.h */,
+				546B7A9A175E9BA000B216A3 /* SPXBreadCrumbItem.m */,
+				546B7A9B175E9BA000B216A3 /* SPXBreadCrumbView.h */,
+				546B7A9C175E9BA000B216A3 /* SPXBreadCrumbView.m */,
+				546B7A9D175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h */,
+				546B7A9E175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m */,
+				546B7A9F175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h */,
+				546B7AA0175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m */,
 			);
-			name = SLBreadCrumbView;
+			name = SPXBreadCrumbView;
 			sourceTree = "<group>";
 		};
 		54870AF0175CB113004194F7 = {
 			isa = PBXGroup;
 			children = (
-				54870B01175CB113004194F7 /* ShapsLibrary.h */,
+				54870B01175CB113004194F7 /* Snippex.h */,
 				54870AFE175CB113004194F7 /* ShapsLibrary */,
 				54870B13175CB113004194F7 /* ShapsLibraryTests */,
 				54915459175CE13300A210BC /* Supporting Files */,
@@ -371,9 +321,9 @@
 		54870AFA175CB113004194F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */,
+				54870AF9175CB113004194F7 /* libSnippexiOS.a */,
 				54870B0A175CB113004194F7 /* ShapsLibraryiOSTests.octest */,
-				54CA906A175CDB6200470B9F /* libShapsLibraryOSX.a */,
+				54CA906A175CDB6200470B9F /* libSnippexOSX.a */,
 				54CA907C175CDB6200470B9F /* ShapsLibraryOSXTests.octest */,
 			);
 			name = Products;
@@ -392,9 +342,7 @@
 		54870AFE175CB113004194F7 /* ShapsLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				546B7A46175D003700B216A3 /* SLGlobalDefines.h */,
-				546B7A6C175E92CB00B216A3 /* SyncTest.h */,
-				546B7A6D175E92CB00B216A3 /* SyncTest.m */,
+				546B7A46175D003700B216A3 /* SPXDefines.h */,
 				543E4FB91779B4A500A22EC5 /* Wrappers */,
 				549154DC175CEFA600A210BC /* Views */,
 				54915532175CF1DD00A210BC /* Managers */,
@@ -408,18 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				54870B14175CB113004194F7 /* Supporting Files */,
-				546B7A64175E370E00B216A3 /* SLViewTests.h */,
-				546B7A65175E370F00B216A3 /* SLViewTests.m */,
-				546B7A68175E375200B216A3 /* SLControlTests.h */,
-				546B7A69175E375200B216A3 /* SLControlTests.m */,
-				546B7A56175D17B000B216A3 /* SLViewiOSTests.h */,
-				546B7A57175D17B000B216A3 /* SLViewiOSTests.m */,
-				546B7A59175D17BC00B216A3 /* SLViewOSXTests.h */,
-				546B7A5A175D17BC00B216A3 /* SLViewOSXTests.m */,
-				546B7A5C175D1A5A00B216A3 /* SLControliOSTests.h */,
-				546B7A5D175D1A5A00B216A3 /* SLControliOSTests.m */,
-				546B7A5F175D1A6900B216A3 /* SLControlOSXTests.h */,
-				546B7A60175D1A6900B216A3 /* SLControlOSXTests.m */,
 			);
 			path = ShapsLibraryTests;
 			sourceTree = "<group>";
@@ -433,28 +369,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		54915457175CE10300A210BC /* Logging */ = {
-			isa = PBXGroup;
-			children = (
-				54915462175CE16A00A210BC /* SLLog.h */,
-				54915463175CE16A00A210BC /* SLLog.m */,
-				546B7AE8175EBED200B216A3 /* SLLog+SLAdditions.h */,
-				546B7AE9175EBED300B216A3 /* SLLog+SLAdditions.m */,
-				5491545C175CE16A00A210BC /* SLASLLogger.h */,
-				5491545D175CE16A00A210BC /* SLASLLogger.m */,
-				54915464175CE16A00A210BC /* SLTTYLogger.h */,
-				54915465175CE16A00A210BC /* SLTTYLogger.m */,
-				5491545E175CE16A00A210BC /* SLDispatchQueueLogFormatter.h */,
-				5491545F175CE16A00A210BC /* SLDispatchQueueLogFormatter.m */,
-			);
-			name = Logging;
-			path = ../../Logging;
-			sourceTree = "<group>";
-		};
 		54915459175CE13300A210BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				54915457175CE10300A210BC /* Logging */,
 				54870B00175CB113004194F7 /* ShapsLibrary-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -482,15 +399,15 @@
 		549154DB175CEF9E00A210BC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				549154C6175CE93700A210BC /* SLGraphicsDefines.h */,
-				549154DF175CEFF100A210BC /* SLGeometry.h */,
-				549154E0175CEFF100A210BC /* SLGeometry.m */,
-				549154DD175CEFF100A210BC /* SLDrawing.h */,
-				549154DE175CEFF100A210BC /* SLDrawing.m */,
-				549154E1175CEFF100A210BC /* SLGradient.h */,
-				549154E2175CEFF100A210BC /* SLGradient.m */,
-				549154E3175CEFF100A210BC /* SLShadow.h */,
-				549154E4175CEFF100A210BC /* SLShadow.m */,
+				549154C6175CE93700A210BC /* SPXGraphicsDefines.h */,
+				549154DF175CEFF100A210BC /* SPXGeometry.h */,
+				549154E0175CEFF100A210BC /* SPXGeometry.m */,
+				549154DD175CEFF100A210BC /* SPXDrawing.h */,
+				549154DE175CEFF100A210BC /* SPXDrawing.m */,
+				549154E1175CEFF100A210BC /* SPXGradient.h */,
+				549154E2175CEFF100A210BC /* SPXGradient.m */,
+				549154E3175CEFF100A210BC /* SPXShadow.h */,
+				549154E4175CEFF100A210BC /* SPXShadow.m */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -498,15 +415,15 @@
 		549154DC175CEFA600A210BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				546B7A98175E9B8C00B216A3 /* SLBreadCrumbView */,
-				549154C9175CE95400A210BC /* SLView.h */,
-				549154CA175CE95400A210BC /* SLView.m */,
-				549154CF175CEE9E00A210BC /* SLControl.h */,
-				549154D0175CEE9E00A210BC /* SLControl.m */,
-				549154D5175CEF4000A210BC /* SLAlert.h */,
-				549154D6175CEF4000A210BC /* SLAlert.m */,
-				54AC49BD176F61AA000389DF /* SLBarButtonItem.h */,
-				54AC49BE176F61AA000389DF /* SLBarButtonItem.m */,
+				546B7A98175E9B8C00B216A3 /* SPXBreadCrumbView */,
+				549154C9175CE95400A210BC /* SPXView.h */,
+				549154CA175CE95400A210BC /* SPXView.m */,
+				549154CF175CEE9E00A210BC /* SPXControl.h */,
+				549154D0175CEE9E00A210BC /* SPXControl.m */,
+				549154D5175CEF4000A210BC /* SPXAlert.h */,
+				549154D6175CEF4000A210BC /* SPXAlert.m */,
+				54AC49BD176F61AA000389DF /* SPXBarButtonItem.h */,
+				54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -514,26 +431,26 @@
 		549154F5175CF04500A210BC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				549154F6175CF06200A210BC /* BezierPath+SLAdditions.h */,
-				549154F7175CF06200A210BC /* BezierPath+SLAdditions.m */,
-				549154F8175CF06200A210BC /* NSBlock+TypedDescription.h */,
-				549154F9175CF06200A210BC /* NSBlock+TypedDescription.m */,
-				549154FA175CF06200A210BC /* NSColor+SLAdditions.h */,
-				549154FB175CF06200A210BC /* NSColor+SLAdditions.m */,
-				549154FC175CF06200A210BC /* NSData+SLAdditions.h */,
-				549154FD175CF06200A210BC /* NSData+SLAdditions.m */,
-				549154FE175CF06200A210BC /* NSDate+SLAdditions.h */,
-				549154FF175CF06200A210BC /* NSDate+SLAdditions.m */,
-				54915500175CF06200A210BC /* NSDateFormatter+SLAdditions.h */,
-				54915501175CF06200A210BC /* NSDateFormatter+SLAdditions.m */,
-				54915502175CF06200A210BC /* NSDictionary+SLAdditions.h */,
-				54915503175CF06200A210BC /* NSDictionary+SLAdditions.m */,
-				54915504175CF06200A210BC /* NSManagedObject+SLAdditions.h */,
-				54915505175CF06200A210BC /* NSManagedObject+SLAdditions.m */,
-				54915506175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h */,
-				54915507175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m */,
-				54915508175CF06200A210BC /* NSString+SLAdditions.h */,
-				54915509175CF06200A210BC /* NSString+SLAdditions.m */,
+				549154F6175CF06200A210BC /* BezierPath+SPXAdditions.h */,
+				549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */,
+				549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */,
+				549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */,
+				549154FA175CF06200A210BC /* NSColor+SPXAdditions.h */,
+				549154FB175CF06200A210BC /* NSColor+SPXAdditions.m */,
+				549154FC175CF06200A210BC /* NSData+SPXAdditions.h */,
+				549154FD175CF06200A210BC /* NSData+SPXAdditions.m */,
+				549154FE175CF06200A210BC /* NSDate+SPXAdditions.h */,
+				549154FF175CF06200A210BC /* NSDate+SPXAdditions.m */,
+				54915500175CF06200A210BC /* NSDateFormatter+SPXAdditions.h */,
+				54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */,
+				54915502175CF06200A210BC /* NSDictionary+SPXAdditions.h */,
+				54915503175CF06200A210BC /* NSDictionary+SPXAdditions.m */,
+				54915504175CF06200A210BC /* NSManagedObject+SPXAdditions.h */,
+				54915505175CF06200A210BC /* NSManagedObject+SPXAdditions.m */,
+				54915506175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h */,
+				54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */,
+				54915508175CF06200A210BC /* NSString+SPXAdditions.h */,
+				54915509175CF06200A210BC /* NSString+SPXAdditions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -541,10 +458,10 @@
 		54915532175CF1DD00A210BC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				54915533175CF24E00A210BC /* SLCoreDataManager.h */,
-				54915534175CF24E00A210BC /* SLCoreDataManager.m */,
-				54915535175CF24E00A210BC /* SLErrorManager.h */,
-				54915536175CF24E00A210BC /* SLErrorManager.m */,
+				54915533175CF24E00A210BC /* SPXCoreDataManager.h */,
+				54915534175CF24E00A210BC /* SPXCoreDataManager.m */,
+				54915535175CF24E00A210BC /* SPXErrorManager.h */,
+				54915536175CF24E00A210BC /* SPXErrorManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -556,35 +473,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54915487175CE3DF00A210BC /* ShapsLibrary.h in Headers */,
-				546B7A47175D003800B216A3 /* SLGlobalDefines.h in Headers */,
-				546B7A97175E998900B216A3 /* SLLog.h in Headers */,
-				549154C7175CE93700A210BC /* SLGraphicsDefines.h in Headers */,
-				549154CB175CE95400A210BC /* SLView.h in Headers */,
-				549154D1175CEE9E00A210BC /* SLControl.h in Headers */,
-				549154D7175CEF4000A210BC /* SLAlert.h in Headers */,
-				549154E5175CEFF100A210BC /* SLDrawing.h in Headers */,
-				549154E9175CEFF100A210BC /* SLGeometry.h in Headers */,
-				549154ED175CEFF100A210BC /* SLGradient.h in Headers */,
-				549154F1175CEFF100A210BC /* SLShadow.h in Headers */,
-				5491550A175CF06200A210BC /* BezierPath+SLAdditions.h in Headers */,
-				5491550E175CF06200A210BC /* NSBlock+TypedDescription.h in Headers */,
-				54915516175CF06200A210BC /* NSData+SLAdditions.h in Headers */,
-				5491551A175CF06200A210BC /* NSDate+SLAdditions.h in Headers */,
-				5491551E175CF06200A210BC /* NSDateFormatter+SLAdditions.h in Headers */,
-				54915522175CF06200A210BC /* NSDictionary+SLAdditions.h in Headers */,
-				546B7AA1175E9BA000B216A3 /* SLBreadCrumbItem.h in Headers */,
-				546B7AA5175E9BA000B216A3 /* SLBreadCrumbView.h in Headers */,
-				546B7AA9175E9BA000B216A3 /* SLBreadCrumbView+iOS.h in Headers */,
-				546B7AAD175E9BA000B216A3 /* SLBreadCrumbView+OSX.h in Headers */,
-				54915526175CF06200A210BC /* NSManagedObject+SLAdditions.h in Headers */,
-				5491552A175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h in Headers */,
-				5491552E175CF06200A210BC /* NSString+SLAdditions.h in Headers */,
-				54915537175CF24E00A210BC /* SLCoreDataManager.h in Headers */,
-				546B7AC6175EA41E00B216A3 /* SyncTest.h in Headers */,
-				5491553B175CF24E00A210BC /* SLErrorManager.h in Headers */,
-				546B7AEA175EBED300B216A3 /* SLLog+SLAdditions.h in Headers */,
-				54AC49BF176F61AA000389DF /* SLBarButtonItem.h in Headers */,
+				54915487175CE3DF00A210BC /* Snippex.h in Headers */,
+				546B7A47175D003800B216A3 /* SPXDefines.h in Headers */,
+				549154C7175CE93700A210BC /* SPXGraphicsDefines.h in Headers */,
+				549154CB175CE95400A210BC /* SPXView.h in Headers */,
+				549154D1175CEE9E00A210BC /* SPXControl.h in Headers */,
+				549154D7175CEF4000A210BC /* SPXAlert.h in Headers */,
+				549154E5175CEFF100A210BC /* SPXDrawing.h in Headers */,
+				549154E9175CEFF100A210BC /* SPXGeometry.h in Headers */,
+				549154ED175CEFF100A210BC /* SPXGradient.h in Headers */,
+				549154F1175CEFF100A210BC /* SPXShadow.h in Headers */,
+				5491550A175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
+				5491550E175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */,
+				54915516175CF06200A210BC /* NSData+SPXAdditions.h in Headers */,
+				5491551A175CF06200A210BC /* NSDate+SPXAdditions.h in Headers */,
+				5491551E175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */,
+				54915522175CF06200A210BC /* NSDictionary+SPXAdditions.h in Headers */,
+				546B7AA1175E9BA000B216A3 /* SPXBreadCrumbItem.h in Headers */,
+				546B7AA5175E9BA000B216A3 /* SPXBreadCrumbView.h in Headers */,
+				546B7AA9175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h in Headers */,
+				546B7AAD175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h in Headers */,
+				54915526175CF06200A210BC /* NSManagedObject+SPXAdditions.h in Headers */,
+				5491552A175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h in Headers */,
+				5491552E175CF06200A210BC /* NSString+SPXAdditions.h in Headers */,
+				54915537175CF24E00A210BC /* SPXCoreDataManager.h in Headers */,
+				5491553B175CF24E00A210BC /* SPXErrorManager.h in Headers */,
+				54AC49BF176F61AA000389DF /* SPXBarButtonItem.h in Headers */,
 				543E4FC31779B5BB00A22EC5 /* SPXStore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,35 +507,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54915485175CE3C500A210BC /* ShapsLibrary.h in Headers */,
-				5491547A175CE16A00A210BC /* SLLog.h in Headers */,
-				549154C8175CE93700A210BC /* SLGraphicsDefines.h in Headers */,
-				549154CC175CE95400A210BC /* SLView.h in Headers */,
-				549154D2175CEE9E00A210BC /* SLControl.h in Headers */,
-				549154D8175CEF4000A210BC /* SLAlert.h in Headers */,
-				549154E6175CEFF100A210BC /* SLDrawing.h in Headers */,
-				549154EA175CEFF100A210BC /* SLGeometry.h in Headers */,
-				549154EE175CEFF100A210BC /* SLGradient.h in Headers */,
-				549154F2175CEFF100A210BC /* SLShadow.h in Headers */,
-				5491550B175CF06200A210BC /* BezierPath+SLAdditions.h in Headers */,
-				5491550F175CF06200A210BC /* NSBlock+TypedDescription.h in Headers */,
-				54915513175CF06200A210BC /* NSColor+SLAdditions.h in Headers */,
-				54915517175CF06200A210BC /* NSData+SLAdditions.h in Headers */,
-				5491551B175CF06200A210BC /* NSDate+SLAdditions.h in Headers */,
-				5491551F175CF06200A210BC /* NSDateFormatter+SLAdditions.h in Headers */,
-				54915523175CF06200A210BC /* NSDictionary+SLAdditions.h in Headers */,
-				54915527175CF06200A210BC /* NSManagedObject+SLAdditions.h in Headers */,
-				5491552B175CF06200A210BC /* NSManagedObjectContext+SLAdditions.h in Headers */,
-				5491552F175CF06200A210BC /* NSString+SLAdditions.h in Headers */,
-				54915538175CF24E00A210BC /* SLCoreDataManager.h in Headers */,
-				5491553C175CF24E00A210BC /* SLErrorManager.h in Headers */,
-				546B7A48175D003800B216A3 /* SLGlobalDefines.h in Headers */,
-				546B7A6E175E92CC00B216A3 /* SyncTest.h in Headers */,
-				546B7AA2175E9BA000B216A3 /* SLBreadCrumbItem.h in Headers */,
-				546B7AA6175E9BA000B216A3 /* SLBreadCrumbView.h in Headers */,
-				546B7AAA175E9BA000B216A3 /* SLBreadCrumbView+iOS.h in Headers */,
-				546B7AAE175E9BA000B216A3 /* SLBreadCrumbView+OSX.h in Headers */,
-				546B7AEB175EBED300B216A3 /* SLLog+SLAdditions.h in Headers */,
+				54915485175CE3C500A210BC /* Snippex.h in Headers */,
+				549154C8175CE93700A210BC /* SPXGraphicsDefines.h in Headers */,
+				549154CC175CE95400A210BC /* SPXView.h in Headers */,
+				549154D2175CEE9E00A210BC /* SPXControl.h in Headers */,
+				549154D8175CEF4000A210BC /* SPXAlert.h in Headers */,
+				549154E6175CEFF100A210BC /* SPXDrawing.h in Headers */,
+				549154EA175CEFF100A210BC /* SPXGeometry.h in Headers */,
+				549154EE175CEFF100A210BC /* SPXGradient.h in Headers */,
+				549154F2175CEFF100A210BC /* SPXShadow.h in Headers */,
+				5491550B175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
+				5491550F175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */,
+				54915513175CF06200A210BC /* NSColor+SPXAdditions.h in Headers */,
+				54915517175CF06200A210BC /* NSData+SPXAdditions.h in Headers */,
+				5491551B175CF06200A210BC /* NSDate+SPXAdditions.h in Headers */,
+				5491551F175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */,
+				54915523175CF06200A210BC /* NSDictionary+SPXAdditions.h in Headers */,
+				54915527175CF06200A210BC /* NSManagedObject+SPXAdditions.h in Headers */,
+				5491552B175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h in Headers */,
+				5491552F175CF06200A210BC /* NSString+SPXAdditions.h in Headers */,
+				54915538175CF24E00A210BC /* SPXCoreDataManager.h in Headers */,
+				5491553C175CF24E00A210BC /* SPXErrorManager.h in Headers */,
+				546B7A48175D003800B216A3 /* SPXDefines.h in Headers */,
+				546B7AA2175E9BA000B216A3 /* SPXBreadCrumbItem.h in Headers */,
+				546B7AA6175E9BA000B216A3 /* SPXBreadCrumbView.h in Headers */,
+				546B7AAA175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h in Headers */,
+				546B7AAE175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h in Headers */,
 				543E4FC41779B5BB00A22EC5 /* SPXStore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,9 +540,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		54870AF8175CB113004194F7 /* ShapsLibraryiOS */ = {
+		54870AF8175CB113004194F7 /* SnippexiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54870B1E175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOS" */;
+			buildConfigurationList = 54870B1E175CB114004194F7 /* Build configuration list for PBXNativeTarget "SnippexiOS" */;
 			buildPhases = (
 				54870AF5175CB113004194F7 /* Sources */,
 				54870AF6175CB113004194F7 /* Frameworks */,
@@ -643,14 +554,14 @@
 			);
 			dependencies = (
 			);
-			name = ShapsLibraryiOS;
+			name = SnippexiOS;
 			productName = ShapsLibrary;
-			productReference = 54870AF9175CB113004194F7 /* libShapsLibraryiOS.a */;
+			productReference = 54870AF9175CB113004194F7 /* libSnippexiOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		54870B09175CB113004194F7 /* ShapsLibraryiOSTests */ = {
+		54870B09175CB113004194F7 /* SnippexiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54870B21175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOSTests" */;
+			buildConfigurationList = 54870B21175CB114004194F7 /* Build configuration list for PBXNativeTarget "SnippexiOSTests" */;
 			buildPhases = (
 				54870B05175CB113004194F7 /* Sources */,
 				54870B06175CB113004194F7 /* Frameworks */,
@@ -662,14 +573,14 @@
 			dependencies = (
 				54870B11175CB113004194F7 /* PBXTargetDependency */,
 			);
-			name = ShapsLibraryiOSTests;
+			name = SnippexiOSTests;
 			productName = ShapsLibraryTests;
 			productReference = 54870B0A175CB113004194F7 /* ShapsLibraryiOSTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		54CA9069175CDB6200470B9F /* ShapsLibraryOSX */ = {
+		54CA9069175CDB6200470B9F /* SnippexOSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54CA908B175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSX" */;
+			buildConfigurationList = 54CA908B175CDB6200470B9F /* Build configuration list for PBXNativeTarget "SnippexOSX" */;
 			buildPhases = (
 				54CA9066175CDB6200470B9F /* Sources */,
 				54CA9067175CDB6200470B9F /* Frameworks */,
@@ -679,14 +590,14 @@
 			);
 			dependencies = (
 			);
-			name = ShapsLibraryOSX;
+			name = SnippexOSX;
 			productName = ShapsLibraryOSX;
-			productReference = 54CA906A175CDB6200470B9F /* libShapsLibraryOSX.a */;
+			productReference = 54CA906A175CDB6200470B9F /* libSnippexOSX.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		54CA907B175CDB6200470B9F /* ShapsLibraryOSXTests */ = {
+		54CA907B175CDB6200470B9F /* SnippexOSXTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54CA908E175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSXTests" */;
+			buildConfigurationList = 54CA908E175CDB6200470B9F /* Build configuration list for PBXNativeTarget "SnippexOSXTests" */;
 			buildPhases = (
 				54CA9077175CDB6200470B9F /* Sources */,
 				54CA9078175CDB6200470B9F /* Frameworks */,
@@ -698,7 +609,7 @@
 			dependencies = (
 				54CA9080175CDB6200470B9F /* PBXTargetDependency */,
 			);
-			name = ShapsLibraryOSXTests;
+			name = SnippexOSXTests;
 			productName = ShapsLibraryOSXTests;
 			productReference = 54CA907C175CDB6200470B9F /* ShapsLibraryOSXTests.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -709,8 +620,8 @@
 		54870AF1175CB113004194F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = Shaps;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Snippex;
 			};
 			buildConfigurationList = 54870AF4175CB113004194F7 /* Build configuration list for PBXProject "ShapsLibrary" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -724,10 +635,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54870AF8175CB113004194F7 /* ShapsLibraryiOS */,
-				54870B09175CB113004194F7 /* ShapsLibraryiOSTests */,
-				54CA9069175CDB6200470B9F /* ShapsLibraryOSX */,
-				54CA907B175CDB6200470B9F /* ShapsLibraryOSXTests */,
+				54870AF8175CB113004194F7 /* SnippexiOS */,
+				54870B09175CB113004194F7 /* SnippexiOSTests */,
+				54CA9069175CDB6200470B9F /* SnippexOSX */,
+				54CA907B175CDB6200470B9F /* SnippexOSXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -798,35 +709,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546B7AC7175EA6D900B216A3 /* SyncTest.m in Sources */,
-				5491546C175CE16A00A210BC /* SLASLLogger.m in Sources */,
-				54915471175CE16A00A210BC /* SLDispatchQueueLogFormatter.m in Sources */,
-				5491547B175CE16A00A210BC /* SLLog.m in Sources */,
-				54915480175CE16A00A210BC /* SLTTYLogger.m in Sources */,
-				549154CD175CE95400A210BC /* SLView.m in Sources */,
-				549154D3175CEE9E00A210BC /* SLControl.m in Sources */,
-				549154D9175CEF4000A210BC /* SLAlert.m in Sources */,
-				549154E7175CEFF100A210BC /* SLDrawing.m in Sources */,
-				549154EB175CEFF100A210BC /* SLGeometry.m in Sources */,
-				549154EF175CEFF100A210BC /* SLGradient.m in Sources */,
-				549154F3175CEFF100A210BC /* SLShadow.m in Sources */,
-				5491550C175CF06200A210BC /* BezierPath+SLAdditions.m in Sources */,
-				54915510175CF06200A210BC /* NSBlock+TypedDescription.m in Sources */,
-				54915518175CF06200A210BC /* NSData+SLAdditions.m in Sources */,
-				5491551C175CF06200A210BC /* NSDate+SLAdditions.m in Sources */,
-				54915520175CF06200A210BC /* NSDateFormatter+SLAdditions.m in Sources */,
-				54915524175CF06200A210BC /* NSDictionary+SLAdditions.m in Sources */,
-				54915528175CF06200A210BC /* NSManagedObject+SLAdditions.m in Sources */,
-				5491552C175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m in Sources */,
-				54915530175CF06200A210BC /* NSString+SLAdditions.m in Sources */,
-				54915539175CF24E00A210BC /* SLCoreDataManager.m in Sources */,
-				54AC49C0176F61AA000389DF /* SLBarButtonItem.m in Sources */,
-				5491553D175CF24E00A210BC /* SLErrorManager.m in Sources */,
-				546B7AA3175E9BA000B216A3 /* SLBreadCrumbItem.m in Sources */,
-				546B7AA7175E9BA000B216A3 /* SLBreadCrumbView.m in Sources */,
-				546B7AAB175E9BA000B216A3 /* SLBreadCrumbView+iOS.m in Sources */,
-				546B7AAF175E9BA000B216A3 /* SLBreadCrumbView+OSX.m in Sources */,
-				546B7AEC175EBED300B216A3 /* SLLog+SLAdditions.m in Sources */,
+				549154CD175CE95400A210BC /* SPXView.m in Sources */,
+				549154D3175CEE9E00A210BC /* SPXControl.m in Sources */,
+				549154D9175CEF4000A210BC /* SPXAlert.m in Sources */,
+				549154E7175CEFF100A210BC /* SPXDrawing.m in Sources */,
+				549154EB175CEFF100A210BC /* SPXGeometry.m in Sources */,
+				549154EF175CEFF100A210BC /* SPXGradient.m in Sources */,
+				549154F3175CEFF100A210BC /* SPXShadow.m in Sources */,
+				5491550C175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */,
+				54915510175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */,
+				54915518175CF06200A210BC /* NSData+SPXAdditions.m in Sources */,
+				5491551C175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */,
+				54915520175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
+				54915524175CF06200A210BC /* NSDictionary+SPXAdditions.m in Sources */,
+				54915528175CF06200A210BC /* NSManagedObject+SPXAdditions.m in Sources */,
+				5491552C175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m in Sources */,
+				54915530175CF06200A210BC /* NSString+SPXAdditions.m in Sources */,
+				54915539175CF24E00A210BC /* SPXCoreDataManager.m in Sources */,
+				54AC49C0176F61AA000389DF /* SPXBarButtonItem.m in Sources */,
+				5491553D175CF24E00A210BC /* SPXErrorManager.m in Sources */,
+				546B7AA3175E9BA000B216A3 /* SPXBreadCrumbItem.m in Sources */,
+				546B7AA7175E9BA000B216A3 /* SPXBreadCrumbView.m in Sources */,
+				546B7AAB175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m in Sources */,
+				546B7AAF175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m in Sources */,
 				543E4FC51779B5BB00A22EC5 /* SPXStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,10 +740,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546B7A58175D17B000B216A3 /* SLViewiOSTests.m in Sources */,
-				546B7A5E175D1A5A00B216A3 /* SLControliOSTests.m in Sources */,
-				546B7A66175E370F00B216A3 /* SLViewTests.m in Sources */,
-				546B7A6A175E375200B216A3 /* SLControlTests.m in Sources */,
 				543E4FC61779B5BB00A22EC5 /* SPXStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -847,35 +748,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5491546E175CE16A00A210BC /* SLASLLogger.m in Sources */,
-				54915473175CE16A00A210BC /* SLDispatchQueueLogFormatter.m in Sources */,
-				5491547D175CE16A00A210BC /* SLLog.m in Sources */,
-				54915482175CE16A00A210BC /* SLTTYLogger.m in Sources */,
-				549154CE175CE95400A210BC /* SLView.m in Sources */,
-				549154D4175CEE9E00A210BC /* SLControl.m in Sources */,
-				549154DA175CEF4000A210BC /* SLAlert.m in Sources */,
-				549154E8175CEFF100A210BC /* SLDrawing.m in Sources */,
-				549154EC175CEFF100A210BC /* SLGeometry.m in Sources */,
-				549154F0175CEFF100A210BC /* SLGradient.m in Sources */,
-				549154F4175CEFF100A210BC /* SLShadow.m in Sources */,
-				5491550D175CF06200A210BC /* BezierPath+SLAdditions.m in Sources */,
-				54915511175CF06200A210BC /* NSBlock+TypedDescription.m in Sources */,
-				54915515175CF06200A210BC /* NSColor+SLAdditions.m in Sources */,
-				54915519175CF06200A210BC /* NSData+SLAdditions.m in Sources */,
-				5491551D175CF06200A210BC /* NSDate+SLAdditions.m in Sources */,
-				54915521175CF06200A210BC /* NSDateFormatter+SLAdditions.m in Sources */,
-				54915525175CF06200A210BC /* NSDictionary+SLAdditions.m in Sources */,
-				54915529175CF06200A210BC /* NSManagedObject+SLAdditions.m in Sources */,
-				5491552D175CF06200A210BC /* NSManagedObjectContext+SLAdditions.m in Sources */,
-				54915531175CF06200A210BC /* NSString+SLAdditions.m in Sources */,
-				5491553A175CF24E00A210BC /* SLCoreDataManager.m in Sources */,
-				5491553E175CF24E00A210BC /* SLErrorManager.m in Sources */,
-				546B7A6F175E92CC00B216A3 /* SyncTest.m in Sources */,
-				546B7AA4175E9BA000B216A3 /* SLBreadCrumbItem.m in Sources */,
-				546B7AA8175E9BA000B216A3 /* SLBreadCrumbView.m in Sources */,
-				546B7AAC175E9BA000B216A3 /* SLBreadCrumbView+iOS.m in Sources */,
-				546B7AB0175E9BA000B216A3 /* SLBreadCrumbView+OSX.m in Sources */,
-				546B7AED175EBED300B216A3 /* SLLog+SLAdditions.m in Sources */,
+				549154CE175CE95400A210BC /* SPXView.m in Sources */,
+				549154D4175CEE9E00A210BC /* SPXControl.m in Sources */,
+				549154DA175CEF4000A210BC /* SPXAlert.m in Sources */,
+				549154E8175CEFF100A210BC /* SPXDrawing.m in Sources */,
+				549154EC175CEFF100A210BC /* SPXGeometry.m in Sources */,
+				549154F0175CEFF100A210BC /* SPXGradient.m in Sources */,
+				549154F4175CEFF100A210BC /* SPXShadow.m in Sources */,
+				5491550D175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */,
+				54915511175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */,
+				54915515175CF06200A210BC /* NSColor+SPXAdditions.m in Sources */,
+				54915519175CF06200A210BC /* NSData+SPXAdditions.m in Sources */,
+				5491551D175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */,
+				54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
+				54915525175CF06200A210BC /* NSDictionary+SPXAdditions.m in Sources */,
+				54915529175CF06200A210BC /* NSManagedObject+SPXAdditions.m in Sources */,
+				5491552D175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m in Sources */,
+				54915531175CF06200A210BC /* NSString+SPXAdditions.m in Sources */,
+				5491553A175CF24E00A210BC /* SPXCoreDataManager.m in Sources */,
+				5491553E175CF24E00A210BC /* SPXErrorManager.m in Sources */,
+				546B7AA4175E9BA000B216A3 /* SPXBreadCrumbItem.m in Sources */,
+				546B7AA8175E9BA000B216A3 /* SPXBreadCrumbView.m in Sources */,
+				546B7AAC175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m in Sources */,
+				546B7AB0175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m in Sources */,
 				543E4FC71779B5BB00A22EC5 /* SPXStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -884,10 +779,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546B7A5B175D17BC00B216A3 /* SLViewOSXTests.m in Sources */,
-				546B7A61175D1A6900B216A3 /* SLControlOSXTests.m in Sources */,
-				546B7A67175E370F00B216A3 /* SLViewTests.m in Sources */,
-				546B7A6B175E375200B216A3 /* SLControlTests.m in Sources */,
 				543E4FC81779B5BB00A22EC5 /* SPXStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -897,12 +788,12 @@
 /* Begin PBXTargetDependency section */
 		54870B11175CB113004194F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 54870AF8175CB113004194F7 /* ShapsLibraryiOS */;
+			target = 54870AF8175CB113004194F7 /* SnippexiOS */;
 			targetProxy = 54870B10175CB113004194F7 /* PBXContainerItemProxy */;
 		};
 		54CA9080175CDB6200470B9F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 54CA9069175CDB6200470B9F /* ShapsLibraryOSX */;
+			target = 54CA9069175CDB6200470B9F /* SnippexOSX */;
 			targetProxy = 54CA907F175CDB6200470B9F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1057,7 +948,6 @@
 		54CA908C175CDB6200470B9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -1073,14 +963,13 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		54CA908D175CDB6200470B9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1097,14 +986,13 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		54CA908F175CDB6200470B9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1114,7 +1002,7 @@
 				INFOPLIST_FILE = "ShapsLibraryTests/ShapsLibraryTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -1122,7 +1010,6 @@
 		54CA9090175CDB6200470B9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
@@ -1133,7 +1020,7 @@
 				INFOPLIST_FILE = "ShapsLibraryTests/ShapsLibraryTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -1150,7 +1037,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54870B1E175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOS" */ = {
+		54870B1E175CB114004194F7 /* Build configuration list for PBXNativeTarget "SnippexiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54870B1F175CB114004194F7 /* Debug */,
@@ -1159,7 +1046,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54870B21175CB114004194F7 /* Build configuration list for PBXNativeTarget "ShapsLibraryiOSTests" */ = {
+		54870B21175CB114004194F7 /* Build configuration list for PBXNativeTarget "SnippexiOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54870B22175CB114004194F7 /* Debug */,
@@ -1168,7 +1055,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54CA908B175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSX" */ = {
+		54CA908B175CDB6200470B9F /* Build configuration list for PBXNativeTarget "SnippexOSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54CA908C175CDB6200470B9F /* Debug */,
@@ -1177,7 +1064,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54CA908E175CDB6200470B9F /* Build configuration list for PBXNativeTarget "ShapsLibraryOSXTests" */ = {
+		54CA908E175CDB6200470B9F /* Build configuration list for PBXNativeTarget "SnippexOSXTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54CA908F175CDB6200470B9F /* Debug */,

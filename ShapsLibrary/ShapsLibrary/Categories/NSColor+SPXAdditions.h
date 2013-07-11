@@ -23,28 +23,22 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import <Cocoa/Cocoa.h>
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+/**
+ An NSColor category that adds iOS style functionality to OS X 10.7.
+ */
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+@interface NSColor (SPXAdditions)
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+/// @abstract		Gets a CGColorRef value from this UIColor.
+@property (nonatomic, readonly) CGColorRef CGColor;
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+/**
+ @abstract			Returns an instance of NSColor from the specified CGColorRef
+ @param				CGColor The CGColorRef value to use to create this color.
+ @return			An NSColor instance.
+ */
++(NSColor *)colorWithCGColor:(CGColorRef)CGColor;
 
-#endif
+@end

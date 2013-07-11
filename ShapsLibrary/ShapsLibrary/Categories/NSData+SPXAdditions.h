@@ -23,28 +23,40 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import <Foundation/Foundation.h>
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+/**
+ An NSData category that adds useful functionality manipulating NSData instances.
+ */
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+@interface NSData (SPXAdditions)
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#pragma mark -	C Functions
+/// @name		C Functions
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+void *NewBase64Decode(
+					  const char *inputBuffer,
+					  size_t length,
+					  size_t *outputLength);
 
-#endif
+char *NewBase64Encode(
+					  const void *inputBuffer,
+					  size_t length,
+					  bool separateLines,
+					  size_t *outputLength);
+
+#pragma mark -	Objective-C Functions
+/// @name		Objective-C Functions
+
+/**
+ @abstract		Returns an NSData instance with the specified base64 encoded string.
+ @param			string The base64 encoded string.
+ */
++(NSData *)dataFromBase64String:(NSString *)string;
+
+/**
+ @abstract		Returns a base64 encoded string using this NSData instance.
+ */
+-(NSString *)base64EncodedString;
+
+@end

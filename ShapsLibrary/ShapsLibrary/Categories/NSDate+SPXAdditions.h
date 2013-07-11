@@ -23,28 +23,34 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import <Foundation/Foundation.h>
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+/**
+ An NSDate category that adds additional parsing and formatting options.
+ */
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+@interface NSDate (SPXAdditions)
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+/**
+ @abstract		Returns a valid NSDate instance using the specified RFC3339 formatted date.
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+ @param			dateString A valid RFC3339 date as an NSString instance.
+ @return		A valid NSDate instance.
 
-#endif
+ @discussion	Dates should be in the following format 
+	
+	"yyyy-MM-dd'T'HH:mm:ssZ"
+			   or 
+	"yyyy-MM-dd'T'HH:mm:ss'Z'"
+ */
++(NSDate *)dateFromRFC3339DateString:(NSString *)dateString;
+
+/**
+ @abstract		Returns an natural language version of the date. 
+ For example:
+
+	"Today", "Yesterday", "Last month", "2 minutes ago"
+ */
+-(NSString *)naturalLanguageDate;
+
+@end

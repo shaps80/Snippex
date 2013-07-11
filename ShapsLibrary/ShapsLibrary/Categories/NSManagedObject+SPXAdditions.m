@@ -23,28 +23,19 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import "NSManagedObject+SPXAdditions.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+@implementation NSManagedObject (SPXAdditions)
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+-(NSDictionary *)JSONRepresentation
+{
+	@throw [NSException exceptionWithName:@"JSONRepresentation not overriden" reason:@"You must override JSONRepresentation on your NSManagedObject subclass" userInfo:nil];
+	return nil;
+}
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+-(void)setAttributesFromJSON:(NSDictionary *)attributes
+{
+	@throw [NSException exceptionWithName:@"setAttributesFromJSON: not overriden" reason:@"You must override setAttributesFromJSON: on your NSManagedObject subclass" userInfo:nil];
+}
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
-
-#endif
+@end

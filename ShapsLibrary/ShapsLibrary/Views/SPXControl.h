@@ -23,28 +23,39 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+/**
+ This class provides an abstract way of subclassing either a UIControl (on iOS) or NSControl (on OSX). It also provides custom methods for updating layout or drawing.
+ Any components that should work on both iOS and OSX should subclass this class instead of implementing UIControl/NSControl directly.
+ */
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+typedef enum
+{
+    SPXControlStateNormal			= 0,
+    SPXControlStateHighlighted		= 1 << 0,
+    SPXControlStateDisabled			= 1 << 1,
+    SPXControlStateSelected			= 1 << 2,
+} SPXControlState;
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+@interface SPXControl : UIControl
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+-(void)layoutSubviews NS_REQUIRES_SUPER;
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+#else 
+@interface SPXControl : NSControl
+
+-(void)layout NS_REQUIRES_SUPER;
 
 #endif
+
+/// @abstract		All subclasses should use this method to perform layout as this ensures iOS and OSX get updated correctly.
+-(void)layoutViews;
+
+/// @abstract		This ensures setNeedsLayout is called correctly on iOS and OSX
+-(void)setLayoutRequired;
+
+/// @abstract		This ensures setNeedsDisplay is called correctly on iOS and OSX.
+-(void)setDrawingRequired;
+
+@end

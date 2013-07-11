@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54CA9069175CDB6200470B9F"
                BuildableName = "libShapsLibraryOSX.a"
-               BlueprintName = "ShapsLibraryOSX"
+               BlueprintName = "SnippexOSX"
                ReferencedContainer = "container:ShapsLibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54CA907B175CDB6200470B9F"
                BuildableName = "ShapsLibraryOSXTests.octest"
-               BlueprintName = "ShapsLibraryOSXTests"
+               BlueprintName = "SnippexOSXTests"
                ReferencedContainer = "container:ShapsLibrary.xcodeproj">
             </BuildableReference>
          </TestableReference>

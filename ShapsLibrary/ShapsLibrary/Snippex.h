@@ -23,28 +23,44 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import "SPXDefines.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+#pragma mark - Views
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#import "SPXView.h"
+#import "SPXControl.h"
+#import "SPXAlert.h"
+#import "SPXBreadCrumbView.h"
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+#pragma mark - Managers
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+#import "SPXCoreDataManager.h"
+#import "SPXErrorManager.h"
 
+#pragma mark - Graphics
+
+#import "SPXGraphicsDefines.h"
+#import "SPXGeometry.h"
+#import "SPXDrawing.h"
+#import "SPXGradient.h"
+#import "SPXShadow.h"
+
+#pragma mark - Wrappers
+
+#import "SPXStore.h"
+
+#pragma mark - Categories
+
+#ifdef DEBUG
+#import "NSBlock+SPXAdditions.h"
+#elif !TARGET_OS_IPHONE
+#import "NSColor+SPXAdditions.h"
 #endif
+
+#import "BezierPath+SPXAdditions.h"
+#import "NSData+SPXAdditions.h"
+#import "NSDateFormatter+SPXAdditions.h"
+#import "NSDictionary+SPXAdditions.h"
+#import "NSManagedObject+SPXAdditions.h"
+#import "NSManagedObjectContext+SPXAdditions.h"
+#import "NSString+SPXAdditions.h"

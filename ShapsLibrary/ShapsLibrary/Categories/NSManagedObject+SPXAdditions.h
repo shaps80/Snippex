@@ -23,28 +23,21 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import <CoreData/CoreData.h>
+#import <objc/runtime.h>
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+/**
+ An NSManagedObject category to provide consistent methods for constructing the model object from JSON and returning its JSON representation.
+ */
+@interface NSManagedObject (SPXAdditions)
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+/// @abstract		Returns the JSON representation of this object.
+-(NSDictionary *)JSONRepresentation;
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+/**
+ @abstract		Sets the attributes for this object using the specified dictionary/json object.
+ @param			attributes The JSON/dictionary of attributes to use for setting this objects properties.
+ */
+-(void)setAttributesFromJSON:(NSDictionary *)attributes;
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
-
-#endif
+@end

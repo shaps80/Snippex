@@ -23,28 +23,34 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import <Foundation/Foundation.h>
+#import "SPXGraphicsDefines.h"
+#import "SPXControl.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+typedef enum
+{
+	SPXBreadCrumbItemPositionStart	= 0,
+	SPXBreadCrumbItemPositionMiddle	= 1,
+	SPXBreadCrumbItemPositionEnd	= 2,
+} SPXBreadCrumbItemPosition;
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+/**
+ This class encapsulates the basic properties for each breadcrumb and also performs its own drawing.
+ */
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+@interface SPXBreadCrumbItem : SPXControl
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+/**
+ @abstract		Returns an instance with its text set.
+ @param			text The string to set for its text.
+ @return		An SPXBreadCrumbItem instance.
+ */
+-(id)initWithText:(NSString *)text;
 
-#endif
+/// @abstract	Gets the position of this item.
+@property (nonatomic, readonly) SPXBreadCrumbItemPosition position;
+
+/// @abstract	Gets/sets the text of this item.
+@property (nonatomic, copy) NSString *text;
+
+@end

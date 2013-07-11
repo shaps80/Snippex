@@ -23,28 +23,35 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import "NSDictionary+SPXAdditions.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+// helper function: get the string form of any object
+static NSString *toString(id object)
+{
+	return [NSString stringWithFormat: @"%@", object];
+}
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+// helper function: get the url encoded string form of any object
+static NSString *urlEncode(id object)
+{
+	NSString *string = toString(object);
+	return [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+@implementation NSDictionary (SPXAdditions)
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+-(NSString*) queryString
+{
+	NSMutableArray *parts = [NSMutableArray array];
 
-#endif
+	for (id key in self)
+	{
+		id value = [self objectForKey:key];
+		NSString *part = [NSString stringWithFormat:@"%@=%@", urlEncode(key), urlEncode(value)];
+		[parts addObject:part];
+	}
+
+	return [parts componentsJoinedByString:@"&"];
+}
+
+@end

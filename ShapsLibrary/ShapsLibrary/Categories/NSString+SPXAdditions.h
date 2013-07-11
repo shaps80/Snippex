@@ -23,28 +23,38 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import <Foundation/Foundation.h>
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+/**
+ An NSString category that adds useful functionality for formatting strings.
+ */
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+@interface NSString (SPXAdditions)
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+/**
+ @abstract		Returns a dictionary of key/value pairs constructed from a query string.
+ @discussion	The query string should be in the format 
+ 
+	key=value&key=value
+ */
+-(NSDictionary *)queryParametersFromString;
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
+/**
+ @abstract		Returns a URL encoded string using the specified encoding.
+ @param			encoding The encoding to use.
+ @return		A URL encoded NSString instance.
+ */
+-(NSString *)urlEncodedStringUsingEncoding:(NSStringEncoding)encoding;
 
-#endif
+/**
+ @abstract		Returns a URL encoded string using the specified encoding.
+ @param			encoding The encoding to use.
+ @param			ignore If yes, will ignore query specifiers such as:
+ 
+	'/', '?', ':', '='
+
+ @return		A URL encoded NSString instance.
+ */
+-(NSString *)urlEncodedStringUsingEncoding:(NSStringEncoding)encoding ignoreQuerySpecifiers:(BOOL)ignore;
+
+@end

@@ -23,28 +23,27 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import "SPXBreadCrumbItem.h"
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+@implementation SPXBreadCrumbItem
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
-
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
-
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
-
+-(id)initWithText:(NSString *)text
+{
+	self = [super init];
+	if (self)
+	{
+#if !TARGET_OS_IPHONE
+		[self setWantsLayer:YES];
 #endif
+
+		_text = [text copy];
+	}
+	return self;
+}
+
+-(NSString *)description
+{
+	return [NSString stringWithFormat:@"%@ | %@", [super description], _text];
+}
+
+@end

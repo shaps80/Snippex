@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,28 +23,19 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
+#import <UIKit/UIKit.h>
 
-#ifdef __OBJC__
-	#import "SPXDefines.h"
-	#import <Foundation/Foundation.h>
+@class SPXBarButtonItem;
 
-	#if TARGET_OS_IPHONE
-		#ifndef __IPHONE_5_1
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+typedef void (^SPXBarButtonItemCompletionBlock)(SPXBarButtonItem *sender);
 
-		#import <UIKit/UIKit.h>
-		#import <CoreData/CoreData.h>
-		#import <QuartzCore/QuartzCore.h>
-		#import <CoreGraphics/CoreGraphics.h>
-	#else
-		#ifndef __MAC_10_7
-		#warning "This project uses features only available in iOS SDK 5.1 and later."
-		#endif
+@interface SPXBarButtonItem : UIBarButtonItem
 
-		#import <Cocoa/Cocoa.h>
-		#import <CoreData/CoreData.h>
-	#endif
++(SPXBarButtonItem *)barButtonSystemItem:(UIBarButtonSystemItem)systemItem;
++(SPXBarButtonItem *)barButtonWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style;
++(SPXBarButtonItem *)barButtonWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style;
++(SPXBarButtonItem *)barButtonWithImage:(UIImage *)image landscapeImagePhone:(UIImage *)landscapeImagePhone style:(UIBarButtonItemStyle)style;
 
-#endif
+@property (nonatomic, copy) SPXBarButtonItemCompletionBlock completionBlock;
+
+@end
