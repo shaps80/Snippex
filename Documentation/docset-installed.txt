@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/Shaps/Library/Developer/Shared/Documentation/DocSets/com.shaps.ShapsLibrary-1_0.docset
-Time: 2013-06-03 18:11:45 +0000
