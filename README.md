@@ -38,4 +38,4 @@ Everything is well documented, with full HTML documentation provided (thanks to 
 I hope you find this useful and if you do, drop me a line on twitter @shaps or email shaps80[@]me.com
 I love to hear from fellow developers :)
 
-Developed by [@shaps][http://twitter.com/shaps]
+Developed by [@shaps](http://twitter.com/shaps "Twitter")
