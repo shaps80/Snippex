@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2013 Snippex. All rights reserved.
+ Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,36 +23,77 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#import <Foundation/Foundation.h>
 
-/**
- Here are various definitions to simplify implementation across platforms.
- You can use these methods throughout your code, as does all the Core code
- to ensure the correct classes are used on each platform. e.g. (NSColor vs UIColor)
- */
+#pragma mark - Universal
 
+#if TARGET_OS_IPHONE
 
+#define SPXColor            UIColor
+#define SPXGraphicsContext  UIGraphicsGetCurrentContext()
+#define SPXBezierPath       UIBezierPath
 
-// Usage: -(void)myMethod NS_REQUIRES_SUPER;
-
-#ifndef NS_REQUIRES_SUPER
-#if __has_attribute(objc_requires_super)
-#define NS_REQUIRES_SUPER __attribute((objc_requires_super))
 #else
-#define NS_REQUIRES_SUPER
+
+#define SPXColor            NSColor
+#define SPXGraphicsContext  [[NSGraphicsContext currentContext] graphicsPort]
+#define SPXBezierPath       NSBezierPath
+
 #endif
-#endif
-
-
-// Usage: TRY_PERFORM(self, @selector(stringWithArray:));
-
-#define TRY_PERFORM(THE_OBJECT, THE_SELECTOR) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR] : nil)
-#define TRY_PERFORM_WITH_ARG(THE_OBJECT, THE_SELECTOR, THE_ARG) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:THE_ARG] : nil)
-#define TRY_PERFORM_WITH_ARG2(THE_OBJECT, THE_SELECTOR, ARG1, ARG2) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:ARG1 withObject:ARG2] : nil)
-
-// Usage: encodeObject(_variableName); and decodeObject(_variableName);
 
 #define STRINGIFY(x) #x
 #define OBJC_STRINGIFY(x) @#x
+
+/**
+ User Defaults - Provides wrapper for convenience.
+ getDefaultsObject(_object);
+ setDefaultsObject(_objecT);
+ synchronizeDefaults;
+ */
+
+#pragma mark - NSUserDefaults
+
+#define getDefaults [NSUserDefaults standardUserDefaults]
+#define synchronizeDefaults [[NSUserDefaults standardUserDefaults] synchronize]
+
+// for objects use these
+#define setDefaultsObject(_variableName) [[NSUserDefaults standardUserDefaults] setObject:_variableName forKey:OBJC_STRINGIFY(_variableName)]
+#define getDefaultsObject(_variableName) _variableName = [[NSUserDefaults standardUserDefaults] objectForKey:OBJC_STRINGIFY(_variableName)]
+
+// for primitives use these
+#define setDefaultsInteger(_variableName) [[NSUserDefaults standardUserDefaults] setInteger:_variableName forKey:OBJC_STRINGIFY(_variableName)]
+#define getDefaultsInteger(_variableName) _variableName = [[NSUserDefaults standardUserDefaults] integerForKey:OBJC_STRINGIFY(_variableName)]
+#define setDefaultsDouble(_variableName) [[NSUserDefaults standardUserDefaults] setDouble:_variableName forKey:OBJC_STRINGIFY(_variableName)]
+#define getDefaultsDouble(_variableName) _variableName = [[NSUserDefaults standardUserDefaults] doubleForKey:OBJC_STRINGIFY(_variableName)]
+#define setDefaultsFloat(_variableName) [[NSUserDefaults standardUserDefaults] setFloat:_variableName forKey:OBJC_STRINGIFY(_variableName)]
+#define getDefaultsFloat(_variableName) _variableName = [[NSUserDefaults standardUserDefaults] floatForKey:OBJC_STRINGIFY(_variableName)]
+#define setDefaultsBool(_variableName) [[NSUserDefaults standardUserDefaults] setBool:_variableName forKey:OBJC_STRINGIFY(_variableName)]
+#define getDefaultsBool(_variableName) _variableName = [[NSUserDefaults standardUserDefaults] boolForKey:OBJC_STRINGIFY(_variableName)]
+
+#if TARGET_OS_IPHONE
+
+#define setDefaultsRect(_variableName) [[NSUserDefaults standardUserDefaults] setObject:[NSValue valueWithCGRect:_variableName] forKey:OBJC_STRINGIFY(_variableName)];
+#define getDefaultsRect(_variableName) [[[NSUserDefaults standardUserDefaults] objectForKey:OBJC_STRINGIFY(_variableName)] CGRectValue];
+#define setDefaultsPoint(_variableName) [[NSUserDefaults standardUserDefaults] setObject:[NSValue valueWithCGPoint:_variableName] forKey:OBJC_STRINGIFY(_variableName)];
+#define getDefaultsPoint(_variableName) [[[NSUserDefaults standardUserDefaults] objectForKey:OBJC_STRINGIFY(_variableName)] CGPointValue];
+
+#else
+
+#define setDefaultsRect(_variableName) [[NSUserDefaults standardUserDefaults] setObject:[NSValue valueWithRect:_variableName] forKey:OBJC_STRINGIFY(_variableName)];
+#define getDefaultsRect(_variableName) [[[NSUserDefaults standardUserDefaults] objectForKey:OBJC_STRINGIFY(_variableName)] rectValue];
+#define setDefaultsPoint(_variableName) [[NSUserDefaults standardUserDefaults] setObject:[NSValue valueWithPoint:_variableName] forKey:OBJC_STRINGIFY(_variableName)];
+#define getDefaultsPoint(_variableName) [[[NSUserDefaults standardUserDefaults] objectForKey:OBJC_STRINGIFY(_variableName)] pointValue];
+
+#endif
+
+/**
+ NSEncoding - Provides wrapper for convenience.
+ encodeObject(_object);
+ decodeObject(_object);
+ */
+
+#pragma mark - NSCoding
+
 #define encodeObject(_variableName) [aCoder encodeObject:_variableName forKey:OBJC_STRINGIFY(_variableName)]
 #define decodeObject(_variableName) _variableName = [aDecoder decodeObjectForKey:OBJC_STRINGIFY(_variableName)]
 
@@ -85,3 +126,72 @@
 
 #endif
 
+/**
+ Perform selector - Provides wrapper for convenience.
+ */
+
+#pragma mark - Perform Selector
+
+#define PERFORM_SELECTOR(THE_OBJECT, THE_SELECTOR) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR] : nil)
+#define PERFORM_SELECTOR_WITH_ARG(THE_OBJECT, THE_SELECTOR, THE_ARG) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:THE_ARG] : nil)
+#define PERFORM_SELECTOR_WITH_ARG2(THE_OBJECT, THE_SELECTOR, ARG1, ARG2) (([THE_OBJECT respondsToSelector:THE_SELECTOR]) ? [THE_OBJECT performSelector:THE_SELECTOR withObject:ARG1 withObject:ARG2] : nil)
+
+/**
+ Requires Super - Provides compiler warning when super is not called on a method that requires it.
+ -(void)myMethod NS_REQUIRES_SUPER;
+ */
+
+#pragma mark - Requires Super
+
+#ifndef NS_REQUIRES_SUPER
+#if __has_attribute(objc_requires_super)
+#define NS_REQUIRES_SUPER __attribute((objc_requires_super))
+#else
+#define NS_REQUIRES_SUPER
+#endif
+#endif
+
+/**
+ Weak Variables - automatically inserts __weak/weak in iOS 5 and above, and __unsafe_unretained/assign older versions
+ id __WEAK object;
+ @property (WEAK) object;
+ */
+
+#pragma mark - Weak Pointers
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
+#define __WEAK      __weak
+#define WEAK        weak
+
+#else
+
+#define __WEAK      __unsafe_unretained
+#define WEAK        assign
+
+#endif
+
+/**
+ DLog - Provides a simpler implementation that is guaranteed to be removed in RELEASE mode.
+ LogMethod - Provides a simply way to log the current class and method to the console.
+ DLog(@"%@", object);
+ logMethod;
+ */
+
+#pragma mark - Logging
+
+#if DEBUG
+
+// allow us to log method and class while in debug mode
+#define logMethod NSLog(@"LOG: %@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+
+// should use DLog vs NSLog to ensure its completely disabled when not in debug mode
+#define DLog(...) NSLog(__VA_ARGS__)
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+// is we're in release mode, we disable these
+#define DLog(...)
+#define logMethod
+
+#endif
