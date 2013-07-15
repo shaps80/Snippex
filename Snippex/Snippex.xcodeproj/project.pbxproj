@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		543E4FC31779B5BB00A22EC5 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 543E4FC11779B5BB00A22EC5 /* SPXStore.h */; };
-		543E4FC41779B5BB00A22EC5 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 543E4FC11779B5BB00A22EC5 /* SPXStore.h */; };
+		543E4FC41779B5BB00A22EC5 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 543E4FC11779B5BB00A22EC5 /* SPXStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543E4FC51779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
 		543E4FC61779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
 		543E4FC71779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
 		543E4FC81779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
+		54570BD71794278D008CE9B0 /* Color+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54570BD51794278D008CE9B0 /* Color+SPXAdditions.h */; };
+		54570BD81794278D008CE9B0 /* Color+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54570BD61794278D008CE9B0 /* Color+SPXAdditions.m */; };
+		54570BD917942791008CE9B0 /* Color+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54570BD61794278D008CE9B0 /* Color+SPXAdditions.m */; };
 		546B7A34175CFBB700B216A3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549154BD175CE7DD00A210BC /* SenTestingKit.framework */; };
 		546B7A36175CFCA000B216A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A35175CFC9F00B216A3 /* UIKit.framework */; };
 		546B7A38175CFCAC00B216A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */; };
@@ -87,8 +90,6 @@
 		5491550F175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915510175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */; };
 		54915511175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */; };
-		54915513175CF06200A210BC /* NSColor+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FA175CF06200A210BC /* NSColor+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915515175CF06200A210BC /* NSColor+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FB175CF06200A210BC /* NSColor+SPXAdditions.m */; };
 		54915516175CF06200A210BC /* NSData+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915517175CF06200A210BC /* NSData+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915518175CF06200A210BC /* NSData+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SPXAdditions.m */; };
@@ -165,6 +166,8 @@
 /* Begin PBXFileReference section */
 		543E4FC11779B5BB00A22EC5 /* SPXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStore.h; sourceTree = "<group>"; };
 		543E4FC21779B5BB00A22EC5 /* SPXStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStore.m; sourceTree = "<group>"; };
+		54570BD51794278D008CE9B0 /* Color+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Color+SPXAdditions.h"; sourceTree = "<group>"; };
+		54570BD61794278D008CE9B0 /* Color+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Color+SPXAdditions.m"; sourceTree = "<group>"; };
 		546B7A35175CFC9F00B216A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		546B7A37175CFCAC00B216A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		546B7A3A175CFCBE00B216A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -185,7 +188,7 @@
 		54870B15175CB113004194F7 /* SnippexTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnippexTests-Info.plist"; sourceTree = "<group>"; };
 		54870B17175CB113004194F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		549154BD175CE7DD00A210BC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		549154C6175CE93700A210BC /* SPXGraphicsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXGraphicsDefines.h; sourceTree = "<group>"; };
+		549154C6175CE93700A210BC /* SPXGraphicsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPXGraphicsDefines.h; path = Graphics/SPXGraphicsDefines.h; sourceTree = "<group>"; };
 		549154C9175CE95400A210BC /* SPXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXView.h; sourceTree = "<group>"; };
 		549154CA175CE95400A210BC /* SPXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXView.m; sourceTree = "<group>"; };
 		549154CF175CEE9E00A210BC /* SPXControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXControl.h; sourceTree = "<group>"; };
@@ -204,8 +207,6 @@
 		549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BezierPath+SPXAdditions.m"; sourceTree = "<group>"; };
 		549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBlock+SPXAdditions.h"; sourceTree = "<group>"; };
 		549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBlock+SPXAdditions.m"; sourceTree = "<group>"; };
-		549154FA175CF06200A210BC /* NSColor+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+SPXAdditions.h"; sourceTree = "<group>"; };
-		549154FB175CF06200A210BC /* NSColor+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+SPXAdditions.m"; sourceTree = "<group>"; };
 		549154FC175CF06200A210BC /* NSData+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SPXAdditions.h"; sourceTree = "<group>"; };
 		549154FD175CF06200A210BC /* NSData+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SPXAdditions.m"; sourceTree = "<group>"; };
 		549154FE175CF06200A210BC /* NSDate+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SPXAdditions.h"; sourceTree = "<group>"; };
@@ -351,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				546B7A46175D003700B216A3 /* SPXDefines.h */,
+				549154C6175CE93700A210BC /* SPXGraphicsDefines.h */,
 				543E4FB91779B4A500A22EC5 /* Wrappers */,
 				54915532175CF1DD00A210BC /* Managers */,
 				549154DC175CEFA600A210BC /* Views */,
@@ -409,7 +411,6 @@
 		549154DB175CEF9E00A210BC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				549154C6175CE93700A210BC /* SPXGraphicsDefines.h */,
 				549154DF175CEFF100A210BC /* SPXGeometry.h */,
 				549154E0175CEFF100A210BC /* SPXGeometry.m */,
 				549154DD175CEFF100A210BC /* SPXDrawing.h */,
@@ -445,8 +446,6 @@
 				549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */,
 				549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */,
 				549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */,
-				549154FA175CF06200A210BC /* NSColor+SPXAdditions.h */,
-				549154FB175CF06200A210BC /* NSColor+SPXAdditions.m */,
 				549154FC175CF06200A210BC /* NSData+SPXAdditions.h */,
 				549154FD175CF06200A210BC /* NSData+SPXAdditions.m */,
 				549154FE175CF06200A210BC /* NSDate+SPXAdditions.h */,
@@ -461,6 +460,8 @@
 				54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */,
 				54915508175CF06200A210BC /* NSString+SPXAdditions.h */,
 				54915509175CF06200A210BC /* NSString+SPXAdditions.m */,
+				54570BD51794278D008CE9B0 /* Color+SPXAdditions.h */,
+				54570BD61794278D008CE9B0 /* Color+SPXAdditions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -510,6 +511,7 @@
 				5491553B175CF24E00A210BC /* SPXErrorManager.h in Headers */,
 				54AC49BF176F61AA000389DF /* SPXBarButtonItem.h in Headers */,
 				543E4FC31779B5BB00A22EC5 /* SPXStore.h in Headers */,
+				54570BD71794278D008CE9B0 /* Color+SPXAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +530,6 @@
 				549154F2175CEFF100A210BC /* SPXShadow.h in Headers */,
 				5491550B175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
 				5491550F175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */,
-				54915513175CF06200A210BC /* NSColor+SPXAdditions.h in Headers */,
 				54915517175CF06200A210BC /* NSData+SPXAdditions.h in Headers */,
 				5491551B175CF06200A210BC /* NSDate+SPXAdditions.h in Headers */,
 				5491551F175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */,
@@ -743,6 +744,7 @@
 				546B7AAB175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m in Sources */,
 				546B7AAF175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m in Sources */,
 				543E4FC51779B5BB00A22EC5 /* SPXStore.m in Sources */,
+				54570BD81794278D008CE9B0 /* Color+SPXAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,7 +769,6 @@
 				549154F4175CEFF100A210BC /* SPXShadow.m in Sources */,
 				5491550D175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */,
 				54915511175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */,
-				54915515175CF06200A210BC /* NSColor+SPXAdditions.m in Sources */,
 				54915519175CF06200A210BC /* NSData+SPXAdditions.m in Sources */,
 				5491551D175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */,
 				54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
@@ -782,6 +783,7 @@
 				546B7AAC175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m in Sources */,
 				546B7AB0175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m in Sources */,
 				543E4FC71779B5BB00A22EC5 /* SPXStore.m in Sources */,
+				54570BD917942791008CE9B0 /* Color+SPXAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -958,6 +960,7 @@
 		54CA908C175CDB6200470B9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -967,6 +970,7 @@
 				GCC_PREFIX_HEADER = "Snippex/Snippex-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -980,6 +984,7 @@
 		54CA908D175CDB6200470B9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -990,6 +995,7 @@
 				GCC_PREFIX_HEADER = "Snippex/Snippex-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",

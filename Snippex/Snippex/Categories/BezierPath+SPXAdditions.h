@@ -36,7 +36,7 @@
 #else
 
 #import <Cocoa/Cocoa.h>
-#import "NSColor+SPXAdditions.h"
+#import "Color+SPXAdditions.h"
 
 @interface NSBezierPath (SPXAdditions)
 

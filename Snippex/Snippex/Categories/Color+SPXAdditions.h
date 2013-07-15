@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,13 +23,11 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
-/**
- An NSColor category that adds iOS style functionality to OS X 10.7.
- */
+@interface SPXColor (SPXAdditions)
 
-@interface NSColor (SPXAdditions)
+#if !TARGET_OS_IPHONE
 
 /// @abstract		Gets a CGColorRef value from this UIColor.
 @property (nonatomic, readonly) CGColorRef CGColor;
@@ -40,5 +38,9 @@
  @return			An NSColor instance.
  */
 +(NSColor *)colorWithCGColor:(CGColorRef)CGColor;
+
+#endif
+
++(SPXColor *)colorFromHTMLValue:(NSString *)value;
 
 @end

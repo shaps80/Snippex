@@ -27,7 +27,7 @@
 #import "SPXGraphicsDefines.h"
 
 #if !TARGET_OS_IPHONE
-#import "NSColor+SPXAdditions.h"
+#import "Color+SPXAdditions.h"
 #endif
 
 /**

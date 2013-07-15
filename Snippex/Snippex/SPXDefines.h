@@ -160,6 +160,7 @@
 #pragma mark - Weak Pointers
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
+
 #define __WEAK      __weak
 #define WEAK        weak
 
@@ -175,17 +176,34 @@
  LogMethod - Provides a simply way to log the current class and method to the console.
  DLog(@"%@", object);
  logMethod;
+ 
+ Logging format (date, line_number, class, method, format)
+
+    2013-07-12 00:52:00 | 193 | NMNotifier | initializeWithAppKey:appSecret: | Initialized key and secret 
  */
 
 #pragma mark - Logging
 
 #if DEBUG
 
+#import <Foundation/Foundation.h>
+
+static NSString * getTimestamp()
+{
+    static NSDateFormatter *formatter = nil;
+    
+    if (!formatter)
+        formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:@"MMM dd yyyy, hh:mm:ss"];
+    return [formatter stringFromDate:[NSDate date]];
+}
+
 // allow us to log method and class while in debug mode
-#define logMethod NSLog(@"LOG: %@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+#define logMethod NSLog((@"%@ | %d | %@ | %@ "), getTimestamp(), __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 
 // should use DLog vs NSLog to ensure its completely disabled when not in debug mode
-#define DLog(...) NSLog(__VA_ARGS__)
+#define DLog(fmt, ...) NSLog((@"%@ | %d | %@ | %@ | " fmt), getTimestamp(), __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__);
 #define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 #else

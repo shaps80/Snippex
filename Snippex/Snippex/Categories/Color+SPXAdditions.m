@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,10 +23,12 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Availability.h>
-#import "NSColor+SPXAdditions.h"
+#import "Color+SPXAdditions.h"
+#import "SPXGraphicsDefines.h"
 
-@implementation NSColor (SPXAdditions)
+@implementation SPXColor (SPXAdditions)
+
+#if !TARGET_OS_IPHONE
 
 // This is to supress warnings when compiling on 10.8+ because these methods are already provided by the SDK.
 // These should be removed soon since we no longer need to support 10.7
@@ -53,5 +55,13 @@
 }
 
 #pragma clang diagnostic pop
+
+#endif
+
++(SPXColor *)colorFromHTMLValue:(NSString *)value
+{
+    NSAssert(NO, @"NOt Implemented");
+    return nil;
+}
 
 @end

@@ -54,7 +54,7 @@
 #ifdef DEBUG
 #import "NSBlock+SPXAdditions.h"
 #elif !TARGET_OS_IPHONE
-#import "NSColor+SPXAdditions.h"
+#import "Color+SPXAdditions.h"
 #endif
 
 #import "BezierPath+SPXAdditions.h"

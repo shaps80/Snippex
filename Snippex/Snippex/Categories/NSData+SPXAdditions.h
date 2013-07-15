@@ -25,6 +25,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^SPXDataCompletionBlock)(NSData *data, NSError *error);
+
 /**
  An NSData category that adds useful functionality manipulating NSData instances.
  */
@@ -58,5 +60,30 @@ char *NewBase64Encode(
  @abstract		Returns a base64 encoded string using this NSData instance.
  */
 -(NSString *)base64EncodedString;
+
+/**
+ @abstract      Performs an Asynchronous request and returns the data/error in the completion block
+ @param         url The url for the request
+ @param         body The key/value pairs to pass into the body of this request, pass NIL here to generate a GET request, POST otherwise
+ @param         encoding The encoding to use for the body string, if this is a GET request, this value is ignored
+ @param         error If an error occurs, it will be stored to this value
+ @return        The NSData returned from this request
+ */
++(NSData *)dataWithContentsOfURL:(NSURL *)url
+                        postBody:(NSDictionary *)body
+                        encoding:(NSStringEncoding)encoding
+                           error:(out NSError *__autoreleasing *)error;
+
+/**
+ @abstract      Performs an Asynchronous request and returns the data/error in the completion block
+ @param         url The url for the request
+ @param         body The key/value pairs to pass into the body of this request, pass NIL here to generate a GET request, POST otherwise
+ @param         encoding The encoding to use for the body string, if this is a GET request, this value is ignored
+ @param         completion The completion block to be executed when this request completes
+ */
++(void)dataWithContentsOfURL:(NSURL *)url
+                    postBody:(NSDictionary *)body
+                    encoding:(NSStringEncoding)encoding
+                  completion:(SPXDataCompletionBlock)completion;
 
 @end

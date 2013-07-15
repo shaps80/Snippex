@@ -148,8 +148,6 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 	}
 
 	self.path = path;
-#warning need to check this!!
-    CGPathRelease(path);
 	return (__bridge CGPathRef)(__bridge id)self.path;
 }
 

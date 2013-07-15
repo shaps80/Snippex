@@ -30,7 +30,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #if !TARGET_OS_IPHONE
-#import "NSColor+SPXAdditions.h"
+#import "Color+SPXAdditions.h"
 #endif
 
 // Draws a 1 px line using specified context.

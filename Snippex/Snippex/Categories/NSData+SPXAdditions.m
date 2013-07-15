@@ -307,4 +307,60 @@ char *NewBase64Encode(
     return result;
 }
 
++(NSData *)dataWithContentsOfURL:(NSURL *)url
+                        postBody:(NSDictionary *)body
+                        encoding:(NSStringEncoding)encoding
+                           error:(out NSError *__autoreleasing *)error
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSMutableString *bodyString = [[NSMutableString alloc] init];
+
+    for (NSString *key in body.allKeys)
+    {
+        NSString *value = [body objectForKey:key];
+        [bodyString appendFormat:@"%@=%@&", key, value];
+    }
+
+    if (bodyString.length)
+        [bodyString deleteCharactersInRange:NSMakeRange(bodyString.length - 2, 1)];
+
+    [request setHTTPBody:[bodyString dataUsingEncoding:encoding]];
+
+    if (body) [request setHTTPMethod:@"POST"];
+    else [request setHTTPMethod:@"GET"];
+
+    return [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:error];
+}
+
++(void)dataWithContentsOfURL:(NSURL *)url
+                    postBody:(NSDictionary *)body
+                    encoding:(NSStringEncoding)encoding
+                  completion:(SPXDataCompletionBlock)completion
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSMutableString *bodyString = [[NSMutableString alloc] init];
+
+    for (NSString *key in body.allKeys)
+    {
+        NSString *value = [body objectForKey:key];
+        [bodyString appendFormat:@"%@=%@&", key, value];
+    }
+
+    if (bodyString.length)
+        [bodyString deleteCharactersInRange:NSMakeRange(bodyString.length - 2, 1)];
+
+    [request setHTTPBody:[bodyString dataUsingEncoding:encoding]];
+
+    if (body) [request setHTTPMethod:@"POST"];
+    else [request setHTTPMethod:@"GET"];
+
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+    {
+        if (completion)
+            completion(data, error);
+    }];
+}
+
 @end
