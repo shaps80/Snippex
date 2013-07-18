@@ -24,6 +24,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "SPXGraphicsDefines.h"
 
 @interface SPXColor (SPXAdditions)
 
@@ -41,6 +42,6 @@
 
 #endif
 
-+(SPXColor *)colorFromHTMLValue:(NSString *)value;
++(SPXColor *)colorWithHexValue:(NSString *)value;
 
 @end

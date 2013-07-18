@@ -64,3 +64,5 @@
 #import "NSManagedObject+SPXAdditions.h"
 #import "NSManagedObjectContext+SPXAdditions.h"
 #import "NSString+SPXAdditions.h"
+#import "Color+SPXAdditions.h"
+
