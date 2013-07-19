@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,21 +23,8 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <CoreData/CoreData.h>
-#import <objc/runtime.h>
+#import <Foundation/Foundation.h>
 
-/**
- An NSManagedObject category to provide consistent methods for constructing the model object from JSON and returning its JSON representation.
- */
-@interface NSManagedObject (SPXAdditions)
-
-/// @abstract		Returns the JSON representation of this object.
--(NSDictionary *)JSONRepresentation;
-
-/**
- @abstract		Sets the attributes for this object using the specified dictionary/json object.
- @param			attributes The JSON/dictionary of attributes to use for setting this objects properties.
- */
--(void)setAttributesFromJSON:(NSDictionary *)attributes;
+@interface SPXiCloudStore : NSObject
 
 @end

@@ -269,8 +269,6 @@
 
 #pragma mark - Keychain Wrapper
 
-
-#define kDelimiter @"-|-"
 #define DEFAULT_ACCESSIBILITY kSecAttrAccessibleWhenUnlocked
 
 #if __has_feature(objc_arc)

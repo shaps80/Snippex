@@ -84,6 +84,12 @@ typedef void (^SPXAlertCompletionBlock)(NSInteger buttonIndex);
  */
 -(void)dismissWithDelay:(NSTimeInterval)delay;
 
+#if TARGET_OS_IPHONE
+-(UIAlertView *)alert;
+#else
+-(NSAlert *)alert;
+#endif
+
 @end
 
 /**

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,19 +23,8 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "NSManagedObject+SPXAdditions.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSManagedObject (SPXAdditions)
-
--(NSDictionary *)JSONRepresentation
-{
-	@throw [NSException exceptionWithName:@"JSONRepresentation not overriden" reason:@"You must override JSONRepresentation on your NSManagedObject subclass" userInfo:nil];
-	return nil;
-}
-
--(void)setAttributesFromJSON:(NSDictionary *)attributes
-{
-	@throw [NSException exceptionWithName:@"setAttributesFromJSON: not overriden" reason:@"You must override setAttributesFromJSON: on your NSManagedObject subclass" userInfo:nil];
-}
+@interface SPXKeychainStore : NSObject
 
 @end

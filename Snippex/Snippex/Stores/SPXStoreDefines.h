@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,50 +23,22 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
 
-#pragma mark - Views
+/**
+ The various states an object can be in.
+ */
+typedef enum
+{
+	SPXStoreObjectStateFound        /* The object was found    */,
+	SPXStoreObjectStateAdded        /* The object was added    */,
+	SPXStoreObjectStateRemoved      /* The object was removed  */,
+	SPXStoreObjectStateModified     /* The object was modified */,
+} SPXStoreObjectState;
 
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
-#import "SPXBarButtonItem.h"
-
-#pragma mark - Controllers
-
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-
-#pragma mark - Managers
-
-#import "SPXStoreManager.h"
-#import "SPXErrorManager.h"
-
-#pragma mark - Graphics
-
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
-
-#pragma mark - CoreData
-
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
-#import "Color+SPXAdditions.h"
-
+typedef enum
+{
+    SPXStoreTypeDefaults            /* Returns a store backed by NSUserDefaults */,
+    SPXStoreTypeiCloud              /* Returns a store backed by iCloud         */,
+    SPXStoreTypeKeychain            /* Returns a store backed by NSUserDefaults */,
+    SPXStoreTypeCoreData            /* Returns a store backed by CoreData       */,
+} SPXStoreType;

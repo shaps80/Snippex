@@ -25,9 +25,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SPXBarButtonItem;
-
-typedef void (^SPXBarButtonItemCompletionBlock)(SPXBarButtonItem *sender);
+typedef void (^SPXBarButtonItemCompletionBlock)();
 
 @interface SPXBarButtonItem : UIBarButtonItem
 

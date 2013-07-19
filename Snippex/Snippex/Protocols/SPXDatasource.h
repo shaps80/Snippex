@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,50 +23,29 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-#pragma mark - Views
+typedef UITableViewCell* (^SPXCellForIndexPathBlock)(UITableView *tableView, NSManagedObject *object, NSIndexPath *indexPath);
+typedef NSString* (^SPXTitleForHeaderInSectionBlock)(UITableView *tableView, NSUInteger section);
+typedef NSString* (^SPXTitleForFooterInSectionBlock)(UITableView *tableView, NSUInteger section);
 
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
-#import "SPXBarButtonItem.h"
+@protocol SPXDatasourceProtocol <NSObject>
 
-#pragma mark - Controllers
+@required
+-(id)tableView:(UITableView *)tableView objectAtIndexPath:(NSIndexPath *)indexPath;
+-(NSArray *)sectionsForTableView:(UITableView *)tableView;
 
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
+@end
 
-#pragma mark - Managers
+@interface SPXDatasource : NSObject <UITableViewDataSource, SPXDatasourceProtocol>
 
-#import "SPXStoreManager.h"
-#import "SPXErrorManager.h"
+@property (nonatomic, copy) NSArray *sortDescriptors;
 
-#pragma mark - Graphics
+-(void)setSectionIndexMinimumDisplayRowCount:(NSInteger)count;
 
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
+-(void)setCellForRowAtIndexPathBlock:(SPXCellForIndexPathBlock)block;
+-(void)setTitleForHeaderInSectionBlock:(SPXTitleForHeaderInSectionBlock)block;
+-(void)setTitleForFooterInSectionBlock:(SPXTitleForFooterInSectionBlock)block;
 
-#pragma mark - CoreData
-
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
-#import "Color+SPXAdditions.h"
-
+@end

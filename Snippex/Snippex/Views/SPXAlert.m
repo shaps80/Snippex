@@ -151,5 +151,10 @@ static NSMutableArray *alerts;
 	});
 }
 
+-(id)alert
+{
+    return _alert;
+}
+
 
 @end

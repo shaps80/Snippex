@@ -30,7 +30,7 @@
 -(void)actionForBarButtonItem
 {
 	if (_completionBlock)
-		_completionBlock(self);
+		_completionBlock();
 }
 
 +(SPXBarButtonItem *)barButtonWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style

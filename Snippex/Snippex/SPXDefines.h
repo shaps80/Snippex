@@ -188,23 +188,12 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString * getTimestamp()
-{
-    static NSDateFormatter *formatter = nil;
-    
-    if (!formatter)
-        formatter = [[NSDateFormatter alloc] init];
-    
-    [formatter setDateFormat:@"MMM dd yyyy, hh:mm:ss"];
-    return [formatter stringFromDate:[NSDate date]];
-}
-
 // allow us to log method and class while in debug mode
-#define logMethod NSLog((@"%@ | %d | %@ | %@ "), getTimestamp(), __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+#define logMethod NSLog((@"%@ | %d | %@ | %@ "), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 
 // should use DLog vs NSLog to ensure its completely disabled when not in debug mode
-#define DLog(fmt, ...) NSLog((@"%@ | %d | %@ | %@ | " fmt), getTimestamp(), __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__);
-#define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#define DLog(fmt, ...) NSLog((@"%@ | %d | %@ | %@ | " fmt), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__);
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
 
 #else
 

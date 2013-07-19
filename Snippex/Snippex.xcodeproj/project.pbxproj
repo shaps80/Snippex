@@ -7,6 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540158131799ADC400175910 /* SPXSearchDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 540158111799ADC400175910 /* SPXSearchDatasource.h */; };
+		540158141799ADC400175910 /* SPXSearchDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 540158121799ADC400175910 /* SPXSearchDatasource.m */; };
+		540158171799AE6200175910 /* SPXDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 540158151799AE6200175910 /* SPXDatasource.h */; };
+		540158181799AE6200175910 /* SPXDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 540158161799AE6200175910 /* SPXDatasource.m */; };
+		541AF17A17994124004259D6 /* SPXFetchRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF17417994124004259D6 /* SPXFetchRequest.h */; };
+		541AF17B17994124004259D6 /* SPXFetchRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF17417994124004259D6 /* SPXFetchRequest.h */; };
+		541AF17C17994124004259D6 /* SPXFetchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF17517994124004259D6 /* SPXFetchRequest.m */; };
+		541AF17D17994124004259D6 /* SPXFetchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF17517994124004259D6 /* SPXFetchRequest.m */; };
+		541AF189179944D2004259D6 /* SPXStoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF187179944D2004259D6 /* SPXStoreManager.h */; };
+		541AF18A179944D2004259D6 /* SPXStoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF187179944D2004259D6 /* SPXStoreManager.h */; };
+		541AF18B179944D2004259D6 /* SPXStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF188179944D2004259D6 /* SPXStoreManager.m */; };
+		541AF18C179944D2004259D6 /* SPXStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF188179944D2004259D6 /* SPXStoreManager.m */; };
+		541AF191179945B8004259D6 /* SPXCoreDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF18F179945B8004259D6 /* SPXCoreDataStore.h */; };
+		541AF192179945B8004259D6 /* SPXCoreDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF18F179945B8004259D6 /* SPXCoreDataStore.h */; };
+		541AF193179945B8004259D6 /* SPXCoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF190179945B8004259D6 /* SPXCoreDataStore.m */; };
+		541AF194179945B8004259D6 /* SPXCoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF190179945B8004259D6 /* SPXCoreDataStore.m */; };
+		541AF197179945CC004259D6 /* SPXiCloudStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF195179945CC004259D6 /* SPXiCloudStore.h */; };
+		541AF198179945CC004259D6 /* SPXiCloudStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF195179945CC004259D6 /* SPXiCloudStore.h */; };
+		541AF199179945CC004259D6 /* SPXiCloudStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF196179945CC004259D6 /* SPXiCloudStore.m */; };
+		541AF19A179945CC004259D6 /* SPXiCloudStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF196179945CC004259D6 /* SPXiCloudStore.m */; };
+		541AF19D179945DA004259D6 /* SPXDefaultsStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF19B179945DA004259D6 /* SPXDefaultsStore.h */; };
+		541AF19E179945DA004259D6 /* SPXDefaultsStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF19B179945DA004259D6 /* SPXDefaultsStore.h */; };
+		541AF19F179945DA004259D6 /* SPXDefaultsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF19C179945DA004259D6 /* SPXDefaultsStore.m */; };
+		541AF1A0179945DA004259D6 /* SPXDefaultsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF19C179945DA004259D6 /* SPXDefaultsStore.m */; };
+		541AF1A217994AC8004259D6 /* SPXStoreDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1A11799467B004259D6 /* SPXStoreDefines.h */; };
+		541AF1A317994AC9004259D6 /* SPXStoreDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1A11799467B004259D6 /* SPXStoreDefines.h */; };
+		541AF1A617994AD9004259D6 /* SPXKeychainStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1A417994AD9004259D6 /* SPXKeychainStore.h */; };
+		541AF1A717994AD9004259D6 /* SPXKeychainStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1A417994AD9004259D6 /* SPXKeychainStore.h */; };
+		541AF1A817994AD9004259D6 /* SPXKeychainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF1A517994AD9004259D6 /* SPXKeychainStore.m */; };
+		541AF1A917994AD9004259D6 /* SPXKeychainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF1A517994AD9004259D6 /* SPXKeychainStore.m */; };
+		541AF1AE17994E7F004259D6 /* SPXCoreDataDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */; };
+		541AF1B017994E7F004259D6 /* SPXCoreDataDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */; };
 		543E4FC31779B5BB00A22EC5 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 543E4FC11779B5BB00A22EC5 /* SPXStore.h */; };
 		543E4FC41779B5BB00A22EC5 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 543E4FC11779B5BB00A22EC5 /* SPXStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543E4FC51779B5BB00A22EC5 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXStore.m */; };
@@ -106,22 +138,10 @@
 		54915523175CF06200A210BC /* NSDictionary+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915502175CF06200A210BC /* NSDictionary+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915524175CF06200A210BC /* NSDictionary+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915503175CF06200A210BC /* NSDictionary+SPXAdditions.m */; };
 		54915525175CF06200A210BC /* NSDictionary+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915503175CF06200A210BC /* NSDictionary+SPXAdditions.m */; };
-		54915526175CF06200A210BC /* NSManagedObject+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915504175CF06200A210BC /* NSManagedObject+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915527175CF06200A210BC /* NSManagedObject+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915504175CF06200A210BC /* NSManagedObject+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915528175CF06200A210BC /* NSManagedObject+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915505175CF06200A210BC /* NSManagedObject+SPXAdditions.m */; };
-		54915529175CF06200A210BC /* NSManagedObject+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915505175CF06200A210BC /* NSManagedObject+SPXAdditions.m */; };
-		5491552A175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915506175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491552B175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915506175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491552C175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */; };
-		5491552D175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */; };
 		5491552E175CF06200A210BC /* NSString+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915508175CF06200A210BC /* NSString+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5491552F175CF06200A210BC /* NSString+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915508175CF06200A210BC /* NSString+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915530175CF06200A210BC /* NSString+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915509175CF06200A210BC /* NSString+SPXAdditions.m */; };
 		54915531175CF06200A210BC /* NSString+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915509175CF06200A210BC /* NSString+SPXAdditions.m */; };
-		54915537175CF24E00A210BC /* SPXCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915533175CF24E00A210BC /* SPXCoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915538175CF24E00A210BC /* SPXCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915533175CF24E00A210BC /* SPXCoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915539175CF24E00A210BC /* SPXCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915534175CF24E00A210BC /* SPXCoreDataManager.m */; };
-		5491553A175CF24E00A210BC /* SPXCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915534175CF24E00A210BC /* SPXCoreDataManager.m */; };
 		5491553B175CF24E00A210BC /* SPXErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SPXErrorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5491553C175CF24E00A210BC /* SPXErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SPXErrorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5491553D175CF24E00A210BC /* SPXErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SPXErrorManager.m */; };
@@ -164,6 +184,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		540158111799ADC400175910 /* SPXSearchDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXSearchDatasource.h; sourceTree = "<group>"; };
+		540158121799ADC400175910 /* SPXSearchDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXSearchDatasource.m; sourceTree = "<group>"; };
+		540158151799AE6200175910 /* SPXDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXDatasource.h; sourceTree = "<group>"; };
+		540158161799AE6200175910 /* SPXDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXDatasource.m; sourceTree = "<group>"; };
+		541AF17417994124004259D6 /* SPXFetchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXFetchRequest.h; sourceTree = "<group>"; };
+		541AF17517994124004259D6 /* SPXFetchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXFetchRequest.m; sourceTree = "<group>"; };
+		541AF187179944D2004259D6 /* SPXStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStoreManager.h; sourceTree = "<group>"; };
+		541AF188179944D2004259D6 /* SPXStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStoreManager.m; sourceTree = "<group>"; };
+		541AF18F179945B8004259D6 /* SPXCoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataStore.h; sourceTree = "<group>"; };
+		541AF190179945B8004259D6 /* SPXCoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataStore.m; sourceTree = "<group>"; };
+		541AF195179945CC004259D6 /* SPXiCloudStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXiCloudStore.h; sourceTree = "<group>"; };
+		541AF196179945CC004259D6 /* SPXiCloudStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXiCloudStore.m; sourceTree = "<group>"; };
+		541AF19B179945DA004259D6 /* SPXDefaultsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXDefaultsStore.h; sourceTree = "<group>"; };
+		541AF19C179945DA004259D6 /* SPXDefaultsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXDefaultsStore.m; sourceTree = "<group>"; };
+		541AF1A11799467B004259D6 /* SPXStoreDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPXStoreDefines.h; sourceTree = "<group>"; };
+		541AF1A417994AD9004259D6 /* SPXKeychainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXKeychainStore.h; sourceTree = "<group>"; };
+		541AF1A517994AD9004259D6 /* SPXKeychainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXKeychainStore.m; sourceTree = "<group>"; };
+		541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataDatasource.h; sourceTree = "<group>"; };
+		541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataDatasource.m; sourceTree = "<group>"; };
 		543E4FC11779B5BB00A22EC5 /* SPXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStore.h; sourceTree = "<group>"; };
 		543E4FC21779B5BB00A22EC5 /* SPXStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStore.m; sourceTree = "<group>"; };
 		54570BD51794278D008CE9B0 /* Color+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Color+SPXAdditions.h"; sourceTree = "<group>"; };
@@ -215,14 +254,8 @@
 		54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SPXAdditions.m"; sourceTree = "<group>"; };
 		54915502175CF06200A210BC /* NSDictionary+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SPXAdditions.h"; sourceTree = "<group>"; };
 		54915503175CF06200A210BC /* NSDictionary+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SPXAdditions.m"; sourceTree = "<group>"; };
-		54915504175CF06200A210BC /* NSManagedObject+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+SPXAdditions.h"; sourceTree = "<group>"; };
-		54915505175CF06200A210BC /* NSManagedObject+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+SPXAdditions.m"; sourceTree = "<group>"; };
-		54915506175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SPXAdditions.h"; sourceTree = "<group>"; };
-		54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SPXAdditions.m"; sourceTree = "<group>"; };
 		54915508175CF06200A210BC /* NSString+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SPXAdditions.h"; sourceTree = "<group>"; };
 		54915509175CF06200A210BC /* NSString+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SPXAdditions.m"; sourceTree = "<group>"; };
-		54915533175CF24E00A210BC /* SPXCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataManager.h; sourceTree = "<group>"; };
-		54915534175CF24E00A210BC /* SPXCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataManager.m; sourceTree = "<group>"; };
 		54915535175CF24E00A210BC /* SPXErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXErrorManager.h; sourceTree = "<group>"; };
 		54915536175CF24E00A210BC /* SPXErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXErrorManager.m; sourceTree = "<group>"; };
 		54A0B941178F6F9F0062D076 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -281,6 +314,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541AF18617994133004259D6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				541AF17417994124004259D6 /* SPXFetchRequest.h */,
+				541AF17517994124004259D6 /* SPXFetchRequest.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		541AF18E179945A2004259D6 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				541AF1A11799467B004259D6 /* SPXStoreDefines.h */,
+				541AF18F179945B8004259D6 /* SPXCoreDataStore.h */,
+				541AF190179945B8004259D6 /* SPXCoreDataStore.m */,
+				541AF195179945CC004259D6 /* SPXiCloudStore.h */,
+				541AF196179945CC004259D6 /* SPXiCloudStore.m */,
+				541AF19B179945DA004259D6 /* SPXDefaultsStore.h */,
+				541AF19C179945DA004259D6 /* SPXDefaultsStore.m */,
+				541AF1A417994AD9004259D6 /* SPXKeychainStore.h */,
+				541AF1A517994AD9004259D6 /* SPXKeychainStore.m */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		541AF1AB17994E2E004259D6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				540158151799AE6200175910 /* SPXDatasource.h */,
+				540158161799AE6200175910 /* SPXDatasource.m */,
+				541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */,
+				541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */,
+				540158111799ADC400175910 /* SPXSearchDatasource.h */,
+				540158121799ADC400175910 /* SPXSearchDatasource.m */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		543E4FB91779B4A500A22EC5 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,9 +422,11 @@
 		54870AFE175CB113004194F7 /* ShapsLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				541AF1AB17994E2E004259D6 /* Protocols */,
 				546B7A46175D003700B216A3 /* SPXDefines.h */,
 				549154C6175CE93700A210BC /* SPXGraphicsDefines.h */,
 				543E4FB91779B4A500A22EC5 /* Wrappers */,
+				541AF18E179945A2004259D6 /* Stores */,
 				54915532175CF1DD00A210BC /* Managers */,
 				549154DC175CEFA600A210BC /* Views */,
 				549154DB175CEF9E00A210BC /* Graphics */,
@@ -454,10 +527,6 @@
 				54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */,
 				54915502175CF06200A210BC /* NSDictionary+SPXAdditions.h */,
 				54915503175CF06200A210BC /* NSDictionary+SPXAdditions.m */,
-				54915504175CF06200A210BC /* NSManagedObject+SPXAdditions.h */,
-				54915505175CF06200A210BC /* NSManagedObject+SPXAdditions.m */,
-				54915506175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h */,
-				54915507175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m */,
 				54915508175CF06200A210BC /* NSString+SPXAdditions.h */,
 				54915509175CF06200A210BC /* NSString+SPXAdditions.m */,
 				54570BD51794278D008CE9B0 /* Color+SPXAdditions.h */,
@@ -469,8 +538,9 @@
 		54915532175CF1DD00A210BC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				54915533175CF24E00A210BC /* SPXCoreDataManager.h */,
-				54915534175CF24E00A210BC /* SPXCoreDataManager.m */,
+				541AF187179944D2004259D6 /* SPXStoreManager.h */,
+				541AF188179944D2004259D6 /* SPXStoreManager.m */,
+				541AF18617994133004259D6 /* CoreData */,
 				54915535175CF24E00A210BC /* SPXErrorManager.h */,
 				54915536175CF24E00A210BC /* SPXErrorManager.m */,
 			);
@@ -488,6 +558,7 @@
 				546B7A47175D003800B216A3 /* SPXDefines.h in Headers */,
 				549154C7175CE93700A210BC /* SPXGraphicsDefines.h in Headers */,
 				549154CB175CE95400A210BC /* SPXView.h in Headers */,
+				541AF17A17994124004259D6 /* SPXFetchRequest.h in Headers */,
 				549154D1175CEE9E00A210BC /* SPXControl.h in Headers */,
 				549154D7175CEF4000A210BC /* SPXAlert.h in Headers */,
 				549154E5175CEFF100A210BC /* SPXDrawing.h in Headers */,
@@ -495,23 +566,29 @@
 				549154ED175CEFF100A210BC /* SPXGradient.h in Headers */,
 				549154F1175CEFF100A210BC /* SPXShadow.h in Headers */,
 				5491550A175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
+				541AF1A617994AD9004259D6 /* SPXKeychainStore.h in Headers */,
 				5491550E175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */,
+				541AF1A217994AC8004259D6 /* SPXStoreDefines.h in Headers */,
 				54915516175CF06200A210BC /* NSData+SPXAdditions.h in Headers */,
 				5491551A175CF06200A210BC /* NSDate+SPXAdditions.h in Headers */,
 				5491551E175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */,
 				54915522175CF06200A210BC /* NSDictionary+SPXAdditions.h in Headers */,
 				546B7AA1175E9BA000B216A3 /* SPXBreadCrumbItem.h in Headers */,
 				546B7AA5175E9BA000B216A3 /* SPXBreadCrumbView.h in Headers */,
+				541AF191179945B8004259D6 /* SPXCoreDataStore.h in Headers */,
 				546B7AA9175E9BA000B216A3 /* SPXBreadCrumbView+iOS.h in Headers */,
 				546B7AAD175E9BA000B216A3 /* SPXBreadCrumbView+OSX.h in Headers */,
-				54915526175CF06200A210BC /* NSManagedObject+SPXAdditions.h in Headers */,
-				5491552A175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h in Headers */,
+				541AF19D179945DA004259D6 /* SPXDefaultsStore.h in Headers */,
+				541AF197179945CC004259D6 /* SPXiCloudStore.h in Headers */,
+				541AF1AE17994E7F004259D6 /* SPXCoreDataDatasource.h in Headers */,
+				541AF189179944D2004259D6 /* SPXStoreManager.h in Headers */,
 				5491552E175CF06200A210BC /* NSString+SPXAdditions.h in Headers */,
-				54915537175CF24E00A210BC /* SPXCoreDataManager.h in Headers */,
 				5491553B175CF24E00A210BC /* SPXErrorManager.h in Headers */,
 				54AC49BF176F61AA000389DF /* SPXBarButtonItem.h in Headers */,
 				543E4FC31779B5BB00A22EC5 /* SPXStore.h in Headers */,
 				54570BD71794278D008CE9B0 /* Color+SPXAdditions.h in Headers */,
+				540158131799ADC400175910 /* SPXSearchDatasource.h in Headers */,
+				540158171799AE6200175910 /* SPXDatasource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,17 +604,21 @@
 				549154E6175CEFF100A210BC /* SPXDrawing.h in Headers */,
 				549154EA175CEFF100A210BC /* SPXGeometry.h in Headers */,
 				549154EE175CEFF100A210BC /* SPXGradient.h in Headers */,
+				541AF19E179945DA004259D6 /* SPXDefaultsStore.h in Headers */,
 				549154F2175CEFF100A210BC /* SPXShadow.h in Headers */,
 				5491550B175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
 				5491550F175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */,
 				54915517175CF06200A210BC /* NSData+SPXAdditions.h in Headers */,
+				541AF18A179944D2004259D6 /* SPXStoreManager.h in Headers */,
 				5491551B175CF06200A210BC /* NSDate+SPXAdditions.h in Headers */,
+				541AF1A717994AD9004259D6 /* SPXKeychainStore.h in Headers */,
+				541AF192179945B8004259D6 /* SPXCoreDataStore.h in Headers */,
+				541AF198179945CC004259D6 /* SPXiCloudStore.h in Headers */,
 				5491551F175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */,
+				541AF1A317994AC9004259D6 /* SPXStoreDefines.h in Headers */,
+				541AF17B17994124004259D6 /* SPXFetchRequest.h in Headers */,
 				54915523175CF06200A210BC /* NSDictionary+SPXAdditions.h in Headers */,
-				54915527175CF06200A210BC /* NSManagedObject+SPXAdditions.h in Headers */,
-				5491552B175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.h in Headers */,
 				5491552F175CF06200A210BC /* NSString+SPXAdditions.h in Headers */,
-				54915538175CF24E00A210BC /* SPXCoreDataManager.h in Headers */,
 				5491553C175CF24E00A210BC /* SPXErrorManager.h in Headers */,
 				546B7A48175D003800B216A3 /* SPXDefines.h in Headers */,
 				546B7AA2175E9BA000B216A3 /* SPXBreadCrumbItem.h in Headers */,
@@ -721,6 +802,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				549154CD175CE95400A210BC /* SPXView.m in Sources */,
+				541AF1A817994AD9004259D6 /* SPXKeychainStore.m in Sources */,
 				549154D3175CEE9E00A210BC /* SPXControl.m in Sources */,
 				549154D9175CEF4000A210BC /* SPXAlert.m in Sources */,
 				549154E7175CEFF100A210BC /* SPXDrawing.m in Sources */,
@@ -733,18 +815,23 @@
 				5491551C175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */,
 				54915520175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
 				54915524175CF06200A210BC /* NSDictionary+SPXAdditions.m in Sources */,
-				54915528175CF06200A210BC /* NSManagedObject+SPXAdditions.m in Sources */,
-				5491552C175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m in Sources */,
+				541AF19F179945DA004259D6 /* SPXDefaultsStore.m in Sources */,
+				541AF18B179944D2004259D6 /* SPXStoreManager.m in Sources */,
 				54915530175CF06200A210BC /* NSString+SPXAdditions.m in Sources */,
-				54915539175CF24E00A210BC /* SPXCoreDataManager.m in Sources */,
 				54AC49C0176F61AA000389DF /* SPXBarButtonItem.m in Sources */,
+				541AF1B017994E7F004259D6 /* SPXCoreDataDatasource.m in Sources */,
 				5491553D175CF24E00A210BC /* SPXErrorManager.m in Sources */,
 				546B7AA3175E9BA000B216A3 /* SPXBreadCrumbItem.m in Sources */,
+				541AF193179945B8004259D6 /* SPXCoreDataStore.m in Sources */,
+				541AF17C17994124004259D6 /* SPXFetchRequest.m in Sources */,
 				546B7AA7175E9BA000B216A3 /* SPXBreadCrumbView.m in Sources */,
 				546B7AAB175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m in Sources */,
+				541AF199179945CC004259D6 /* SPXiCloudStore.m in Sources */,
 				546B7AAF175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m in Sources */,
 				543E4FC51779B5BB00A22EC5 /* SPXStore.m in Sources */,
 				54570BD81794278D008CE9B0 /* Color+SPXAdditions.m in Sources */,
+				540158141799ADC400175910 /* SPXSearchDatasource.m in Sources */,
+				540158181799AE6200175910 /* SPXDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,21 +855,24 @@
 				549154F0175CEFF100A210BC /* SPXGradient.m in Sources */,
 				549154F4175CEFF100A210BC /* SPXShadow.m in Sources */,
 				5491550D175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */,
+				541AF194179945B8004259D6 /* SPXCoreDataStore.m in Sources */,
 				54915511175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */,
 				54915519175CF06200A210BC /* NSData+SPXAdditions.m in Sources */,
 				5491551D175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */,
 				54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
 				54915525175CF06200A210BC /* NSDictionary+SPXAdditions.m in Sources */,
-				54915529175CF06200A210BC /* NSManagedObject+SPXAdditions.m in Sources */,
-				5491552D175CF06200A210BC /* NSManagedObjectContext+SPXAdditions.m in Sources */,
 				54915531175CF06200A210BC /* NSString+SPXAdditions.m in Sources */,
-				5491553A175CF24E00A210BC /* SPXCoreDataManager.m in Sources */,
 				5491553E175CF24E00A210BC /* SPXErrorManager.m in Sources */,
 				546B7AA4175E9BA000B216A3 /* SPXBreadCrumbItem.m in Sources */,
 				546B7AA8175E9BA000B216A3 /* SPXBreadCrumbView.m in Sources */,
+				541AF1A917994AD9004259D6 /* SPXKeychainStore.m in Sources */,
 				546B7AAC175E9BA000B216A3 /* SPXBreadCrumbView+iOS.m in Sources */,
+				541AF1A0179945DA004259D6 /* SPXDefaultsStore.m in Sources */,
 				546B7AB0175E9BA000B216A3 /* SPXBreadCrumbView+OSX.m in Sources */,
+				541AF17D17994124004259D6 /* SPXFetchRequest.m in Sources */,
+				541AF18C179944D2004259D6 /* SPXStoreManager.m in Sources */,
 				543E4FC71779B5BB00A22EC5 /* SPXStore.m in Sources */,
+				541AF19A179945CC004259D6 /* SPXiCloudStore.m in Sources */,
 				54570BD917942791008CE9B0 /* Color+SPXAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
