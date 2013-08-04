@@ -24,28 +24,38 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+#import "SPXRestPayload.h"
+#import "SPXRestAuthentication.h"
+#import "SPXRestTypes.h"
 
-typedef UITableViewCell* (^SPXCellForIndexPathBlock)(UITableView *tableView, id object, NSIndexPath *indexPath);
-typedef NSString* (^SPXTitleForHeaderInSectionBlock)(UITableView *tableView, NSUInteger section);
-typedef NSString* (^SPXTitleForFooterInSectionBlock)(UITableView *tableView, NSUInteger section);
+@interface SPXRestClient : NSObject
 
-@protocol SPXDatasourceProtocol <NSObject>
+@property (nonatomic, weak) id <SPXRestAuthentication> authentication;
 
-@required
--(NSArray *)sectionsForTableView:(UITableView *)tableView;
--(id)objectAtIndexPath:(NSIndexPath *)indexPath;
+-(void)setMaxConcurrentRequests:(NSInteger)count;
 
-@end
+- (SPXRestRequest *)get:(NSURL *)url
+             parameters:(NSDictionary *)parameters
+                headers:(NSDictionary *)headers
+             completion:(SPXRequestResponseBlock)completion;
 
-@interface SPXDatasource : NSObject <UITableViewDataSource, SPXDatasourceProtocol>
+- (SPXRestRequest *)post:(NSURL *)url
+                 payload:(id <SPXRestPayloadProtocol>)payload
+                 headers:(NSDictionary *)headers
+              completion:(SPXRequestResponseBlock)completion;
 
-@property (nonatomic, copy) NSArray *sortDescriptors;
+- (SPXRestRequest *)put:(NSURL *)url
+                payload:(id <SPXRestPayloadProtocol>)payload
+                headers:(NSDictionary *)headers
+             completion:(SPXRequestResponseBlock)completion;
 
--(void)setSectionIndexMinimumDisplayRowCount:(NSInteger)count;
+- (SPXRestRequest *)delete:(NSURL *)url
+                   headers:(NSDictionary *)headers
+                completion:(SPXRequestResponseBlock)completion;
 
--(void)setCellForRowAtIndexPathBlock:(SPXCellForIndexPathBlock)block;
--(void)setTitleForHeaderInSectionBlock:(SPXTitleForHeaderInSectionBlock)block;
--(void)setTitleForFooterInSectionBlock:(SPXTitleForFooterInSectionBlock)block;
+- (SPXRestRequest *)performRequest:(SPXRestRequest *)request
+                        completion:(SPXRequestResponseBlock)completion;
+
+- (void)cancelAllRequests;
 
 @end

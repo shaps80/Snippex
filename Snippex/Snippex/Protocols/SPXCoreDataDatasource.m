@@ -81,6 +81,11 @@
     return self;
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 -(void)reload
 {
     _fetchedResultsController = nil;
@@ -113,12 +118,12 @@
     return _fetchedResultsController;
 }
 
-#pragma mark - Private methods
-
--(id)tableView:(UITableView *)tableView objectAtIndexPath:(NSIndexPath *)indexPath
+-(id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];
 }
+
+#pragma mark - Private methods
 
 -(NSArray *)sectionsForTableView:(UITableView *)tableView
 {

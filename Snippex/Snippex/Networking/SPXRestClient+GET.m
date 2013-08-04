@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,59 +23,23 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
+#import "SPXRestClient+GET.h"
 
-#pragma mark - Views
+@implementation SPXRestClient (GET)
 
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
+- (SPXRestRequest *)get:(NSURL *)url completion:(SPXRequestResponseBlock)completion
+{
+    return [self get:url parameters:nil headers:nil completion:completion];
+}
 
-#if TARGET_OS_IPHONE
-#import "SPXBarButtonItem.h"
-#endif
+- (SPXRestRequest *)get:(NSURL *)url headers:(NSDictionary *)headers completion:(SPXRequestResponseBlock)completion
+{
+    return [self get:url parameters:nil headers:headers completion:completion];
+}
 
-#pragma mark - Controllers
+-(SPXRestRequest *)get:(NSURL *)url parameters:(NSDictionary *)parameters completion:(SPXRequestResponseBlock)completion
+{
+    return [self get:url parameters:parameters headers:nil completion:completion];
+}
 
-#if TARGET_OS_IPHONE
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-#import "SPXCollectionDatasource.h"
-#endif
-
-#pragma mark - Managers
-
-#import "SPXStoreManager.h"
-#import "SPXErrorManager.h"
-
-#pragma mark - Graphics
-
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
-
-#pragma mark - CoreData
-
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
-#import "Color+SPXAdditions.h"
-
-#if TARGET_OS_IPHONE
-#import "UIDevice+SPXAdditions.h"
-#endif
+@end

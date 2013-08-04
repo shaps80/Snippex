@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,59 +23,42 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
+#import "SPXDrizzleAuth.h"
 
-#pragma mark - Views
+@implementation SPXDrizzleAuth
 
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
+//- (NSString *)clientID
+//{
+//#if SPX_TEST_API
+//    return SPXSessionTestClientID;
+//#else
+//    SPXKeyValueStore *store = [SPXKeyValueStore storeForType:SPXStoreTypeKeychain];
+//    return [store stringForKey:SPXDrizzleSessionKeyClientID];
+//#endif
+//}
+//
+//- (NSString *)apiKey
+//{
+//#if SPX_TEST_API
+//    return SPXSessionTestAPIKey;
+//#else
+//    SPXKeyValueStore *store = [SPXKeyValueStore storeForType:SPXStoreTypeKeychain];
+//    return [store stringForKey:SPXDrizzleSessionKeyAPIKey];
+//#endif
+//}
 
-#if TARGET_OS_IPHONE
-#import "SPXBarButtonItem.h"
-#endif
+-(NSString *)description
+{
+    return @"See api_key and client_id in SPXRestRequest for Drizzle authentication.";
+}
 
-#pragma mark - Controllers
+- (void)authenticateBeforePerformingRequest:(SPXRestRequest *)request
+{
+//    [request setValue:[self clientID] forParameter:@"client_id"];
+//    [request setValue:[self apiKey] forParameter:@"api_key"];
 
-#if TARGET_OS_IPHONE
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-#import "SPXCollectionDatasource.h"
-#endif
+    [request setValue:@"1234" forParameter:@"client_id"];
+    [request setValue:@"4321" forParameter:@"api_key"];
+}
 
-#pragma mark - Managers
-
-#import "SPXStoreManager.h"
-#import "SPXErrorManager.h"
-
-#pragma mark - Graphics
-
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
-
-#pragma mark - CoreData
-
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
-#import "Color+SPXAdditions.h"
-
-#if TARGET_OS_IPHONE
-#import "UIDevice+SPXAdditions.h"
-#endif
+@end

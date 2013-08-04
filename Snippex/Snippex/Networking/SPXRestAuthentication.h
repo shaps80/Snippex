@@ -23,59 +23,18 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
+#import <Foundation/Foundation.h>
+#import "SPXRestRequest.h"
 
-#pragma mark - Views
+@protocol SPXRestAuthentication <NSObject>
 
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
+- (void)authenticateBeforePerformingRequest:(SPXRestRequest *)request;
 
-#if TARGET_OS_IPHONE
-#import "SPXBarButtonItem.h"
-#endif
+@end
 
-#pragma mark - Controllers
+@interface SPXRestBasicAuth : NSObject <SPXRestAuthentication>
 
-#if TARGET_OS_IPHONE
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-#import "SPXCollectionDatasource.h"
-#endif
++(instancetype)authWithUsername:(NSString *)username password:(NSString *)password;
 
-#pragma mark - Managers
+@end
 
-#import "SPXStoreManager.h"
-#import "SPXErrorManager.h"
-
-#pragma mark - Graphics
-
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
-
-#pragma mark - CoreData
-
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
-#import "Color+SPXAdditions.h"
-
-#if TARGET_OS_IPHONE
-#import "UIDevice+SPXAdditions.h"
-#endif

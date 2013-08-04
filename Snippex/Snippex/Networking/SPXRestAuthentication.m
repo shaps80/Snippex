@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,59 +23,38 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
-
-#pragma mark - Views
-
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
-
-#if TARGET_OS_IPHONE
-#import "SPXBarButtonItem.h"
-#endif
-
-#pragma mark - Controllers
-
-#if TARGET_OS_IPHONE
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-#import "SPXCollectionDatasource.h"
-#endif
-
-#pragma mark - Managers
-
-#import "SPXStoreManager.h"
-#import "SPXErrorManager.h"
-
-#pragma mark - Graphics
-
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
-
-#pragma mark - CoreData
-
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
-#import "BezierPath+SPXAdditions.h"
+#import "SPXRestAuthentication.h"
 #import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
-#import "Color+SPXAdditions.h"
+#import "SPXRestRequest.h"
 
-#if TARGET_OS_IPHONE
-#import "UIDevice+SPXAdditions.h"
-#endif
+@interface SPXRestBasicAuth()
+
+@property (nonatomic, strong) NSString *authString;
+
+@end
+
+@implementation SPXRestBasicAuth
+
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"%@ | %@", [self class], _authString];
+}
+
++(instancetype)authWithUsername:(NSString *)username password:(NSString *)password
+{
+    SPXRestBasicAuth *auth = [[SPXRestBasicAuth alloc] init];
+    NSString *authString = [NSString stringWithFormat:@"%@:%@", username, password];
+    NSString *encodedString = [[authString dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
+    [auth setAuthString:[NSString stringWithFormat:@"Basic %@", encodedString]];
+    return auth;
+}
+
+- (void)authenticateBeforePerformingRequest:(SPXRestRequest *)request
+{
+    NSAssert([request respondsToSelector:@selector(setValue:forHTTPHeaderField:)],
+             @"The provided request doesn't appear to respond to -setValue:forHTTPHeaderField!");
+
+    [request setValue:self.authString forHTTPHeaderField:@"Authorization"];
+}
+
+@end

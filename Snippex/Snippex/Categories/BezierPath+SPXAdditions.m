@@ -106,7 +106,7 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 	if (self.path)
 		return self.path;
 	
-	CGMutablePathRef path = CGPathCreateMutable();
+	CGMutablePathRef path = nil;
 	NSInteger elementCount = [self elementCount];
 
 	// The maximum number of points is 3 for a NSCurveToBezierPathElement.
@@ -118,6 +118,8 @@ static void CGPathCallback(void *info, const CGPathElement *element)
         CGPathRelease(path);
         return NULL;
     }
+    else
+        path = CGPathCreateMutable();
 	
 	for (unsigned int i = 0; i < elementCount; i++)
 	{
@@ -142,12 +144,12 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 				break;
 			default:
 				CGPathCloseSubpath(path);
-				NSLog(@"Unknown element at [NSBezierPath (GTMBezierPathCGPathAdditions) cgPath]");
+				NSLog(@"Unknown element at [NSBezierPath (GTMBezierPathCGPathAdditions) CGPath]");
 				break;
 		};
 	}
 
-	self.path = path;
+    objc_setAssociatedObject(self, (void *) PathKey, CFBridgingRelease(path), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 	return (__bridge CGPathRef)(__bridge id)self.path;
 }
 

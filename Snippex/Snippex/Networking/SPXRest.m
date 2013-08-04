@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,59 +23,47 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
+#import "SPXRest.h"
 
-#pragma mark - Views
+@implementation SPXRest
 
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
++ (NSURL *)URLForEndpoint:(NSString *)endpoint relativeTo:(NSString *)root
+{
+    // do this right!!!
+    // make sure url is created correctly
+    // ensure the provided strings are valid
+    // url-encode where required, etc, etc...
 
-#if TARGET_OS_IPHONE
-#import "SPXBarButtonItem.h"
-#endif
+    return [NSURL URLWithString:endpoint relativeToURL:[NSURL URLWithString:root]];
+}
 
-#pragma mark - Controllers
++(SPXRestClient *)client
+{
+	static SPXRestClient *_sharedInstance = nil;
+	static dispatch_once_t oncePredicate;
+	dispatch_once(&oncePredicate, ^{
+		_sharedInstance = [[SPXRestClient alloc] init];
+	});
 
-#if TARGET_OS_IPHONE
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-#import "SPXCollectionDatasource.h"
-#endif
+	return _sharedInstance;
+}
 
-#pragma mark - Managers
++ (SPXRestClient *)newClient
+{
+    return [[SPXRestClient alloc] init];
+}
 
-#import "SPXStoreManager.h"
-#import "SPXErrorManager.h"
+static BOOL _SPXDebugLoggingEnabled = NO;
 
-#pragma mark - Graphics
++ (void)setDebugLoggingEnabled:(BOOL)enabled
+{
+    _SPXDebugLoggingEnabled = enabled;
+}
 
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
++ (void)log:(NSString *)message
+{
+    if (_SPXDebugLoggingEnabled)
+        NSLog(@"SPXRest | %@", message);
+}
 
-#pragma mark - CoreData
-
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
-#import "Color+SPXAdditions.h"
-
-#if TARGET_OS_IPHONE
-#import "UIDevice+SPXAdditions.h"
-#endif
+@end

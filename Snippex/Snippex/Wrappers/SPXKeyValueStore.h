@@ -38,7 +38,7 @@ typedef enum
  It supports NSNull and when the object being passed is nil, NSNull is stored in its place, so that when you attempt to recover the value, nil is returned.
  */
 
-@interface SPXStore : NSObject
+@interface SPXKeyValueStore : NSObject
 
 +(instancetype)storeForType:(SPXStoreType)type;
 
@@ -49,10 +49,6 @@ typedef enum
 // keyed subscripting
 -(void)setObject:(id)object forKeyedSubscript:(id)key;
 -(id)objectForKeyedSubscript:(id)key;
-
-// storage for any object type using encryption, passing a nil object, will remove its key/value from the store
--(void)setObject:(id)object forKey:(NSString *)key encrypt:(BOOL)encrypt;
--(id)objectForKey:(NSString *)key encrypted:(BOOL)encrypted;
 -(void)removeObjectForKey:(NSString *)key;
 
 // convenience setters

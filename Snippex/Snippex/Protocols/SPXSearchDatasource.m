@@ -67,12 +67,17 @@
     return [[SPXSearchDatasource alloc] initWithTableViewController:controller];
 }
 
+-(id)tableView:(UITableView *)tableView objectForIndexPath:(NSIndexPath *)indexPath
+{
+    return [_results objectAtIndex:indexPath.row];
+}
+
 -(void)setSourceWithBlock:(SPXSearchSourceBlock)block
 {
     _sourceBlock = block;
 }
 
--(id)tableView:(UITableView *)tableView objectAtIndexPath:(NSIndexPath *)indexPath
+-(id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return [_results objectAtIndex:indexPath.row];
 }
@@ -85,6 +90,11 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _results.count;
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
 }
 
 #pragma mark - Public methods

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,59 +23,18 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
-
-#pragma mark - Views
-
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
-
-#if TARGET_OS_IPHONE
-#import "SPXBarButtonItem.h"
-#endif
-
-#pragma mark - Controllers
-
-#if TARGET_OS_IPHONE
 #import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-#import "SPXCollectionDatasource.h"
-#endif
 
-#pragma mark - Managers
+@interface SPXCollectionDatasource : SPXDatasource
 
-#import "SPXStoreManager.h"
-#import "SPXErrorManager.h"
+@property (nonatomic, strong) NSPredicate *predicate;
 
-#pragma mark - Graphics
++(instancetype)datasourceForTableView:(UITableView *)tableView
+                               source:(NSArray *)source;
 
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
+-(void)addObject:(id)object;
+-(void)removeObjectAtIndex:(NSInteger)index;
 
-#pragma mark - CoreData
+-(NSArray *)source;
 
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
-#import "Color+SPXAdditions.h"
-
-#if TARGET_OS_IPHONE
-#import "UIDevice+SPXAdditions.h"
-#endif
+@end

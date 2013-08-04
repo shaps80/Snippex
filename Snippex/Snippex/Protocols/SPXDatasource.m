@@ -39,7 +39,7 @@
 
 #pragma mark - Private Getters
 
--(id)tableView:(UITableView *)tableView objectAtIndexPath:(NSIndexPath *)indexPath
+-(id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
 }
@@ -55,11 +55,16 @@
 {
     if (self.cellBlock)
     {
-        id object = [self tableView:tableView objectAtIndexPath:indexPath];
+        id object = [self objectAtIndexPath:indexPath];
         return self.cellBlock(tableView, object, indexPath);
     }
     else
         return nil;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
@@ -101,7 +106,7 @@
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return NO;
+    return YES;
 }
 
 -(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath

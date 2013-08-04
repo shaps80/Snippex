@@ -171,6 +171,7 @@
 
 #endif
 
+
 /**
  DLog - Provides a simpler implementation that is guaranteed to be removed in RELEASE mode.
  LogMethod - Provides a simply way to log the current class and method to the console.
@@ -187,6 +188,30 @@
 #if DEBUG
 
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
+
+/**
+ Use this method to generate random values within the specified range.
+
+ float value = spxRand(10, 100);
+
+ will return a random value between 10 and 100
+ */
+
+#pragma mark - Random
+
+static inline CGFloat spxRandf() {
+    return rand() / (CGFloat) RAND_MAX;
+}
+
+static inline CGFloat spxRand(CGFloat low, CGFloat high) {
+    return spxRandf() * (high - low) + low;
+}
 
 // allow us to log method and class while in debug mode
 #define logMethod NSLog((@"%@ | %d | %@ | %@ "), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd));

@@ -24,7 +24,7 @@
  */
 
 #import <Security/Security.h>
-#import "SPXStore.h"
+#import "SPXKeyValueStore.h"
 
 #pragma mark - SPXStoreProtocol
 
@@ -44,12 +44,12 @@
 
 #pragma mark - SPXStore
 
-@interface SPXStore ()
+@interface SPXKeyValueStore ()
 @property (nonatomic, strong) id store;
 @end
 
 
-@implementation SPXStore
+@implementation SPXKeyValueStore
 
 #pragma mark - Lifecycle
 
@@ -89,7 +89,7 @@
 
 +(instancetype)storeForType:(SPXStoreType)type
 {
-	return [[SPXStore alloc] initWithStoreType:type];
+	return [[SPXKeyValueStore alloc] initWithStoreType:type];
 }
 
 -(BOOL)synchronize
