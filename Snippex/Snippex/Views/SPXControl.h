@@ -28,6 +28,8 @@
  Any components that should work on both iOS and OSX should subclass this class instead of implementing UIControl/NSControl directly.
  */
 
+#import "SPXDefines.h"
+
 typedef enum
 {
     SPXControlStateNormal			= 0,

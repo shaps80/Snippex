@@ -139,6 +139,7 @@
 	else return NO;
 }
 
+#ifdef __COREMOTION__
 -(BOOL)supportsGyroscope
 {
 #ifdef __IPHONE_4_0
@@ -149,12 +150,15 @@
 	return NO;
 #endif
 }
+#endif
 
+#if __MOBILECORESERVICES__
 -(BOOL)supportsVideo
 {
 	UIImagePickerController *picker = [[UIImagePickerController alloc] init];
 	NSArray *sourceTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
 	return [sourceTypes containsObject:(NSString *)kUTTypeMovie];
 }
+#endif
 
 @end

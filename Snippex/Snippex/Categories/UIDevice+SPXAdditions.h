@@ -24,8 +24,14 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <CoreMotion/CoreMotion.h>
+
+#ifdef __MOBILECORESERVICES__
 #import <MobileCoreServices/MobileCoreServices.h>
+#endif
+
+#ifdef __COREMOTION__
+#import <CoreMotion/CoreMotion.h>
+#endif
 
 typedef enum {
     SPXDeviceTypeUnknown,
@@ -64,7 +70,13 @@ typedef enum {
 -(SPXDeviceType)deviceType;
 
 -(BOOL)supportsRetina;
--(BOOL)supportsGyroscope;
+
+#if __MOBILECORESERVICES__
 -(BOOL)supportsVideo;
+#endif
+
+#ifdef __COREMOTION__
+-(BOOL)supportsGyroscope;
+#endif
 
 @end

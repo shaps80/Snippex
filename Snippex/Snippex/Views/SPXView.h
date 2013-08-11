@@ -28,6 +28,8 @@
  Any components that should work on both iOS and OSX should subclass this class instead of implementing UIView/NSView directly.
  */
 
+#import "SPXDefines.h"
+
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 @interface SPXView : UIView

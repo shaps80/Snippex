@@ -24,6 +24,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "SPXDefines.h"
 #import <CoreData/CoreData.h>
 
 typedef UITableViewCell* (^SPXCellForIndexPathBlock)(UITableView *tableView, id object, NSIndexPath *indexPath);
