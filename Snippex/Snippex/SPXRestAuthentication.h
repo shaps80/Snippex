@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2013 Snippex. All rights reserved.
+ Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,19 +23,19 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXRestTests.h"
-#import "SPXRest.h"
-#import "SPXDrizzleAuth.h"
+#import <Foundation/Foundation.h>
+#import "SPXRestRequest.h"
 
-#define SPXBaseURL                      @"https://api.digitalocean.com"
-#define SPXEndpointDroplets             @"droplets"
+@protocol SPXRestAuthentication <NSObject>
 
-#define SPXURL(endpoint)                [SPXRest URLForEndpoint:endpoint relativeTo:(SPXBaseURL)]
-
-@implementation SPXRestTests
-
-- (void)testRest
-{
-}
+- (BOOL)hasValidCredentials;
+- (void)authenticateBeforePerformingRequest:(SPXRestRequest *)request;
 
 @end
+
+@interface SPXRestBasicAuth : NSObject <SPXRestAuthentication>
+
++(instancetype)authWithUsername:(NSString *)username password:(NSString *)password;
+
+@end
+

@@ -23,19 +23,23 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXRestTests.h"
-#import "SPXRest.h"
-#import "SPXDrizzleAuth.h"
 
-#define SPXBaseURL                      @"https://api.digitalocean.com"
-#define SPXEndpointDroplets             @"droplets"
-
-#define SPXURL(endpoint)                [SPXRest URLForEndpoint:endpoint relativeTo:(SPXBaseURL)]
-
-@implementation SPXRestTests
-
-- (void)testRest
+/**
+ The various states an object can be in.
+ */
+typedef enum
 {
-}
+    SPXStoreObjectStateNotFound     = NSNotFound,
+	SPXStoreObjectStateFound        = 1,             /* The object was found    */
+	SPXStoreObjectStateAdded        = 2,             /* The object was added    */
+	SPXStoreObjectStateRemoved      = 3,             /* The object was removed  */
+	SPXStoreObjectStateModified     = 4,             /* The object was modified */
+} SPXStoreObjectState;
 
-@end
+typedef enum
+{
+    SPXStoreTypeDefaults            /* Returns a store backed by NSUserDefaults */,
+    SPXStoreTypeiCloud              /* Returns a store backed by iCloud         */,
+    SPXStoreTypeKeychain            /* Returns a store backed by NSUserDefaults */,
+    SPXStoreTypeCoreData            /* Returns a store backed by CoreData       */,
+} SPXStoreType;

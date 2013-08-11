@@ -23,19 +23,43 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXRestTests.h"
-#import "SPXRest.h"
-#import "SPXDrizzleAuth.h"
+#ifndef _SPXSTORE_H
+#define _SPXSTORE_H
 
-#define SPXBaseURL                      @"https://api.digitalocean.com"
-#define SPXEndpointDroplets             @"droplets"
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import "NSManagedObjectContext+SPXStoreAdditions.h"
 
-#define SPXURL(endpoint)                [SPXRest URLForEndpoint:endpoint relativeTo:(SPXBaseURL)]
+#ifndef _COREDATADEFINES_H
+#warning "CoreData framework not found in project, or not included in precompiled header."
+#endif
 
-@implementation SPXRestTests
+@interface SPXStore : NSObject
 
-- (void)testRest
-{
-}
++ (instancetype)storeNamed:(NSString *)name;
++ (instancetype)addStoreNamed:(NSString *)name filename:(NSString *)filename;
+
++ (void)setDefaultStoreName:(NSString *)name filename:(NSString *)filename;
+
+- (NSManagedObjectContext *)mainContext;
+- (NSManagedObjectContext *)privateContext;
+
+- (void)setKey:(NSString *)key forEntityNamed:(NSString *)name;
+- (NSString *)keyForEntityNamed:(NSString *)name;
+
+// Convenience methods
+
+/// @return     Returns a singleton instance of SPXStore
++ (instancetype)default;
+
+/// @return     Returns the main NSManagedObjectContext to be used in the UI, using the default SPXStore
++ (NSManagedObjectContext *)mainContext;
+
+/// @return     Returns the priavate NSManagedObjectContext to be used in updates, using the default SPXStore
++ (NSManagedObjectContext *)privateContext;
+
+- (NSURL *)URL;
 
 @end
+
+#endif

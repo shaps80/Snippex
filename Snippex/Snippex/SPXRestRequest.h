@@ -23,19 +23,56 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXRestTests.h"
-#import "SPXRest.h"
-#import "SPXDrizzleAuth.h"
+#import "SPXRestURLOperation.h"
+#import "SPXRestResponse.h"
+#import "SPXRestPayload.h"
 
-#define SPXBaseURL                      @"https://api.digitalocean.com"
-#define SPXEndpointDroplets             @"droplets"
+@interface SPXRestRequest : SPXRestURLOperation
 
-#define SPXURL(endpoint)                [SPXRest URLForEndpoint:endpoint relativeTo:(SPXBaseURL)]
+@property (nonatomic, readonly) NSURL *URL;
+@property (nonatomic, readonly) NSDictionary *allHTTPHeaders;
 
-@implementation SPXRestTests
+/**
+ @abstract
+ */
+- (id)initWithURL:(NSURL *)url method:(NSString *)method;
 
-- (void)testRest
-{
-}
+/**
+ */
+- (void)setTimeoutInterval:(NSTimeInterval)timeout;
+
+/**
+ */
+- (void)setResponseHandler:(id <SPXResponseHandler>)handler;
+
+/**
+ @abstract
+ */
+- (void)setPayload:(id <SPXRestPayloadProtocol>)payload;
+
+/**
+ @abstract
+ */
+- (void)setHeaders:(NSDictionary *)headers;
+
+/**
+ @abstract
+ */
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
+
+/**
+ @abstract
+ */
+- (void)setParameters:(NSDictionary *)parameters;
+
+/**
+ @abstract
+ */
+- (void)setValue:(NSString *)value forParameter:(NSString *)parameter;
+
+/**
+ @abstract
+ */
+- (void)setHandlesCookiesAutomatically:(BOOL)shouldHandleCookies;
 
 @end

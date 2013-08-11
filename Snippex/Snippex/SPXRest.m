@@ -23,19 +23,48 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXRestTests.h"
 #import "SPXRest.h"
-#import "SPXDrizzleAuth.h"
 
-#define SPXBaseURL                      @"https://api.digitalocean.com"
-#define SPXEndpointDroplets             @"droplets"
+@implementation SPXRest
 
-#define SPXURL(endpoint)                [SPXRest URLForEndpoint:endpoint relativeTo:(SPXBaseURL)]
-
-@implementation SPXRestTests
-
-- (void)testRest
++ (NSURL *)URLForEndpoint:(NSString *)endpoint relativeTo:(NSString *)root
 {
+    return [NSURL URLWithString:endpoint relativeToURL:[NSURL URLWithString:root]];
+}
+
++(SPXRestClient *)client
+{
+	static SPXRestClient *_sharedInstance = nil;
+	static dispatch_once_t oncePredicate;
+	dispatch_once(&oncePredicate, ^{
+		_sharedInstance = [[SPXRestClient alloc] init];
+	});
+
+	return _sharedInstance;
+}
+
++ (SPXRestClient *)newClient
+{
+    return [[SPXRestClient alloc] init];
+}
+
+static SPXRestLoggingType __loggingType = NO;
+
++ (void)setLoggingType:(SPXRestLoggingType)type
+{
+    __loggingType = type;
+}
+
++ (void)log:(NSString *)message
+{
+    if (__loggingType == SPXRestLoggingTypeConcise)
+        DLog(@"%@", message);
+}
+
++ (void)logVerbose:(NSString *)message
+{
+    if (__loggingType == SPXRestLoggingTypeVerbose)
+        DLog(@"%@", message);
 }
 
 @end

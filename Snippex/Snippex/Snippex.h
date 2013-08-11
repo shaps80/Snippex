@@ -25,57 +25,33 @@
 
 #import "SPXDefines.h"
 
-#pragma mark - Views
-
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXBreadCrumbView.h"
+#ifdef DEBUG
+#import "NSBlock+SPXAdditions.h"
+#endif
 
 #if TARGET_OS_IPHONE
 #import "SPXBarButtonItem.h"
-#endif
-
-#pragma mark - Controllers
-
-#if TARGET_OS_IPHONE
 #import "SPXDatasource.h"
 #import "SPXCoreDataDatasource.h"
 #import "SPXSearchDatasource.h"
 #import "SPXCollectionDatasource.h"
+#import "UIDevice+SPXAdditions.h"
 #endif
 
-#pragma mark - Managers
-
-#import "SPXStoreManager.h"
+#import "SPXView.h"
+#import "SPXControl.h"
+#import "SPXAlert.h"
 #import "SPXErrorManager.h"
-
-#pragma mark - Graphics
-
 #import "SPXGraphicsDefines.h"
 #import "SPXGeometry.h"
 #import "SPXDrawing.h"
 #import "SPXGradient.h"
 #import "SPXShadow.h"
-
-#pragma mark - CoreData
-
-#import "SPXFetchRequest.h"
-#import "SPXCoreDataStore.h"
-
-#pragma mark - Categories
-
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
-
+#import "SPXStore.h"
+#import "SPXRest.h"
 #import "BezierPath+SPXAdditions.h"
 #import "NSData+SPXAdditions.h"
 #import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXAdditions.h"
-#import "NSString+SPXAdditions.h"
+#import "NSDictionary+SPXRestQueryString.h"
+#import "NSString+SPXRestQueryString.h"
 #import "Color+SPXAdditions.h"
-
-#if TARGET_OS_IPHONE
-#import "UIDevice+SPXAdditions.h"
-#endif

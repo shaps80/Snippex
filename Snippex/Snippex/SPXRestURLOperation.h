@@ -23,19 +23,26 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXRestTests.h"
-#import "SPXRest.h"
-#import "SPXDrizzleAuth.h"
+#import <Foundation/Foundation.h>
+#import "SPXRestTypes.h"
 
-#define SPXBaseURL                      @"https://api.digitalocean.com"
-#define SPXEndpointDroplets             @"droplets"
-
-#define SPXURL(endpoint)                [SPXRest URLForEndpoint:endpoint relativeTo:(SPXBaseURL)]
-
-@implementation SPXRestTests
-
-- (void)testRest
+@interface SPXRestURLOperation : NSOperation <NSURLConnectionDelegate>
 {
+    BOOL _isExecuting;
+    BOOL _isFinished;
 }
+
+@property (nonatomic, strong, readonly) NSURLConnection *connection;
+@property (nonatomic, strong) NSURLRequest *request;
+@property (nonatomic, strong, readonly) NSURLResponse *response;
+@property (nonatomic, strong, readonly) NSError *error;
+@property (nonatomic, copy) SPXRestResponseBlock responseCompletionBlock;
+
+- (id)initWithRequest:(NSURLRequest *)request;
+
+- (void)finish;
+- (void)cancelImmediately;
+
+-(NSData *)data;
 
 @end

@@ -23,19 +23,23 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXRestTests.h"
-#import "SPXRest.h"
-#import "SPXDrizzleAuth.h"
+#import "SPXRestClient+PUT.h"
 
-#define SPXBaseURL                      @"https://api.digitalocean.com"
-#define SPXEndpointDroplets             @"droplets"
+@implementation SPXRestClient (PUT)
 
-#define SPXURL(endpoint)                [SPXRest URLForEndpoint:endpoint relativeTo:(SPXBaseURL)]
-
-@implementation SPXRestTests
-
-- (void)testRest
+-(SPXRestRequest *)put:(NSURL *)url completion:(SPXRestResponseBlock)completion
 {
+    return [self put:url payload:nil headers:nil completion:completion];
+}
+
+-(SPXRestRequest *)put:(NSURL *)url headers:(NSDictionary *)headers completion:(SPXRestResponseBlock)completion
+{
+    return [self put:url payload:nil headers:headers completion:completion];
+}
+
+-(SPXRestRequest *)put:(NSURL *)url payload:(id)payload completion:(SPXRestResponseBlock)completion
+{
+    return [self put:url payload:payload headers:nil completion:completion];
 }
 
 @end

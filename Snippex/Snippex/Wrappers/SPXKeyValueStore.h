@@ -25,12 +25,52 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum
-{
-	SPXStoreTypeUserDefaults,
-	SPXStoreTypeKeychain,
-	SPXStoreTypeiCloud
-} SPXStoreType;
+@protocol SPXKeyValueStoreProtocol <NSObject>
+
+@required
+
+// storage for any object type, passing a nil object, will remove its key/value from the store
+- (void)setObject:(id)object forKey:(NSString *)key;
+- (void)removeObjectForKey:(NSString *)key;
+- (id)objectForKey:(NSString *)key;
+
+// keyed subscripting
+- (void)setObject:(id)object forKeyedSubscript:(id)key;
+- (id)objectForKeyedSubscript:(id)key;
+
+@optional
+
+// convenience setters
+- (void)setBool:(BOOL)value forKey:(NSString *)key;
+- (void)setString:(NSString *)value forKey:(NSString *)key;
+- (void)setDouble:(double)value forKey:(NSString *)key;
+- (void)setInteger:(NSInteger)value forKey:(NSString *)key;
+- (void)setFloat:(CGFloat)value forKey:(NSString *)key;
+- (void)setDate:(NSDate *)value forKey:(NSString *)key;
+- (void)setData:(NSData *)value forKey:(NSString *)key;
+- (void)setSet:(NSSet *)value forKey:(NSString *)key;
+- (void)setArray:(NSArray *)value forKey:(NSString *)key;
+- (void)setDictionary:(NSDictionary *)value forKey:(NSString *)key;
+
+// convenience getters
+- (BOOL)boolForKey:(NSString *)key;
+- (NSString *)stringForKey:(NSString *)key;
+- (double)doubleForKey:(NSString *)key;
+- (NSInteger)integerForKey:(NSString *)key;
+- (CGFloat)floatForKey:(NSString *)key;
+- (NSDate *)dateForKey:(NSString *)key;
+- (NSData *)dataForKey:(NSString *)key;
+- (NSSet *)setForKey:(NSString *)key;
+- (NSArray *)arrayForKey:(NSString *)key;
+- (NSDictionary *)dictionaryForKey:(NSString *)key;
+
+// this ALWAYS returns nil for the keychain since the keychain doesn't support this
+- (NSDictionary *)dictionaryRepresentation;
+
+// commit any changes to the store, this MUST be called for userDefaults type, but in your implementation is useful for knowing when to commit changes.
+- (BOOL)synchronize;
+
+@end
 
 /**
  SPXStore consolidates all your key/value storage needs into a single class allowing easy storage and recovery of key/value pairs across 3 store types.
@@ -38,46 +78,10 @@ typedef enum
  It supports NSNull and when the object being passed is nil, NSNull is stored in its place, so that when you attempt to recover the value, nil is returned.
  */
 
-@interface SPXKeyValueStore : NSObject
+@interface SPXKeyValueStore : NSObject <SPXKeyValueStoreProtocol>
 
-+(instancetype)storeForType:(SPXStoreType)type;
-
-// storage for any object type, passing a nil object, will remove its key/value from the store
--(void)setObject:(id)object forKey:(NSString *)key;
--(id)objectForKey:(NSString *)key;
-
-// keyed subscripting
--(void)setObject:(id)object forKeyedSubscript:(id)key;
--(id)objectForKeyedSubscript:(id)key;
--(void)removeObjectForKey:(NSString *)key;
-
-// convenience setters
--(void)setBool:(BOOL)value forKey:(NSString *)key;
--(void)setString:(NSString *)value forKey:(NSString *)key;
--(void)setDouble:(double)value forKey:(NSString *)key;
--(void)setInteger:(NSInteger)value forKey:(NSString *)key;
--(void)setFloat:(CGFloat)value forKey:(NSString *)key;
--(void)setDate:(NSDate *)value forKey:(NSString *)key;
--(void)setData:(NSData *)value forKey:(NSString *)key;
--(void)setSet:(NSSet *)value forKey:(NSString *)key;
--(void)setArray:(NSArray *)value forKey:(NSString *)key;
--(void)setDictionary:(NSDictionary *)value forKey:(NSString *)key;
-
-// convenience getters
--(BOOL)boolForKey:(NSString *)key;
--(NSString *)stringForKey:(NSString *)key;
--(double)doubleForKey:(NSString *)key;
--(NSInteger)integerForKey:(NSString *)key;
--(CGFloat)floatForKey:(NSString *)key;
--(NSDate *)dateForKey:(NSString *)key;
--(NSData *)dataForKey:(NSString *)key;
--(NSSet *)setForKey:(NSString *)key;
--(NSArray *)arrayForKey:(NSString *)key;
--(NSDictionary *)dictionaryForKey:(NSString *)key;
-
-// commit any changes to the store, this has no effect when using SPXStoreTypeKeychain since its not required
--(BOOL)synchronize;
-// this ALWAYS returns nil for SPXStoreTypeKeychain since the keychain doesn't support this
--(NSDictionary *)dictionaryRepresentation;
++ (instancetype)keychain;
++ (instancetype)userDefaults;
++ (instancetype)iCloud;
 
 @end

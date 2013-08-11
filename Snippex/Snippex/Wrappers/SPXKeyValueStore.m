@@ -30,10 +30,10 @@
 
 // Defines methods that a store MUST implement
 @protocol SPXStoreProtocol <NSObject>
--(void)setObject:(id)object forKey:(NSString *)key;
--(id)objectForKey:(NSString *)forKey;
--(BOOL)synchronize;
--(NSDictionary *)dictionaryRepresentation;
+- (void)setObject:(id)object forKey:(NSString *)key;
+- (id)objectForKey:(NSString *)forKey;
+- (BOOL)synchronize;
+- (NSDictionary *)dictionaryRepresentation;
 @end
 
 #pragma mark - SPXStoreKeychain
@@ -53,51 +53,27 @@
 
 #pragma mark - Lifecycle
 
--(id)initWithStoreType:(SPXStoreType)type
++ (instancetype)keychain
 {
-	self = [super init];
-
-	if (self)
-	{
-		if (type == SPXStoreTypeUserDefaults)
-			_store = [self userDefaults];
-		else if (type == SPXStoreTypeiCloud)
-			_store = [self iCloud];
-		else if (type == SPXStoreTypeKeychain)
-			_store = [self keychain];
-		else
-			return nil;
-	}
-
-	return self;
+	return (id <SPXKeyValueStoreProtocol>)[SPXStoreKeychain sharedKeychain];
 }
 
--(SPXStoreKeychain *)keychain
++ (instancetype)iCloud
 {
-	return [SPXStoreKeychain sharedKeychain];
+	return (id <SPXKeyValueStoreProtocol>)[NSUbiquitousKeyValueStore defaultStore];
 }
 
--(NSUbiquitousKeyValueStore *)iCloud
++ (instancetype)userDefaults
 {
-	return [NSUbiquitousKeyValueStore defaultStore];
+	return (id <SPXKeyValueStoreProtocol>)[NSUserDefaults standardUserDefaults];
 }
 
--(NSUserDefaults *)userDefaults
-{
-	return [NSUserDefaults standardUserDefaults];
-}
-
-+(instancetype)storeForType:(SPXStoreType)type
-{
-	return [[SPXKeyValueStore alloc] initWithStoreType:type];
-}
-
--(BOOL)synchronize
+- (BOOL)synchronize
 {
 	return [_store synchronize];
 }
 
--(NSDictionary *)dictionaryRepresentation
+- (NSDictionary *)dictionaryRepresentation
 {
 	return [_store dictionaryRepresentation];
 }
@@ -105,7 +81,7 @@
 #pragma mark - Primary set and get
 
 // all setters should come here...
--(void)setObject:(id)object forKey:(NSString *)key encrypt:(BOOL)encrypt
+- (void)setObject:(id)object forKey:(NSString *)key encrypt:(BOOL)encrypt
 {
 	[_store setObject:object forKey:key];
 
@@ -122,7 +98,7 @@
 }
 
 // all getters should come here...
--(id)objectForKey:(NSString *)key encrypted:(BOOL)encrypted
+- (id)objectForKey:(NSString *)key encrypted:(BOOL)encrypted
 {
 	NSString *storeKey = key;
 	id storeObject = [_store objectForKey:storeKey];
@@ -136,131 +112,131 @@
 	return storeObject;
 }
 
--(void)removeObjectForKey:(NSString *)key
+- (void)removeObjectForKey:(NSString *)key
 {
 	[self setObject:nil forKey:key encrypt:NO];
 }
 
 #pragma mark - Setters
 
--(void)setBool:(BOOL)value forKey:(NSString *)key
+- (void)setBool:(BOOL)value forKey:(NSString *)key
 {
 	[self setObject:@(value) forKey:key encrypt:NO];
 }
 
--(void)setObject:(id)object forKeyedSubscript:(id)key
+- (void)setObject:(id)object forKeyedSubscript:(id)key
 {
 	[self setObject:object forKey:key encrypt:NO];
 }
 
--(void)setObject:(id)object forKey:(NSString *)key
+- (void)setObject:(id)object forKey:(NSString *)key
 {
 	[self setObject:object forKey:key encrypt:NO];
 }
 
--(void)setDouble:(double)value forKey:(NSString *)key
+- (void)setDouble:(double)value forKey:(NSString *)key
 {
 	[self setObject:@(value) forKey:key encrypt:NO];
 }
 
--(void)setFloat:(CGFloat)value forKey:(NSString *)key
+- (void)setFloat:(CGFloat)value forKey:(NSString *)key
 {
 	[self setObject:@(value) forKey:key encrypt:NO];
 }
 
--(void)setInteger:(NSInteger)value forKey:(NSString *)key
+- (void)setInteger:(NSInteger)value forKey:(NSString *)key
 {
 	[self setObject:@(value) forKey:key encrypt:NO];
 }
 
--(void)setString:(NSString *)value forKey:(NSString *)key
+- (void)setString:(NSString *)value forKey:(NSString *)key
 {
 	[self setObject:value forKey:key encrypt:NO];
 }
 
--(void)setDate:(NSDate *)date forKey:(NSString *)key
+- (void)setDate:(NSDate *)date forKey:(NSString *)key
 {
 	[self setObject:date forKey:key encrypt:NO];
 }
 
--(void)setData:(NSData *)data forKey:(NSString *)key
+- (void)setData:(NSData *)data forKey:(NSString *)key
 {
 	[self setObject:data forKey:key encrypt:NO];
 }
 
--(void)setSet:(NSSet *)set forKey:(NSString *)key
+- (void)setSet:(NSSet *)set forKey:(NSString *)key
 {
 	[self setObject:set forKey:key encrypt:NO];
 }
 
--(void)setArray:(NSArray *)array forKey:(NSString *)key
+- (void)setArray:(NSArray *)array forKey:(NSString *)key
 {
 	[self setObject:array forKey:key encrypt:NO];
 }
 
--(void)setDictionary:(NSDictionary *)dictionary forKey:(NSString *)key
+- (void)setDictionary:(NSDictionary *)dictionary forKey:(NSString *)key
 {
 	[self setObject:dictionary forKey:key encrypt:NO];
 }
 
 #pragma mark - Getters
 
--(id)objectForKeyedSubscript:(id)key
+- (id)objectForKeyedSubscript:(id)key
 {
 	return [self objectForKey:key encrypted:NO];
 }
 
--(BOOL)boolForKey:(NSString *)key
+- (BOOL)boolForKey:(NSString *)key
 {
 	return [[self objectForKey:key encrypted:NO] boolValue];
 }
 
--(id)objectForKey:(NSString *)key
+- (id)objectForKey:(NSString *)key
 {
 	return [self objectForKey:key encrypted:NO];
 }
 
--(double)doubleForKey:(NSString *)key
+- (double)doubleForKey:(NSString *)key
 {
 	return [[self objectForKey:key encrypted:NO] doubleValue];
 }
 
--(CGFloat)floatForKey:(NSString *)key
+- (CGFloat)floatForKey:(NSString *)key
 {
 	return [[self objectForKey:key encrypted:NO] floatValue];
 }
 
--(NSInteger)integerForKey:(NSString *)key
+- (NSInteger)integerForKey:(NSString *)key
 {
 	return [[self objectForKey:key encrypted:NO] integerValue];
 }
 
--(NSString *)stringForKey:(NSString *)key
+- (NSString *)stringForKey:(NSString *)key
 {
 	return [self objectForKey:key encrypted:NO];
 }
 
--(NSDate *)dateForKey:(NSString *)key
+- (NSDate *)dateForKey:(NSString *)key
 {
 	return [self objectForKey:key encrypted:NO];
 }
 
--(NSData *)dataForKey:(NSString *)key
+- (NSData *)dataForKey:(NSString *)key
 {
 	return [self objectForKey:key encrypted:NO];
 }
 
--(NSSet *)setForKey:(NSString *)key
+- (NSSet *)setForKey:(NSString *)key
 {
 	return [self objectForKey:key encrypted:NO];
 }
 
--(NSArray *)arrayForKey:(NSString *)key
+- (NSArray *)arrayForKey:(NSString *)key
 {
 	return [self objectForKey:key encrypted:NO];
 }
 
--(NSDictionary *)dictionaryForKey:(NSString *)key
+- (NSDictionary *)dictionaryForKey:(NSString *)key
 {
 	return [self objectForKey:key encrypted:NO];
 }
@@ -300,19 +276,19 @@ static NSString *SPXBundleId = nil;
 	return _sharedKeychain;
 }
 
--(NSString *)keyByAppendingBundleIdToKey:(NSString *)key
+- (NSString *)keyByAppendingBundleIdToKey:(NSString *)key
 {
     return [SPXBundleId stringByAppendingFormat:@".%@", key];
 }
 
--(NSMutableDictionary *)service
+- (NSMutableDictionary *)service
 {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:(SPX_ID)kSecClassGenericPassword forKey:(SPX_ID)kSecClass];
     return dict;
 }
 
--(NSMutableDictionary *)query
+- (NSMutableDictionary *)query
 {
     NSMutableDictionary *query = [NSMutableDictionary dictionary];
 
@@ -322,7 +298,7 @@ static NSString *SPXBundleId = nil;
     return query;
 }
 
--(void)setObject:(id)object forKey:(NSString *)key
+- (void)setObject:(id)object forKey:(NSString *)key
 {
 	if (!key.length)
 	{
@@ -376,7 +352,7 @@ static NSString *SPXBundleId = nil;
     }
 }
 
--(NSString *)objectForKey:(NSString *)key
+- (NSString *)objectForKey:(NSString *)key
 {
     NSString *storeKey = [self keyByAppendingBundleIdToKey:key];
 
@@ -410,12 +386,12 @@ static NSString *SPXBundleId = nil;
 	return storeObject;
 }
 
--(BOOL)synchronize
+- (BOOL)synchronize
 {
 	return YES;
 }
 
--(NSDictionary *)dictionaryRepresentation
+- (NSDictionary *)dictionaryRepresentation
 {
 	return nil;
 }
