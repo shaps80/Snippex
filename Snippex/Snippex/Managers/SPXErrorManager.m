@@ -44,6 +44,13 @@ static NSDictionary *errorsDictionary;
 
 +(SPXErrorManager *)sharedInstance
 {
+    if (!errorsDictionary)
+    {
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"Errors" withExtension:@"plist"];
+        NSAssert(url, @"Unable to load default errors.plist, have you mispelled the filename or forgotten to initialize with +initializeWithPlist: or +initializeWithDictionary:");
+        [SPXErrorManager initializeWithPlist:url];
+    }
+
 	static SPXErrorManager *_sharedInstance = nil;
 	static dispatch_once_t oncePredicate;
 	dispatch_once(&oncePredicate, ^{

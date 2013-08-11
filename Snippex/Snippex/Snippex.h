@@ -55,3 +55,6 @@
 #import "NSDictionary+SPXRestQueryString.h"
 #import "NSString+SPXRestQueryString.h"
 #import "Color+SPXAdditions.h"
+#import "SPXAudio.h"
+#import "SPXReachability.h"
+#import "SPXKeyValueStore.h"

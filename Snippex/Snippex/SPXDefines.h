@@ -217,7 +217,7 @@ static inline CGFloat spxRand(CGFloat low, CGFloat high) {
 #define logMethod NSLog((@"%@ | %d | %@ | %@ "), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 
 // should use DLog vs NSLog to ensure its completely disabled when not in debug mode
-#define DLog(fmt, ...) NSLog((@"%@ | %d | %@ | %@ | " fmt), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__);
+#define DLog(fmt, ...) NSLog((@"%@ | %d | %@ | %@ | " fmt), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__)
 #define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
 
 #else

@@ -24,6 +24,7 @@
  */
 
 #import "SPXCoreDataDatasource.h"
+#import "SPXDefines.h"
 
 @interface SPXDatasource ()
 
