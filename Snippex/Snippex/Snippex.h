@@ -25,9 +25,6 @@
 
 #import "SPXDefines.h"
 
-#ifdef DEBUG
-#import "NSBlock+SPXAdditions.h"
-#endif
 
 #if TARGET_OS_IPHONE
 #import "SPXBarButtonItem.h"
