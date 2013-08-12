@@ -74,12 +74,12 @@ static NSDictionary *errors;
 
 + (NSString *)messageForCode:(NSInteger)code
 {
-    return [[errors objectForKey:@(code)] objectForKey:@"LongMessage"];
+    return [[errors objectForKey:@(code)] objectForKey:@"LongMessage"] ?: @"An unknown error occurred.";
 }
 
 + (NSString *)shortMessageForCode:(NSInteger)code
 {
-    return [[errors objectForKey:@(code)] objectForKey:@"ShortMessage"];
+    return [[errors objectForKey:@(code)] objectForKey:@"ShortMessage"] ?: @"Unknown error.";
 }
 
 + (NSString *)messageForCode:(NSInteger)code withPrefix:(NSString *)prefix suffix:(NSString *)suffix
@@ -87,10 +87,15 @@ static NSDictionary *errors;
     return [NSString stringWithFormat:@"%@%@%@", prefix, [self messageForCode:code], suffix];
 }
 
++ (NSString *)shortMessageForCode:(NSInteger)code withPrefix:(NSString *)prefix suffix:(NSString *)suffix
+{
+    return [NSString stringWithFormat:@"%@%@%@", prefix, [self shortMessageForCode:code], suffix];
+}
+
 + (NSError *)errorForError:(NSError *)error
 {
-    NSString *longMessage = [SPXError messageForCode:error.code];
-    NSString *shortMessage = [SPXError shortMessageForCode:error.code];
+    NSString *longMessage = [[errors objectForKey:@(error.code)] objectForKey:@"LongMessage"];
+    NSString *shortMessage = [[errors objectForKey:@(error.code)] objectForKey:@"ShortMessage"];
 
     NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] initWithDictionary:error.userInfo];
 

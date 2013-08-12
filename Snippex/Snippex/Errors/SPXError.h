@@ -67,6 +67,18 @@
 + (NSString *)messageForCode:(NSInteger)code withPrefix:(NSString *)prefix suffix:(NSString *)suffix;
 
 /**
+ @abstract      Returns the message for the specified code, with the given prefix and suffix surrounding to the string
+ @discussion    This is useful for providing generic messages in the plist, but then specialising them here.
+
+ E.g.    message - "Failed to create"
+ prefix  - nil
+ suffix  - "'object123'"
+
+ result  - "Failed to create 'object123'"
+ */
++ (NSString *)shortMessageForCode:(NSInteger)code withPrefix:(NSString *)prefix suffix:(NSString *)suffix;
+
+/**
  @abstract      Returns an NSError from this NSError.
  @return        If the Plist contains error messages for this code, the returned NSError will contain this NSError's domain and code, but the messages found in the Plist, otherwise the Plist is left unchanged.
  */

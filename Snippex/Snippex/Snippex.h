@@ -38,7 +38,7 @@
 #import "SPXView.h"
 #import "SPXControl.h"
 #import "SPXAlert.h"
-#import "SPXErrorManager.h"
+#import "SPXError.h"
 #import "SPXGraphicsDefines.h"
 #import "SPXGeometry.h"
 #import "SPXDrawing.h"
