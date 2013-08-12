@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,36 +23,20 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#import <Foundation/Foundation.h>
 #import "SPXDefines.h"
 
+@class SPXRest;
 
-#if TARGET_OS_IPHONE
-#import "SPXBarButtonItem.h"
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-#import "SPXCollectionDatasource.h"
-#import "UIDevice+SPXAdditions.h"
-#endif
+typedef void (^SPXImageCacheCompletion)(UIImage *image, NSError *error);
 
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXError.h"
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
-#import "SPXStore.h"
-#import "SPXRest.h"
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXRestQueryString.h"
-#import "NSString+SPXRestQueryString.h"
-#import "Color+SPXAdditions.h"
-#import "SPXAudio.h"
-#import "SPXReachability.h"
-#import "SPXKeyValueStore.h"
-#import "SPXImage.h"
+@interface SPXImage : NSObject
+
+/**
+ @abstract      Pre-caches the image from the specified URL, then returns it in the completion blcok
+ @param         url The URL for this image if its not already downloaded
+ @param         completion The block to execute and return the cached copy of the image, nil if not found
+ */
++ (void)imageWithURL:(NSURL *)url completion:(SPXImageCacheCompletion)completion;
+
+@end

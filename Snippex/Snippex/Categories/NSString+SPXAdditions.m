@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,36 +23,26 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXDefines.h"
+#import "NSString+SPXAdditions.h"
+#import <CommonCrypto/CommonDigest.h>
 
+@implementation NSString (SPXAdditions)
 
-#if TARGET_OS_IPHONE
-#import "SPXBarButtonItem.h"
-#import "SPXDatasource.h"
-#import "SPXCoreDataDatasource.h"
-#import "SPXSearchDatasource.h"
-#import "SPXCollectionDatasource.h"
-#import "UIDevice+SPXAdditions.h"
-#endif
+- (NSString *)MD5
+{
+	if (!self.length) return nil;
 
-#import "SPXView.h"
-#import "SPXControl.h"
-#import "SPXAlert.h"
-#import "SPXError.h"
-#import "SPXGraphicsDefines.h"
-#import "SPXGeometry.h"
-#import "SPXDrawing.h"
-#import "SPXGradient.h"
-#import "SPXShadow.h"
-#import "SPXStore.h"
-#import "SPXRest.h"
-#import "BezierPath+SPXAdditions.h"
-#import "NSData+SPXAdditions.h"
-#import "NSDateFormatter+SPXAdditions.h"
-#import "NSDictionary+SPXRestQueryString.h"
-#import "NSString+SPXRestQueryString.h"
-#import "Color+SPXAdditions.h"
-#import "SPXAudio.h"
-#import "SPXReachability.h"
-#import "SPXKeyValueStore.h"
-#import "SPXImage.h"
+	const char *cStr = [self UTF8String];
+	unsigned char result[16];
+	CC_MD5( cStr, strlen(cStr), result );
+
+	return [NSString stringWithFormat:
+			@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
+			result[0],  result[1],  result[2],  result[3],
+			result[4],  result[5],  result[6],  result[7],
+			result[8],  result[9],  result[10], result[11],
+			result[12], result[13], result[14], result[15]
+			];
+}
+
+@end
