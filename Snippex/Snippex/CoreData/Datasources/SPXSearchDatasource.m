@@ -77,6 +77,11 @@
     _sourceBlock = block;
 }
 
+- (NSIndexPath *)indexPathForObject:(id)object
+{
+    return [NSIndexPath indexPathForRow:[_results indexOfObject:object] inSection:0];
+}
+
 -(id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return [_results objectAtIndex:indexPath.row];

@@ -119,6 +119,11 @@
     return _fetchedResultsController;
 }
 
+- (NSIndexPath *)indexPathForObject:(id)object
+{
+    return [self.fetchedResultsController indexPathForObject:object];
+}
+
 -(id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];

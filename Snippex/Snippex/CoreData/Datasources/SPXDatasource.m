@@ -39,6 +39,11 @@
 
 #pragma mark - Private Getters
 
+-(NSIndexPath *)indexPathForObject:(id)object
+{
+    return nil;
+}
+
 -(id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
