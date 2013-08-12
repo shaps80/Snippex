@@ -15,8 +15,6 @@
 		5401A3F517B16464004B8CCB /* SPXAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5401A3F217B16464004B8CCB /* SPXAudio.h */; };
 		5401A3F617B16464004B8CCB /* SPXAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401A3F317B16464004B8CCB /* SPXAudio.m */; };
 		5401A3F717B16464004B8CCB /* SPXAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401A3F317B16464004B8CCB /* SPXAudio.m */; };
-		5419EB5717ADC09400D56192 /* SPXRestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5419EB5617ADC09400D56192 /* SPXRestTests.m */; };
-		5419EB5817ADC09400D56192 /* SPXRestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5419EB5617ADC09400D56192 /* SPXRestTests.m */; };
 		541AF1AE17994E7F004259D6 /* SPXCoreDataDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */; };
 		541AF1B017994E7F004259D6 /* SPXCoreDataDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */; };
 		541B0B5917AE07E400231554 /* NSData+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SPXAdditions.m */; };
@@ -89,10 +87,6 @@
 		5491550B175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F6175CF06200A210BC /* BezierPath+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5491550C175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */; };
 		5491550D175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */; };
-		5491550E175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491550F175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54915510175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */; };
-		54915511175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */; };
 		54915516175CF06200A210BC /* NSData+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915517175CF06200A210BC /* NSData+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 549154FC175CF06200A210BC /* NSData+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915518175CF06200A210BC /* NSData+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SPXAdditions.m */; };
@@ -225,8 +219,6 @@
 		540158161799AE6200175910 /* SPXDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXDatasource.m; sourceTree = "<group>"; };
 		5401A3F217B16464004B8CCB /* SPXAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXAudio.h; sourceTree = "<group>"; };
 		5401A3F317B16464004B8CCB /* SPXAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXAudio.m; sourceTree = "<group>"; };
-		5419EB5517ADC09400D56192 /* SPXRestTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXRestTests.h; sourceTree = "<group>"; };
-		5419EB5617ADC09400D56192 /* SPXRestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXRestTests.m; sourceTree = "<group>"; };
 		541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataDatasource.h; sourceTree = "<group>"; };
 		541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataDatasource.m; sourceTree = "<group>"; };
 		543E4FC11779B5BB00A22EC5 /* SPXKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXKeyValueStore.h; sourceTree = "<group>"; };
@@ -268,8 +260,6 @@
 		549154E4175CEFF100A210BC /* SPXShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXShadow.m; sourceTree = "<group>"; };
 		549154F6175CF06200A210BC /* BezierPath+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BezierPath+SPXAdditions.h"; sourceTree = "<group>"; };
 		549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BezierPath+SPXAdditions.m"; sourceTree = "<group>"; };
-		549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBlock+SPXAdditions.h"; sourceTree = "<group>"; };
-		549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBlock+SPXAdditions.m"; sourceTree = "<group>"; };
 		549154FC175CF06200A210BC /* NSData+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SPXAdditions.h"; sourceTree = "<group>"; };
 		549154FD175CF06200A210BC /* NSData+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SPXAdditions.m"; sourceTree = "<group>"; };
 		549154FE175CF06200A210BC /* NSDate+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SPXAdditions.h"; sourceTree = "<group>"; };
@@ -387,8 +377,7 @@
 				54EA29F317B7CED300DE7C42 /* Core */,
 				54EA29F217B7CECE00DE7C42 /* Datasources */,
 			);
-			name = CoreData;
-			path = Protocols;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		543E4FB91779B4A500A22EC5 /* KeyValue Storage */ = {
@@ -414,7 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				54870B01175CB113004194F7 /* Snippex.h */,
-				54870AFE175CB113004194F7 /* ShapsLibrary */,
+				54870AFE175CB113004194F7 /* Snippex */,
 				54870B13175CB113004194F7 /* Snippex Tests */,
 				54915459175CE13300A210BC /* Supporting Files */,
 				54870AFB175CB113004194F7 /* Frameworks */,
@@ -443,7 +432,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		54870AFE175CB113004194F7 /* ShapsLibrary */ = {
+		54870AFE175CB113004194F7 /* Snippex */ = {
 			isa = PBXGroup;
 			children = (
 				546B7A46175D003700B216A3 /* SPXDefines.h */,
@@ -457,7 +446,6 @@
 				54EA299417B7CE1D00DE7C42 /* Networking */,
 				549154DC175CEFA600A210BC /* Views */,
 			);
-			name = ShapsLibrary;
 			path = Snippex;
 			sourceTree = "<group>";
 		};
@@ -465,8 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				54870B14175CB113004194F7 /* Supporting Files */,
-				5419EB5517ADC09400D56192 /* SPXRestTests.h */,
-				5419EB5617ADC09400D56192 /* SPXRestTests.m */,
 			);
 			name = "Snippex Tests";
 			path = SnippexTests;
@@ -546,8 +532,6 @@
 			children = (
 				549154F6175CF06200A210BC /* BezierPath+SPXAdditions.h */,
 				549154F7175CF06200A210BC /* BezierPath+SPXAdditions.m */,
-				549154F8175CF06200A210BC /* NSBlock+SPXAdditions.h */,
-				549154F9175CF06200A210BC /* NSBlock+SPXAdditions.m */,
 				549154FC175CF06200A210BC /* NSData+SPXAdditions.h */,
 				549154FD175CF06200A210BC /* NSData+SPXAdditions.m */,
 				549154FE175CF06200A210BC /* NSDate+SPXAdditions.h */,
@@ -577,11 +561,12 @@
 			children = (
 				54EA299B17B7CE9500DE7C42 /* SPXRest.h */,
 				54EA299C17B7CE9500DE7C42 /* SPXRest.m */,
+				54EA29B117B7CE9500DE7C42 /* SPXRestTypes.h */,
 				54EA2A0517B7D06800DE7C42 /* Core */,
 				54EA2A0417B7D04D00DE7C42 /* Protocols and Helpers */,
 				54EA2A0317B7D02B00DE7C42 /* Categories */,
 			);
-			name = Networking;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		54EA29F217B7CECE00DE7C42 /* Datasources */ = {
@@ -596,19 +581,19 @@
 				5445EFFF1799CB1B00DFC769 /* SPXCollectionDatasource.h */,
 				5445F0001799CB1B00DFC769 /* SPXCollectionDatasource.m */,
 			);
-			name = Datasources;
+			path = Datasources;
 			sourceTree = "<group>";
 		};
 		54EA29F317B7CED300DE7C42 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */,
 				54EA29F617B7CEFC00DE7C42 /* SPXStore.h */,
 				54EA29F717B7CEFC00DE7C42 /* SPXStore.m */,
+				54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */,
 				54EA29F417B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h */,
 				54EA29F517B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		54EA2A0317B7D02B00DE7C42 /* Categories */ = {
@@ -627,7 +612,7 @@
 				54EA299717B7CE9500DE7C42 /* NSString+SPXRestQueryString.h */,
 				54EA299817B7CE9500DE7C42 /* NSString+SPXRestQueryString.m */,
 			);
-			name = Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		54EA2A0417B7D04D00DE7C42 /* Protocols and Helpers */ = {
@@ -642,13 +627,12 @@
 				54EA299D17B7CE9500DE7C42 /* SPXRestAuthentication.h */,
 				54EA299E17B7CE9500DE7C42 /* SPXRestAuthentication.m */,
 			);
-			name = "Protocols and Helpers";
+			path = "Protocols and Helpers";
 			sourceTree = "<group>";
 		};
 		54EA2A0517B7D06800DE7C42 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				54EA29B117B7CE9500DE7C42 /* SPXRestTypes.h */,
 				54EA299F17B7CE9500DE7C42 /* SPXRestClient.h */,
 				54EA29A017B7CE9500DE7C42 /* SPXRestClient.m */,
 				54EA29AD17B7CE9500DE7C42 /* SPXRestRequest.h */,
@@ -658,7 +642,7 @@
 				54EA29B217B7CE9500DE7C42 /* SPXRestURLOperation.h */,
 				54EA29B317B7CE9500DE7C42 /* SPXRestURLOperation.m */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -684,7 +668,6 @@
 				549154ED175CEFF100A210BC /* SPXGradient.h in Headers */,
 				549154F1175CEFF100A210BC /* SPXShadow.h in Headers */,
 				5491550A175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
-				5491550E175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */,
 				54EA29D017B7CE9600DE7C42 /* SPXRestClient+GET.h in Headers */,
 				54915516175CF06200A210BC /* NSData+SPXAdditions.h in Headers */,
 				54EA29E417B7CE9600DE7C42 /* SPXRestRequest.h in Headers */,
@@ -739,7 +722,6 @@
 				549154EE175CEFF100A210BC /* SPXGradient.h in Headers */,
 				549154F2175CEFF100A210BC /* SPXShadow.h in Headers */,
 				5491550B175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
-				5491550F175CF06200A210BC /* NSBlock+SPXAdditions.h in Headers */,
 				54915517175CF06200A210BC /* NSData+SPXAdditions.h in Headers */,
 				54EA29FA17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h in Headers */,
 				54EA29C117B7CE9600DE7C42 /* SPXRest.h in Headers */,
@@ -939,7 +921,6 @@
 				549154EF175CEFF100A210BC /* SPXGradient.m in Sources */,
 				549154F3175CEFF100A210BC /* SPXShadow.m in Sources */,
 				5491550C175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */,
-				54915510175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */,
 				54915518175CF06200A210BC /* NSData+SPXAdditions.m in Sources */,
 				5401A3F617B16464004B8CCB /* SPXAudio.m in Sources */,
 				54EA29FB17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m in Sources */,
@@ -979,7 +960,6 @@
 			files = (
 				541B0B5A17AE07E500231554 /* NSData+SPXAdditions.m in Sources */,
 				543E4FC61779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
-				5419EB5717ADC09400D56192 /* SPXRestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,7 +983,6 @@
 				549154F4175CEFF100A210BC /* SPXShadow.m in Sources */,
 				5491550D175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */,
 				54EA29DB17B7CE9600DE7C42 /* SPXRestClient+PUT.m in Sources */,
-				54915511175CF06200A210BC /* NSBlock+SPXAdditions.m in Sources */,
 				54915519175CF06200A210BC /* NSData+SPXAdditions.m in Sources */,
 				5491551D175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */,
 				54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
@@ -1029,7 +1008,6 @@
 			files = (
 				541B0B5917AE07E400231554 /* NSData+SPXAdditions.m in Sources */,
 				543E4FC81779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
-				5419EB5817ADC09400D56192 /* SPXRestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
