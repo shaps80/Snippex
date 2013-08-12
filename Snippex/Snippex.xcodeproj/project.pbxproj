@@ -15,8 +15,6 @@
 		5401A3F517B16464004B8CCB /* SPXAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5401A3F217B16464004B8CCB /* SPXAudio.h */; };
 		5401A3F617B16464004B8CCB /* SPXAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401A3F317B16464004B8CCB /* SPXAudio.m */; };
 		5401A3F717B16464004B8CCB /* SPXAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401A3F317B16464004B8CCB /* SPXAudio.m */; };
-		5419EB5717ADC09400D56192 /* SPXRestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5419EB5617ADC09400D56192 /* SPXRestTests.m */; };
-		5419EB5817ADC09400D56192 /* SPXRestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5419EB5617ADC09400D56192 /* SPXRestTests.m */; };
 		541AF1AE17994E7F004259D6 /* SPXCoreDataDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */; };
 		541AF1B017994E7F004259D6 /* SPXCoreDataDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */; };
 		541B0B5917AE07E400231554 /* NSData+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SPXAdditions.m */; };
@@ -221,8 +219,6 @@
 		540158161799AE6200175910 /* SPXDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXDatasource.m; sourceTree = "<group>"; };
 		5401A3F217B16464004B8CCB /* SPXAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXAudio.h; sourceTree = "<group>"; };
 		5401A3F317B16464004B8CCB /* SPXAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXAudio.m; sourceTree = "<group>"; };
-		5419EB5517ADC09400D56192 /* SPXRestTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXRestTests.h; sourceTree = "<group>"; };
-		5419EB5617ADC09400D56192 /* SPXRestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXRestTests.m; sourceTree = "<group>"; };
 		541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataDatasource.h; sourceTree = "<group>"; };
 		541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataDatasource.m; sourceTree = "<group>"; };
 		543E4FC11779B5BB00A22EC5 /* SPXKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXKeyValueStore.h; sourceTree = "<group>"; };
@@ -457,8 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				54870B14175CB113004194F7 /* Supporting Files */,
-				5419EB5517ADC09400D56192 /* SPXRestTests.h */,
-				5419EB5617ADC09400D56192 /* SPXRestTests.m */,
 			);
 			name = "Snippex Tests";
 			path = SnippexTests;
@@ -966,7 +960,6 @@
 			files = (
 				541B0B5A17AE07E500231554 /* NSData+SPXAdditions.m in Sources */,
 				543E4FC61779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
-				5419EB5717ADC09400D56192 /* SPXRestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,7 +1008,6 @@
 			files = (
 				541B0B5917AE07E400231554 /* NSData+SPXAdditions.m in Sources */,
 				543E4FC81779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
-				5419EB5817ADC09400D56192 /* SPXRestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
