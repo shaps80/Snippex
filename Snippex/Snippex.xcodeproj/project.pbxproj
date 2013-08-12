@@ -552,8 +552,7 @@
 				54D7D97D17B8E9820000ADFB /* SPXError.h */,
 				54D7D97E17B8E9820000ADFB /* SPXError.m */,
 			);
-			name = Errors;
-			path = Managers;
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		54EA299417B7CE1D00DE7C42 /* Networking */ = {
