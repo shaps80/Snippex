@@ -99,15 +99,15 @@
 		5491551F175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915500175CF06200A210BC /* NSDateFormatter+SPXAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54915520175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */; };
 		54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */; };
-		5491553B175CF24E00A210BC /* SPXErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SPXErrorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491553C175CF24E00A210BC /* SPXErrorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54915535175CF24E00A210BC /* SPXErrorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5491553D175CF24E00A210BC /* SPXErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SPXErrorManager.m */; };
-		5491553E175CF24E00A210BC /* SPXErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915536175CF24E00A210BC /* SPXErrorManager.m */; };
 		54A0B942178F6F9F0062D076 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A0B941178F6F9F0062D076 /* Security.framework */; };
 		54A0B944178F6FA50062D076 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A0B943178F6FA50062D076 /* Security.framework */; };
 		54AC49BF176F61AA000389DF /* SPXBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 54AC49BD176F61AA000389DF /* SPXBarButtonItem.h */; };
 		54AC49C0176F61AA000389DF /* SPXBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */; };
 		54CA9081175CDB6200470B9F /* libSnippexOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54CA906A175CDB6200470B9F /* libSnippexOSX.a */; };
+		54D7D97F17B8E9820000ADFB /* SPXError.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7D97D17B8E9820000ADFB /* SPXError.h */; };
+		54D7D98017B8E9820000ADFB /* SPXError.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7D97D17B8E9820000ADFB /* SPXError.h */; };
+		54D7D98117B8E9820000ADFB /* SPXError.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7D97E17B8E9820000ADFB /* SPXError.m */; };
+		54D7D98217B8E9820000ADFB /* SPXError.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7D97E17B8E9820000ADFB /* SPXError.m */; };
 		54EA29B417B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA299517B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.h */; };
 		54EA29B517B7CE9600DE7C42 /* NSDictionary+SPXRestQueryString.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA299517B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.h */; };
 		54EA29B617B7CE9600DE7C42 /* NSDictionary+SPXRestQueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299617B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.m */; };
@@ -266,14 +266,14 @@
 		549154FF175CF06200A210BC /* NSDate+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SPXAdditions.m"; sourceTree = "<group>"; };
 		54915500175CF06200A210BC /* NSDateFormatter+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SPXAdditions.h"; sourceTree = "<group>"; };
 		54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SPXAdditions.m"; sourceTree = "<group>"; };
-		54915535175CF24E00A210BC /* SPXErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXErrorManager.h; sourceTree = "<group>"; };
-		54915536175CF24E00A210BC /* SPXErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXErrorManager.m; sourceTree = "<group>"; };
 		54A0B941178F6F9F0062D076 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		54A0B943178F6FA50062D076 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		54AC49BD176F61AA000389DF /* SPXBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXBarButtonItem.h; sourceTree = "<group>"; };
 		54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXBarButtonItem.m; sourceTree = "<group>"; };
 		54CA906A175CDB6200470B9F /* libSnippexOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnippexOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CA907C175CDB6200470B9F /* SnippexOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnippexOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54D7D97D17B8E9820000ADFB /* SPXError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXError.h; sourceTree = "<group>"; };
+		54D7D97E17B8E9820000ADFB /* SPXError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXError.m; sourceTree = "<group>"; };
 		54EA299517B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SPXRestQueryString.h"; sourceTree = "<group>"; };
 		54EA299617B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SPXRestQueryString.m"; sourceTree = "<group>"; };
 		54EA299717B7CE9500DE7C42 /* NSString+SPXRestQueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SPXRestQueryString.h"; sourceTree = "<group>"; };
@@ -440,7 +440,7 @@
 				5401A3F117B1644D004B8CCB /* Audio */,
 				549154F5175CF04500A210BC /* Categories */,
 				541AF1AB17994E2E004259D6 /* CoreData */,
-				54915532175CF1DD00A210BC /* Error Handling */,
+				54915532175CF1DD00A210BC /* Errors */,
 				549154DB175CEF9E00A210BC /* Graphics */,
 				543E4FB91779B4A500A22EC5 /* KeyValue Storage */,
 				54EA299417B7CE1D00DE7C42 /* Networking */,
@@ -546,13 +546,13 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		54915532175CF1DD00A210BC /* Error Handling */ = {
+		54915532175CF1DD00A210BC /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				54915535175CF24E00A210BC /* SPXErrorManager.h */,
-				54915536175CF24E00A210BC /* SPXErrorManager.m */,
+				54D7D97D17B8E9820000ADFB /* SPXError.h */,
+				54D7D97E17B8E9820000ADFB /* SPXError.m */,
 			);
-			name = "Error Handling";
+			name = Errors;
 			path = Managers;
 			sourceTree = "<group>";
 		};
@@ -680,8 +680,8 @@
 				5401A3F417B16464004B8CCB /* SPXAudio.h in Headers */,
 				54EA29EE17B7CE9600DE7C42 /* SPXRestURLOperation.h in Headers */,
 				541AF1AE17994E7F004259D6 /* SPXCoreDataDatasource.h in Headers */,
-				5491553B175CF24E00A210BC /* SPXErrorManager.h in Headers */,
 				54AC49BF176F61AA000389DF /* SPXBarButtonItem.h in Headers */,
+				54D7D97F17B8E9820000ADFB /* SPXError.h in Headers */,
 				543E4FC31779B5BB00A22EC5 /* SPXKeyValueStore.h in Headers */,
 				54EA29D817B7CE9600DE7C42 /* SPXRestClient+PUT.h in Headers */,
 				54570BD71794278D008CE9B0 /* Color+SPXAdditions.h in Headers */,
@@ -703,6 +703,7 @@
 			files = (
 				5401A3F517B16464004B8CCB /* SPXAudio.h in Headers */,
 				54915485175CE3C500A210BC /* Snippex.h in Headers */,
+				54D7D98017B8E9820000ADFB /* SPXError.h in Headers */,
 				54EA29ED17B7CE9600DE7C42 /* SPXRestTypes.h in Headers */,
 				54EA29CD17B7CE9600DE7C42 /* SPXRestClient+DELETE.h in Headers */,
 				54EA29DD17B7CE9600DE7C42 /* SPXRestPackage.h in Headers */,
@@ -730,7 +731,6 @@
 				5491551F175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */,
 				54EA29D917B7CE9600DE7C42 /* SPXRestClient+PUT.h in Headers */,
 				54EA29E117B7CE9600DE7C42 /* SPXRestPayload.h in Headers */,
-				5491553C175CF24E00A210BC /* SPXErrorManager.h in Headers */,
 				54EA29E917B7CE9600DE7C42 /* SPXRestResponse.h in Headers */,
 				546B7A48175D003800B216A3 /* SPXDefines.h in Headers */,
 				54EA29EF17B7CE9600DE7C42 /* SPXRestURLOperation.h in Headers */,
@@ -929,11 +929,11 @@
 				54EA29EA17B7CE9600DE7C42 /* SPXRestResponse.m in Sources */,
 				54EA29DA17B7CE9600DE7C42 /* SPXRestClient+PUT.m in Sources */,
 				54EA29F017B7CE9600DE7C42 /* SPXRestURLOperation.m in Sources */,
+				54D7D98117B8E9820000ADFB /* SPXError.m in Sources */,
 				54EA29C217B7CE9600DE7C42 /* SPXRest.m in Sources */,
 				54AC49C0176F61AA000389DF /* SPXBarButtonItem.m in Sources */,
 				541AF1B017994E7F004259D6 /* SPXCoreDataDatasource.m in Sources */,
 				54EA29D217B7CE9600DE7C42 /* SPXRestClient+GET.m in Sources */,
-				5491553D175CF24E00A210BC /* SPXErrorManager.m in Sources */,
 				54EA29CE17B7CE9600DE7C42 /* SPXRestClient+DELETE.m in Sources */,
 				54EA29DE17B7CE9600DE7C42 /* SPXRestPackage.m in Sources */,
 				54EA29CA17B7CE9600DE7C42 /* SPXRestClient.m in Sources */,
@@ -968,6 +968,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54EA29BF17B7CE9600DE7C42 /* SPXReachability.m in Sources */,
+				54D7D98217B8E9820000ADFB /* SPXError.m in Sources */,
 				54EA29CF17B7CE9600DE7C42 /* SPXRestClient+DELETE.m in Sources */,
 				549154CE175CE95400A210BC /* SPXView.m in Sources */,
 				549154D4175CEE9E00A210BC /* SPXControl.m in Sources */,
@@ -989,7 +990,6 @@
 				54EA29E717B7CE9600DE7C42 /* SPXRestRequest.m in Sources */,
 				54EA29EB17B7CE9600DE7C42 /* SPXRestResponse.m in Sources */,
 				54EA29BB17B7CE9600DE7C42 /* NSString+SPXRestQueryString.m in Sources */,
-				5491553E175CF24E00A210BC /* SPXErrorManager.m in Sources */,
 				5401A3F717B16464004B8CCB /* SPXAudio.m in Sources */,
 				54EA29FC17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m in Sources */,
 				54EA29D717B7CE9600DE7C42 /* SPXRestClient+POST.m in Sources */,
