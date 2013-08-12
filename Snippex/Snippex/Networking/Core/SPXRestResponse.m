@@ -73,9 +73,9 @@ NSDictionary *extractCookiesFromHeaders(NSDictionary *headers, NSURL *url)
 -(NSString *)description
 {
     if (self.error)
-        return [NSString stringWithFormat:@"%i | %@", self.statusCode, self.localizedStatusDescription];
+        return [NSString stringWithFormat:@"%li | %@", (unsigned long)self.statusCode, self.localizedStatusDescription];
     else
-        return [NSString stringWithFormat:@"%i | %@", self.statusCode, self.package.description];
+        return [NSString stringWithFormat:@"%li | %@", (unsigned long)self.statusCode, self.package.description];
 }
 
 -(NSString *)debugDescription
@@ -83,7 +83,7 @@ NSDictionary *extractCookiesFromHeaders(NSDictionary *headers, NSURL *url)
     if (self.error)
         return [NSString stringWithFormat:@"%@", self.error];
     else
-        return [NSString stringWithFormat:@"Status: %i\n%@", self.statusCode, self.package.debugDescription];
+        return [NSString stringWithFormat:@"Status: %li\n%@", (unsigned long)self.statusCode, self.package.debugDescription];
 }
 
 - (SPXRestPackage *)package
