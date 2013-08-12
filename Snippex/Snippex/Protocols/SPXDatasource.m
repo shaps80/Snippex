@@ -39,6 +39,11 @@
 
 #pragma mark - Private Getters
 
+- (NSIndexPath *)indexPathForObject:(id)object
+{
+    return nil;
+}
+
 -(id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
@@ -106,7 +111,7 @@
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return YES;
+    return NO;
 }
 
 -(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath

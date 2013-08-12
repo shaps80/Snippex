@@ -113,6 +113,11 @@
     return _source.count;
 }
 
+- (NSIndexPath *)indexPathForObject:(id)object
+{
+    return [NSIndexPath indexPathForRow:[_source indexOfObject:object] inSection:0];
+}
+
 -(id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return [_source objectAtIndex:indexPath.row];

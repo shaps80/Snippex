@@ -34,11 +34,11 @@
 - (void)removeObjectForKey:(NSString *)key;
 - (id)objectForKey:(NSString *)key;
 
+@optional
+
 // keyed subscripting
 - (void)setObject:(id)object forKeyedSubscript:(id)key;
 - (id)objectForKeyedSubscript:(id)key;
-
-@optional
 
 // convenience setters
 - (void)setBool:(BOOL)value forKey:(NSString *)key;
@@ -80,8 +80,8 @@
 
 @interface SPXKeyValueStore : NSObject <SPXKeyValueStoreProtocol>
 
-+ (instancetype)keychain;
-+ (instancetype)userDefaults;
-+ (instancetype)iCloud;
++ (id <SPXKeyValueStoreProtocol>)keychain;
++ (id <SPXKeyValueStoreProtocol>)userDefaults;
++ (id <SPXKeyValueStoreProtocol>)iCloud;
 
 @end

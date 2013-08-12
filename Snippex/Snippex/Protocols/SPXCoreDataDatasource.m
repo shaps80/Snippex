@@ -68,7 +68,7 @@
         _tableView = tableView;
         _entityName = entityName;
         _managedObjectContext = context;
-        [_tableView setSectionIndexMinimumDisplayRowCount:10];
+        [_tableView setSectionIndexMinimumDisplayRowCount:NSIntegerMax];
 
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidReceiveMemoryWarningNotification
                                                           object:self
@@ -117,6 +117,11 @@
     }
 
     return _fetchedResultsController;
+}
+
+- (NSIndexPath *)indexPathForObject:(id)object
+{
+    return [self.fetchedResultsController indexPathForObject:object];
 }
 
 -(id)objectAtIndexPath:(NSIndexPath *)indexPath

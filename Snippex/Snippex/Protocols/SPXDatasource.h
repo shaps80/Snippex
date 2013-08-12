@@ -36,6 +36,7 @@ typedef NSString* (^SPXTitleForFooterInSectionBlock)(UITableView *tableView, NSU
 @required
 -(NSArray *)sectionsForTableView:(UITableView *)tableView;
 -(id)objectAtIndexPath:(NSIndexPath *)indexPath;
+-(NSIndexPath *)indexPathForObject:(id)object;
 
 @end
 

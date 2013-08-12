@@ -26,26 +26,10 @@
 #import <Security/Security.h>
 #import "SPXKeyValueStore.h"
 
-#pragma mark - SPXStoreProtocol
-
-// Defines methods that a store MUST implement
-@protocol SPXStoreProtocol <NSObject>
-- (void)setObject:(id)object forKey:(NSString *)key;
-- (id)objectForKey:(NSString *)forKey;
-- (BOOL)synchronize;
-- (NSDictionary *)dictionaryRepresentation;
-@end
-
 #pragma mark - SPXStoreKeychain
 
-@interface SPXStoreKeychain : NSObject <SPXStoreProtocol>
-+(SPXStoreKeychain *)sharedKeychain;
-@end
-
-#pragma mark - SPXStore
-
-@interface SPXKeyValueStore ()
-@property (nonatomic, strong) id store;
+@interface SPXKeychain : NSObject <SPXKeyValueStoreProtocol>
++(instancetype)sharedKeychain;
 @end
 
 
@@ -55,7 +39,7 @@
 
 + (instancetype)keychain
 {
-	return (id <SPXKeyValueStoreProtocol>)[SPXStoreKeychain sharedKeychain];
+	return (id <SPXKeyValueStoreProtocol>)[SPXKeychain sharedKeychain];
 }
 
 + (instancetype)iCloud
@@ -68,177 +52,20 @@
 	return (id <SPXKeyValueStoreProtocol>)[NSUserDefaults standardUserDefaults];
 }
 
-- (BOOL)synchronize
-{
-	return [_store synchronize];
-}
-
-- (NSDictionary *)dictionaryRepresentation
-{
-	return [_store dictionaryRepresentation];
-}
-
-#pragma mark - Primary set and get
-
-// all setters should come here...
-- (void)setObject:(id)object forKey:(NSString *)key encrypt:(BOOL)encrypt
-{
-	[_store setObject:object forKey:key];
-
-	NSString *storeKey = key;
-	id storeObject = object;
-
-	// perform encryption here
-	if (encrypt)
-	{
-
-	}
-
-	[_store setObject:storeObject forKey:storeKey];
-}
-
-// all getters should come here...
-- (id)objectForKey:(NSString *)key encrypted:(BOOL)encrypted
-{
-	NSString *storeKey = key;
-	id storeObject = [_store objectForKey:storeKey];
-
-	// perform decryption here
-	if (encrypted)
-	{
-
-	}
-
-	return storeObject;
-}
-
-- (void)removeObjectForKey:(NSString *)key
-{
-	[self setObject:nil forKey:key encrypt:NO];
-}
-
-#pragma mark - Setters
-
-- (void)setBool:(BOOL)value forKey:(NSString *)key
-{
-	[self setObject:@(value) forKey:key encrypt:NO];
-}
-
-- (void)setObject:(id)object forKeyedSubscript:(id)key
-{
-	[self setObject:object forKey:key encrypt:NO];
-}
-
 - (void)setObject:(id)object forKey:(NSString *)key
 {
-	[self setObject:object forKey:key encrypt:NO];
-}
-
-- (void)setDouble:(double)value forKey:(NSString *)key
-{
-	[self setObject:@(value) forKey:key encrypt:NO];
-}
-
-- (void)setFloat:(CGFloat)value forKey:(NSString *)key
-{
-	[self setObject:@(value) forKey:key encrypt:NO];
-}
-
-- (void)setInteger:(NSInteger)value forKey:(NSString *)key
-{
-	[self setObject:@(value) forKey:key encrypt:NO];
-}
-
-- (void)setString:(NSString *)value forKey:(NSString *)key
-{
-	[self setObject:value forKey:key encrypt:NO];
-}
-
-- (void)setDate:(NSDate *)date forKey:(NSString *)key
-{
-	[self setObject:date forKey:key encrypt:NO];
-}
-
-- (void)setData:(NSData *)data forKey:(NSString *)key
-{
-	[self setObject:data forKey:key encrypt:NO];
-}
-
-- (void)setSet:(NSSet *)set forKey:(NSString *)key
-{
-	[self setObject:set forKey:key encrypt:NO];
-}
-
-- (void)setArray:(NSArray *)array forKey:(NSString *)key
-{
-	[self setObject:array forKey:key encrypt:NO];
-}
-
-- (void)setDictionary:(NSDictionary *)dictionary forKey:(NSString *)key
-{
-	[self setObject:dictionary forKey:key encrypt:NO];
-}
-
-#pragma mark - Getters
-
-- (id)objectForKeyedSubscript:(id)key
-{
-	return [self objectForKey:key encrypted:NO];
-}
-
-- (BOOL)boolForKey:(NSString *)key
-{
-	return [[self objectForKey:key encrypted:NO] boolValue];
+    NSAssert(NO, @"You should not implement this class directly!");
 }
 
 - (id)objectForKey:(NSString *)key
 {
-	return [self objectForKey:key encrypted:NO];
+    NSAssert(NO, @"You should not implement this class directly!");
+    return nil;
 }
 
-- (double)doubleForKey:(NSString *)key
+- (void)removeObjectForKey:(NSString *)key
 {
-	return [[self objectForKey:key encrypted:NO] doubleValue];
-}
-
-- (CGFloat)floatForKey:(NSString *)key
-{
-	return [[self objectForKey:key encrypted:NO] floatValue];
-}
-
-- (NSInteger)integerForKey:(NSString *)key
-{
-	return [[self objectForKey:key encrypted:NO] integerValue];
-}
-
-- (NSString *)stringForKey:(NSString *)key
-{
-	return [self objectForKey:key encrypted:NO];
-}
-
-- (NSDate *)dateForKey:(NSString *)key
-{
-	return [self objectForKey:key encrypted:NO];
-}
-
-- (NSData *)dataForKey:(NSString *)key
-{
-	return [self objectForKey:key encrypted:NO];
-}
-
-- (NSSet *)setForKey:(NSString *)key
-{
-	return [self objectForKey:key encrypted:NO];
-}
-
-- (NSArray *)arrayForKey:(NSString *)key
-{
-	return [self objectForKey:key encrypted:NO];
-}
-
-- (NSDictionary *)dictionaryForKey:(NSString *)key
-{
-	return [self objectForKey:key encrypted:NO];
+    NSAssert(NO, @"You should not implement this class directly!");
 }
 
 @end
@@ -258,16 +85,16 @@
 static NSString *SPXBundleId = nil;
 
 
-@implementation SPXStoreKeychain
+@implementation SPXKeychain
 
 +(void)initialize
 {
 	SPXBundleId = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleIdentifierKey];
 }
 
-+(SPXStoreKeychain *)sharedKeychain
++(instancetype)sharedKeychain
 {
-	static SPXStoreKeychain *_sharedKeychain = nil;
+	static SPXKeychain *_sharedKeychain = nil;
 	static dispatch_once_t oncePredicate;
 	dispatch_once(&oncePredicate, ^{
 		_sharedKeychain = [[self alloc] init];
@@ -296,6 +123,127 @@ static NSString *SPXBundleId = nil;
     [query setObject:(SPX_ID)kCFBooleanTrue forKey:(SPX_ID) kSecReturnData];
 
     return query;
+}
+
+#pragma mark - Removals
+
+- (void)removeObjectForKey:(NSString *)key
+{
+	[self setObject:nil forKey:key];
+}
+
+#pragma mark - Setters
+
+- (void)setBool:(BOOL)value forKey:(NSString *)key
+{
+	[self setObject:@(value) forKey:key];
+}
+
+- (void)setObject:(id)object forKeyedSubscript:(id)key
+{
+	[self setObject:object forKey:key];
+}
+
+- (void)setDouble:(double)value forKey:(NSString *)key
+{
+	[self setObject:@(value) forKey:key];
+}
+
+- (void)setFloat:(CGFloat)value forKey:(NSString *)key
+{
+	[self setObject:@(value) forKey:key];
+}
+
+- (void)setInteger:(NSInteger)value forKey:(NSString *)key
+{
+	[self setObject:@(value) forKey:key];
+}
+
+- (void)setString:(NSString *)value forKey:(NSString *)key
+{
+	[self setObject:value forKey:key];
+}
+
+- (void)setDate:(NSDate *)date forKey:(NSString *)key
+{
+	[self setObject:date forKey:key];
+}
+
+- (void)setData:(NSData *)data forKey:(NSString *)key
+{
+	[self setObject:data forKey:key];
+}
+
+- (void)setSet:(NSSet *)set forKey:(NSString *)key
+{
+	[self setObject:set forKey:key];
+}
+
+- (void)setArray:(NSArray *)array forKey:(NSString *)key
+{
+	[self setObject:array forKey:key];
+}
+
+- (void)setDictionary:(NSDictionary *)dictionary forKey:(NSString *)key
+{
+	[self setObject:dictionary forKey:key];
+}
+
+#pragma mark - Getters
+
+- (id)objectForKeyedSubscript:(id)key
+{
+	return [self objectForKey:key];
+}
+
+- (BOOL)boolForKey:(NSString *)key
+{
+	return [[self objectForKey:key] boolValue];
+}
+
+- (double)doubleForKey:(NSString *)key
+{
+	return [[self objectForKey:key] doubleValue];
+}
+
+- (CGFloat)floatForKey:(NSString *)key
+{
+	return [[self objectForKey:key] floatValue];
+}
+
+- (NSInteger)integerForKey:(NSString *)key
+{
+	return [[self objectForKey:key] integerValue];
+}
+
+- (NSString *)stringForKey:(NSString *)key
+{
+	return [self objectForKey:key];
+}
+
+- (NSDate *)dateForKey:(NSString *)key
+{
+	return [self objectForKey:key];
+}
+
+- (NSData *)dataForKey:(NSString *)key
+{
+	return [self objectForKey:key];
+}
+
+- (NSSet *)setForKey:(NSString *)key
+{
+	return [self objectForKey:key];
+}
+
+- (NSArray *)arrayForKey:(NSString *)key
+{
+	return [self objectForKey:key];
+}
+
+- (NSDictionary *)dictionaryForKey:(NSString *)key
+{
+	return [self objectForKey:key];
 }
 
 - (void)setObject:(id)object forKey:(NSString *)key
