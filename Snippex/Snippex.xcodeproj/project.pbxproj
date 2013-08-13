@@ -576,8 +576,7 @@
 				54D7D9F517B92FE50000ADFB /* SPXImageCache.h */,
 				54D7D9F617B92FE50000ADFB /* SPXImageCache.m */,
 			);
-			name = Caching;
-			path = Audio/Caching;
+			path = Caching;
 			sourceTree = "<group>";
 		};
 		54EA299417B7CE1D00DE7C42 /* Networking */ = {
