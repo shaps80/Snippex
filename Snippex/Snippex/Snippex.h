@@ -57,6 +57,6 @@
     #import "SPXAudio.h"
     #import "SPXReachability.h"
     #import "SPXKeyValueStore.h"
-    #import "SPXImage.h"
+    #import "SPXImageCache.h"
 
 #endif

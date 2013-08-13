@@ -23,19 +23,19 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXImage.h"
+#import "SPXImageCache.h"
 #import "SPXRest.h"
 #import "NSString+SPXAdditions.h"
 
-@interface SPXImage ()
+@interface SPXImageCache ()
 @property (nonatomic, strong) NSCache *images;
 @end
 
-@implementation SPXImage
+@implementation SPXImageCache
 
 +(instancetype)cache
 {
-	static SPXImage *_sharedInstance = nil;
+	static SPXImageCache *_sharedInstance = nil;
 	static dispatch_once_t oncePredicate;
 	dispatch_once(&oncePredicate, ^{
 		_sharedInstance = [[self alloc] init];
@@ -73,7 +73,7 @@
         return;
     }
 
-    SPXImage *cache = [SPXImage cache];
+    SPXImageCache *cache = [SPXImageCache cache];
     NSString *identifier = [cache MD5ForURL:url];
 
     if (!identifier)

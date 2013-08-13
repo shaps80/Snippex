@@ -31,7 +31,7 @@
 
 typedef void (^SPXImageCacheCompletion)(UIImage *image, NSError *error);
 
-@interface SPXImage : NSObject
+@interface SPXImageCache : NSObject
 
 /**
  @abstract      Pre-caches the image from the specified URL, then returns it in the completion blcok
