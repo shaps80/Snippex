@@ -82,6 +82,13 @@ static NSString *defaultStoreName;
 
 @implementation SPXStore
 
++ (NSError *)saveContext:(NSManagedObjectContext *)context
+{
+    NSError *error = nil;
+    if ([context hasChanges]) [context save:&error];
+    return error;
+}
+
 - (NSString *)debugDescription
 {
     return [NSString stringWithFormat:@"%@\n%@", [self URL], _model.entityVersionHashesByName];

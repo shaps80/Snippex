@@ -60,6 +60,8 @@
 
 - (NSURL *)URL;
 
++ (NSError *)saveContext:(NSManagedObjectContext *)context;
+
 @end
 
 #endif
