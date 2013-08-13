@@ -82,33 +82,59 @@
         return;
     }
 
-    UIImage *image = [cache.images objectForKey:identifier];
+    __block UIImage *image = [cache.images objectForKey:identifier];
 
+    // if we find it in memory, return it
     if (image)
     {
         completion(image, nil);
         return;
     }
 
-    NSURL *diskURL = [cache cacheURLForURL:url];
-    image = [UIImage imageWithContentsOfFile:[diskURL path]];
-
-    if (image)
+    void(^ReturnImage)(UIImage*, NSError*) = ^(UIImage *image, NSError *error)
     {
-        completion(image, nil);
-        return;
-    }
-
-    [[SPXRest client] get:url completion:^(SPXRestResponse *response)
-    {
-        if (response.error)
+        dispatch_async(dispatch_get_main_queue(), ^
         {
-            completion(nil, response.error);
+            if (completion) completion(image, nil);
+        });
+    };
+
+    // we can use any priority here except DISPATCH_QUEUE_PRIORITY_BACKGROUND since this is I/O throttled
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
+    {
+        NSURL *diskURL = [cache cacheURLForURL:url];
+        image = [UIImage imageWithContentsOfFile:[diskURL path]];
+
+        // if we found it on disk, return it
+        if (image)
+        {
+            ReturnImage(image, nil);
+
+            // and add it to memory
+            [cache.images setObject:image forKey:identifier];
             return;
         }
 
-        completion([UIImage imageWithData:response.responseData], nil);
-    }];
+        // otherwise download it
+        [[SPXRest client] get:url completion:^(SPXRestResponse *response)
+         {
+             if (response.error)
+                 ReturnImage(nil, response.error);
+             else
+             {
+                 image = [UIImage imageWithData:response.responseData];
+                 ReturnImage(image, nil);
+
+                 if (image)
+                 {
+                     // now save it to disk and in memory
+                     NSURL *saveURL = [cache cacheURLForURL:url];
+                     [response.responseData writeToURL:saveURL atomically:YES];
+                     [cache.images setObject:image forKey:identifier];
+                 }
+             }
+         }];
+    });
 }
 
 @end
