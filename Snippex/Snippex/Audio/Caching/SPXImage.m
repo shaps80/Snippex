@@ -33,7 +33,7 @@
 
 @implementation SPXImage
 
-+(instancetype)sharedInstance
++(instancetype)cache
 {
 	static SPXImage *_sharedInstance = nil;
 	static dispatch_once_t oncePredicate;
@@ -73,7 +73,7 @@
         return;
     }
 
-    SPXImage *cache = [SPXImage sharedInstance];
+    SPXImage *cache = [SPXImage cache];
     NSString *identifier = [cache MD5ForURL:url];
 
     if (!identifier)
