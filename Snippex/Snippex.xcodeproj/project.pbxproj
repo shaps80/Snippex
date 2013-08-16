@@ -15,6 +15,42 @@
 		5401A3F517B16464004B8CCB /* SPXAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5401A3F217B16464004B8CCB /* SPXAudio.h */; };
 		5401A3F617B16464004B8CCB /* SPXAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401A3F317B16464004B8CCB /* SPXAudio.m */; };
 		5401A3F717B16464004B8CCB /* SPXAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401A3F317B16464004B8CCB /* SPXAudio.m */; };
+		5401F04117BE6BA700105349 /* SPXRestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FF113617BE414C001E6E8B /* SPXRestTests.m */; };
+		5401F04217BE6BA800105349 /* SPXRestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FF113617BE414C001E6E8B /* SPXRestTests.m */; };
+		5401F04317BE6F3800105349 /* SPXRest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299C17B7CE9500DE7C42 /* SPXRest.m */; };
+		5401F04417BE6F3800105349 /* SPXRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A017B7CE9500DE7C42 /* SPXRestClient.m */; };
+		5401F04517BE6F3800105349 /* SPXRestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29AE17B7CE9500DE7C42 /* SPXRestRequest.m */; };
+		5401F04617BE6F3800105349 /* SPXRestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29B017B7CE9500DE7C42 /* SPXRestResponse.m */; };
+		5401F04717BE6F3800105349 /* SPXRestURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29B317B7CE9500DE7C42 /* SPXRestURLOperation.m */; };
+		5401F04817BE6F3800105349 /* SPXReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299A17B7CE9500DE7C42 /* SPXReachability.m */; };
+		5401F04917BE6F3800105349 /* SPXRestPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29AC17B7CE9500DE7C42 /* SPXRestPayload.m */; };
+		5401F04A17BE6F3800105349 /* SPXRestPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29AA17B7CE9500DE7C42 /* SPXRestPackage.m */; };
+		5401F04B17BE6F3800105349 /* SPXRestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299E17B7CE9500DE7C42 /* SPXRestAuthentication.m */; };
+		5401F04C17BE6F3800105349 /* SPXRestClient+DELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A217B7CE9500DE7C42 /* SPXRestClient+DELETE.m */; };
+		5401F04D17BE6F3800105349 /* SPXRestClient+GET.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A417B7CE9500DE7C42 /* SPXRestClient+GET.m */; };
+		5401F04E17BE6F3800105349 /* SPXRestClient+POST.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A617B7CE9500DE7C42 /* SPXRestClient+POST.m */; };
+		5401F04F17BE6F3800105349 /* SPXRestClient+PUT.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A817B7CE9500DE7C42 /* SPXRestClient+PUT.m */; };
+		5401F05017BE6F3800105349 /* NSDictionary+SPXRestQueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299617B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.m */; };
+		5401F05117BE6F3800105349 /* NSString+SPXRestQueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299817B7CE9500DE7C42 /* NSString+SPXRestQueryString.m */; };
+		5401F05217BE6F3800105349 /* SPXRest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299C17B7CE9500DE7C42 /* SPXRest.m */; };
+		5401F05317BE6F3800105349 /* SPXRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A017B7CE9500DE7C42 /* SPXRestClient.m */; };
+		5401F05417BE6F3800105349 /* SPXRestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29AE17B7CE9500DE7C42 /* SPXRestRequest.m */; };
+		5401F05517BE6F3800105349 /* SPXRestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29B017B7CE9500DE7C42 /* SPXRestResponse.m */; };
+		5401F05617BE6F3800105349 /* SPXRestURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29B317B7CE9500DE7C42 /* SPXRestURLOperation.m */; };
+		5401F05717BE6F3800105349 /* SPXReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299A17B7CE9500DE7C42 /* SPXReachability.m */; };
+		5401F05817BE6F3800105349 /* SPXRestPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29AC17B7CE9500DE7C42 /* SPXRestPayload.m */; };
+		5401F05917BE6F3800105349 /* SPXRestPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29AA17B7CE9500DE7C42 /* SPXRestPackage.m */; };
+		5401F05A17BE6F3800105349 /* SPXRestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299E17B7CE9500DE7C42 /* SPXRestAuthentication.m */; };
+		5401F05B17BE6F3800105349 /* SPXRestClient+DELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A217B7CE9500DE7C42 /* SPXRestClient+DELETE.m */; };
+		5401F05C17BE6F3800105349 /* SPXRestClient+GET.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A417B7CE9500DE7C42 /* SPXRestClient+GET.m */; };
+		5401F05D17BE6F3800105349 /* SPXRestClient+POST.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A617B7CE9500DE7C42 /* SPXRestClient+POST.m */; };
+		5401F05E17BE6F3800105349 /* SPXRestClient+PUT.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29A817B7CE9500DE7C42 /* SPXRestClient+PUT.m */; };
+		5401F05F17BE6F3800105349 /* NSDictionary+SPXRestQueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299617B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.m */; };
+		5401F06017BE6F3800105349 /* NSString+SPXRestQueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA299817B7CE9500DE7C42 /* NSString+SPXRestQueryString.m */; };
+		5401F06A17BE78E100105349 /* SPXSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401F06917BE78E100105349 /* SPXSemaphore.m */; };
+		5401F06B17BE78E100105349 /* SPXSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401F06917BE78E100105349 /* SPXSemaphore.m */; };
+		5401F06C17BE78E500105349 /* SPXSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401F06917BE78E100105349 /* SPXSemaphore.m */; };
+		5401F06D17BE78E600105349 /* SPXSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401F06917BE78E100105349 /* SPXSemaphore.m */; };
 		541AF1AE17994E7F004259D6 /* SPXCoreDataDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */; };
 		541AF1B017994E7F004259D6 /* SPXCoreDataDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */; };
 		541B0B5917AE07E400231554 /* NSData+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SPXAdditions.m */; };
@@ -100,9 +136,10 @@
 		54915520175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */; };
 		54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */; };
 		54A0B942178F6F9F0062D076 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A0B941178F6F9F0062D076 /* Security.framework */; };
-		54A0B944178F6FA50062D076 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A0B943178F6FA50062D076 /* Security.framework */; };
 		54AC49BF176F61AA000389DF /* SPXBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 54AC49BD176F61AA000389DF /* SPXBarButtonItem.h */; };
 		54AC49C0176F61AA000389DF /* SPXBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */; };
+		54B6601E17BE81880066AD81 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B6601D17BE81880066AD81 /* Security.framework */; };
+		54B6602017BE81910066AD81 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B6601F17BE81910066AD81 /* SystemConfiguration.framework */; };
 		54CA9081175CDB6200470B9F /* libSnippexOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54CA906A175CDB6200470B9F /* libSnippexOSX.a */; };
 		54D7D97F17B8E9820000ADFB /* SPXError.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7D97D17B8E9820000ADFB /* SPXError.h */; };
 		54D7D98017B8E9820000ADFB /* SPXError.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7D97D17B8E9820000ADFB /* SPXError.h */; };
@@ -188,8 +225,6 @@
 		54EA2A0017B7CEFC00DE7C42 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29F717B7CEFC00DE7C42 /* SPXStore.m */; };
 		54EA2A0117B7CEFC00DE7C42 /* SPXStoreDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */; };
 		54EA2A0217B7CEFC00DE7C42 /* SPXStoreDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */; };
-		54FF113817BE414C001E6E8B /* SPXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FF113717BE414C001E6E8B /* SPXTests.m */; };
-		54FF113917BE414C001E6E8B /* SPXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FF113717BE414C001E6E8B /* SPXTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +264,8 @@
 		540158161799AE6200175910 /* SPXDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXDatasource.m; sourceTree = "<group>"; };
 		5401A3F217B16464004B8CCB /* SPXAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXAudio.h; sourceTree = "<group>"; };
 		5401A3F317B16464004B8CCB /* SPXAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXAudio.m; sourceTree = "<group>"; };
+		5401F06817BE78E100105349 /* SPXSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXSemaphore.h; sourceTree = "<group>"; };
+		5401F06917BE78E100105349 /* SPXSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXSemaphore.m; sourceTree = "<group>"; };
 		541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataDatasource.h; sourceTree = "<group>"; };
 		541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataDatasource.m; sourceTree = "<group>"; };
 		543E4FC11779B5BB00A22EC5 /* SPXKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXKeyValueStore.h; sourceTree = "<group>"; };
@@ -277,9 +314,10 @@
 		54915500175CF06200A210BC /* NSDateFormatter+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SPXAdditions.h"; sourceTree = "<group>"; };
 		54915501175CF06200A210BC /* NSDateFormatter+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SPXAdditions.m"; sourceTree = "<group>"; };
 		54A0B941178F6F9F0062D076 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		54A0B943178F6FA50062D076 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		54AC49BD176F61AA000389DF /* SPXBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXBarButtonItem.h; sourceTree = "<group>"; };
 		54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXBarButtonItem.m; sourceTree = "<group>"; };
+		54B6601D17BE81880066AD81 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		54B6601F17BE81910066AD81 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		54CA906A175CDB6200470B9F /* libSnippexOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnippexOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CA907C175CDB6200470B9F /* SnippexOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnippexOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D7D97D17B8E9820000ADFB /* SPXError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXError.h; sourceTree = "<group>"; };
@@ -324,8 +362,7 @@
 		54EA29F617B7CEFC00DE7C42 /* SPXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStore.h; sourceTree = "<group>"; };
 		54EA29F717B7CEFC00DE7C42 /* SPXStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStore.m; sourceTree = "<group>"; };
 		54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStoreDefines.h; sourceTree = "<group>"; };
-		54FF113617BE414C001E6E8B /* SPXTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXTests.h; sourceTree = "<group>"; };
-		54FF113717BE414C001E6E8B /* SPXTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXTests.m; sourceTree = "<group>"; };
+		54FF113617BE414C001E6E8B /* SPXRestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXRestTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,7 +404,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A0B944178F6FA50062D076 /* Security.framework in Frameworks */,
+				54B6602017BE81910066AD81 /* SystemConfiguration.framework in Frameworks */,
+				54B6601E17BE81880066AD81 /* Security.framework in Frameworks */,
 				54CA9081175CDB6200470B9F /* libSnippexOSX.a in Frameworks */,
 				549154BE175CE7DD00A210BC /* SenTestingKit.framework in Frameworks */,
 				546B7A43175CFD0600B216A3 /* Cocoa.framework in Frameworks */,
@@ -385,6 +423,15 @@
 				5401A3F317B16464004B8CCB /* SPXAudio.m */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		5401F06717BE78C400105349 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5401F06817BE78E100105349 /* SPXSemaphore.h */,
+				5401F06917BE78E100105349 /* SPXSemaphore.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		541AF1AB17994E2E004259D6 /* CoreData */ = {
@@ -409,7 +456,8 @@
 		546B7A3C175CFCC400B216A3 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
-				54A0B943178F6FA50062D076 /* Security.framework */,
+				54B6601F17BE81910066AD81 /* SystemConfiguration.framework */,
+				54B6601D17BE81880066AD81 /* Security.framework */,
 				546B7A3A175CFCBE00B216A3 /* Cocoa.framework */,
 			);
 			name = OSX;
@@ -453,6 +501,7 @@
 				54870B01175CB113004194F7 /* Snippex.h */,
 				546B7A46175D003700B216A3 /* SPXDefines.h */,
 				549154C6175CE93700A210BC /* SPXGraphicsDefines.h */,
+				5401F06717BE78C400105349 /* Helpers */,
 				5401A3F117B1644D004B8CCB /* Audio */,
 				54D7D9F417B92FE50000ADFB /* Caching */,
 				549154F5175CF04500A210BC /* Categories */,
@@ -469,6 +518,7 @@
 		54870B13175CB113004194F7 /* Snippex Tests */ = {
 			isa = PBXGroup;
 			children = (
+				54FF113617BE414C001E6E8B /* SPXRestTests.m */,
 				54870B14175CB113004194F7 /* Supporting Files */,
 			);
 			name = "Snippex Tests";
@@ -480,8 +530,6 @@
 			children = (
 				54870B15175CB113004194F7 /* SnippexTests-Info.plist */,
 				54870B16175CB113004194F7 /* InfoPlist.strings */,
-				54FF113617BE414C001E6E8B /* SPXTests.h */,
-				54FF113717BE414C001E6E8B /* SPXTests.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -947,6 +995,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				549154CD175CE95400A210BC /* SPXView.m in Sources */,
+				5401F06C17BE78E500105349 /* SPXSemaphore.m in Sources */,
 				549154D3175CEE9E00A210BC /* SPXControl.m in Sources */,
 				549154D9175CEF4000A210BC /* SPXAlert.m in Sources */,
 				549154E7175CEFF100A210BC /* SPXDrawing.m in Sources */,
@@ -993,8 +1042,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54FF113817BE414C001E6E8B /* SPXTests.m in Sources */,
+				5401F06A17BE78E100105349 /* SPXSemaphore.m in Sources */,
+				5401F05817BE6F3800105349 /* SPXRestPayload.m in Sources */,
+				5401F04217BE6BA800105349 /* SPXRestTests.m in Sources */,
+				5401F05317BE6F3800105349 /* SPXRestClient.m in Sources */,
+				5401F05F17BE6F3800105349 /* NSDictionary+SPXRestQueryString.m in Sources */,
+				5401F05217BE6F3800105349 /* SPXRest.m in Sources */,
+				5401F05517BE6F3800105349 /* SPXRestResponse.m in Sources */,
+				5401F05C17BE6F3800105349 /* SPXRestClient+GET.m in Sources */,
+				5401F05B17BE6F3800105349 /* SPXRestClient+DELETE.m in Sources */,
+				5401F05417BE6F3800105349 /* SPXRestRequest.m in Sources */,
+				5401F05617BE6F3800105349 /* SPXRestURLOperation.m in Sources */,
+				5401F05A17BE6F3800105349 /* SPXRestAuthentication.m in Sources */,
+				5401F05E17BE6F3800105349 /* SPXRestClient+PUT.m in Sources */,
 				541B0B5A17AE07E500231554 /* NSData+SPXAdditions.m in Sources */,
+				5401F05717BE6F3800105349 /* SPXReachability.m in Sources */,
+				5401F05917BE6F3800105349 /* SPXRestPackage.m in Sources */,
+				5401F06017BE6F3800105349 /* NSString+SPXRestQueryString.m in Sources */,
+				5401F05D17BE6F3800105349 /* SPXRestClient+POST.m in Sources */,
 				543E4FC61779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1033,6 +1098,7 @@
 				54EA29CB17B7CE9600DE7C42 /* SPXRestClient.m in Sources */,
 				54EA29F117B7CE9600DE7C42 /* SPXRestURLOperation.m in Sources */,
 				54EA29B717B7CE9600DE7C42 /* NSDictionary+SPXRestQueryString.m in Sources */,
+				5401F06D17BE78E600105349 /* SPXSemaphore.m in Sources */,
 				54EA2A0017B7CEFC00DE7C42 /* SPXStore.m in Sources */,
 				54D7DA1517B931370000ADFB /* NSString+SPXAdditions.m in Sources */,
 				543E4FC71779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
@@ -1044,8 +1110,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54FF113917BE414C001E6E8B /* SPXTests.m in Sources */,
+				5401F06B17BE78E100105349 /* SPXSemaphore.m in Sources */,
+				5401F04917BE6F3800105349 /* SPXRestPayload.m in Sources */,
+				5401F04117BE6BA700105349 /* SPXRestTests.m in Sources */,
+				5401F04417BE6F3800105349 /* SPXRestClient.m in Sources */,
+				5401F05017BE6F3800105349 /* NSDictionary+SPXRestQueryString.m in Sources */,
+				5401F04317BE6F3800105349 /* SPXRest.m in Sources */,
+				5401F04617BE6F3800105349 /* SPXRestResponse.m in Sources */,
+				5401F04D17BE6F3800105349 /* SPXRestClient+GET.m in Sources */,
+				5401F04C17BE6F3800105349 /* SPXRestClient+DELETE.m in Sources */,
+				5401F04517BE6F3800105349 /* SPXRestRequest.m in Sources */,
+				5401F04717BE6F3800105349 /* SPXRestURLOperation.m in Sources */,
+				5401F04B17BE6F3800105349 /* SPXRestAuthentication.m in Sources */,
+				5401F04F17BE6F3800105349 /* SPXRestClient+PUT.m in Sources */,
 				541B0B5917AE07E400231554 /* NSData+SPXAdditions.m in Sources */,
+				5401F04817BE6F3800105349 /* SPXReachability.m in Sources */,
+				5401F04A17BE6F3800105349 /* SPXRestPackage.m in Sources */,
+				5401F05117BE6F3800105349 /* NSString+SPXRestQueryString.m in Sources */,
+				5401F04E17BE6F3800105349 /* SPXRestClient+POST.m in Sources */,
 				543E4FC81779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

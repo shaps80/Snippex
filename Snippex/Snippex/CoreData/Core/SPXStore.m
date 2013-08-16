@@ -35,7 +35,7 @@ static NSString *defaultSeedPath;
 
 @interface SPXStoreManager : NSObject
 
-@property (nonatomic, strong) NSMutableDictionary *stores;
+@property (nonatomic, STRONG) NSMutableDictionary *stores;
 
 - (void)addStore:(SPXStore *)store name:(NSString *)name;
 - (SPXStore *)storeNamed:(NSString *)name;
@@ -74,11 +74,11 @@ static NSString *defaultSeedPath;
 @end
 
 @interface SPXStore ()
-@property (nonatomic, strong) NSManagedObjectModel *model;
-@property (nonatomic, strong) NSPersistentStoreCoordinator *coordinator;
-@property (nonatomic, strong) NSMutableDictionary *entityKeys;
-@property (nonatomic, strong) NSManagedObjectContext *mainContext;
-@property (nonatomic, strong) NSManagedObjectContext *privateContext;
+@property (nonatomic, STRONG) NSManagedObjectModel *model;
+@property (nonatomic, STRONG) NSPersistentStoreCoordinator *coordinator;
+@property (nonatomic, STRONG) NSMutableDictionary *entityKeys;
+@property (nonatomic, STRONG) NSManagedObjectContext *mainContext;
+@property (nonatomic, STRONG) NSManagedObjectContext *privateContext;
 @end
 
 @implementation SPXStore
@@ -90,9 +90,33 @@ static NSString *defaultSeedPath;
     return error;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@", [self URL]];
+}
+
 - (NSString *)debugDescription
 {
     return [NSString stringWithFormat:@"%@\n%@", [self URL], _model.entityVersionHashesByName];
+}
+
+static SPXStoreLoggingType __loggingType = NO;
+
++ (void)setLoggingType:(SPXStoreLoggingType)type
+{
+    __loggingType = type;
+}
+
++ (void)log:(NSString *)message
+{
+    if (__loggingType == SPXStoreLoggingTypeConcise)
+        DLog(@"%@", message);
+}
+
++ (void)logVerbose:(NSString *)message
+{
+    if (__loggingType == SPXStoreLoggingTypeVerbose)
+        DLog(@"%@", message);
 }
 
 - (BOOL)copySeedDatabaseIfRequiredFromPath:(NSString *)seedPath toPath:(NSString *)storePath error:(out NSError * __autoreleasing *)error
@@ -102,7 +126,11 @@ static NSString *defaultSeedPath;
         NSError *localError;
         if (![[NSFileManager defaultManager] copyItemAtPath:seedPath toPath:storePath error:&localError])
         {
-            DLog(@"Failed to copy seed database from path '%@' to path '%@': %@", seedPath, storePath, [localError localizedDescription]);
+            NSString *log = [NSString stringWithFormat:@"Failed to copy seed database from path '%@' to path '%@': %@",
+                             seedPath, storePath, [localError localizedDescription]];
+
+            [SPXStore logVerbose:log];
+
             if (error) *error = localError;
             return NO;
         }
@@ -130,7 +158,7 @@ static NSString *defaultSeedPath;
         NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:filename];
 
         if (seedPath && ![self copySeedDatabaseIfRequiredFromPath:seedPath toPath:[storeURL path] error:&error])
-            DLog(@"%@", error);
+            [SPXStore logVerbose:error.localizedDescription];
 
         NSDictionary *options = @{  NSMigratePersistentStoresAutomaticallyOption    : @(YES),
                                     NSInferMappingModelAutomaticallyOption          : @(YES),
@@ -141,7 +169,8 @@ static NSString *defaultSeedPath;
 
         if (![_coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error])
         {
-            DLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            NSString *log = [NSString stringWithFormat:@"Unresolved error %@, %@", error, [error userInfo]];
+            [SPXStore logVerbose:log];
             abort();
         }
 

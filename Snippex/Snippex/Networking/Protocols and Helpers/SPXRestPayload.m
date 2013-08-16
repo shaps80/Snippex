@@ -28,8 +28,8 @@
 
 @interface SPXRestPayload()
 
-@property (nonatomic, strong) NSData *data;
-@property (nonatomic, strong) NSString *contentType;
+@property (nonatomic, STRONG) NSData *data;
+@property (nonatomic, STRONG) NSString *contentType;
 
 @end
 

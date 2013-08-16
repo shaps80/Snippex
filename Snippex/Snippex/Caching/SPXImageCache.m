@@ -28,7 +28,7 @@
 #import "NSString+SPXAdditions.h"
 
 @interface SPXImageCache ()
-@property (nonatomic, strong) NSCache *images;
+@property (nonatomic, STRONG) NSCache *images;
 @end
 
 @implementation SPXImageCache

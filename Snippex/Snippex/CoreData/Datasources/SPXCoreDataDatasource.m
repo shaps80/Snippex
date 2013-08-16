@@ -40,7 +40,7 @@
 
 @property (nonatomic, copy) NSString *entityName;
 @property (nonatomic, weak) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, STRONG) NSFetchedResultsController *fetchedResultsController;
 
 @end
 

@@ -29,9 +29,9 @@
 static NSMutableArray *alerts;
 
 @interface SPXAlert ()
-@property (nonatomic, strong) SPXAlertCompletionBlock completion;
-@property (nonatomic, strong) NSMutableArray *buttonTitles;
-@property (nonatomic, strong) id alert;
+@property (nonatomic, STRONG) SPXAlertCompletionBlock completion;
+@property (nonatomic, STRONG) NSMutableArray *buttonTitles;
+@property (nonatomic, STRONG) id alert;
 @end
 
 @implementation SPXAlert

@@ -41,9 +41,9 @@ NSDictionary *extractCookiesFromHeaders(NSDictionary *headers, NSURL *url)
 @interface SPXRestResponse ()
 
 @property (nonatomic) NSUInteger statusCode;
-@property (nonatomic, strong) NSData *responseData;
-@property (nonatomic, strong) NSDictionary *headers;
-@property (nonatomic, strong) NSDictionary *cookies;
+@property (nonatomic, STRONG) NSData *responseData;
+@property (nonatomic, STRONG) NSDictionary *headers;
+@property (nonatomic, STRONG) NSDictionary *cookies;
 @property (nonatomic, weak) id <SPXResponseHandler> handler;
 @end
 

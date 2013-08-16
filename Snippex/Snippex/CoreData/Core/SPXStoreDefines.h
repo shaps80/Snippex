@@ -43,3 +43,10 @@ typedef enum
     SPXStoreTypeKeychain            /* Returns a store backed by NSUserDefaults */,
     SPXStoreTypeCoreData            /* Returns a store backed by CoreData       */,
 } SPXStoreType;
+
+typedef enum
+{
+    SPXStoreLoggingTypeNone,
+    SPXStoreLoggingTypeConcise,
+    SPXStoreLoggingTypeVerbose
+} SPXStoreLoggingType;

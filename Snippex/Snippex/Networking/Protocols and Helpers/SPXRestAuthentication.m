@@ -29,7 +29,7 @@
 
 @interface SPXRestBasicAuth()
 
-@property (nonatomic, strong) NSString *authString;
+@property (nonatomic, STRONG) NSString *authString;
 
 @end
 

@@ -30,8 +30,8 @@
 
 @interface SPXRestRequest ()
 
-@property (nonatomic, strong, readonly) NSMutableURLRequest *currentRequest;
-@property (nonatomic, strong) NSMutableDictionary *HTTPparameters;
+@property (nonatomic, STRONG, readonly) NSMutableURLRequest *currentRequest;
+@property (nonatomic, STRONG) NSMutableDictionary *HTTPparameters;
 @property (nonatomic, weak) id <SPXResponseHandler> responseHandler;
 
 @end

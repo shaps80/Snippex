@@ -171,6 +171,12 @@
 
 #endif
 
+#if __has_feature(objc_arc)
+#define STRONG      strong
+#else
+#define STRONG      retain
+#endif
+
 
 /**
  DLog - Provides a simpler implementation that is guaranteed to be removed in RELEASE mode.

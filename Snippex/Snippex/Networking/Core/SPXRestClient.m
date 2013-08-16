@@ -27,10 +27,16 @@
 #import "SPXRestRequest.h"
 
 @interface SPXRestClient ()
-@property (nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, STRONG) NSOperationQueue *queue;
+@property (nonatomic, STRONG) NSMutableSet *pendingEndpoints;
 @end
 
 @implementation SPXRestClient
+
+- (NSMutableSet *)pendingEndpoints
+{
+    return _pendingEndpoints ?: (_pendingEndpoints = [[NSMutableSet alloc] init]);
+}
 
 - (NSOperationQueue *)queue
 {
@@ -85,17 +91,33 @@ static NSTimeInterval __defaultTimeoutInterval = 10;
 - (SPXRestRequest *)performRequest:(SPXRestRequest *)request
                         completion:(SPXRestResponseBlock)completion
 {
+    if ([self.pendingEndpoints containsObject:request.URL])
+    {
+        SPXRestResponse *response = [[SPXRestResponse alloc] initWithStatus:-30 responseData:nil headers:nil originalRequest:request responseHandler:nil];
+        if (completion) completion(response);
+        return nil;
+    }
+
+
     if ([_authenticationHandler respondsToSelector:@selector(authenticateBeforePerformingRequest:)])
         [_authenticationHandler authenticateBeforePerformingRequest:request];
 
+    SPXRestRequest * __WEAK __weakRequest = request;
     [request setResponseHandler:_responseHandler];
-    request.responseCompletionBlock = completion;
+    [request setResponseCompletionBlock:^(SPXRestResponse *response)
+    {
+        [self.pendingEndpoints removeObject:__weakRequest.URL];
+        if (completion) completion(response);
+    }];
+
     [self.queue addOperation:request];
+    [self.pendingEndpoints addObject:request.URL];
     return request;
 }
 
 - (void)cancelAllRequests
 {
+    [_pendingEndpoints removeAllObjects];
     [_queue cancelAllOperations];
 }
 

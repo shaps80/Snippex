@@ -26,7 +26,12 @@
  */
 
 #import <Foundation/Foundation.h>
+
+#ifndef _SYSTEMCONFIGURATION_H
 #import <SystemConfiguration/SystemConfiguration.h>
+#else
+#warning SystemConfiguration is required, please add it to your project.
+#endif
 
 #import <sys/socket.h>
 #import <netinet/in.h>

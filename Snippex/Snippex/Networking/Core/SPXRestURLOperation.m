@@ -28,9 +28,9 @@
 
 @interface SPXRestURLOperation ()
 
-@property (nonatomic, strong, readwrite) NSURLResponse *response;
-@property (nonatomic, strong, readwrite) NSError *error;
-@property (nonatomic, strong, readwrite) NSMutableData *data;
+@property (nonatomic, STRONG, readwrite) NSURLResponse *response;
+@property (nonatomic, STRONG, readwrite) NSError *error;
+@property (nonatomic, STRONG, readwrite) NSMutableData *data;
 
 - (void)setExecuting:(BOOL)isExecuting;
 - (void)setFinished:(BOOL)isFinished;

@@ -27,7 +27,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface SPXAudio ()
-@property (nonatomic, strong) NSMutableDictionary *preloadedAudio;
+@property (nonatomic, STRONG) NSMutableDictionary *preloadedAudio;
 @end
 
 @implementation SPXAudio

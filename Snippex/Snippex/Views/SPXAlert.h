@@ -28,6 +28,7 @@
 #endif
 
 #import <Foundation/Foundation.h>
+#import "SPXDefines.h"
 
 /**
  @abstract		Defines the completion block for an id<SPXAlertProtocol> instances.

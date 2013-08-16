@@ -24,25 +24,29 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "SPXRestTypes.h"
+#import <SenTestingKit/SenTestingKit.h>
+#import "Snippex.h"
 
-@interface SPXRestURLOperation : NSOperation <NSURLConnectionDelegate>
+typedef void (^RequestBlock)();
+
+@interface SPXTests : SenTestCase
+@end
+
+@implementation SPXTests
+
+- (void)testMultipleRequestsToSameEndpoint
 {
-    BOOL _isExecuting;
-    BOOL _isFinished;
+    NSString *path = @"http://upload.wikimedia.org/wikipedia/commons/9/9d/243_Ida_large.jpg";
+
+    [[SPXRest client] get:[NSURL URLWithString:path] completion:nil];
+    [[SPXRest client] get:[NSURL URLWithString:path] completion:^(SPXRestResponse *response)
+    {
+        NSAssert(response.statusCode == -30, @"This is the second request, so the status code SHOULD be -30");
+        [SPXSemaphore resumeForKey:@"request"];
+    }];
+
+    [[SPXRest client] cancelAllRequests];
+    [SPXSemaphore pauseForKey:@"request"];
 }
-
-@property (nonatomic, STRONG, readonly) NSURLConnection *connection;
-@property (nonatomic, STRONG) NSURLRequest *request;
-@property (nonatomic, STRONG, readonly) NSURLResponse *response;
-@property (nonatomic, STRONG, readonly) NSError *error;
-@property (nonatomic, copy) SPXRestResponseBlock responseCompletionBlock;
-
-- (id)initWithRequest:(NSURLRequest *)request;
-
-- (void)finish;
-- (void)cancelImmediately;
-
--(NSData *)data;
 
 @end

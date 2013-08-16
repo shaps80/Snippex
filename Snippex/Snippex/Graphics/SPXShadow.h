@@ -112,9 +112,9 @@
 /// @abstract	The color opacity for this shadow
 @property (nonatomic) CGFloat shadowOpacity;
 /// @abstract	The color for this shadow
-@property (nonatomic, strong) SPXColor *shadowColor;
+@property (nonatomic, STRONG) SPXColor *shadowColor;
 /// @abstract	The path for this shadow
-@property (nonatomic, strong) SPXBezierPath *shadowPath;
+@property (nonatomic, STRONG) SPXBezierPath *shadowPath;
 
 #pragma mark -	Drop Shadows
 /// @name		Drop Shadows

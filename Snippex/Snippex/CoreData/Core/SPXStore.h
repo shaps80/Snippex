@@ -66,6 +66,10 @@
 
 + (NSError *)saveContext:(NSManagedObjectContext *)context;
 
++ (void)logVerbose:(NSString *)message;
+
++ (void)setLoggingType:(SPXStoreLoggingType)type;
+
 @end
 
 #endif

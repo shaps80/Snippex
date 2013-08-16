@@ -23,8 +23,12 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <Foundation/Foundation.h>
 
-@interface SPXTests : SenTestCase
+@interface SPXSemaphore : NSObject
+
++ (BOOL)isPausedForKey:(NSString*)key;
++ (void)pauseForKey:(NSString *)key;
++ (void)resumeForKey:(NSString *)key;
 
 @end

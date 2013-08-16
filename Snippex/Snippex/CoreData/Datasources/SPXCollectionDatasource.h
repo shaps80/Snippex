@@ -27,7 +27,7 @@
 
 @interface SPXCollectionDatasource : SPXDatasource
 
-@property (nonatomic, strong) NSPredicate *predicate;
+@property (nonatomic, STRONG) NSPredicate *predicate;
 
 +(instancetype)datasourceForTableView:(UITableView *)tableView
                                source:(NSArray *)source;

@@ -23,20 +23,63 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SPXTests.h"
-#import "Snippex.h"
+#import "SPXSemaphore.h"
 
-@implementation SPXTests
+@interface SPXSemaphore ()
+@property (nonatomic, STRONG) NSMutableArray *keys;
+@end
 
-- (void)testNetworking
+@implementation SPXSemaphore
+
++(instancetype)sharedInstance
 {
-    [[SPXRest client] setAuthenticationHandler:nil];
-    
-    [[SPXRest client] get:nil completion:^(SPXRestResponse *response)
-    {
+	static SPXSemaphore *_sharedInstance = nil;
+	static dispatch_once_t oncePredicate;
+	dispatch_once(&oncePredicate, ^{
+		_sharedInstance = [[self alloc] init];
+	});
 
-    }];
+	return _sharedInstance;
+}
 
+- (NSMutableArray *)keys
+{
+    return _keys ?: (_keys = [[NSMutableArray alloc] init]);
+}
+
+- (BOOL)isPausedForKey:(NSString *)key
+{
+    return [_keys containsObject:key];
+}
+
+- (void)pauseForKey:(NSString *)key
+{
+    BOOL keepRunning = YES;
+
+    while (keepRunning && [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1.0]])
+        keepRunning = [[SPXSemaphore sharedInstance] isPausedForKey:key];
+
+    NSLog(@"Finished");
+}
+
+- (void)resumeForKey:(NSString *)key
+{
+    [_keys removeObject:key];
+}   
+
++ (BOOL)isPausedForKey:(NSString *)key
+{
+    return [[SPXSemaphore sharedInstance] isPausedForKey:key];
+}
+
++ (void)pauseForKey:(NSString *)key
+{
+    [[SPXSemaphore sharedInstance] pauseForKey:key];
+}
+
++ (void)resumeForKey:(NSString *)key
+{
+    [[SPXSemaphore sharedInstance] resumeForKey:key];
 }
 
 @end
