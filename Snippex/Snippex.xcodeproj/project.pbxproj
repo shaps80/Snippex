@@ -188,6 +188,8 @@
 		54EA2A0017B7CEFC00DE7C42 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29F717B7CEFC00DE7C42 /* SPXStore.m */; };
 		54EA2A0117B7CEFC00DE7C42 /* SPXStoreDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */; };
 		54EA2A0217B7CEFC00DE7C42 /* SPXStoreDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */; };
+		54FF113817BE414C001E6E8B /* SPXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FF113717BE414C001E6E8B /* SPXTests.m */; };
+		54FF113917BE414C001E6E8B /* SPXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FF113717BE414C001E6E8B /* SPXTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +324,8 @@
 		54EA29F617B7CEFC00DE7C42 /* SPXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStore.h; sourceTree = "<group>"; };
 		54EA29F717B7CEFC00DE7C42 /* SPXStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStore.m; sourceTree = "<group>"; };
 		54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStoreDefines.h; sourceTree = "<group>"; };
+		54FF113617BE414C001E6E8B /* SPXTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXTests.h; sourceTree = "<group>"; };
+		54FF113717BE414C001E6E8B /* SPXTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,6 +480,8 @@
 			children = (
 				54870B15175CB113004194F7 /* SnippexTests-Info.plist */,
 				54870B16175CB113004194F7 /* InfoPlist.strings */,
+				54FF113617BE414C001E6E8B /* SPXTests.h */,
+				54FF113717BE414C001E6E8B /* SPXTests.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -987,6 +993,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FF113817BE414C001E6E8B /* SPXTests.m in Sources */,
 				541B0B5A17AE07E500231554 /* NSData+SPXAdditions.m in Sources */,
 				543E4FC61779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
 			);
@@ -1037,6 +1044,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FF113917BE414C001E6E8B /* SPXTests.m in Sources */,
 				541B0B5917AE07E400231554 /* NSData+SPXAdditions.m in Sources */,
 				543E4FC81779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
 			);

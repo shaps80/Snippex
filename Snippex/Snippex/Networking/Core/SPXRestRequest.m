@@ -132,7 +132,7 @@
 
     if (!data.length) return;
     
-    NSString *length = [NSString stringWithFormat:@"%d", [data length]];
+    NSString *length = [NSString stringWithFormat:@"%lu", (unsigned long)[data length]];
 
     [_currentRequest setHTTPBody:data];
 

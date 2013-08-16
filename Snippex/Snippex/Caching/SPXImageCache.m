@@ -82,7 +82,12 @@
         return;
     }
 
+#if TARGET_OS_IPHONE
     __block UIImage *image = [cache.images objectForKey:identifier];
+#else
+    __block NSImage *image = [cache.images objectForKey:identifier];
+#endif
+
 
     // if we find it in memory, return it
     if (image)
@@ -91,7 +96,13 @@
         return;
     }
 
-    void(^ReturnImage)(UIImage*, NSError*) = ^(UIImage *image, NSError *error)
+    void(^ReturnImage)() = ^(
+#if TARGET_OS_IPHONE
+                             UIImage *image,
+#else
+                             NSImage *image,
+#endif
+                             NSError *error)
     {
         dispatch_async(dispatch_get_main_queue(), ^
         {
@@ -103,7 +114,12 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
     {
         NSURL *diskURL = [cache cacheURLForURL:url];
+
+#if TARGET_OS_IPHONE
         image = [UIImage imageWithContentsOfFile:[diskURL path]];
+#else
+        image = [[NSImage alloc] initWithContentsOfFile:[diskURL path]];
+#endif
 
         // if we found it on disk, return it
         if (image)
@@ -122,7 +138,11 @@
                  ReturnImage(nil, response.error);
              else
              {
+#if TARGET_OS_IPHONE
                  image = [UIImage imageWithData:response.responseData];
+#else
+                 image = [[NSImage alloc] initWithData:response.responseData];
+#endif
                  ReturnImage(image, nil);
 
                  if (image)

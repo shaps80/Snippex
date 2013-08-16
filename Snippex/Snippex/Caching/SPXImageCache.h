@@ -23,13 +23,22 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
+
 #import <Foundation/Foundation.h>
-#import "SPXDefines.h"
 
 @class SPXRest;
 
+#if TARGET_OS_IPHONE
 typedef void (^SPXImageCacheCompletion)(UIImage *image, NSError *error);
+#else
+typedef void (^SPXImageCacheCompletion)(NSImage *image, NSError *error);
+#endif
+
 
 @interface SPXImageCache : NSObject
 

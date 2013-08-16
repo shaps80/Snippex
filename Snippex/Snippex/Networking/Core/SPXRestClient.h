@@ -32,7 +32,7 @@
 @interface SPXRestClient : NSObject
 
 @property (nonatomic, strong) id <SPXResponseHandler> responseHandler;
-@property (nonatomic, weak) id <SPXRestAuthentication> authentication;
+@property (nonatomic, weak) id <SPXRestAuthentication> authenticationHandler;
 
 -(void)setMaxConcurrentRequests:(NSInteger)count;
 

@@ -85,8 +85,8 @@ static NSTimeInterval __defaultTimeoutInterval = 10;
 - (SPXRestRequest *)performRequest:(SPXRestRequest *)request
                         completion:(SPXRestResponseBlock)completion
 {
-    if ([_authentication respondsToSelector:@selector(authenticateBeforePerformingRequest:)])
-        [_authentication authenticateBeforePerformingRequest:request];
+    if ([_authenticationHandler respondsToSelector:@selector(authenticateBeforePerformingRequest:)])
+        [_authenticationHandler authenticateBeforePerformingRequest:request];
 
     [request setResponseHandler:_responseHandler];
     request.responseCompletionBlock = completion;
