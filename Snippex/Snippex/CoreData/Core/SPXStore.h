@@ -37,12 +37,16 @@
 @interface SPXStore : NSObject
 
 + (instancetype)storeNamed:(NSString *)name;
+
 + (instancetype)addStoreNamed:(NSString *)name filename:(NSString *)filename;
++ (instancetype)addStoreNamed:(NSString *)name filename:(NSString *)filename seedPath:(NSString *)seedPath;
 
 + (void)setDefaultStoreName:(NSString *)name filename:(NSString *)filename;
++ (void)setDefaultStoreName:(NSString *)name filename:(NSString *)filename seedPath:(NSString *)seedPath;
 
 - (NSManagedObjectContext *)mainContext;
 - (NSManagedObjectContext *)privateContext;
+- (NSManagedObjectContext *)newContextForType:(NSManagedObjectContextConcurrencyType)concurrencyType;
 
 - (void)setKey:(NSString *)key forEntityNamed:(NSString *)name;
 - (NSString *)keyForEntityNamed:(NSString *)name;

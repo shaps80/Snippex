@@ -69,7 +69,7 @@
 {
     if (!url)
     {
-        completion(nil, nil);
+        if (completion) completion(nil, nil);
         return;
     }
 
@@ -78,7 +78,7 @@
 
     if (!identifier)
     {
-        completion(nil, nil);
+        if (completion) completion(nil, nil);
         return;
     }
 
@@ -87,7 +87,7 @@
     // if we find it in memory, return it
     if (image)
     {
-        completion(image, nil);
+        if (completion) completion(image, nil);
         return;
     }
 
@@ -116,7 +116,7 @@
         }
 
         // otherwise download it
-        [[SPXRest client] get:url completion:^(SPXRestResponse *response)
+        [[SPXRest newClient] get:url completion:^(SPXRestResponse *response)
          {
              if (response.error)
                  ReturnImage(nil, response.error);

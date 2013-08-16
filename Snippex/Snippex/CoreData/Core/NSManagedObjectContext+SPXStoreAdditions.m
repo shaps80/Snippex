@@ -32,6 +32,37 @@ static char const * const SPXStoreKey = "SPX_store";
 
 @implementation NSManagedObjectContext (SPXStoreAdditions)
 
+- (NSString *)errorDomain
+{
+    return [[[NSBundle mainBundle] bundleIdentifier] stringByAppendingPathExtension:@"SPXStore"];
+}
+
+- (NSError *)saveToStore
+{
+    __block NSError *error = nil;
+    NSManagedObjectContext *context = self;
+
+    while (context)
+    {
+        __block BOOL success = NO;
+
+        [context performBlockAndWait:^{
+            success = [context save:&error];
+        }];
+
+        if (!self.parentContext && !context.persistentStoreCoordinator)
+        {
+            error = [NSError errorWithDomain:[self errorDomain] code:-1
+                                    userInfo:@{ NSLocalizedDescriptionKey :
+                                                @"The context doesn't appear to belong to a persistent store" }];
+        }
+
+        context = context.parentContext;
+    }
+
+    return error;
+}
+
 #pragma mark - Count only
 
 - (NSInteger)countForEntityNamed:(NSString *)name
@@ -62,20 +93,23 @@ static char const * const SPXStoreKey = "SPX_store";
 {
     NSPredicate *predicate;
 
-    if ([predicateOrString isKindOfClass:[NSString class]])
+    if (predicateOrString)
     {
-        va_list variadicArguments;
-        va_start(variadicArguments, predicateOrString);
-        predicate = [NSPredicate predicateWithFormat:predicateOrString arguments:variadicArguments];
-        va_end(variadicArguments);
-    }
-    else
-    {
-        NSAssert2([predicateOrString isKindOfClass:[NSPredicate class]],
-                  @"Second parameter passed to %s is of unexpected class %@",
-                  sel_getName(_cmd), [predicateOrString class]);
+        if ([predicateOrString isKindOfClass:[NSString class]])
+        {
+            va_list variadicArguments;
+            va_start(variadicArguments, predicateOrString);
+            predicate = [NSPredicate predicateWithFormat:predicateOrString arguments:variadicArguments];
+            va_end(variadicArguments);
+        }
+        else
+        {
+            NSAssert2([predicateOrString isKindOfClass:[NSPredicate class]],
+                      @"Second parameter passed to %s is of unexpected class %@",
+                      sel_getName(_cmd), [predicateOrString class]);
 
-        predicate = (NSPredicate *)predicateOrString;
+            predicate = (NSPredicate *)predicateOrString;
+        }
     }
 
     return [self fetchEntitiesNamed:name predicate:predicate sorting:nil];

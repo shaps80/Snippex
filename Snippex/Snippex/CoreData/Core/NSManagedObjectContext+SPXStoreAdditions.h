@@ -30,6 +30,11 @@
 @interface NSManagedObjectContext (SPXStoreAdditions)
 
 /**
+ @abstract      Runs up all the parent contexts and saves everything back to the persistent store.
+ */
+- (NSError *)saveToStore;
+
+/**
  */
 - (NSInteger)countForEntityNamed:(NSString *)name;
 

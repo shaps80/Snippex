@@ -27,6 +27,7 @@
 
 static NSString *defaultModelName;
 static NSString *defaultStoreName;
+static NSString *defaultSeedPath;
 
 @interface NSManagedObjectContext (SPXStoreAdditionsCategory)
 - (void)setSPX_store:(id)store;
@@ -74,7 +75,7 @@ static NSString *defaultStoreName;
 
 @interface SPXStore ()
 @property (nonatomic, strong) NSManagedObjectModel *model;
-@property (nonatomic, strong) NSPersistentStoreCoordinator *store;
+@property (nonatomic, strong) NSPersistentStoreCoordinator *coordinator;
 @property (nonatomic, strong) NSMutableDictionary *entityKeys;
 @property (nonatomic, strong) NSManagedObjectContext *mainContext;
 @property (nonatomic, strong) NSManagedObjectContext *privateContext;
@@ -94,7 +95,23 @@ static NSString *defaultStoreName;
     return [NSString stringWithFormat:@"%@\n%@", [self URL], _model.entityVersionHashesByName];
 }
 
-- (id)initWithModelName:(NSString *)model storeName:(NSString *)name
+- (BOOL)copySeedDatabaseIfRequiredFromPath:(NSString *)seedPath toPath:(NSString *)storePath error:(out NSError * __autoreleasing *)error
+{
+    if (![[NSFileManager defaultManager] fileExistsAtPath:storePath])
+    {
+        NSError *localError;
+        if (![[NSFileManager defaultManager] copyItemAtPath:seedPath toPath:storePath error:&localError])
+        {
+            DLog(@"Failed to copy seed database from path '%@' to path '%@': %@", seedPath, storePath, [localError localizedDescription]);
+            if (error) *error = localError;
+            return NO;
+        }
+    }
+
+    return YES;
+}
+
+- (id)initWithModelName:(NSString *)model storeName:(NSString *)name seedPath:(NSString *)seedPath
 {
     if (!(name.length && model.length))
 	{
@@ -108,16 +125,21 @@ static NSString *defaultStoreName;
 
     if (self)
     {
-        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:model withExtension:@"momd"];
-        _model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-
         NSError *error = nil;
         NSString *filename = [NSString stringWithFormat:@"%@.sqlite", name];
         NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:filename];
 
-        _store = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_model];
+        if (seedPath && ![self copySeedDatabaseIfRequiredFromPath:seedPath toPath:[storeURL path] error:&error])
+            DLog(@"%@", error);
 
-        if (![_store addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+        NSDictionary *options = @{  NSMigratePersistentStoresAutomaticallyOption    : @(YES),
+                                    NSInferMappingModelAutomaticallyOption          : @(YES),
+                                 };
+
+        _model = [NSManagedObjectModel mergedModelFromBundles:[NSBundle allBundles]];
+        _coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_model];
+
+        if (![_coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error])
         {
             DLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
@@ -132,14 +154,24 @@ static NSString *defaultStoreName;
     return self;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)privateContextDidSave:(NSNotification *)note
 {
-    NSError *error = nil;
-    if (![[self mainContext] save:&error])
-        DLog(@"%@", error);
+    [self.mainContext performBlock:^{
+        [self.mainContext mergeChangesFromContextDidSaveNotification:note];
+    }];
 }
 
 + (void)setDefaultStoreName:(NSString *)name filename:(NSString *)filename
+{
+    [self setDefaultStoreName:name filename:filename seedPath:nil];
+}
+
++ (void)setDefaultStoreName:(NSString *)name filename:(NSString *)filename seedPath:(NSString *)seedPath
 {
     NSAssert((name.length && filename.length),
              @"name and filename must not be nil and must have a length greater than 0");
@@ -148,6 +180,7 @@ static NSString *defaultStoreName;
 
     defaultModelName = name;
     defaultStoreName = [filename stringByDeletingPathExtension];
+    defaultSeedPath = seedPath;
 }
 
 - (NSMutableDictionary *)entityKeys
@@ -156,12 +189,31 @@ static NSString *defaultStoreName;
     (_entityKeys = [[NSMutableDictionary alloc] init]);
 }
 
+- (NSManagedObjectContext *)newContextForType:(NSManagedObjectContextConcurrencyType)concurrencyType
+{
+    NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:concurrencyType];
+
+    [managedObjectContext performBlockAndWait:^
+    {
+        managedObjectContext.parentContext = self.privateContext;
+        managedObjectContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy;
+    }];
+
+    return managedObjectContext;
+}
+
 - (NSManagedObjectContext *)mainContext
 {
     if (!_mainContext)
     {
         _mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-        [_mainContext performBlockAndWait:^{ [_mainContext setPersistentStoreCoordinator:_store]; }];
+
+        [_mainContext performBlockAndWait:^
+        {
+            [_mainContext setPersistentStoreCoordinator:_coordinator];
+            [_mainContext setMergePolicy:NSMergeByPropertyStoreTrumpMergePolicy];
+        }];
+
         [_mainContext performSelector:@selector(setSPX_store:) withObject:self];
     }
 
@@ -172,9 +224,14 @@ static NSString *defaultStoreName;
 {
     if (!_privateContext)
     {
-        NSManagedObjectContext *mainContext  = [self mainContext];
         _privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-        [_privateContext performBlockAndWait:^{ [_privateContext setParentContext:mainContext]; }];
+
+        [_privateContext performBlockAndWait:^
+        {
+            [_privateContext setParentContext:[self mainContext]];
+            [_privateContext setMergePolicy:NSMergeByPropertyStoreTrumpMergePolicy];
+        }];
+
         [_privateContext performSelector:@selector(setSPX_store:) withObject:self];
     }
 
@@ -193,7 +250,7 @@ static NSString *defaultStoreName;
 
 - (NSURL *)URL
 {
-    return [[[_store persistentStores] lastObject] URL];
+    return [[[_coordinator persistentStores] lastObject] URL];
 }
 
 + (instancetype)default
@@ -211,18 +268,24 @@ static NSString *defaultStoreName;
     
     if (!store)
     {
-        store = [[SPXStore alloc] initWithModelName:defaultModelName storeName:defaultStoreName];
+        store = [[SPXStore alloc] initWithModelName:defaultModelName storeName:defaultStoreName seedPath:defaultSeedPath];
         [[SPXStoreManager sharedInstance] addStore:store name:defaultModelName];
     }
 
     return store;
 }
 
-+ (instancetype)addStoreNamed:(NSString *)name filename:(NSString *)filename
++ (instancetype)addStoreNamed:(NSString *)name filename:(NSString *)filename seedPath:(NSString *)seedPath
 {
-    SPXStore *store = [[SPXStore alloc] initWithModelName:name storeName:[filename stringByDeletingPathExtension]];
+    SPXStore *store = [[SPXStore alloc] initWithModelName:name storeName:[filename stringByDeletingPathExtension] seedPath:seedPath];
     [[SPXStoreManager sharedInstance] addStore:store name:name];
     return store;
+
+}
+
++ (instancetype)addStoreNamed:(NSString *)name filename:(NSString *)filename
+{
+    return [self addStoreNamed:name filename:filename seedPath:nil];
 }
 
 + (instancetype)storeNamed:(NSString *)name

@@ -75,7 +75,7 @@ NSDictionary *extractCookiesFromHeaders(NSDictionary *headers, NSURL *url)
     if (self.error)
         return [NSString stringWithFormat:@"%li | %@", (unsigned long)self.statusCode, self.localizedStatusDescription];
     else
-        return [NSString stringWithFormat:@"%li | %@", (unsigned long)self.statusCode, self.package.description];
+        return [NSString stringWithFormat:@"%li", (unsigned long)self.statusCode];
 }
 
 -(NSString *)debugDescription

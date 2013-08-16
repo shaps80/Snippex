@@ -128,7 +128,15 @@
 
 - (void)setPayload:(id<SPXRestPayloadProtocol>)payload
 {
-    [_currentRequest setHTTPBody:[payload dataForRequest:self]];
+    NSData *data = [payload dataForRequest:self];
+
+    if (!data.length) return;
+    
+    NSString *length = [NSString stringWithFormat:@"%d", [data length]];
+
+    [_currentRequest setHTTPBody:data];
+
+    [self setValue:length forHTTPHeaderField:@"Content-Length"];
     [self setValue:[payload contentTypeForRequest:self] forHTTPHeaderField:@"Content-Type"];
 }
 
@@ -142,7 +150,6 @@
 - (void)start
 {
     self.request = _currentRequest;
-
     [super start];
 }
 
