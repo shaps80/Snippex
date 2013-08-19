@@ -58,6 +58,5 @@
     #import "SPXReachability.h"
     #import "SPXKeyValueStore.h"
     #import "SPXImageCache.h"
-    #import "SPXSemaphore.h"
 
 #endif

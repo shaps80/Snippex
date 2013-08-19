@@ -24,26 +24,11 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "SPXDefines.h"
-#import "SPXRestTypes.h"
 
-@interface SPXRestURLOperation : NSOperation <NSURLConnectionDelegate>
-{
-    BOOL _isExecuting;
-    BOOL _isFinished;
-}
+@interface NSOperationQueue (SPXAdditions)
 
-@property (nonatomic, STRONG, readonly) NSURLConnection *connection;
-@property (nonatomic, STRONG) NSURLRequest *request;
-@property (nonatomic, STRONG, readonly) NSURLResponse *response;
-@property (nonatomic, STRONG, readonly) NSError *error;
-@property (nonatomic, copy) SPXRestResponseBlock responseCompletionBlock;
-
-- (id)initWithRequest:(NSURLRequest *)request;
-
-- (void)finish;
-- (void)cancelImmediately;
-
--(NSData *)data;
+- (void)addOperationAtFrontOfQueue:(NSOperation *)op;
+- (void)addOperationsAtFrontOfQueue:(NSArray *)ops waitUntilFinished:(BOOL)wait;
+- (void)addOperationAtFrontOfQueueWithBlock:(void (^)(void))block;
 
 @end
