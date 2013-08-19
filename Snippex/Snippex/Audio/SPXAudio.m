@@ -24,6 +24,7 @@
  */
 
 #import "SPXAudio.h"
+#import "SPXDefines.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface SPXAudio ()

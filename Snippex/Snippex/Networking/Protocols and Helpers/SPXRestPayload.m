@@ -24,6 +24,7 @@
  */
 
 #import "SPXRestPayload.h"
+#import "SPXDefines.h"
 #import "NSDictionary+SPXRestQueryString.h"
 
 @interface SPXRestPayload()
