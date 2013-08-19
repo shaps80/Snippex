@@ -24,6 +24,7 @@
  */
 
 #import <QuartzCore/QuartzCore.h>
+#import "SPXDefines.h"
 #import "SPXGraphicsDefines.h"
 
 #if !TARGET_OS_IPHONE
