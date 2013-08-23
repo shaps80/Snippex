@@ -25,6 +25,7 @@
 
 #import "SPXRestClient.h"
 #import "SPXRestRequest.h"
+#import "NSOperationQueue+SPXAdditions.h"
 
 @interface SPXRestClient ()
 @property (nonatomic, STRONG) NSOperationQueue *queue;
@@ -88,6 +89,17 @@ static NSTimeInterval __defaultTimeoutInterval = 10;
     return [self performRequest:[self requestForURL:url method:@"DELETE" payload:nil headers:headers] completion:completion];
 }
 
+- (SPXRestRequest *)download:(NSURL *)sourceURL
+                        path:(NSString *)destinationPath
+                  parameters:(NSDictionary *)parameters
+                     headers:(NSDictionary *)headers
+                    progress:(SPXRestDownloadProgressBlock)progress
+                  completion:(SPXRestResponseBlock)completion
+{
+#warning IMPLEMENT!
+    return nil;
+}
+
 - (SPXRestRequest *)performRequest:(SPXRestRequest *)request
                         completion:(SPXRestResponseBlock)completion
 {
@@ -98,19 +110,26 @@ static NSTimeInterval __defaultTimeoutInterval = 10;
         return nil;
     }
 
-
     if ([_authenticationHandler respondsToSelector:@selector(authenticateBeforePerformingRequest:)])
         [_authenticationHandler authenticateBeforePerformingRequest:request];
+
+#if TARGET_OS_IPHONE
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+#endif
 
     SPXRestRequest * __WEAK __weakRequest = request;
     [request setResponseHandler:_responseHandler];
     [request setResponseCompletionBlock:^(SPXRestResponse *response)
     {
+#if TARGET_OS_IPHONE
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+#endif
+
         [self.pendingEndpoints removeObject:__weakRequest.URL];
         if (completion) completion(response);
     }];
 
-    [self.queue addOperation:request];
+    [self.queue addOperationAtFrontOfQueue:request];
     [self.pendingEndpoints addObject:request.URL];
     return request;
 }

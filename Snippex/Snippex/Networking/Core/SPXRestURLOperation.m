@@ -60,10 +60,8 @@
 
 -(void)start
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-#if TARGET_OS_IPHONE
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-#endif
+    dispatch_async(dispatch_get_main_queue(), ^
+    {
         [SPXRest log:[NSString stringWithFormat:@"Request started | %@", self.description]];
         [SPXRest logVerbose:[NSString stringWithFormat:@"Request started | %@", self.debugDescription]];
     });
@@ -126,7 +124,10 @@
         [SPXRest logVerbose:[NSString stringWithFormat:@"Request failed | %@", self.description]];
     });
 
-    self.error = error;
+    NSMutableDictionary *userInfo = [error.userInfo mutableCopy];
+    [userInfo setObject:SPXLocalizedTitleKey forKey:@"Network Error"];
+
+    self.error = [NSError errorWithDomain:error.domain code:error.code userInfo:userInfo];
 }
 
 #pragma mark - Private
@@ -146,9 +147,6 @@
     [self didChangeValueForKey:@"isFinished"];
 
     dispatch_async(dispatch_get_main_queue(), ^{
-#if TARGET_OS_IPHONE
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-#endif
     });
 
     if ([self isCancelled])

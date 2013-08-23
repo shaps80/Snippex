@@ -49,6 +49,7 @@
         _currentRequest = [[NSMutableURLRequest alloc] initWithURL:url];
         [_currentRequest setTimeoutInterval:10];
         [_currentRequest setHTTPMethod:method];
+
         _HTTPparameters = [[NSMutableDictionary alloc] init];
     }
 

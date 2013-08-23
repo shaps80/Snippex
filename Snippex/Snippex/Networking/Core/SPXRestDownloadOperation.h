@@ -24,27 +24,10 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "SPXDefines.h"
-#import "SPXRestTypes.h"
-#import "NSError+SPXAdditions.h"
+#import "SPXRestURLOperation.h"
 
-@interface SPXRestURLOperation : NSOperation <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
-{
-    BOOL _isExecuting;
-    BOOL _isFinished;
-}
+typedef void (^SPXRestDownloadProgressBlock)(long long currentBytesLength, long long expectedBytesLength);
 
-@property (nonatomic, STRONG, readonly) NSURLConnection *connection;
-@property (nonatomic, STRONG) NSURLRequest *request;
-@property (nonatomic, STRONG, readonly) NSURLResponse *response;
-@property (nonatomic, STRONG, readonly) NSError *error;
-@property (nonatomic, copy) SPXRestResponseBlock responseCompletionBlock;
-
-- (id)initWithRequest:(NSURLRequest *)request;
-
-- (void)finish;
-- (void)cancelImmediately;
-
--(NSData *)data;
+@interface SPXRestDownloadOperation : SPXRestURLOperation <NSURLConnectionDownloadDelegate>
 
 @end

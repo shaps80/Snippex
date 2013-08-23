@@ -23,28 +23,41 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
-#import "SPXDefines.h"
-#import "SPXRestTypes.h"
-#import "NSError+SPXAdditions.h"
+#import "SPXRestDownloadOperation.h"
 
-@interface SPXRestURLOperation : NSOperation <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
+@interface SPXRestDownloadOperation ()
+@property (nonatomic, copy) SPXRestDownloadProgressBlock progressBlock;
+@property (nonatomic, copy) NSURL *destinationURL;
+@property (nonatomic, strong) NSError *error;
+@end
+
+@implementation SPXRestDownloadOperation
+
+- (id)initWithRequest:(NSURLRequest *)request filePath:(NSString *)filePath progressBlock:(SPXRestDownloadProgressBlock)progress
 {
-    BOOL _isExecuting;
-    BOOL _isFinished;
+    self = [super initWithRequest:request];
+    if (!self) return nil;
+
+    _destinationURL = [NSURL fileURLWithPath:filePath];
+
+    NSAssert(_destinationURL, @"You must profile a valid filePath URL");
+    _progressBlock = progress;
+
+    return self;
 }
 
-@property (nonatomic, STRONG, readonly) NSURLConnection *connection;
-@property (nonatomic, STRONG) NSURLRequest *request;
-@property (nonatomic, STRONG, readonly) NSURLResponse *response;
-@property (nonatomic, STRONG, readonly) NSError *error;
-@property (nonatomic, copy) SPXRestResponseBlock responseCompletionBlock;
+- (void)connection:(NSURLConnection *)connection didWriteData:(long long)bytesWritten totalBytesWritten:(long long)totalBytesWritten expectedTotalBytes:(long long)expectedTotalBytes
+{
+    if (_progressBlock)
+        _progressBlock(totalBytesWritten, expectedTotalBytes);
+}
 
-- (id)initWithRequest:(NSURLRequest *)request;
-
-- (void)finish;
-- (void)cancelImmediately;
-
--(NSData *)data;
+- (void)connectionDidFinishDownloading:(NSURLConnection *)connection destinationURL:(NSURL *)destinationURL
+{
+    NSError *error = nil;
+    [[NSFileManager defaultManager] copyItemAtURL:destinationURL toURL:_destinationURL error:&error];
+    self.error = error;
+    [self finish];
+}
 
 @end
