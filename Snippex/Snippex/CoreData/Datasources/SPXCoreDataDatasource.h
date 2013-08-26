@@ -36,5 +36,7 @@
                            entityName:(NSString *)entityName;
 
 -(void)reload;
+-(NSInteger)numberOfRowsInSection:(NSInteger)section;
+-(NSInteger)numberOfSections;
 
 @end

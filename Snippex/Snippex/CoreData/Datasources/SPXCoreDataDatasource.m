@@ -138,6 +138,18 @@
 
 #pragma mark - UITableView Datasource
 
+- (NSInteger)numberOfRowsInSection:(NSInteger)section
+{
+    NSArray *sections = [[self fetchedResultsController] sections];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [sections objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
+}
+
+- (NSInteger)numberOfSections
+{
+    return [[self sectionsForTableView:_tableView] count];
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [[self sectionsForTableView:tableView] count];
