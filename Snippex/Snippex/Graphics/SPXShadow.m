@@ -41,16 +41,11 @@
 
 	if (self)
 	{
-		_shadowOpacity = [[aDecoder decodeObjectForKey:CODER_OPACITY] floatValue];
-		_shadowColor = [aDecoder decodeObjectForKey:CODER_COLOR];
-		_shadowBlurRadius = [[aDecoder decodeObjectForKey:CODER_BLUR] floatValue];
-		_shadowPath = [aDecoder decodeObjectForKey:CODER_PATH];
-
-#if TARGET_OS_IPHONE
-		_shadowOffset = [[aDecoder decodeObjectForKey:CODER_OFFSET] CGSizeValue];
-#else
-		_shadowOffset = [[aDecoder decodeObjectForKey:CODER_OFFSET] sizeValue];
-#endif
+        decodeFloat(_shadowOpacity);
+        decodeObject(_shadowColor);
+        decodeFloat(_shadowBlurRadius);
+        decodeObject(_shadowPath);
+        decodeSize(_shadowOffset);
 	}
 
 	return self;
@@ -58,16 +53,11 @@
 
 -(void)encodeWithCoder:(NSCoder *)aCoder
 {
-	[aCoder encodeObject:_shadowPath forKey:CODER_PATH];
-	[aCoder encodeObject:@(_shadowBlurRadius) forKey:CODER_BLUR];
-	[aCoder encodeObject:@(_shadowOpacity) forKey:CODER_OPACITY];
-	[aCoder encodeObject:_shadowColor forKey:CODER_COLOR];
-
-#if TARGET_OS_IPHONE
-	[aCoder encodeObject:[NSValue valueWithCGSize:_shadowOffset] forKey:CODER_OFFSET];
-#else
-	[aCoder encodeObject:[NSValue valueWithSize:_shadowOffset] forKey:CODER_OFFSET];
-#endif
+    encodeFloat(_shadowBlurRadius);
+    encodeFloat(_shadowOpacity);
+    encodeObject(_shadowColor);
+    encodeObject(_shadowPath);
+    encodeSize(_shadowOffset);
 }
 
 +(SPXShadow *)defaultShadow

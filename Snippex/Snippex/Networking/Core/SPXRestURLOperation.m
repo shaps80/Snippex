@@ -124,10 +124,7 @@
         [SPXRest logVerbose:[NSString stringWithFormat:@"Request failed | %@", self.description]];
     });
 
-    NSMutableDictionary *userInfo = [error.userInfo mutableCopy];
-    [userInfo setObject:SPXLocalizedTitleKey forKey:@"Network Error"];
-
-    self.error = [NSError errorWithDomain:error.domain code:error.code userInfo:userInfo];
+    self.error = error;
 }
 
 #pragma mark - Private

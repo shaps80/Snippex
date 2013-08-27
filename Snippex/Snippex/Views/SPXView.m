@@ -24,8 +24,135 @@
  */
 
 #import "SPXView.h"
+#import "Image+SPXAdditions.h"
+
+@interface SPXView ()
+@property (nonatomic, assign) BOOL updating;
+@property (nonatomic, assign) BOOL iterationsSet;
+@property (nonatomic, assign) BOOL blurRadiusSet;
+@property (nonatomic, assign) BOOL dynamicSet;
+@end
 
 @implementation SPXView
+
+- (void)configure
+{
+    if (!_iterationsSet) _blurIterations = 3;
+    if (!_blurRadiusSet) _blurRadius = 60.0f;
+    if (!_dynamicSet) _usesDynamicBlurring = NO;
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    if ((self = [super initWithFrame:frame]))
+    {
+        [self configure];
+        self.clipsToBounds = YES;
+    }
+    
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder]))
+    {
+        [self configure];
+    }
+    
+    return self;
+}
+
+- (void)setBlurIterations:(NSInteger)blurIterations
+{
+    _iterationsSet = YES;
+    _blurIterations = blurIterations;
+    [self setNeedsDisplay];
+}
+
+- (void)setBlurRadius:(CGFloat)blurRadius
+{
+    _blurRadiusSet = YES;
+    _blurRadius = blurRadius;
+    [self setNeedsDisplay];
+}
+
+- (void)setUsesDynamicBlurring:(BOOL)usesDynamicBlurring
+{
+    _dynamicSet = YES;
+    _usesDynamicBlurring = usesDynamicBlurring;
+
+    if (_usesDynamicBlurring && self.superview)
+        [self updateAsynchronously];
+}
+
+- (void)willMoveToSuperview:(UIView *)superview
+{
+    [super willMoveToSuperview:superview];
+    
+    if (superview)
+    {
+        UIImage *snapshot = [self superviewAsImage];
+        UIImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
+        self.layer.contents = (id)blurredImage.CGImage;
+    }
+}
+
+- (void)didMoveToSuperview
+{
+    [super didMoveToSuperview];
+
+    if (self.superview && self.usesDynamicBlurring)
+        [self updateAsynchronously];
+}
+
+- (void)setNeedsDisplay
+{
+    [super setNeedsDisplay];
+    [self.layer setNeedsDisplay];
+}
+
+- (void)displayLayer:(CALayer *)layer
+{
+    if (self.superview)
+    {
+        BOOL wasHidden = self.hidden;
+        self.hidden = YES;
+        UIImage *snapshot = [self superviewAsImage];
+        self.hidden = wasHidden;
+        UIImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
+        self.layer.contents = (id)blurredImage.CGImage;
+    }
+}
+
+- (void)updateAsynchronously
+{
+    if (self.superview && !self.updating)
+    {
+        BOOL wasHidden = self.hidden;
+        self.hidden = YES;
+        UIImage *snapshot = [self superviewAsImage];
+        self.hidden = wasHidden;
+
+        self.updating = YES;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+
+            UIImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+
+                self.layer.contents = (id)blurredImage.CGImage;
+                self.updating = NO;
+
+                if (self.usesDynamicBlurring)
+                {
+                    [self performSelectorOnMainThread:@selector(updateAsynchronously)
+                                           withObject:nil
+                                        waitUntilDone:NO];
+                }
+            });
+        });
+    }
+}
 
 -(BOOL)isFlipped
 {

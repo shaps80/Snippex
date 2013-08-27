@@ -27,8 +27,8 @@
 
 @interface NSOperationQueue (SPXAdditions)
 
-- (void)addOperationAtFrontOfQueue:(NSOperation *)op;
-- (void)addOperationsAtFrontOfQueue:(NSArray *)ops waitUntilFinished:(BOOL)wait;
+- (void)addOperationAtFrontOfQueue:(NSOperation *)operation;
+- (void)addOperationsAtFrontOfQueue:(NSArray *)operations waitUntilFinished:(BOOL)wait;
 - (void)addOperationAtFrontOfQueueWithBlock:(void (^)(void))block;
 
 @end

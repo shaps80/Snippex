@@ -58,12 +58,19 @@
                    headers:(NSDictionary *)headers
                 completion:(SPXRestResponseBlock)completion;
 
-- (SPXRestRequest *)download:(NSURL *)sourceURL
-                        path:(NSString *)destinationPath
-                  parameters:(NSDictionary *)parameters
-                     headers:(NSDictionary *)headers
-                    progress:(SPXRestDownloadProgressBlock)progress
-                  completion:(SPXRestResponseBlock)completion;
+- (SPXRestRequest *)get:(NSURL *)sourceURL
+                   path:(NSString *)destinationPath
+             parameters:(NSDictionary *)parameters
+                headers:(NSDictionary *)headers
+               progress:(SPXRestDownloadProgressBlock)progress
+             completion:(SPXRestResponseBlock)completion;
+
+- (SPXRestRequest *)post:(NSURL *)sourceURL
+                    path:(NSString *)destinationPath
+                 payload:(SPXRestPayload *)payload
+                 headers:(NSDictionary *)headers
+                progress:(SPXRestDownloadProgressBlock)progress
+              completion:(SPXRestResponseBlock)completion;
 
 - (SPXRestRequest *)performRequest:(SPXRestRequest *)request
                         completion:(SPXRestResponseBlock)completion;
