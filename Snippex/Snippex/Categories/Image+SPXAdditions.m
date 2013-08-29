@@ -97,7 +97,11 @@ CGImageRef SPXCreateBlurredImageRef(CGImageRef imageRef, CGFloat radius, NSInteg
     CGImageRef imageRef = [self CGImageForProposedRect:NULL context:nil hints:nil];
     return imageRef;
 }
-
+#else
+- (CGImageRef)CGImageRef
+{
+    return self.CGImage;
+}
 #endif
 
 #if TARGET_OS_IPHONE
@@ -177,6 +181,20 @@ CGImageRef SPXCreateBlurredImageRef(CGImageRef imageRef, CGFloat radius, NSInteg
 }
 
 #else
+
+@implementation NSView (SPXImageAdditions)
+
+- (NSImage *)viewAsImage
+{
+    return [[NSImage alloc] initWithData:[self dataWithPDFInsideRect:[self bounds]]];
+}
+
+- (NSImage *)superviewAsImage
+{
+    return [[NSImage alloc] initWithData:[self.superview dataWithPDFInsideRect:[self.superview bounds]]];
+}
+
+@end
 
 @implementation NSWindow (SPXImageAdditions)
 

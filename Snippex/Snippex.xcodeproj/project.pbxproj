@@ -68,6 +68,10 @@
 		543E4FC61779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXKeyValueStore.m */; };
 		543E4FC71779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXKeyValueStore.m */; };
 		543E4FC81779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E4FC21779B5BB00A22EC5 /* SPXKeyValueStore.m */; };
+		5441E57D17CF54EE00D716E3 /* SPXRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 5441E57B17CF54EE00D716E3 /* SPXRuntime.h */; };
+		5441E57E17CF54EE00D716E3 /* SPXRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 5441E57B17CF54EE00D716E3 /* SPXRuntime.h */; };
+		5441E57F17CF54EE00D716E3 /* SPXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 5441E57C17CF54EE00D716E3 /* SPXRuntime.m */; };
+		5441E58017CF54EE00D716E3 /* SPXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 5441E57C17CF54EE00D716E3 /* SPXRuntime.m */; };
 		5445F0011799CB1B00DFC769 /* SPXCollectionDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5445EFFF1799CB1B00DFC769 /* SPXCollectionDatasource.h */; };
 		5445F0021799CB1B00DFC769 /* SPXCollectionDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5445F0001799CB1B00DFC769 /* SPXCollectionDatasource.m */; };
 		54570BD71794278D008CE9B0 /* Color+SPXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54570BD51794278D008CE9B0 /* Color+SPXAdditions.h */; };
@@ -286,6 +290,8 @@
 		541C462E17CBA6C30016AE96 /* Image+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Image+SPXAdditions.m"; sourceTree = "<group>"; };
 		543E4FC11779B5BB00A22EC5 /* SPXKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXKeyValueStore.h; sourceTree = "<group>"; };
 		543E4FC21779B5BB00A22EC5 /* SPXKeyValueStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXKeyValueStore.m; sourceTree = "<group>"; };
+		5441E57B17CF54EE00D716E3 /* SPXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXRuntime.h; sourceTree = "<group>"; };
+		5441E57C17CF54EE00D716E3 /* SPXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXRuntime.m; sourceTree = "<group>"; };
 		5445EFFF1799CB1B00DFC769 /* SPXCollectionDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCollectionDatasource.h; sourceTree = "<group>"; };
 		5445F0001799CB1B00DFC769 /* SPXCollectionDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCollectionDatasource.m; sourceTree = "<group>"; };
 		54570BD51794278D008CE9B0 /* Color+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Color+SPXAdditions.h"; sourceTree = "<group>"; };
@@ -451,6 +457,8 @@
 			children = (
 				5401F06817BE78E100105349 /* SPXSemaphore.h */,
 				5401F06917BE78E100105349 /* SPXSemaphore.m */,
+				5441E57B17CF54EE00D716E3 /* SPXRuntime.h */,
+				5441E57C17CF54EE00D716E3 /* SPXRuntime.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -772,6 +780,7 @@
 				54EA29C017B7CE9600DE7C42 /* SPXRest.h in Headers */,
 				549154E5175CEFF100A210BC /* SPXDrawing.h in Headers */,
 				549154E9175CEFF100A210BC /* SPXGeometry.h in Headers */,
+				5441E57D17CF54EE00D716E3 /* SPXRuntime.h in Headers */,
 				549154ED175CEFF100A210BC /* SPXGradient.h in Headers */,
 				549154F1175CEFF100A210BC /* SPXShadow.h in Headers */,
 				5491550A175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
@@ -821,6 +830,7 @@
 				54EA29CD17B7CE9600DE7C42 /* SPXRestClient+DELETE.h in Headers */,
 				54EA29DD17B7CE9600DE7C42 /* SPXRestPackage.h in Headers */,
 				54EA29D517B7CE9600DE7C42 /* SPXRestClient+POST.h in Headers */,
+				5441E57E17CF54EE00D716E3 /* SPXRuntime.h in Headers */,
 				54EA29B917B7CE9600DE7C42 /* NSString+SPXRestQueryString.h in Headers */,
 				549515E217CBA21F005CE4EF /* NSOperationQueue+SPXAdditions.h in Headers */,
 				54EA29C517B7CE9600DE7C42 /* SPXRestAuthentication.h in Headers */,
@@ -1064,6 +1074,7 @@
 				54EA29BA17B7CE9600DE7C42 /* NSString+SPXRestQueryString.m in Sources */,
 				54EA29B617B7CE9600DE7C42 /* NSDictionary+SPXRestQueryString.m in Sources */,
 				54710AE0179B4923004243F7 /* UIDevice+SPXAdditions.m in Sources */,
+				5441E57F17CF54EE00D716E3 /* SPXRuntime.m in Sources */,
 				54EA29C617B7CE9600DE7C42 /* SPXRestAuthentication.m in Sources */,
 				540158181799AE6200175910 /* SPXDatasource.m in Sources */,
 				5445F0021799CB1B00DFC769 /* SPXCollectionDatasource.m in Sources */,
@@ -1126,6 +1137,7 @@
 				54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
 				54EA29E717B7CE9600DE7C42 /* SPXRestRequest.m in Sources */,
 				54EA29EB17B7CE9600DE7C42 /* SPXRestResponse.m in Sources */,
+				5441E58017CF54EE00D716E3 /* SPXRuntime.m in Sources */,
 				54EA29BB17B7CE9600DE7C42 /* NSString+SPXRestQueryString.m in Sources */,
 				5401A3F717B16464004B8CCB /* SPXAudio.m in Sources */,
 				54EA29FC17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m in Sources */,

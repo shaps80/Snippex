@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
+   Copyright (c) 2013 Snippex. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -23,42 +23,6 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _SNIPPEX_H_
-#define _SNIPPEX_H_
+#import <objc/runtime.h>
 
-    #import "SPXDefines.h"
-
-    #if TARGET_OS_IPHONE
-    #import "SPXBarButtonItem.h"
-    #import "SPXDatasource.h"
-    #import "SPXCoreDataDatasource.h"
-    #import "SPXSearchDatasource.h"
-    #import "SPXCollectionDatasource.h"
-    #import "UIDevice+SPXAdditions.h"
-    #endif
-
-    #import "SPXView.h"
-    #import "SPXControl.h"
-    #import "SPXAlert.h"
-    #import "SPXError.h"
-    #import "SPXGraphicsDefines.h"
-    #import "SPXGeometry.h"
-    #import "SPXDrawing.h"
-    #import "SPXGradient.h"
-    #import "SPXShadow.h"
-    #import "SPXStore.h"
-    #import "SPXRest.h"
-    #import "BezierPath+SPXAdditions.h"
-    #import "NSData+SPXAdditions.h"
-    #import "NSDateFormatter+SPXAdditions.h"
-    #import "NSDictionary+SPXRestQueryString.h"
-    #import "NSString+SPXRestQueryString.h"
-    #import "Image+SPXAdditions.h"
-    #import "Color+SPXAdditions.h"
-    #import "SPXAudio.h"
-    #import "SPXReachability.h"
-    #import "SPXKeyValueStore.h"
-    #import "SPXImageCache.h"
-    #import "SPXRuntime.h"
-
-#endif
+void dumpClass(Class cls);

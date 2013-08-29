@@ -47,7 +47,10 @@
     if ((self = [super initWithFrame:frame]))
     {
         [self configure];
+
+#if TARGET_OS_IPHONE
         self.clipsToBounds = YES;
+#endif
     }
     
     return self;
@@ -67,14 +70,23 @@
 {
     _iterationsSet = YES;
     _blurIterations = blurIterations;
+
+#if TARGET_OS_IPHONE
     [self setNeedsDisplay];
+#else
+    [self setNeedsDisplay:YES];
+#endif
 }
 
 - (void)setBlurRadius:(CGFloat)blurRadius
 {
     _blurRadiusSet = YES;
     _blurRadius = blurRadius;
+#if TARGET_OS_IPHONE
     [self setNeedsDisplay];
+#else
+    [self setNeedsDisplay:YES];
+#endif
 }
 
 - (void)setUsesDynamicBlurring:(BOOL)usesDynamicBlurring
@@ -86,29 +98,55 @@
         [self updateAsynchronously];
 }
 
+#if TARGET_OS_IPHONE
 - (void)willMoveToSuperview:(UIView *)superview
 {
     [super willMoveToSuperview:superview];
+#else
+- (void)viewWillMoveToSuperview:(NSView *)superview
+{
+    [super viewWillMoveToSuperview:superview];
+#endif
     
     if (superview)
     {
+#if TARGET_OS_IPHONE
         UIImage *snapshot = [self superviewAsImage];
         UIImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
-        self.layer.contents = (id)blurredImage.CGImage;
+        self.layer.contents = (id)[blurredImage CGImageRef];
+#else
+        NSImage *snapshot = [self superviewAsImage];
+        NSImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
+        self.wantsLayer = YES;
+        self.layer.contents = (id)[blurredImage CGImageRef];
+#endif
     }
 }
 
+#if TARGET_OS_IPHONE
 - (void)didMoveToSuperview
 {
     [super didMoveToSuperview];
+#else
+- (void)viewDidMoveToSuperview
+{
+    [super viewDidMoveToSuperview];
+#endif
 
     if (self.superview && self.usesDynamicBlurring)
         [self updateAsynchronously];
 }
 
+#if TARGET_OS_IPHONE
 - (void)setNeedsDisplay
 {
     [super setNeedsDisplay];
+#else
+- (void)setNeedsDisplay:(BOOL)flag
+{
+    [super setNeedsDisplay:flag];
+#endif
+
     [self.layer setNeedsDisplay];
 }
 
@@ -116,12 +154,22 @@
 {
     if (self.superview)
     {
+#if TARGET_OS_IPHONE
         BOOL wasHidden = self.hidden;
         self.hidden = YES;
         UIImage *snapshot = [self superviewAsImage];
         self.hidden = wasHidden;
         UIImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
-        self.layer.contents = (id)blurredImage.CGImage;
+        self.layer.contents = (id)[blurredImage CGImageRef];
+
+#else
+        BOOL wasHidden = self.isHidden;
+        self.hidden = YES;
+        NSImage *snapshot = [self superviewAsImage];
+        self.hidden = wasHidden;
+        NSImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
+        self.layer.contents = (id)[blurredImage CGImageRef];
+#endif
     }
 }
 
@@ -129,18 +177,29 @@
 {
     if (self.superview && !self.updating)
     {
+#if TARGET_OS_IPHONE
         BOOL wasHidden = self.hidden;
         self.hidden = YES;
         UIImage *snapshot = [self superviewAsImage];
         self.hidden = wasHidden;
+#else
+        BOOL wasHidden = self.isHidden;
+        self.hidden = YES;
+        NSImage *snapshot = [self superviewAsImage];
+        self.hidden = wasHidden;
+#endif
 
         self.updating = YES;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^
+        {
+#if TARGET_OS_IPHONE
             UIImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
-            dispatch_sync(dispatch_get_main_queue(), ^{
-
-                self.layer.contents = (id)blurredImage.CGImage;
+#else
+            NSImage *blurredImage = [snapshot blurredImageWithRadius:self.blurRadius iterations:self.blurIterations];
+#endif
+            dispatch_sync(dispatch_get_main_queue(), ^
+            {
+                self.layer.contents = (id)[blurredImage CGImageRef];
                 self.updating = NO;
 
                 if (self.usesDynamicBlurring)

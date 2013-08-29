@@ -44,10 +44,9 @@ CGImageRef SPXCreateBlurredImageRef(CGImageRef imageRef, CGFloat radius, NSInteg
 @interface UIImage (SPXImageAdditions)
 #else
 @interface NSImage (SPXImageAdditions)
+#endif
 
 @property (nonatomic, readonly) CGImageRef CGImageRef;
-
-#endif
 
 #if TARGET_OS_IPHONE
 + (UIImage *)imageFromCGImageRef:(CGImageRef)image;
@@ -67,6 +66,13 @@ CGImageRef SPXCreateBlurredImageRef(CGImageRef imageRef, CGFloat radius, NSInteg
 - (UIImage *)superviewAsImage;
 
 #else
+
+@interface NSView (SPXImageAdditions)
+
+- (NSImage *)viewAsImage;
+- (NSImage *)superviewAsImage;
+
+@end
 
 @interface NSWindow (SPXImageAdditions)
 
