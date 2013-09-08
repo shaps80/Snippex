@@ -144,7 +144,7 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 				break;
 			default:
 				CGPathCloseSubpath(path);
-				NSLog(@"Unknown element at [NSBezierPath (GTMBezierPathCGPathAdditions) CGPath]");
+				DLog(@"Unknown element at [NSBezierPath (GTMBezierPathCGPathAdditions) CGPath]");
 				break;
 		};
 	}
