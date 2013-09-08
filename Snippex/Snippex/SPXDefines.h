@@ -197,43 +197,44 @@
 
 #if DEBUG
 
-#import <Foundation/Foundation.h>
+    #import <Foundation/Foundation.h>
 
-#if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
+    #if TARGET_OS_IPHONE
+    #import <UIKit/UIKit.h>
+    #else
+    #import <AppKit/AppKit.h>
+    #endif
+
+    /**
+     Use this method to generate random values within the specified range.
+
+     float value = spxRand(10, 100);
+
+     will return a random value between 10 and 100
+     */
+
+    #pragma mark - Random
+
+    static inline CGFloat spxRandf() {
+        return rand() / (CGFloat) RAND_MAX;
+    }
+
+    static inline CGFloat spxRand(CGFloat low, CGFloat high) {
+        return spxRandf() * (high - low) + low;
+    }
+
+    // allow us to log method and class while in debug mode
+    #define logMethod NSLog((@"%@ | %d | %@ | %@ "), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+
+    // should use DLog vs NSLog to ensure its completely disabled when not in debug mode
+    #define DLog(fmt, ...) NSLog((@"%@ | %d | %@ | %@ | " fmt), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__)
+    #define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+
 #else
-#import <AppKit/AppKit.h>
-#endif
 
-/**
- Use this method to generate random values within the specified range.
-
- float value = spxRand(10, 100);
-
- will return a random value between 10 and 100
- */
-
-#pragma mark - Random
-
-static inline CGFloat spxRandf() {
-    return rand() / (CGFloat) RAND_MAX;
-}
-
-static inline CGFloat spxRand(CGFloat low, CGFloat high) {
-    return spxRandf() * (high - low) + low;
-}
-
-// allow us to log method and class while in debug mode
-#define logMethod NSLog((@"%@ | %d | %@ | %@ "), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-
-// should use DLog vs NSLog to ensure its completely disabled when not in debug mode
-#define DLog(fmt, ...) NSLog((@"%@ | %d | %@ | %@ | " fmt), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__)
-#define NSLog(FORMAT, ...) fprintf(stderr,"%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
-
-#else
-
-// is we're in release mode, we disable these
-#define DLog(...)
-#define logMethod
+    // is we're in release mode, use testflight to add remote logging
+    #define DLog(fmt, ...) TFLog((@"%@ | %d | %@ | %@ | " fmt), [NSDate date], __LINE__, NSStringFromClass([self class]), NSStringFromSelector(_cmd), ##__VA_ARGS__)
+    #define NSLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+    #define logMethod
 
 #endif

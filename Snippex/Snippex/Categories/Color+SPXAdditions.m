@@ -58,7 +58,21 @@
 
 #endif
 
-+(SPXColor *)colorWithHexValue:(NSString *)value
+- (NSString *)hexValue
+{
+  CGFloat red, blue, green, alpha;
+  int r, g, b, a;
+  [self getRed:&red green:&green blue:&blue alpha:&alpha];
+  
+  r = (int)(255.0 * red);
+  g = (int)(255.0 * green);
+  b = (int)(255.0 * blue);
+  a = (int)(255.0 * alpha);
+  
+  return [NSString stringWithFormat:@"%02x%02x%02x%02x",r,g,b,a];
+}
+
++ (SPXColor *)colorWithHexValue:(NSString *)value
 {
     value = [value stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"#"]];
     unsigned rgbValue = 0;

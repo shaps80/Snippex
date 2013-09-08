@@ -24,6 +24,7 @@
  */
 
 #import "NSDate+SPXAdditions.h"
+#import "SPXDefines.h"
 
 @implementation NSDate (SPXAdditions)
 
@@ -43,7 +44,7 @@
 
 		if (![rfc3339TimestampFormatterWithTimeZone getObjectValue:&theDate forString:dateString range:nil error:&error])
 		{
-			NSLog(@"Date '%@' could not be parsed: %@", dateString, error);
+			DLog(@"Date '%@' could not be parsed: %@", dateString, error);
 		}
     }
 
