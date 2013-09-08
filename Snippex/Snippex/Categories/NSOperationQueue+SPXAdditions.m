@@ -27,7 +27,7 @@
 
 @implementation NSOperationQueue (SPXAdditions)
 
-- (void)setLIFODependendenciesForOperation:(NSOperation *)op
+- (void)setLIFODependendenciesForOperation:(NSOperation *)operation
 {
     @synchronized(self)
     {
@@ -45,7 +45,7 @@
             NSOperation *operation = operations[index];
 
             if (![operation isExecuting])
-                [operation addDependency:op];
+                [operation addDependency:operation];
         }
 
         // resume queue
@@ -53,20 +53,20 @@
     }
 }
 
-- (void)addOperationAtFrontOfQueue:(NSOperation *)op
+- (void)addOperationAtFrontOfQueue:(NSOperation *)operation
 {
-    [self setLIFODependendenciesForOperation:op];
-    [self addOperation:op];
+    [self setLIFODependendenciesForOperation:operation];
+    [self addOperation:operation];
 }
 
-- (void)addOperationsAtFrontOfQueue:(NSArray *)ops waitUntilFinished:(BOOL)wait
+- (void)addOperationsAtFrontOfQueue:(NSArray *)operations waitUntilFinished:(BOOL)wait
 {
-    for (NSOperation *op in ops)
+    for (NSOperation *operation in operations)
     {
-        [self setLIFODependendenciesForOperation:op];
+        [self setLIFODependendenciesForOperation:operation];
     }
 
-    [self addOperations:ops waitUntilFinished:wait];
+    [self addOperations:operations waitUntilFinished:wait];
 }
 
 - (void)addOperationAtFrontOfQueueWithBlock:(void (^)(void))block

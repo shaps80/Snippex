@@ -89,6 +89,31 @@ static NSTimeInterval __defaultTimeoutInterval = 10;
     return [self performRequest:[self requestForURL:url method:@"DELETE" payload:nil headers:headers] completion:completion];
 }
 
+<<<<<<< HEAD
+=======
+- (SPXRestRequest *)get:(NSURL *)sourceURL
+                   path:(NSString *)destinationPath
+             parameters:(NSDictionary *)parameters
+                headers:(NSDictionary *)headers
+               progress:(SPXRestDownloadProgressBlock)progress
+             completion:(SPXRestResponseBlock)completion
+{
+    NSAssert(NO, @"Not implemented");
+    return nil;
+}
+
+- (SPXRestRequest *)post:(NSURL *)sourceURL
+                    path:(NSString *)destinationPath
+                 payload:(SPXRestPayload *)payload
+                 headers:(NSDictionary *)headers
+                progress:(SPXRestDownloadProgressBlock)progress
+              completion:(SPXRestResponseBlock)completion
+{
+    NSAssert(NO, @"Not implemented");
+    return nil;
+}
+
+>>>>>>> origin/Drizzle
 - (SPXRestRequest *)performRequest:(SPXRestRequest *)request
                         completion:(SPXRestResponseBlock)completion
 {

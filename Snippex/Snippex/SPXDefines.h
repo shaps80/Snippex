@@ -112,17 +112,21 @@
 
 #define encodeRect(_variableName) [aCoder encodeCGRect:_variableName forKey:OBJC_STRINGIFY(_variableName)]
 #define encodePoint(_variableName) [aCoder encodeCGPoint:_variableName forKey:OBJC_STRINGIFY(_variableName)]
+#define encodeSize(_variableName) [aCoder encodeCGSize:_variableName forKey:OBJC_STRINGIFY(_variableName)]
 
 #define decodeRect(_variableName) _variableName = [aDecoder decodeCGRectForKey:OBJC_STRINGIFY(_variableName)]
 #define decodePoint(_variableName) _variableName = [aDecoder decodeCGPointForKey:OBJC_STRINGIFY(_variableName)]
+#define decodeSize(_variableName) _variableName = [aDecoder decodeCGSizeForKey:OBJC_STRINGIFY(_variableName)]
 
 #else
 
 #define encodeRect(_variableName) [aCoder encodeRect:_variableName forKey:OBJC_STRINGIFY(_variableName)]
 #define encodePoint(_variableName) [aCoder encodePoint:_variableName forKey:OBJC_STRINGIFY(_variableName)]
+#define encodeSize(_variableName) [aCoder encodeSize:_variableName forKey:OBJC_STRINGIFY(_variableName)]
 
 #define decodeRect(_variableName) _variableName = [aDecoder decodeRectForKey:OBJC_STRINGIFY(_variableName)]
 #define decodePoint(_variableName) _variableName = [aDecoder decodePointForKey:OBJC_STRINGIFY(_variableName)]
+#define decodeSize(_variableName) _variableName = [aDecoder decodeSizeForKey:OBJC_STRINGIFY(_variableName)]
 
 #endif
 

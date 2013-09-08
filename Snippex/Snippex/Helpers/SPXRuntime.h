@@ -23,12 +23,6 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
-@interface NSOperationQueue (SPXAdditions)
-
-- (void)addOperationAtFrontOfQueue:(NSOperation *)operation;
-- (void)addOperationsAtFrontOfQueue:(NSArray *)operations waitUntilFinished:(BOOL)wait;
-- (void)addOperationAtFrontOfQueueWithBlock:(void (^)(void))block;
-
-@end
+void dumpClass(Class cls);

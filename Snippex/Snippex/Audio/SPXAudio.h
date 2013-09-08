@@ -24,7 +24,12 @@
  */
 
 #import <Foundation/Foundation.h>
+
+#ifndef __AudioToolbox_H
 #import <AudioToolbox/AudioToolbox.h>
+#else
+#warning AudioToolbar.framework is required for this project.
+#endif
 
 #if TARGET_OS_IPHONE
 

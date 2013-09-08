@@ -26,7 +26,6 @@
 #import <Foundation/Foundation.h>
 #import "SPXDefines.h"
 #import "SPXRestTypes.h"
-#import "NSError+SPXAdditions.h"
 
 @interface SPXRestURLOperation : NSOperation <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 {

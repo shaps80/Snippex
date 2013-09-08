@@ -43,6 +43,10 @@
 
 #endif
 
+@property (nonatomic) BOOL usesDynamicBlurring;
+@property (nonatomic) NSInteger blurIterations;
+@property (nonatomic) CGFloat blurRadius;
+
 /// @abstract		All subclasses should use this method to perform layout as this ensures iOS and OSX get updated correctly.
 -(void)layoutViews;
 

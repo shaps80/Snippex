@@ -53,10 +53,12 @@
     #import "NSDateFormatter+SPXAdditions.h"
     #import "NSDictionary+SPXRestQueryString.h"
     #import "NSString+SPXRestQueryString.h"
+    #import "Image+SPXAdditions.h"
     #import "Color+SPXAdditions.h"
     #import "SPXAudio.h"
     #import "SPXReachability.h"
     #import "SPXKeyValueStore.h"
     #import "SPXImageCache.h"
+    #import "SPXRuntime.h"
 
 #endif
