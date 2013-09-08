@@ -24,6 +24,7 @@
  */
 
 #import "SPXSemaphore.h"
+#import "SPXDefines.h"
 
 @interface SPXSemaphore ()
 @property (nonatomic, STRONG) NSMutableArray *keys;
