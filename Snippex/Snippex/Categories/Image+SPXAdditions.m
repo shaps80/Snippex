@@ -235,6 +235,7 @@ CGImageRef SPXCreateBlurredImageRef(CGImageRef imageRef, CGFloat radius, NSInteg
         return nil;
     }
 
+    CFAutorelease(capturedImage);
     return capturedImage;
 }
 

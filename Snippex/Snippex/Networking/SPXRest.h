@@ -23,59 +23,68 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
+#ifndef _RESTCLIENT_H
+#define _RESTCLIENT_H
 
 #import "SPXDefines.h"
-
 #import "SPXRestTypes.h"
 #import "SPXRestRequest.h"
-#import "SPXRestResponse.h"
-#import "SPXRestPayload.h"
-#import "SPXRestPackage.h"
-
 #import "SPXRestClient+GET.h"
 #import "SPXRestClient+POST.h"
 #import "SPXRestClient+PUT.h"
 #import "SPXRestClient+DELETE.h"
 
+
+extern SPXRestLoggingType SPXSharedRestClientLoggingType;
+
+#define SPXRestLog(format, ...) if (SPXSharedRestClientLoggingType == SPXRestLoggingTypeConcise) { SPXLog(format, ##__VA_ARGS__); }
+#define SPXRestLogVerbose(format, ...) if (SPXSharedRestClientLoggingType == SPXRestLoggingTypeVerbose) { SPXLog(format, ##__VA_ARGS__); }
+
+
+@class SPXRestClient, SPXRestRequest, SPXRestRequest, SPXRestPackage, SPXRestPayload;
+
+
 /**
- This class provides a high level API for using RESTful services
+ *  This class provides a high level API for using RESTful services
  */
 @interface SPXRest : NSObject
 
-/**
- @abstract      Convenience method for constructing a valid NSURL using only strings
- @param         endpoint The endpoing to append to the url (e.g. droplets/123)
- @param         root The base URL (e.g. https://api.digitalocean.com) 
- @discussion    Note you don't need to worry about extra '/' characters or string encoding
- */
-+ (NSURL *)URLForEndpoint:(NSString *)endpoint relativeTo:(NSString *)root;
 
 /**
- @return        This class method returns a singleton instance of SPXRestRequest
+*  Convenience method for constructing a valid NSURL using only strings
+*
+*  @param endpoint The endpoing to append to the url (e.g. droplets/123)
+*  @param root     The base URL (e.g. https://api.digitalocean.com)
+*
+*  @return Note you don't need to worry about extra '/' characters or string encoding
+*/
++ (NSURL *)URLForEndpoint:(NSString *)endpoint relativeTo:(NSString *)root;
+
+
+/**
+ *  This class method returns the default singleton instance of SPXRestRequest
+ *
+ *  @return A default singleton instance of SPXRestClient
  */
 + (SPXRestClient *)client;
 
+
 /**
- @return        This class method returns a new instance of SPXRestRequest
+ *  This class method returns a new instance of SPXRestRequest
+ *
+ *  @return An new instance of SPXRestClient
  */
 + (SPXRestClient *)newClient;
 
+
 /**
- @abstract      Can be used to toggle logging for debug purposes.
+ *  Can be used to toggle logging for debug purposes.
+ *
+ *  @param type The logging level
  */
 + (void)setLoggingType:(SPXRestLoggingType)type;
 
-/**
- @abstract      Outputs the message to the console only if debug logging is enabled
- @param         message The message to log
- */
-+ (void)log:(NSString *)message;
-
-/**
- @abstract      Outputs the message to the console only if debug logging is enabled
- @param         message The message to log
- */
-+ (void)logVerbose:(NSString *)message;
 
 @end
+
+#endif

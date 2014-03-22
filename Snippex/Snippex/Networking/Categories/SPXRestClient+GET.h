@@ -25,17 +25,51 @@
 
 #import "SPXRestClient.h"
 
+
+/**
+ *  Defines the available GET request methods
+ */
 @interface SPXRestClient (GET)
 
+
+/**
+ *  Returns a GET request
+ *
+ *  @param url        The url for this request
+ *  @param parameters The query parameters for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)get:(NSURL *)url
              parameters:(NSDictionary *)parameters
              completion:(SPXRestResponseBlock)completion;
 
+
+/**
+ *  Returns a GET request
+ *
+ *  @param url        The url for this request
+ *  @param headers    The HTTP headers for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)get:(NSURL *)url
                 headers:(NSDictionary *)headers
              completion:(SPXRestResponseBlock)completion;
 
+
+/**
+ *  Returns a GET request
+ *
+ *  @param url        The url for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)get:(NSURL *)url
              completion:(SPXRestResponseBlock)completion;
+
 
 @end

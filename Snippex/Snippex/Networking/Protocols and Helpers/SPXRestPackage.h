@@ -23,14 +23,29 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
 
+/**
+ *  This class encapsulates a response object, any errors and other information returned from an NSURLRequest
+ */
 @interface SPXRestPackage : NSObject
 
+
+/**
+*  Returns an instance using the specified data and contentType
+*
+*  @param data        The data for this package
+*  @param contentType The contentType of this data
+*
+*  @return An SPXRestPackage instance
+*/
 + (instancetype)packageForData:(NSData *)data contentType:(NSString *)contentType;
 
+
+/**
+ *  Returns the content type of the response
+ *
+ *  @return An NSString representing the content-type
+ */
 - (NSString *)contentType;
-- (id)JSONRepresentation;
-- (NSString *)stringRepresentation;
 
 @end

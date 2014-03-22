@@ -25,6 +25,35 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol SPXKeyValueStoreProtocol;
+
+// convenience C function alternatives for the methods below
+extern void storeSetObject(id <SPXKeyValueStoreProtocol>store, NSString *key, id value);
+extern void storeSetBool(id <SPXKeyValueStoreProtocol>store, NSString *key, BOOL value);
+extern void storeSetString(id <SPXKeyValueStoreProtocol>store, NSString *key, NSString *value);
+extern void storeSetDouble(id <SPXKeyValueStoreProtocol>store, NSString *key, double value);
+extern void storeSetInteger(id <SPXKeyValueStoreProtocol>store, NSString *key, NSInteger value);
+extern void storeSetFloat(id <SPXKeyValueStoreProtocol>store, NSString *key, CGFloat value);
+extern void storeSetDate(id <SPXKeyValueStoreProtocol>store, NSString *key, NSDate *value);
+extern void storeSetData(id <SPXKeyValueStoreProtocol>store, NSString *key, NSData *value);
+extern void storeSetSet(id <SPXKeyValueStoreProtocol>store, NSString *key, NSSet *value);
+extern void storeSetArray(id <SPXKeyValueStoreProtocol>store, NSString *key, NSArray *value);
+extern void storeSetDictionary(id <SPXKeyValueStoreProtocol>store, NSString *key, NSDictionary *value);
+
+extern id storeGetObject(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern BOOL storeGetBool(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern NSString* storeGetString(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern double storeGetDouble(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern NSInteger storeGetInteger(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern CGFloat storeGetFloat(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern NSDate* storeGetDate(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern NSData* storeGetData(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern NSSet* storeGetSet(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern NSArray* storeGetArray(id <SPXKeyValueStoreProtocol>store, NSString *key);
+extern NSDictionary* storeGetDictionary(id <SPXKeyValueStoreProtocol>store, NSString *key);
+
+extern BOOL storeSync(id <SPXKeyValueStoreProtocol>store);
+
 @protocol SPXKeyValueStoreProtocol <NSObject>
 
 @required

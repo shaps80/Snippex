@@ -1,16 +1,16 @@
 /*
-   Copyright (c) 2013 Snippex. All rights reserved.
-
+ Copyright (c) 2013 Snippex. All rights reserved.
+ 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
-
+ 
  1. Redistributions of source code must retain the above copyright notice, this
  list of conditions and the following disclaimer.
-
+ 
  2. Redistributions in binary form must reproduce the above copyright notice,
  this list of conditions and the following disclaimer in the documentation
  and/or other materials provided with the distribution.
-
+ 
  THIS SOFTWARE IS PROVIDED BY Snippex `AS IS' AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -28,19 +28,19 @@
 
 NSDictionary *extractCookiesFromHeaders(NSDictionary *headers, NSURL *url)
 {
-    if (!headers) return [NSDictionary dictionary];
-
-    NSMutableDictionary *cookies = [NSMutableDictionary dictionary];
-
-    for (NSHTTPCookie *cookie in [NSHTTPCookie cookiesWithResponseHeaderFields:headers forURL:url])
-        [cookies setObject:cookie forKey:cookie.name];
-
-    return cookies;
+  if (!headers) return [NSDictionary dictionary];
+  
+  NSMutableDictionary *cookies = [NSMutableDictionary dictionary];
+  
+  for (NSHTTPCookie *cookie in [NSHTTPCookie cookiesWithResponseHeaderFields:headers forURL:url])
+    [cookies setObject:cookie forKey:cookie.name];
+  
+  return cookies;
 }
 
 @interface SPXRestResponse ()
 
-@property (nonatomic) NSUInteger statusCode;
+@property (nonatomic) NSInteger statusCode;
 @property (nonatomic, STRONG) NSData *responseData;
 @property (nonatomic, STRONG) NSDictionary *headers;
 @property (nonatomic, STRONG) NSDictionary *cookies;
@@ -55,74 +55,72 @@ NSDictionary *extractCookiesFromHeaders(NSDictionary *headers, NSURL *url)
      originalRequest:(SPXRestRequest *)request
      responseHandler:(id<SPXResponseHandler>)handler
 {
-    self = [super init];
-
-    if (self)
-    {
-        _statusCode = statusCode;
-        _responseData = data;
-        _headers = headers;
-        _cookies = extractCookiesFromHeaders(headers, request.URL);
-        _originalRequest = request;
-        _handler = handler;
-    }
-
-    return self;
+  self = [super init];
+  
+  if (self)
+  {
+    _statusCode = statusCode;
+    _responseData = data;
+    
+    _headers = headers;
+    _cookies = extractCookiesFromHeaders(headers, request.URL);
+    _originalRequest = request;
+    _handler = handler;
+  }
+  
+  return self;
 }
 
 -(NSString *)description
 {
-    if (self.error)
-        return [NSString stringWithFormat:@"%li | %@", (unsigned long)self.statusCode, self.localizedStatusDescription];
-    else
-        return [NSString stringWithFormat:@"%li", (unsigned long)self.statusCode];
+  return [NSString stringWithFormat:@"%li | %@", (unsigned long)self.statusCode, self.localizedStatusDescription];
 }
 
 -(NSString *)debugDescription
 {
-    if (self.error)
-        return [NSString stringWithFormat:@"%@", self.error];
-    else
-        return [NSString stringWithFormat:@"Status: %li\n%@", (unsigned long)self.statusCode, self.package.debugDescription];
+  if (self.error)
+    return [NSString stringWithFormat:@"%@", self.error];
+  else
+    return [NSString stringWithFormat:@"Status: %li\n%@", (unsigned long)self.statusCode, self.package.debugDescription];
 }
 
 - (SPXRestPackage *)package
 {
-    return [SPXRestPackage packageForData:_responseData contentType:[_headers objectForKey:@"Content-Type"]];
+  return [SPXRestPackage packageForData:_responseData contentType:[_headers objectForKey:@"Content-Type"]];
 }
 
 - (NSString *)localizedStatusDescription
 {
-    return [NSHTTPURLResponse localizedStringForStatusCode:self.statusCode];
+  return [NSHTTPURLResponse localizedStringForStatusCode:self.statusCode];
 }
 
 - (NSHTTPCookie *)cookieNamed:(NSString *)name;
 {
-    return [_cookies objectForKey:name];
+  return [_cookies objectForKey:name];
 }
 
 - (NSString *)valueForHeader:(NSString *)header;
 {
-    return [_headers objectForKey:header];
+  return [_headers objectForKey:header];
 }
 
 - (NSString *)valueForCookie:(NSString *)cookieNamed;
 {
-    return [[self cookieNamed:cookieNamed] value];
+  return [[self cookieNamed:cookieNamed] value];
 }
 
 -(NSError *)error
 {
-    if (_handler)
-        return [_handler errorForResponse:self];
-    else
-        return _originalRequest.error;
+  if (_handler)
+    return [_handler errorForResponse:self];
+  else
+    return _originalRequest.error;
 }
 
 - (BOOL)wasSuccessful
 {
-    return (self.statusCode > 0) &&
-        !self.originalRequest.error;
+  return (self.statusCode > 0) &&
+  !self.originalRequest.error;
 }
 
 

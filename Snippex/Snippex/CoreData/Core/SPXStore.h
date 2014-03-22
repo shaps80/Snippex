@@ -28,7 +28,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "NSManagedObjectContext+SPXStoreAdditions.h"
+#import "NSManagedObjectContext+SPXEntityCount.h"
+#import "NSManagedObjectContext+SPXMultipleObjects.h"
+#import "NSManagedObjectContext+SPXSingleObject.h"
 
 #ifndef _COREDATADEFINES_H
 #warning "CoreData framework not found in project, or not included in precompiled header."
@@ -64,7 +66,15 @@
 
 - (NSURL *)URL;
 
-+ (NSError *)saveContext:(NSManagedObjectContext *)context;
+/**
+ Saves the context synchronously
+ */
++ (void)saveContext:(NSManagedObjectContext *)context completion:(SPXStoreSaveContextBlock)completion;
+
+/**
+ Saves the context synchronously, walking up the parent context to ensure everything is persisted to disk.
+ */
++ (void)saveToPersistentStore:(NSManagedObjectContext *)context completion:(SPXStoreSaveContextBlock)completion;
 
 + (void)logVerbose:(NSString *)message;
 

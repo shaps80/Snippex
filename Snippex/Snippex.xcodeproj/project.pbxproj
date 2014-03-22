@@ -51,6 +51,7 @@
 		5401F06B17BE78E100105349 /* SPXSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401F06917BE78E100105349 /* SPXSemaphore.m */; };
 		5401F06C17BE78E500105349 /* SPXSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401F06917BE78E100105349 /* SPXSemaphore.m */; };
 		5401F06D17BE78E600105349 /* SPXSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401F06917BE78E100105349 /* SPXSemaphore.m */; };
+		5409ECCD1874791D00D8C958 /* libcommonCrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5409ECCC1874791D00D8C958 /* libcommonCrypto.dylib */; };
 		541AF1AE17994E7F004259D6 /* SPXCoreDataDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */; };
 		541AF1B017994E7F004259D6 /* SPXCoreDataDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */; };
 		541B0B5917AE07E400231554 /* NSData+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 549154FD175CF06200A210BC /* NSData+SPXAdditions.m */; };
@@ -155,6 +156,18 @@
 		54AC49C0176F61AA000389DF /* SPXBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */; };
 		54B6601E17BE81880066AD81 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B6601D17BE81880066AD81 /* Security.framework */; };
 		54B6602017BE81910066AD81 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B6601F17BE81910066AD81 /* SystemConfiguration.framework */; };
+		54C6ACA1186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C6AC9F186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.h */; };
+		54C6ACA2186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C6AC9F186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.h */; };
+		54C6ACA3186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C6ACA0186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.m */; };
+		54C6ACA4186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C6ACA0186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.m */; };
+		54C6ACA7186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C6ACA5186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.h */; };
+		54C6ACA8186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C6ACA5186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.h */; };
+		54C6ACA9186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C6ACA6186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.m */; };
+		54C6ACAA186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C6ACA6186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.m */; };
+		54C6ACAD186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C6ACAB186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.h */; };
+		54C6ACAE186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C6ACAB186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.h */; };
+		54C6ACAF186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C6ACAC186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.m */; };
+		54C6ACB0186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C6ACAC186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.m */; };
 		54CA9081175CDB6200470B9F /* libSnippexOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54CA906A175CDB6200470B9F /* libSnippexOSX.a */; };
 		54D7D97F17B8E9820000ADFB /* SPXError.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7D97D17B8E9820000ADFB /* SPXError.h */; };
 		54D7D98017B8E9820000ADFB /* SPXError.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7D97D17B8E9820000ADFB /* SPXError.h */; };
@@ -230,10 +243,6 @@
 		54EA29EF17B7CE9600DE7C42 /* SPXRestURLOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29B217B7CE9500DE7C42 /* SPXRestURLOperation.h */; };
 		54EA29F017B7CE9600DE7C42 /* SPXRestURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29B317B7CE9500DE7C42 /* SPXRestURLOperation.m */; };
 		54EA29F117B7CE9600DE7C42 /* SPXRestURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29B317B7CE9500DE7C42 /* SPXRestURLOperation.m */; };
-		54EA29F917B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29F417B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h */; };
-		54EA29FA17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29F417B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h */; };
-		54EA29FB17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29F517B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m */; };
-		54EA29FC17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29F517B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m */; };
 		54EA29FD17B7CEFC00DE7C42 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29F617B7CEFC00DE7C42 /* SPXStore.h */; };
 		54EA29FE17B7CEFC00DE7C42 /* SPXStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA29F617B7CEFC00DE7C42 /* SPXStore.h */; };
 		54EA29FF17B7CEFC00DE7C42 /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA29F717B7CEFC00DE7C42 /* SPXStore.m */; };
@@ -281,6 +290,7 @@
 		5401A3F317B16464004B8CCB /* SPXAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXAudio.m; sourceTree = "<group>"; };
 		5401F06817BE78E100105349 /* SPXSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXSemaphore.h; sourceTree = "<group>"; };
 		5401F06917BE78E100105349 /* SPXSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXSemaphore.m; sourceTree = "<group>"; };
+		5409ECCC1874791D00D8C958 /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = usr/lib/system/libcommonCrypto.dylib; sourceTree = SDKROOT; };
 		541AF1AC17994E7F004259D6 /* SPXCoreDataDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataDatasource.h; sourceTree = "<group>"; };
 		541AF1AD17994E7F004259D6 /* SPXCoreDataDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataDatasource.m; sourceTree = "<group>"; };
 		541C461917CBA5420016AE96 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -342,6 +352,12 @@
 		54AC49BE176F61AA000389DF /* SPXBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXBarButtonItem.m; sourceTree = "<group>"; };
 		54B6601D17BE81880066AD81 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		54B6601F17BE81910066AD81 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		54C6AC9F186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SPXEntityCount.h"; sourceTree = "<group>"; };
+		54C6ACA0186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SPXEntityCount.m"; sourceTree = "<group>"; };
+		54C6ACA5186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SPXSingleObject.h"; sourceTree = "<group>"; };
+		54C6ACA6186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SPXSingleObject.m"; sourceTree = "<group>"; };
+		54C6ACAB186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SPXMultipleObjects.h"; sourceTree = "<group>"; };
+		54C6ACAC186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SPXMultipleObjects.m"; sourceTree = "<group>"; };
 		54CA906A175CDB6200470B9F /* libSnippexOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnippexOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CA907C175CDB6200470B9F /* SnippexOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnippexOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D7D97D17B8E9820000ADFB /* SPXError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXError.h; sourceTree = "<group>"; };
@@ -381,8 +397,6 @@
 		54EA29B117B7CE9500DE7C42 /* SPXRestTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXRestTypes.h; sourceTree = "<group>"; };
 		54EA29B217B7CE9500DE7C42 /* SPXRestURLOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXRestURLOperation.h; sourceTree = "<group>"; };
 		54EA29B317B7CE9500DE7C42 /* SPXRestURLOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXRestURLOperation.m; sourceTree = "<group>"; };
-		54EA29F417B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SPXStoreAdditions.h"; sourceTree = "<group>"; };
-		54EA29F517B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SPXStoreAdditions.m"; sourceTree = "<group>"; };
 		54EA29F617B7CEFC00DE7C42 /* SPXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStore.h; sourceTree = "<group>"; };
 		54EA29F717B7CEFC00DE7C42 /* SPXStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStore.m; sourceTree = "<group>"; };
 		54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStoreDefines.h; sourceTree = "<group>"; };
@@ -394,6 +408,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5409ECCD1874791D00D8C958 /* libcommonCrypto.dylib in Frameworks */,
 				541C461A17CBA5420016AE96 /* AudioToolbox.framework in Frameworks */,
 				54710AE5179B4A7C004243F7 /* MobileCoreServices.framework in Frameworks */,
 				54710AE3179B4A78004243F7 /* CoreMotion.framework in Frameworks */,
@@ -517,6 +532,7 @@
 		54870AFB175CB113004194F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5409ECCC1874791D00D8C958 /* libcommonCrypto.dylib */,
 				546B7A3C175CFCC400B216A3 /* OSX */,
 				549154C2175CE81700A210BC /* iOS */,
 				549154B8175CE7AF00A210BC /* Common */,
@@ -703,8 +719,12 @@
 				54EA29F617B7CEFC00DE7C42 /* SPXStore.h */,
 				54EA29F717B7CEFC00DE7C42 /* SPXStore.m */,
 				54EA29F817B7CEFC00DE7C42 /* SPXStoreDefines.h */,
-				54EA29F417B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h */,
-				54EA29F517B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m */,
+				54C6AC9F186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.h */,
+				54C6ACA0186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.m */,
+				54C6ACA5186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.h */,
+				54C6ACA6186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.m */,
+				54C6ACAB186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.h */,
+				54C6ACAC186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -793,18 +813,20 @@
 				54EA29E817B7CE9600DE7C42 /* SPXRestResponse.h in Headers */,
 				54EA29E017B7CE9600DE7C42 /* SPXRestPayload.h in Headers */,
 				5491551E175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */,
-				54EA29F917B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h in Headers */,
 				5401A3F417B16464004B8CCB /* SPXAudio.h in Headers */,
 				54EA29EE17B7CE9600DE7C42 /* SPXRestURLOperation.h in Headers */,
 				541AF1AE17994E7F004259D6 /* SPXCoreDataDatasource.h in Headers */,
 				54AC49BF176F61AA000389DF /* SPXBarButtonItem.h in Headers */,
 				54D7D97F17B8E9820000ADFB /* SPXError.h in Headers */,
 				543E4FC31779B5BB00A22EC5 /* SPXKeyValueStore.h in Headers */,
+				54C6ACA1186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.h in Headers */,
 				54EA29D817B7CE9600DE7C42 /* SPXRestClient+PUT.h in Headers */,
 				54570BD71794278D008CE9B0 /* Color+SPXAdditions.h in Headers */,
 				540158131799ADC400175910 /* SPXSearchDatasource.h in Headers */,
 				54EA29B417B7CE9500DE7C42 /* NSDictionary+SPXRestQueryString.h in Headers */,
 				54EA2A0117B7CEFC00DE7C42 /* SPXStoreDefines.h in Headers */,
+				54C6ACAD186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.h in Headers */,
+				54C6ACA7186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.h in Headers */,
 				540158171799AE6200175910 /* SPXDatasource.h in Headers */,
 				5445F0011799CB1B00DFC769 /* SPXCollectionDatasource.h in Headers */,
 				54EA29C417B7CE9600DE7C42 /* SPXRestAuthentication.h in Headers */,
@@ -832,13 +854,14 @@
 				54EA29D517B7CE9600DE7C42 /* SPXRestClient+POST.h in Headers */,
 				5441E57E17CF54EE00D716E3 /* SPXRuntime.h in Headers */,
 				54EA29B917B7CE9600DE7C42 /* NSString+SPXRestQueryString.h in Headers */,
+				54C6ACA8186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.h in Headers */,
 				549515E217CBA21F005CE4EF /* NSOperationQueue+SPXAdditions.h in Headers */,
+				54C6ACAE186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.h in Headers */,
 				54EA29C517B7CE9600DE7C42 /* SPXRestAuthentication.h in Headers */,
 				54EA29BD17B7CE9600DE7C42 /* SPXReachability.h in Headers */,
 				54EA29FE17B7CEFC00DE7C42 /* SPXStore.h in Headers */,
 				54EA29C917B7CE9600DE7C42 /* SPXRestClient.h in Headers */,
 				54EA29D117B7CE9600DE7C42 /* SPXRestClient+GET.h in Headers */,
-				54EA29FA17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.h in Headers */,
 				54EA29C117B7CE9600DE7C42 /* SPXRest.h in Headers */,
 				54EA29B517B7CE9600DE7C42 /* NSDictionary+SPXRestQueryString.h in Headers */,
 				54D7DA1317B931370000ADFB /* NSString+SPXAdditions.h in Headers */,
@@ -854,6 +877,7 @@
 				549154EE175CEFF100A210BC /* SPXGradient.h in Headers */,
 				549154F2175CEFF100A210BC /* SPXShadow.h in Headers */,
 				5491550B175CF06200A210BC /* BezierPath+SPXAdditions.h in Headers */,
+				54C6ACA2186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.h in Headers */,
 				54915517175CF06200A210BC /* NSData+SPXAdditions.h in Headers */,
 				5491551B175CF06200A210BC /* NSDate+SPXAdditions.h in Headers */,
 				5491551F175CF06200A210BC /* NSDateFormatter+SPXAdditions.h in Headers */,
@@ -1047,7 +1071,6 @@
 				5491550C175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */,
 				54915518175CF06200A210BC /* NSData+SPXAdditions.m in Sources */,
 				5401A3F617B16464004B8CCB /* SPXAudio.m in Sources */,
-				54EA29FB17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m in Sources */,
 				5491551C175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */,
 				54915520175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
 				54EA29EA17B7CE9600DE7C42 /* SPXRestResponse.m in Sources */,
@@ -1064,16 +1087,19 @@
 				54EA29CA17B7CE9600DE7C42 /* SPXRestClient.m in Sources */,
 				54EA29D617B7CE9600DE7C42 /* SPXRestClient+POST.m in Sources */,
 				543E4FC51779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
+				54C6ACAF186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.m in Sources */,
 				54EA29BE17B7CE9600DE7C42 /* SPXReachability.m in Sources */,
 				54570BD81794278D008CE9B0 /* Color+SPXAdditions.m in Sources */,
 				549515E317CBA21F005CE4EF /* NSOperationQueue+SPXAdditions.m in Sources */,
 				54EA29E617B7CE9600DE7C42 /* SPXRestRequest.m in Sources */,
+				54C6ACA9186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.m in Sources */,
 				540158141799ADC400175910 /* SPXSearchDatasource.m in Sources */,
 				54EA29E217B7CE9600DE7C42 /* SPXRestPayload.m in Sources */,
 				54EA29FF17B7CEFC00DE7C42 /* SPXStore.m in Sources */,
 				54EA29BA17B7CE9600DE7C42 /* NSString+SPXRestQueryString.m in Sources */,
 				54EA29B617B7CE9600DE7C42 /* NSDictionary+SPXRestQueryString.m in Sources */,
 				54710AE0179B4923004243F7 /* UIDevice+SPXAdditions.m in Sources */,
+				54C6ACA3186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.m in Sources */,
 				5441E57F17CF54EE00D716E3 /* SPXRuntime.m in Sources */,
 				54EA29C617B7CE9600DE7C42 /* SPXRestAuthentication.m in Sources */,
 				540158181799AE6200175910 /* SPXDatasource.m in Sources */,
@@ -1130,8 +1156,10 @@
 				549154F0175CEFF100A210BC /* SPXGradient.m in Sources */,
 				549154F4175CEFF100A210BC /* SPXShadow.m in Sources */,
 				54D7D9FA17B92FE50000ADFB /* SPXImageCache.m in Sources */,
+				54C6ACA4186F18FE00C5F518 /* NSManagedObjectContext+SPXEntityCount.m in Sources */,
 				5491550D175CF06200A210BC /* BezierPath+SPXAdditions.m in Sources */,
 				54EA29DB17B7CE9600DE7C42 /* SPXRestClient+PUT.m in Sources */,
+				54C6ACB0186F1A1000C5F518 /* NSManagedObjectContext+SPXMultipleObjects.m in Sources */,
 				54915519175CF06200A210BC /* NSData+SPXAdditions.m in Sources */,
 				5491551D175CF06200A210BC /* NSDate+SPXAdditions.m in Sources */,
 				54915521175CF06200A210BC /* NSDateFormatter+SPXAdditions.m in Sources */,
@@ -1140,7 +1168,6 @@
 				5441E58017CF54EE00D716E3 /* SPXRuntime.m in Sources */,
 				54EA29BB17B7CE9600DE7C42 /* NSString+SPXRestQueryString.m in Sources */,
 				5401A3F717B16464004B8CCB /* SPXAudio.m in Sources */,
-				54EA29FC17B7CEFC00DE7C42 /* NSManagedObjectContext+SPXStoreAdditions.m in Sources */,
 				54EA29D717B7CE9600DE7C42 /* SPXRestClient+POST.m in Sources */,
 				54EA29CB17B7CE9600DE7C42 /* SPXRestClient.m in Sources */,
 				54EA29F117B7CE9600DE7C42 /* SPXRestURLOperation.m in Sources */,
@@ -1148,6 +1175,7 @@
 				5401F06D17BE78E600105349 /* SPXSemaphore.m in Sources */,
 				54EA2A0017B7CEFC00DE7C42 /* SPXStore.m in Sources */,
 				54D7DA1517B931370000ADFB /* NSString+SPXAdditions.m in Sources */,
+				54C6ACAA186F19DC00C5F518 /* NSManagedObjectContext+SPXSingleObject.m in Sources */,
 				543E4FC71779B5BB00A22EC5 /* SPXKeyValueStore.m in Sources */,
 				54570BD917942791008CE9B0 /* Color+SPXAdditions.m in Sources */,
 				541C463217CBA6C30016AE96 /* Image+SPXAdditions.m in Sources */,
@@ -1269,6 +1297,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Snippex/Snippex-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1290,6 +1322,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Snippex/Snippex-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-ObjC",

@@ -25,20 +25,13 @@
  POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
+
 
 #ifndef _SYSTEMCONFIGURATION_H
 #import <SystemConfiguration/SystemConfiguration.h>
 #else
-#warning SystemConfiguration is required, please add it to your project.
+#pragma message SystemConfiguration is required, please add it to your project.
 #endif
-
-#import <sys/socket.h>
-#import <netinet/in.h>
-#import <netinet6/in6.h>
-#import <arpa/inet.h>
-#import <ifaddrs.h>
-#import <netdb.h>
 
 /**
  * Does ARC support GCD objects?

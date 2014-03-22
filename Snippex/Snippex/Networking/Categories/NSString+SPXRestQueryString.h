@@ -23,11 +23,27 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
 
+/**
+ *  Adds/removes query parameters to/from a string
+ */
 @interface NSString (SPXRestQueryString)
 
+
+/**
+ *  Escapes query parameters
+ *
+ *  @return A copy of the string with percent escapes added
+ */
 - (NSString *)addPercentEscapesForQuery;
+
+
+/**
+ *  Removes percent escapes from the string
+ *
+ *  @return A copy of the string wth percent escapes removed
+ */
 - (NSString *)removePercentEscapesFromQuery;
+
 
 @end

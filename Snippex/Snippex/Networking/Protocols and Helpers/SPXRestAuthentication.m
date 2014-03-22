@@ -1,16 +1,16 @@
 /*
-   Copyright (c) 2013 Snippex. All rights reserved.
-
+ Copyright (c) 2013 Snippex. All rights reserved.
+ 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
-
+ 
  1. Redistributions of source code must retain the above copyright notice, this
  list of conditions and the following disclaimer.
-
+ 
  2. Redistributions in binary form must reproduce the above copyright notice,
  this list of conditions and the following disclaimer in the documentation
  and/or other materials provided with the distribution.
-
+ 
  THIS SOFTWARE IS PROVIDED BY Snippex `AS IS' AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -24,7 +24,6 @@
  */
 
 #import "SPXRestAuthentication.h"
-#import "NSData+SPXAdditions.h"
 #import "SPXRestRequest.h"
 
 @interface SPXRestBasicAuth()
@@ -37,33 +36,33 @@
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ | %@", [self class], _authString];
+  return [NSString stringWithFormat:@"%@ | %@", [self class], _authString];
 }
 
 +(instancetype)authWithUsername:(NSString *)username password:(NSString *)password
 {
-    NSAssert(username.length, @"Expected username with length > 0, got %@", username);
-    NSAssert(password.length, @"Expected password with length > 0, got %@", password);
-
-    SPXRestBasicAuth *auth = [[SPXRestBasicAuth alloc] init];
-    NSString *authString = [NSString stringWithFormat:@"%@:%@", username, password];
-    NSString *encodedString = [[authString dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
-    [auth setAuthString:[NSString stringWithFormat:@"Basic %@", encodedString]];
-
-    return auth;
+  AssertTrueOrReturnNil(username);
+  AssertTrueOrReturnNil(password);
+  
+  SPXRestBasicAuth *auth = [[SPXRestBasicAuth alloc] init];
+  NSString *authString = [NSString stringWithFormat:@"%@:%@", username, password];
+  NSString *encodedString = [[authString dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+  [auth setAuthString:[NSString stringWithFormat:@"Basic %@", encodedString]];
+  
+  return auth;
 }
 
 - (BOOL)hasValidCredentials
 {
-    return _authString.length;
+  return (BOOL)self.authString.length;
 }
 
 - (void)authenticateBeforePerformingRequest:(SPXRestRequest *)request
 {
-    NSAssert([request respondsToSelector:@selector(setValue:forHTTPHeaderField:)],
-             @"The provided request doesn't appear to respond to -setValue:forHTTPHeaderField!");
-
-    [request setValue:self.authString forHTTPHeaderField:@"Authorization"];
+  NSAssert([request respondsToSelector:@selector(setValue:forHTTPHeaderField:)],
+           @"The provided request doesn't appear to respond to -setValue:forHTTPHeaderField!");
+  
+  [request setValue:self.authString forHTTPHeaderField:@"Authorization"];
 }
 
 @end

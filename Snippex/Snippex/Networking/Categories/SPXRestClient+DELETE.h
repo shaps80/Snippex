@@ -25,8 +25,22 @@
 
 #import "SPXRestClient.h"
 
+
+/**
+ *  Defines the available DELETE request methods
+ */
 @interface SPXRestClient (DELETE)
 
+
+/**
+ *  Returns a DELETE request
+ *
+ *  @param url        The url for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)delete:(NSURL *)url completion:(SPXRestResponseBlock)completion;
+
 
 @end

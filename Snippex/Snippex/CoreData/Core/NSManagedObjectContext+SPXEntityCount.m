@@ -23,27 +23,21 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/**
- *  Adds form encoding helper methods to the dictionary
- */
-@interface NSDictionary (SPXRestQueryString)
+#import "NSManagedObjectContext+SPXEntityCount.h"
+#import "SPXStore.h"
 
+@implementation NSManagedObjectContext (SPXEntityCount)
 
-/**
- *  Returns a form encoded string
- *
- *  @return An NSString containing the parameters with form encoding
- */
-- (NSString *)stringWithFormEncodedComponents;
+- (NSInteger)countForEntityNamed:(NSString *)name
+{
+  return [self countForEntityNamed:name predicate:nil];
+}
 
-
-/**
- *  Returns a form encoded dictionary
- *
- *  @param string The string to encode
- *
- *  @return An NSDictionary containing the parameters with form encoding
- */
-+ (NSDictionary *)dictionaryWithFormEncodedString:(NSString *)string;
+- (NSInteger)countForEntityNamed:(NSString *)name predicate:(NSPredicate *)predicate
+{
+  NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:name];
+  [request setPredicate:predicate];
+  return [self countForFetchRequest:request error:nil];
+}
 
 @end

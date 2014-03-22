@@ -1,16 +1,16 @@
 /*
-   Copyright (c) 2013 Snippex. All rights reserved.
-
+ Copyright (c) 2013 Snippex. All rights reserved.
+ 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
-
+ 
  1. Redistributions of source code must retain the above copyright notice, this
  list of conditions and the following disclaimer.
-
+ 
  2. Redistributions in binary form must reproduce the above copyright notice,
  this list of conditions and the following disclaimer in the documentation
  and/or other materials provided with the distribution.
-
+ 
  THIS SOFTWARE IS PROVIDED BY Snippex `AS IS' AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -34,26 +34,37 @@
 
 @implementation SPXRestClient
 
-- (NSMutableSet *)pendingEndpoints
-{
-    return _pendingEndpoints ?: (_pendingEndpoints = [[NSMutableSet alloc] init]);
-}
-
 - (NSOperationQueue *)queue
 {
-    return _queue ?: (_queue = [[NSOperationQueue alloc] init]);
+  if (!_queue) {
+    _queue = [[NSOperationQueue alloc] init];
+    _queue.maxConcurrentOperationCount = 2;
+  }
+  
+  return _queue;
+}
+
+- (NSMutableSet *)pendingEndpoints
+{
+  return _pendingEndpoints ?: (_pendingEndpoints = [[NSMutableSet alloc] init]);
 }
 
 -(void)setMaxConcurrentRequests:(NSInteger)count
 {
-    [self.queue setMaxConcurrentOperationCount:count];
+  [self.queue setMaxConcurrentOperationCount:count];
+}
+
+
+- (NSInteger)maxConcurrentRequests
+{
+  return self.queue.maxConcurrentOperationCount;
 }
 
 static NSTimeInterval __defaultTimeoutInterval = 10;
 
 + (void)setDefaultTimeoutInterval:(NSTimeInterval)timeout
 {
-    __defaultTimeoutInterval = timeout;
+  __defaultTimeoutInterval = timeout;
 }
 
 - (SPXRestRequest *)get:(NSURL *)url
@@ -61,9 +72,9 @@ static NSTimeInterval __defaultTimeoutInterval = 10;
                 headers:(NSDictionary *)headers
              completion:(SPXRestResponseBlock)completion
 {
-    SPXRestRequest *request = [self requestForURL:url method:@"GET" payload:nil headers:headers];
-    [request setParameters:parameters];
-    return [self performRequest:request completion:completion];
+  SPXRestRequest *request = [self requestForURL:url method:@"GET" payload:nil headers:headers];
+  [request setParameters:parameters];
+  return [self performRequest:request completion:completion];
 }
 
 - (SPXRestRequest *)post:(NSURL *)url
@@ -71,7 +82,7 @@ static NSTimeInterval __defaultTimeoutInterval = 10;
                  headers:(NSDictionary *)headers
               completion:(SPXRestResponseBlock)completion
 {
-    return [self performRequest:[self requestForURL:url method:@"POST" payload:payload headers:headers] completion:completion];
+  return [self performRequest:[self requestForURL:url method:@"POST" payload:payload headers:headers] completion:completion];
 }
 
 - (SPXRestRequest *)put:(NSURL *)url
@@ -79,89 +90,86 @@ static NSTimeInterval __defaultTimeoutInterval = 10;
                 headers:(NSDictionary *)headers
              completion:(SPXRestResponseBlock)completion
 {
-    return [self performRequest:[self requestForURL:url method:@"PUT" payload:payload headers:headers] completion:completion];
+  return [self performRequest:[self requestForURL:url method:@"PUT" payload:payload headers:headers] completion:completion];
 }
 
 - (SPXRestRequest *)delete:(NSURL *)url
                    headers:(NSDictionary *)headers
                 completion:(SPXRestResponseBlock)completion
 {
-    return [self performRequest:[self requestForURL:url method:@"DELETE" payload:nil headers:headers] completion:completion];
-}
-
-- (SPXRestRequest *)get:(NSURL *)sourceURL
-                   path:(NSString *)destinationPath
-             parameters:(NSDictionary *)parameters
-                headers:(NSDictionary *)headers
-               progress:(SPXRestDownloadProgressBlock)progress
-             completion:(SPXRestResponseBlock)completion
-{
-    NSAssert(NO, @"Not implemented");
-    return nil;
-}
-
-- (SPXRestRequest *)post:(NSURL *)sourceURL
-                    path:(NSString *)destinationPath
-                 payload:(SPXRestPayload *)payload
-                 headers:(NSDictionary *)headers
-                progress:(SPXRestDownloadProgressBlock)progress
-              completion:(SPXRestResponseBlock)completion
-{
-    NSAssert(NO, @"Not implemented");
-    return nil;
+  return [self performRequest:[self requestForURL:url method:@"DELETE" payload:nil headers:headers] completion:completion];
 }
 
 - (SPXRestRequest *)performRequest:(SPXRestRequest *)request
                         completion:(SPXRestResponseBlock)completion
 {
-    if ([self.pendingEndpoints containsObject:request.URL])
-    {
-        SPXRestResponse *response = [[SPXRestResponse alloc] initWithStatus:-30 responseData:nil headers:nil originalRequest:request responseHandler:nil];
-        if (completion) completion(response);
-        return nil;
+  if ([self.pendingEndpoints containsObject:request.URL])
+  {
+    SPXRestResponse *response = [[SPXRestResponse alloc] initWithStatus:-30 responseData:nil headers:nil originalRequest:request responseHandler:nil];
+    if (completion) completion(response);
+    return nil;
+  }
+  
+  if ([_authenticationHandler respondsToSelector:@selector(hasValidCredentials:)]) {
+    if ([_authenticationHandler hasValidCredentials]) {
+      SPXRestResponse *response = [[SPXRestResponse alloc] initWithStatus:403 responseData:nil headers:nil originalRequest:request responseHandler:nil];
+      if (completion) completion(response);
+      return nil;
     }
-
-    if ([_authenticationHandler respondsToSelector:@selector(authenticateBeforePerformingRequest:)])
-        [_authenticationHandler authenticateBeforePerformingRequest:request];
-
+  }
+  
+  if ([_authenticationHandler respondsToSelector:@selector(authenticateBeforePerformingRequest:)]) {
+    [_authenticationHandler authenticateBeforePerformingRequest:request];
+  }
+  
 #if TARGET_OS_IPHONE
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 #endif
-
-    SPXRestRequest * __WEAK __weakRequest = request;
-    [request setResponseHandler:_responseHandler];
-    [request setResponseCompletionBlock:^(SPXRestResponse *response)
-    {
+  
+  __WEAK SPXRestRequest * __weakRequest = request;
+  [request setResponseHandler:_responseHandler];
+  [request setResponseCompletionBlock:^(SPXRestResponse *response)
+   {
 #if TARGET_OS_IPHONE
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 #endif
-
-        [self.pendingEndpoints removeObject:__weakRequest.URL];
-        if (completion) completion(response);
-    }];
-
-    [self.queue addOperationAtFrontOfQueue:request];
-    [self.pendingEndpoints addObject:request.URL];
-    return request;
+     
+     [self.pendingEndpoints removeObject:__weakRequest.URL];
+     if (completion) completion(response);
+   }];
+  
+  [self.queue addOperationAtFrontOfQueue:request];
+  [self.pendingEndpoints addObject:request.URL];
+  return request;
 }
 
 - (void)cancelAllRequests
 {
-    [_pendingEndpoints removeAllObjects];
-    [_queue cancelAllOperations];
+  [_pendingEndpoints removeAllObjects];
+  [_queue cancelAllOperations];
+}
+
+- (void)suspend
+{
+  [self.queue setSuspended:YES];
+}
+
+- (void)resume
+{
+  [self.queue setSuspended:NO];
 }
 
 #pragma mark - Private
 
 - (SPXRestRequest *)requestForURL:(NSURL *)url method:(NSString *)method payload:(id <SPXRestPayloadProtocol>)payload headers:(NSDictionary *)headers
 {
-    SPXRestRequest *request = [[SPXRestRequest alloc] initWithURL:url method:method];
-
-    [request setPayload:[SPXRestPayload payloadWithObject:payload]];
-    [request setHeaders:headers];
-    [request setTimeoutInterval:__defaultTimeoutInterval];
-
-    return request;
+  SPXRestRequest *request = [[SPXRestRequest alloc] initWithURL:url method:method];
+  
+  [request setPayload:[SPXRestPayload payloadWithObject:payload]];
+  [request setHeaders:headers];
+  [request setTimeoutInterval:__defaultTimeoutInterval];
+  
+  return request;
 }
 
 @end

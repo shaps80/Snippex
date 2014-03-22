@@ -27,26 +27,27 @@
 /**
  The various states an object can be in.
  */
-typedef enum
+typedef NS_OPTIONS(NSInteger, SPXStoreObjectState)
 {
-    SPXStoreObjectStateNotFound     = NSNotFound,
+  SPXStoreObjectStateNotFound     = NSNotFound,
 	SPXStoreObjectStateFound        = 1,             /* The object was found    */
 	SPXStoreObjectStateAdded        = 2,             /* The object was added    */
 	SPXStoreObjectStateRemoved      = 3,             /* The object was removed  */
 	SPXStoreObjectStateModified     = 4,             /* The object was modified */
-} SPXStoreObjectState;
+};
 
-typedef enum
-{
-    SPXStoreTypeDefaults            /* Returns a store backed by NSUserDefaults */,
-    SPXStoreTypeiCloud              /* Returns a store backed by iCloud         */,
-    SPXStoreTypeKeychain            /* Returns a store backed by NSUserDefaults */,
-    SPXStoreTypeCoreData            /* Returns a store backed by CoreData       */,
-} SPXStoreType;
-
-typedef enum
+typedef NS_OPTIONS(NSInteger, SPXStoreLoggingType)
 {
     SPXStoreLoggingTypeNone,
     SPXStoreLoggingTypeConcise,
     SPXStoreLoggingTypeVerbose
-} SPXStoreLoggingType;
+};
+
+typedef void (^SPXStoreSaveContextBlock)(NSError *error);
+
+inline NSError *errorWithCode(NSInteger code, NSString *description)
+{
+  return [NSError errorWithDomain:@"uk.co.snippex.spxstore" code:code userInfo:@{ NSLocalizedDescriptionKey : description }];
+}
+
+static void const *SPXStoreIdentifierKey = &SPXStoreIdentifierKey;

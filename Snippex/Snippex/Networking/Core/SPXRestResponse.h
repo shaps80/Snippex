@@ -23,76 +23,133 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
+
 #import "SPXRestPackage.h"
+
 
 @class SPXRestRequest;
 @class SPXRestResponse;
 
-@protocol SPXResponseHandler <NSObject>
--(NSError *)errorForResponse:(SPXRestResponse *)response;
-@end
-
-@interface SPXRestResponse : NSObject
-
-- (id)initWithStatus:(NSInteger)statusCode
-        responseData:(NSData *)data
-             headers:(NSDictionary *)headers
-     originalRequest:(SPXRestRequest *)request
-     responseHandler:(id <SPXResponseHandler>)handler;
 
 /**
- The original request that this is the response for.
+ *  Defines the protocol for handling responses
+ */
+@protocol SPXResponseHandler <NSObject>
+
+
+/**
+ *  Determines how to handle errors for responses
+ *
+ *  @param response The response to handle
+ *
+ *  @return An NSError instance if an error occurs, nil otherwise
+ */
+-(NSError *)errorForResponse:(SPXRestResponse *)response;
+
+
+@end
+
+
+/**
+ *  A REST request, response object
+ */
+@interface SPXRestResponse : NSObject
+
+
+/**
+ *  Initializes a REST response object
+ *
+ *  @param statusCode The statuscode for this response
+ *  @param data       The NSData associated with this response
+ *  @param headers    The HTTP headers associated with this response
+ *  @param request    The original request that triggered this response
+ *  @param handler    The object that will handle this response
+ *
+ *  @return An instance of SPXRestResponse
+ */
+- (instancetype)initWithStatus:(NSInteger)statusCode
+                  responseData:(NSData *)data
+                       headers:(NSDictionary *)headers
+               originalRequest:(SPXRestRequest *)request
+               responseHandler:(id <SPXResponseHandler>)handler;
+
+
+/**
+ *  The original request that this is the response for.
  */
 @property (nonatomic, readonly) SPXRestRequest *originalRequest;
 
+
 /**
- Returns the raw response data.
+ *  Returns the raw response data.
  */
 @property (nonatomic, readonly) NSData *responseData;
 
+
 /**
- Returns the data object in its intended content-type, nil if the data cannot be decoded into the expected content-type
+ *  Returns the data object in its intended content-type, nil if the data cannot be decoded into the expected content-type
  */
 @property (nonatomic, readonly) SPXRestPackage *package;
 
+
 /**
- Returns a dictionary of response headers
+ *  Returns a dictionary of response headers
  */
 @property (nonatomic, readonly) NSDictionary *headers;
+
 
 /**
  * The HTTP status code.
  */
-@property (nonatomic, readonly) NSUInteger statusCode;
+@property (nonatomic, readonly) NSInteger statusCode;
+
 
 /**
- If the request failed, the error associated with the failure, nil otherwise
+ *  If the request failed, the error associated with the failure, nil otherwise
  */
 @property (nonatomic, readonly) NSError *error;
 
+
 /**
- Localized status description for the HTTP status code
+ *  Localized status description for the HTTP status code
  */
 - (NSString *)localizedStatusDescription;
 
+
 /**
- Indicates that a response was received without error.
+ *  Indicates that a response was received without error
+ *
+ *  @return YES if the request was successful, NO otherwise.
  */
 - (BOOL)wasSuccessful;
 
+
 /**
- Returns the named cookie.
+ *  Returns the named cookie
+ *
+ *  @param name The name of the cookie to get
+ *
+ *  @return The cookie from this response
  */
 - (NSHTTPCookie *)cookieNamed:(NSString *)name;
 
+
 /**
- Returns the value for the named header.
+ *  Returns the value for the HTTP header
+ *
+ *  @param header The HTTP header to retrieve
+ *
+ *  @return The value for this HTTP header
  */
 - (NSString *)valueForHeader:(NSString *)header;
 
+
 /**
- Returns the value for the named cookie.
+ *  Returns the value for the named cookie
+ *
+ *  @param cookieName The name of this cookie
+ *
+ *  @return The value for this cookie
  */
 - (NSString *)valueForCookie:(NSString *)cookieName;
 

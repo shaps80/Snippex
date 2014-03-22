@@ -25,13 +25,45 @@
 
 @class SPXRestRequest, SPXRestResponse;
 
+
+/**
+ *  Defines the authentication block used in requests
+ *
+ *  @param request The request to be authenticated
+ *
+ *  @return A block to handle authentication
+ */
 typedef void (^SPXRestAuthenticationBlock)(SPXRestRequest *request);
+
+
+/**
+ *  Defines the block used in requests
+ *
+ *  @param request The request to process
+ *
+ *  @return A block to handle the request
+ */
 typedef void (^SPXRestRequestBlock)(SPXRestRequest *request);
+
+
+/**
+ *  Defines the response block used in requests
+ *
+ *  @param request The response to be processed
+ *
+ *  @return A block to handle response
+ */
 typedef void (^SPXRestResponseBlock)(SPXRestResponse *response);
 
+
+/**
+ *  The available logging levels
+ */
 typedef enum
 {
     SPXRestLoggingTypeNone,
     SPXRestLoggingTypeConcise,
     SPXRestLoggingTypeVerbose
 } SPXRestLoggingType;
+
+

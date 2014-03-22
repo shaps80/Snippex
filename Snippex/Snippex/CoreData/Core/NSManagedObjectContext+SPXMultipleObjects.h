@@ -1,16 +1,16 @@
 /*
- Copyright (c) 2013 Snippex. All rights reserved.
- 
+   Copyright (c) 2013 Snippex. All rights reserved.
+
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
- 
+
  1. Redistributions of source code must retain the above copyright notice, this
  list of conditions and the following disclaimer.
- 
+
  2. Redistributions in binary form must reproduce the above copyright notice,
  this list of conditions and the following disclaimer in the documentation
  and/or other materials provided with the distribution.
- 
+
  THIS SOFTWARE IS PROVIDED BY Snippex `AS IS' AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -23,59 +23,40 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-@class SPXRestRequest;
+#import <CoreData/CoreData.h>
 
-
-/**
- *  This protocol defines payload structure to be used in all SPXRestRequest's
- */
-@protocol SPXRestPayloadProtocol <NSObject>
-
+@interface NSManagedObjectContext (SPXMultipleObjects)
 
 /**
- *  Returns an NSData representation of the body
- *
- *  @param request The request that will contain this payload
- *
- *  @return An NSData instance containing this payload
+ @abstract      Fetches all objects for the given entity name
+ @param         name The name of the entity
  */
-- (NSData *)dataForRequest:(SPXRestRequest *)request;
-
+- (NSArray *)entitiesNamed:(NSString *)name;
 
 /**
- *  Returns the content-type for this request
- *
- *  @param request The request that will contain this payload
- *
- *  @return An NSString instance representing the content-type of this payload
+ @abstract      Fetches all objects for the given entity name
+ @param         name The name of the entity
+ @param         predicate The string or predicate to filter by
  */
-- (NSString *)contentTypeForRequest:(SPXRestRequest *)request;
+- (NSArray *)entitiesNamed:(NSString *)name
+                 predicate:(id)predicate, ...;
 
+/**
+ @abstract      Fetches all objects for the given entity name
+ @param         name The name of the entity
+ @param         sorting An array of NSSortDescriptors
+ */
+- (NSArray *)entitiesNamed:(NSString *)name
+                   sorting:(NSArray *)sorting;
+
+/**
+ @abstract      Fetches all objects for the given entity name
+ @param         name The name of the entity
+ @param         predicate The string or predicate to filter by
+ @param         sorting An array of NSSortDescriptors
+ */
+- (NSArray *)entitiesNamed:(NSString *)name
+                   sorting:(NSArray *)sorting
+                 predicate:(id)predicate, ...;
 
 @end
-
-
-/**
- *  This object encapsulates the entire payload attached to a request
- */
-@interface SPXRestPayload : NSObject <SPXRestPayloadProtocol>
-
-
-/**
- *  Initializes a default payload object (the object is any class that supports -dataUsingEncoding
- *
- *  @param object The object to add to this payload. This can be an NSDictionary (JSON), NSData, etc...
- *
- *  @return An instance of SPXRestPayload
- */
-+ (instancetype)payloadWithObject:(id)object;
-
-@end
-
-
-/**
- *  Initializes a JSON payload object
- */
-@interface SPXRestJSONPayload : SPXRestPayload
-@end
-

@@ -27,52 +27,100 @@
 #import "SPXRestResponse.h"
 #import "SPXRestPayload.h"
 
+
+/**
+ *  Encapsulates a REST request operation
+ */
 @interface SPXRestRequest : SPXRestURLOperation
 
+
+/**
+ *  The url for this request (this property is readonly)
+ */
 @property (nonatomic, readonly) NSURL *URL;
+
+
+/**
+ *  All HTTP Headers associated with this request (this property is readonly)
+ */
 @property (nonatomic, readonly) NSDictionary *allHTTPHeaders;
 
-/**
- @abstract
- */
-- (id)initWithURL:(NSURL *)url method:(NSString *)method;
 
 /**
+ *  Initializes a REST request.
+ *
+ *  @param url    The url for this request
+ *  @param method The HTTP method for this request
+ *
+ *  @return An instance of SPXRestRequest
+ */
+- (instancetype)initWithURL:(NSURL *)url method:(NSString *)method;
+
+
+/**
+ *  Specifies the timeout duration for this request
+ *
+ *  @param timeout The time (in seconds) before this request will timeout
  */
 - (void)setTimeoutInterval:(NSTimeInterval)timeout;
 
+
 /**
+ *  Sets the object responsible for handling the response for this request
+ *
+ *  @param handler The object to handle responses
  */
 - (void)setResponseHandler:(id <SPXResponseHandler>)handler;
 
+
 /**
- @abstract
+ *  Sets the payload for this request.
+ *
+ *  @param payload The payload encapsules the content, settings, etc.. for this request
  */
 - (void)setPayload:(id <SPXRestPayloadProtocol>)payload;
 
+
 /**
- @abstract
+ *  Sets the headers for this request
+ *
+ *  @param headers The header for this request
  */
 - (void)setHeaders:(NSDictionary *)headers;
 
+
 /**
- @abstract
+ *  Sets (overriding if necessary) the value for the specified header field
+ *
+ *  @param value The value for this header
+ *  @param field The header field
  */
 - (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
 
+
 /**
- @abstract
+ *  Sets the query parameters for this request
+ *
+ *  @param parameters The parameters to be appended to the end of the URL string
  */
 - (void)setParameters:(NSDictionary *)parameters;
 
+
 /**
- @abstract
+ *  Sets the value of the specified parameter
+ *
+ *  @param value     The value for this parameter
+ *  @param parameter The parameter to apply this value to
  */
 - (void)setValue:(NSString *)value forParameter:(NSString *)parameter;
 
+
 /**
- @abstract
+ *  Sets whether to automatically handle cookies or not.
+ *
+ *  @param shouldHandleCookies If YES, will automatically handle cookies, if NO you will be required to handle cookies via the package object
  */
 - (void)setHandlesCookiesAutomatically:(BOOL)shouldHandleCookies;
+
 
 @end

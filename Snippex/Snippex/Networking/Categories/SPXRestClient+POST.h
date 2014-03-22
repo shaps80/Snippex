@@ -25,17 +25,51 @@
 
 #import "SPXRestClient.h"
 
+
+/**
+ *  Defines the available POST request methods
+ */
 @interface SPXRestClient (POST)
 
+
+/**
+ *  Returns a POST request
+ *
+ *  @param url        The url for this request
+ *  @param payload    The payload for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)post:(NSURL *)url
                  payload:(id)payload
               completion:(SPXRestResponseBlock)completion;
 
+
+/**
+ *  Returns a POST request
+ *
+ *  @param url        The url for this request
+ *  @param headers    The HTTP headers for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)post:(NSURL *)url
                  headers:(NSDictionary *)headers
               completion:(SPXRestResponseBlock)completion;
 
+
+/**
+ *  Returns a POST request
+ *
+ *  @param url        The url for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)post:(NSURL *)url
               completion:(SPXRestResponseBlock)completion;
+
 
 @end

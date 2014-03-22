@@ -23,19 +23,50 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
-#import "SPXRestRequest.h"
+@class SPXRestRequest;
 
+
+/**
+ *  Provides a definition for how authentication is handled by the REST client
+ */
 @protocol SPXRestAuthentication <NSObject>
 
+@optional
+
+/**
+ *  Determines if valid credentials have been supplied
+ *
+ *  @return YES if the supplied credentials are valid, NO otherwise
+ */
 - (BOOL)hasValidCredentials;
+
+
+/**
+ *  Specified whether or not authentication should be performed before any request is executed
+ *
+ *  @param request The request to authenticate
+ */
 - (void)authenticateBeforePerformingRequest:(SPXRestRequest *)request;
 
 @end
 
+
+/**
+ *  An class for dealing with authentication
+ */
 @interface SPXRestBasicAuth : NSObject <SPXRestAuthentication>
 
+
+/**
+ *  Initializes an authentication object for handling BASIC authentication
+ *
+ *  @param username The username to use for authentication
+ *  @param password The password to use for authentication
+ *
+ *  @return An instance of SPXRestBasicAuth
+ */
 +(instancetype)authWithUsername:(NSString *)username password:(NSString *)password;
+
 
 @end
 

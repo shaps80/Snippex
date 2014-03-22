@@ -26,6 +26,125 @@
 #import <Security/Security.h>
 #import "SPXKeyValueStore.h"
 
+#pragma mark - C Setters
+
+void storeSetObject(id <SPXKeyValueStoreProtocol>store, NSString *key, id value)
+{
+  [store setObject:value forKey:key];
+}
+
+void storeSetBool(id <SPXKeyValueStoreProtocol>store, NSString *key, BOOL value)
+{
+  [store setBool:value forKey:key];
+}
+
+void storeSetString(id <SPXKeyValueStoreProtocol>store, NSString *key, NSString *value)
+{
+  [store setString:value forKey:key];
+}
+
+void storeSetDoule(id <SPXKeyValueStoreProtocol>store, NSString *key, double value)
+{
+  [store setDouble:value forKey:key];
+}
+
+void storeSetInteger(id <SPXKeyValueStoreProtocol>store, NSString *key, NSInteger value)
+{
+  [store setInteger:value forKey:key];
+}
+
+void storeSetFloat(id <SPXKeyValueStoreProtocol>store, NSString *key, CGFloat value)
+{
+  [store setFloat:value forKey:key];
+}
+
+void storeSetDate(id <SPXKeyValueStoreProtocol>store, NSString *key, NSDate *value)
+{
+  [store setDate:value forKey:key];
+}
+
+void storeSetData(id <SPXKeyValueStoreProtocol>store, NSString *key, NSData *value)
+{
+  [store setData:value forKey:key];
+}
+
+void storeSetSet(id <SPXKeyValueStoreProtocol>store, NSString *key, NSSet *value)
+{
+  [store setSet:value forKey:key];
+}
+
+void storeSetArray(id <SPXKeyValueStoreProtocol>store, NSString *key, NSArray *value)
+{
+  [store setArray:value forKey:key];
+}
+
+void storeSetDictionary(id <SPXKeyValueStoreProtocol>store, NSString *key, NSDictionary *value)
+{
+  [store setDictionary:value forKey:key];
+}
+
+#pragma mark - C Getters
+
+id storeGetObject(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store objectForKey:key];
+}
+
+BOOL storeGetBool(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store boolForKey:key];
+}
+
+NSString* storeGetString(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store stringForKey:key];
+}
+
+double storeGetDouble(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store doubleForKey:key];
+}
+
+NSInteger storeGetInteger(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store integerForKey:key];
+}
+
+CGFloat storeGetFloat(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store floatForKey:key];
+}
+
+NSDate* storeGetDate(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store dateForKey:key];
+}
+
+NSData* storeGetData(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store dataForKey:key];
+}
+
+NSSet* storeGetSet(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store setForKey:key];
+}
+
+NSArray* storeGetArray(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store arrayForKey:key];
+}
+
+NSDictionary* storeGetDictionary(id <SPXKeyValueStoreProtocol>store, NSString *key)
+{
+  return [store dictionaryForKey:key];
+}
+
+BOOL storeSync(id <SPXKeyValueStoreProtocol>store)
+{
+  return [store synchronize];
+}
+
 #pragma mark - SPXStoreKeychain
 
 @interface SPXKeychain : NSObject <SPXKeyValueStoreProtocol>

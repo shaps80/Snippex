@@ -24,55 +24,9 @@
  */
 
 #import <CoreData/CoreData.h>
-#import "SPXDefines.h"
 #import "SPXStoreDefines.h"
 
-@interface NSManagedObjectContext (SPXStoreAdditions)
-
-/**
- @abstract      Runs up all the parent contexts and saves everything back to the persistent store.
- */
-- (NSError *)saveToStore;
-
-/**
- */
-- (NSInteger)countForEntityNamed:(NSString *)name;
-
-/**
- */
-- (NSInteger)countForEntityNamed:(NSString *)name predicate:(NSPredicate *)predicate;
-
-/**
- @abstract      Fetches all objects for the given entity name
- @param         name The name of the entity
- */
-- (NSArray *)entitiesNamed:(NSString *)name;
-
-/**
- @abstract      Fetches all objects for the given entity name
- @param         name The name of the entity
- @param         predicate The string or predicate to filter by
- */
-- (NSArray *)entitiesNamed:(NSString *)name
-                 predicate:(id)predicate, ...;
-
-/**
- @abstract      Fetches all objects for the given entity name
- @param         name The name of the entity
- @param         sorting An array of NSSortDescriptors
- */
-- (NSArray *)entitiesNamed:(NSString *)name
-                   sorting:(NSArray *)sorting;
-
-/**
- @abstract      Fetches all objects for the given entity name
- @param         name The name of the entity
- @param         predicate The string or predicate to filter by
- @param         sorting An array of NSSortDescriptors
- */
-- (NSArray *)entitiesNamed:(NSString *)name
-                   sorting:(NSArray *)sorting
-                 predicate:(id)predicate, ...;
+@interface NSManagedObjectContext (SPXSingleObject)
 
 /**
  @abstract      Fetches a single object that matches the specified identifier
@@ -88,7 +42,7 @@
  @param         identifier The identifier of the object
  @param         name The entity name to use
  @param         create If YES, creates the object if its not found
-                useful for determining if it was created, or found
+ useful for determining if it was created, or found
  */
 - (id)objectWithID:(id)identifier
        entityNamed:(NSString *)name
@@ -100,7 +54,7 @@
  @param         name The entity name to use
  @param         create If YES, creates the object if its not found
  @param         state Returns the state of the object
-                useful for determining if it was created, or found
+ useful for determining if it was created, or found
  */
 - (id)objectWithID:(id)identifier
        entityNamed:(NSString *)name
@@ -114,7 +68,7 @@
  @param         key The entity key to use for identifier comparisons
  @param         create If YES, creates the object if its not found
  @param         state Returns the state of the object
-                useful for determining if it was created, or found
+ useful for determining if it was created, or found
  */
 - (id)objectWithID:(id)identifier
        entityNamed:(NSString *)name

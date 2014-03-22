@@ -23,58 +23,145 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
-#import "SPXRestDownloadOperation.h"
+
 #import "SPXRestResponse.h"
-#import "SPXRestPayload.h"
 #import "SPXRestAuthentication.h"
 #import "SPXRestTypes.h"
 
+
+@class SPXRestRequest, SPXRestPayload;
+
+
+/**
+ *  A REST client
+ */
 @interface SPXRestClient : NSObject
 
+
+/**
+ *  Gets/sets the class responsible for handling HTTP responses
+ */
 @property (nonatomic, STRONG) id <SPXResponseHandler> responseHandler;
+
+
+/**
+ *  Gets/sets the class responsible for handling authentication
+ */
 @property (nonatomic, weak) id <SPXRestAuthentication> authenticationHandler;
 
--(void)setMaxConcurrentRequests:(NSInteger)count;
 
+/**
+ *  Sets the maximum allowed concurrent operations
+ *
+ *  @param count The number of maximum operations
+ */
+- (void)setMaxConcurrentRequests:(NSInteger)count;
+
+
+/**
+ *  Determines how many requests are allowed to operate concurrently. Defaults to 2
+ *
+ *  @return The maximum number of allowed concurrent requests
+ */
+- (NSInteger)maxConcurrentRequests;
+
+
+/**
+ *  Sets the default timeout used for all requests
+ *
+ *  @param timeout The default timeout (in seconds) for all requests
+ */
 + (void)setDefaultTimeoutInterval:(NSTimeInterval)timeout;
 
+
+/**
+ *  The base GET request constructor
+ *
+ *  @param url        The url for this request
+ *  @param parameters The query parameters for this request
+ *  @param headers    The HTTP headers for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)get:(NSURL *)url
              parameters:(NSDictionary *)parameters
                 headers:(NSDictionary *)headers
              completion:(SPXRestResponseBlock)completion;
 
+
+/**
+ *  The base POST request constructor
+ *
+ *  @param url        The url for this request
+ *  @param payload    The payload for this request
+ *  @param headers    The HTTP headers for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)post:(NSURL *)url
                  payload:(id)payload
                  headers:(NSDictionary *)headers
               completion:(SPXRestResponseBlock)completion;
 
+
+/**
+ *  The base PUT request constructor
+ *
+ *  @param url        The url for this request
+ *  @param payload    The payload for this request
+ *  @param headers    The HTTP headers for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)put:(NSURL *)url
                 payload:(id)payload
                 headers:(NSDictionary *)headers
              completion:(SPXRestResponseBlock)completion;
 
+
+/**
+ *  The base DELETE request constructor
+ *
+ *  @param url        The url for this request
+ *  @param headers    The HTTP headers for this request
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return An instance of SPXRestRequest that encapsulates the request and its properties
+ */
 - (SPXRestRequest *)delete:(NSURL *)url
                    headers:(NSDictionary *)headers
                 completion:(SPXRestResponseBlock)completion;
 
-- (SPXRestRequest *)get:(NSURL *)sourceURL
-                   path:(NSString *)destinationPath
-             parameters:(NSDictionary *)parameters
-                headers:(NSDictionary *)headers
-               progress:(SPXRestDownloadProgressBlock)progress
-             completion:(SPXRestResponseBlock)completion;
 
-- (SPXRestRequest *)post:(NSURL *)sourceURL
-                    path:(NSString *)destinationPath
-                 payload:(SPXRestPayload *)payload
-                 headers:(NSDictionary *)headers
-                progress:(SPXRestDownloadProgressBlock)progress
-              completion:(SPXRestResponseBlock)completion;
-
+/**
+ *  Performs the specified request
+ *
+ *  @param request    The request to perform
+ *  @param completion The completion block to execute when this request completes
+ *
+ *  @return The SPXRestRequest that will be performed, including other updates, such as authentication and payload configuration
+ */
 - (SPXRestRequest *)performRequest:(SPXRestRequest *)request
                         completion:(SPXRestResponseBlock)completion;
 
+
+/**
+ *  Cancels all inactive requests
+ */
 - (void)cancelAllRequests;
+
+/**
+ *  Suspends all operations
+ */
+- (void)suspend;
+
+/**
+ *  Resumes all operations
+ */
+- (void)resume;
+
 
 @end

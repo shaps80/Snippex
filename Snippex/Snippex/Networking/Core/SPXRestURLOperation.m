@@ -1,16 +1,16 @@
 /*
-   Copyright (c) 2013 Snippex. All rights reserved.
-
+ Copyright (c) 2013 Snippex. All rights reserved.
+ 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
-
+ 
  1. Redistributions of source code must retain the above copyright notice, this
  list of conditions and the following disclaimer.
-
+ 
  2. Redistributions in binary form must reproduce the above copyright notice,
  this list of conditions and the following disclaimer in the documentation
  and/or other materials provided with the distribution.
-
+ 
  THIS SOFTWARE IS PROVIDED BY Snippex `AS IS' AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -48,139 +48,139 @@
 
 - (id)initWithRequest:(NSURLRequest *)request
 {
-    self = [super init];
-
-    if (self)
-    {
-        _request = request;
-    }
-
-    return self;
+  self = [super init];
+  
+  if (self)
+  {
+    _request = request;
+  }
+  
+  return self;
 }
 
 -(void)start
 {
-    dispatch_async(dispatch_get_main_queue(), ^
-    {
-        [SPXRest log:[NSString stringWithFormat:@"Request started | %@", self.description]];
-        [SPXRest logVerbose:[NSString stringWithFormat:@"Request started | %@", self.debugDescription]];
-    });
-
-    [self setExecuting:YES];
-
-    _connection = [[NSURLConnection alloc] initWithRequest:_request delegate:self startImmediately:NO];
-
-    if (_connection == nil)
-        [self setFinished:YES];
-
-    [_connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    [_connection start];
-
-    [[NSRunLoop currentRunLoop] run];
+  dispatch_async(dispatch_get_main_queue(), ^
+                 {
+                   SPXRestLog(@"%@", [NSString stringWithFormat:@"Request started | %@", self.description]);
+                   SPXRestLogVerbose(@"%@", [NSString stringWithFormat:@"Request started | %@", self.debugDescription]);
+                 });
+  
+  [self setExecuting:YES];
+  
+  _connection = [[NSURLConnection alloc] initWithRequest:_request delegate:self startImmediately:NO];
+  
+  if (_connection == nil)
+    [self setFinished:YES];
+  
+  [_connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+  [_connection start];
+  
+  [[NSRunLoop currentRunLoop] run];
 }
 
 -(NSData *)data
 {
-    return [_data copy];
+  return [_data copy];
 }
 
 #pragma mark - Connection delegate
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    self.response = response;
-    self.data = [[NSMutableData alloc] init];
-
-    if ([self isCancelled])
-    {
-        [connection cancel];
-        [self finish];
-    }
+  self.response = response;
+  self.data = [[NSMutableData alloc] init];
+  
+  if ([self isCancelled])
+  {
+    [connection cancel];
+    [self finish];
+  }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    if (!self.data)
-        self.data = [[NSMutableData alloc] init];
-
-    [_data appendData:data];
-
-    if ([self isCancelled])
-    {
-        [connection cancel];
-        [self finish];
-    }
+  if (!self.data)
+    self.data = [[NSMutableData alloc] init];
+  
+  [_data appendData:data];
+  
+  if ([self isCancelled])
+  {
+    [connection cancel];
+    [self finish];
+  }
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    [self finish];
+  [self finish];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [SPXRest log:[NSString stringWithFormat:@"Request failed | %@", self.description]];
-        [SPXRest logVerbose:[NSString stringWithFormat:@"Request failed | %@", self.description]];
-    });
-
-    self.error = error;
+  dispatch_async(dispatch_get_main_queue(), ^{
+    SPXRestLog(@"%@", [NSString stringWithFormat:@"Request failed | %@", self.description]);
+    SPXRestLogVerbose(@"%@", [NSString stringWithFormat:@"Request failed | %@", self.debugDescription]);
+  });
+  
+  self.error = error;
 }
 
 #pragma mark - Private
 
 - (void)setExecuting:(BOOL)isExecuting;
 {
-    [self willChangeValueForKey:@"isExecuting"];
-    _isExecuting = isExecuting;
-    [self didChangeValueForKey:@"isExecuting"];
+  [self willChangeValueForKey:@"isExecuting"];
+  _isExecuting = isExecuting;
+  [self didChangeValueForKey:@"isExecuting"];
 }
 
 - (void)setFinished:(BOOL)isFinished;
 {
-    [self willChangeValueForKey:@"isFinished"];
-    [self setExecuting:NO];
-    _isFinished = isFinished;
-    [self didChangeValueForKey:@"isFinished"];
-
+  [self willChangeValueForKey:@"isFinished"];
+  [self setExecuting:NO];
+  _isFinished = isFinished;
+  [self didChangeValueForKey:@"isFinished"];
+  
+  dispatch_async(dispatch_get_main_queue(), ^{
+  });
+  
+  if ([self isCancelled])
+  {
     dispatch_async(dispatch_get_main_queue(), ^{
+      SPXRestLog(@"%@", [NSString stringWithFormat:@"Request cancelled | %@", self.description]);
+      SPXRestLogVerbose(@"%@", [NSString stringWithFormat:@"Request cancelled | %@", self.debugDescription]);
     });
-
-    if ([self isCancelled])
-    {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [SPXRest log:[NSString stringWithFormat:@"Request cancelled | %@", self.description]];
-            [SPXRest logVerbose:[NSString stringWithFormat:@"Request cancelled | %@", self.description]];
-        });
-    }
+  }
 }
 
 #pragma mark - Operation
 
 - (void)finish;
 {
-    [self setFinished:YES];
+  [self setFinished:YES];
 }
 
 - (BOOL)isConcurrent
 {
-    return YES;
+  return YES;
 }
 
 - (BOOL)isExecuting
 {
-    return _isExecuting;
+  return _isExecuting;
 }
 
 - (BOOL)isFinished
 {
-    return _isFinished;
+  return _isFinished;
 }
 
 - (void)cancelImmediately
 {
-    [_connection cancel];
-    [self finish];
+  [_connection cancel];
+  [self finish];
 }
 
 @end
