@@ -40,12 +40,12 @@
     NSArray *operations = [self operations];
     NSInteger index = [operations count] - maxOperations;
     
-    if (index >= 0)
-    {
+    if (index >= 0) {
       NSOperation *operation = operations[index];
       
-      if (![operation isExecuting])
+      if (![operation isExecuting]) {
         [operation addDependency:operation];
+      }
     }
     
     // resume queue
@@ -61,8 +61,7 @@
 
 - (void)addOperationsAtFrontOfQueue:(NSArray *)operations waitUntilFinished:(BOOL)wait
 {
-  for (NSOperation *operation in operations)
-  {
+  for (NSOperation *operation in operations) {
     [self setLIFODependendenciesForOperation:operation];
   }
   

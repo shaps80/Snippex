@@ -23,16 +23,22 @@
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
 
 /**
- An NSDateFormatter category
+ *  Provides threadsafe, cheap creation of NSDateFormatter instances by caching them against the curent threadDictionary
  */
 @interface NSDateFormatter (SPXAdditions)
 
+
 /**
- @abstract Returns a shared NSDateFormatter singleton
+ *  Returns an NSDateFormatter that uses the specified format string
+ *
+ *  @param format The format string for this NSDateFormatter
+ *
+ *  @return A new or cached dateFormatter instance - instance exist per thread
  */
-+(NSDateFormatter *)sharedFormatter;
++ (instancetype)dateFormatterForFormat:(NSString *)format;
+
 
 @end
+

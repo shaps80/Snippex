@@ -1,16 +1,16 @@
 /*
-   Copyright (c) 2013 Snippex. All rights reserved.
-
+ Copyright (c) 2013 Snippex. All rights reserved.
+ 
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
-
+ 
  1. Redistributions of source code must retain the above copyright notice, this
  list of conditions and the following disclaimer.
-
+ 
  2. Redistributions in binary form must reproduce the above copyright notice,
  this list of conditions and the following disclaimer in the documentation
  and/or other materials provided with the distribution.
-
+ 
  THIS SOFTWARE IS PROVIDED BY Snippex `AS IS' AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
@@ -36,17 +36,7 @@ typedef void (^RequestBlock)();
 
 - (void)testMultipleRequestsToSameEndpoint
 {
-    NSString *path = @"http://upload.wikimedia.org/wikipedia/commons/9/9d/243_Ida_large.jpg";
 
-    [[SPXRest client] get:[NSURL URLWithString:path] completion:nil];
-    [[SPXRest client] get:[NSURL URLWithString:path] completion:^(SPXRestResponse *response)
-    {
-        NSAssert(response.statusCode == -30, @"This is the second request, so the status code SHOULD be -30");
-        [SPXSemaphore resumeForKey:@"request"];
-    }];
-
-    [[SPXRest client] cancelAllRequests];
-    [SPXSemaphore pauseForKey:@"request"];
 }
 
 @end

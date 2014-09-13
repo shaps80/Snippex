@@ -25,17 +25,34 @@
 
 #import "NSDateFormatter+SPXAdditions.h"
 
+static NSString * const SPXNSDateFormatterKey = @"SPXNSDateFormatterKey";
+
 @implementation NSDateFormatter (SPXAdditions)
 
-+(NSDateFormatter *)sharedFormatter
++ (instancetype)dateFormatterForFormat:(NSString *)format
 {
-	static NSDateFormatter *_sharedFormatter = nil;
-	static dispatch_once_t oncePredicate;
-	dispatch_once(&oncePredicate, ^{
-		_sharedFormatter = [[self alloc] init];
-	});
+  NSMutableDictionary *dateFormatters = [self dateFormatters];
+  NSDateFormatter *formatter = dateFormatters[format];
+  
+  if (!formatter) {
+    formatter = [NSDateFormatter new];
+    formatter.dateFormat = format;
+    dateFormatters[format] = formatter;
+  }
+  
+  return formatter;
+}
 
-	return _sharedFormatter;
++ (NSMutableDictionary *)dateFormatters
+{
+  NSMutableDictionary *formatters = [NSThread currentThread].threadDictionary[SPXNSDateFormatterKey];
+
+  if (!formatters) {
+    formatters = [NSMutableDictionary new];
+    [NSThread currentThread].threadDictionary[SPXNSDateFormatterKey] = formatters;
+  }
+  
+  return formatters;
 }
 
 @end
